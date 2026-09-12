@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T22:29:57Z",
+  "snapshot_at": "2026-09-12T23:29:29Z",
   "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
   "evidence": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "authored-sources",
       "path": "assets/provenance.json",
-      "sha256": "33136f4902ad3cb33ca8033eec5e35984a12b6424cbb891e8c16e4907e8171ca",
+      "sha256": "4bf1c5a131e6395ab1089496ca5c508f6bda8828afab0c63f0dbf4a242d8520f",
       "title": "Original authored surface provenance",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
       "targets": [
@@ -107,7 +107,7 @@
     {
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
-      "sha256": "d3f053fe703b79510dae871bc9668f75cc4956b39e0af2aa429c56a13dec4771",
+      "sha256": "a855a5d79c9e3e91c953eb1ff5fb38b99aca86c0bb5ee10665d85cae3fb9da5a",
       "title": "Native replacement texture sampling",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
       "targets": [
@@ -274,7 +274,7 @@
     {
       "id": "meadows-beech-materials",
       "path": "docs/evidence/contributions/meadows-beech-materials.json",
-      "sha256": "838ab2fa0cdbb0bdb98e211e7e506d38a907cd3c359916a71adc43d42af72c2e",
+      "sha256": "681f97cb76391ff9c52c675527506916e4fc492181c2f8fad996351621e03ee9",
       "title": "Beech foliage and near bark material review",
       "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
       "targets": [
@@ -334,6 +334,93 @@
         },
         {
           "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+          "stages": [
+            "uv_reviewed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meadows-ground-cover",
+      "path": "docs/evidence/contributions/meadows-ground-cover.json",
+      "sha256": "82498dcd8e762db1917b9b6b63985332b65cf1ecceb3e34b61c6fde7dca4b4ea",
+      "title": "Meadows grass and material-specific beech bark",
+      "scope": "Tall and short grass plus continuous bark and stump candidates have scoped UV and native texture evidence. HD grass also passes an isolated original-shader instancing fixture. Wind, world integration, distance transitions and final approval remain open.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2397346978479642237",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
           "stages": [
             "uv_reviewed"
           ]
@@ -410,35 +497,51 @@
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
-      "note": "Authored 1024px bark atlas is reviewed only on near and middle large-tree slots. Its endgrain patch overlaps the distant trunk UVs, so no shared runtime binding is approved. Logs, stumps, small trees, moss and normals need review."
+      "note": "Separate 1024 px continuous standing-tree bark and stump-only atlas candidates have scoped UV and native texture review. The older near/middle atlas targets a downward root cap. Original alpha, normals, moss and material-specific runtime binding remain open. Logs use a separate texture."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Bark slot 1 includes the authored near atlas and underside-cap review."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Bark slot 1 includes the authored near atlas; the low-detail cap stretches endgrain."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Bark remains original because the candidate patch conflicts with distant trunk UVs."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. White-tint view only; unhealthy tint, growth and wind remain open."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
-      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Imported model identity only; no gameplay-prefab join is established here."
+      "note": "Retained geometry with scoped authored grass or beech bark UV review. No authored model, native mesh streaming, game fixture or final approval."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079",
+      "note": "Authored white cutout at 512/256 px, terrain-tinted by the original shader. Exact grass-card UV and native mip review; HD original-shader instancing fixture at 1080 p/4 K. Coarse mip coverage and world integration remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943",
+      "note": "Authored five-blade white cutout at 256/128 px with fitted thickness and restrained bends. UV/native mip review and HD original-shader instancing fixture. Wind, player interaction, distance transitions and world acceptance remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "note": "Retained stump mesh with correctly placed authored cut-top atlas and continuous bark sides. Original normal and shader behavior, gameplay state and final approval remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2397346978479642237",
+      "note": "Retained 48-vertex six-card mesh reviewed for tall/short Meadows grass. The shader fixture reuses its exact geometry, normals and tangents. Other material consumers are outside this appearance scope; no model replacement or game-stage claim."
     }
   ],
   "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18"

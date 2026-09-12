@@ -394,6 +394,158 @@
         }
       ],
       "recipe": "assets/meadows/beech-bark-near-recipe.json"
+    },
+    {
+      "key": "meadows_grass_tall_mask",
+      "dest": "assets/meadows/grass-tall-source-alpha-v1.png",
+      "status": "authored silhouette source",
+      "sha256": "c3cd5b8c6cb35af8b41c9ca7cfc34f6fac81f8bca216cbeb4d365467f3459162",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "L",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "alpha channel of original project-authored artwork"
+    },
+    {
+      "key": "meadows_grass_tall",
+      "dest": "assets/meadows/grass-tall-rgba-v1.png",
+      "status": "authored terrain-tinted cutout candidate",
+      "sha256": "c39b2d7a3061d6498a44db9444a2ca02ea53404f92d36c61400e134328dacab8",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "fitted from project-authored alpha with neutral white RGB",
+      "parents": [
+        {
+          "path": "assets/meadows/grass-tall-source-alpha-v1.png",
+          "sha256": "c3cd5b8c6cb35af8b41c9ca7cfc34f6fac81f8bca216cbeb4d365467f3459162"
+        }
+      ],
+      "recipe": "assets/meadows/grass-tall-recipe.json"
+    },
+    {
+      "key": "meadows_grass_short_mask",
+      "dest": "assets/meadows/grass-short-source-alpha-v1.png",
+      "status": "authored silhouette source",
+      "sha256": "af2bf50b0e5f98339f0dbde48f632e1652c2d3494a23e1dfe9080e2cb8cfc39d",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "L",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "alpha channel of original project-authored artwork"
+    },
+    {
+      "key": "meadows_grass_short",
+      "dest": "assets/meadows/grass-short-rgba-v1.png",
+      "status": "authored terrain-tinted cutout candidate",
+      "sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "fitted from project-authored alpha with neutral white RGB",
+      "parents": [
+        {
+          "path": "assets/meadows/grass-short-source-alpha-v1.png",
+          "sha256": "af2bf50b0e5f98339f0dbde48f632e1652c2d3494a23e1dfe9080e2cb8cfc39d"
+        }
+      ],
+      "recipe": "assets/meadows/grass-short-recipe.json"
+    },
+    {
+      "key": "beech_continuous",
+      "dest": "assets/meadows/beech-continuous-v1.png",
+      "status": "authored material-specific bark candidate",
+      "sha256": "6e399070933e094d0cfb7ac97077c8a1e5a5ecfa2fc50788ff0eda8f794ced31",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "fitted from project-authored bark",
+      "parents": [
+        {
+          "path": "assets/meadows/beech-bark-surface-v1.png",
+          "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+        }
+      ],
+      "recipe": "assets/meadows/beech-continuous-recipe.json"
+    },
+    {
+      "key": "beech_stump",
+      "dest": "assets/meadows/beech-stump-v1.png",
+      "status": "authored material-specific bark candidate",
+      "sha256": "3fe0fe604238a968ec9c61413c4cabc1d72e61d991cea21ba6c2fd34fb9c2e0e",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "fitted from project-authored bark and endgrain",
+      "parents": [
+        {
+          "path": "assets/meadows/beech-bark-surface-v1.png",
+          "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+        },
+        {
+          "path": "assets/meadows/beech-endgrain-source-v1.png",
+          "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+        }
+      ],
+      "recipe": "assets/meadows/beech-stump-recipe.json"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."

@@ -1,9 +1,9 @@
 # Beech material candidates
 
-This batch adds a shared authored branch source, 1024px and 512px foliage
-payloads, and a 1024px bark atlas fitted to the near and middle large-tree
-meshes. These are staged material candidates. No beech runtime binding or final
-art approval is included.
+The current candidates include a shared authored branch source, 1024px and
+512px foliage payloads, continuous standing-tree bark and a separate fitted
+stump atlas. Both bark candidates are 1024px. These are staged material studies.
+No beech runtime binding or final art approval is included.
 
 ## Exact scope
 
@@ -14,7 +14,7 @@ All identities below belong to serialized file
 | --- | --- | --- |
 | `-3647773947989605833` | `beech_branch_hd_albedo`, 1024px | Leaf slot 0 on the three large-tree blob meshes, front and rear; native texture and diagnostic cutout sampling. |
 | `-5355041863167301984` | `beech_branch_balanced_albedo`, 512px | Leaf slot 0 on two small-tree blobs, the sapling and one imported model, using white tint; native texture and diagnostic cutout sampling. |
-| `-7789706379099817400` | `beech_bark_near_hd_albedo`, 1024px | Bark slot 1 on near and middle large-tree meshes, including underside caps; native texture sampling. |
+| `-7789706379099817400` | `beech_continuous_hd_albedo` and `beech_stump_hd_albedo`, 1024px | Material-specific standing-tree and stump studies. The earlier near/middle atlas remains a historical fitting study. |
 
 The [layout evidence](evidence/beech-material-layout.json) records exact
 material slots, hierarchy joins and shared scope. The [UV review](evidence/beech-material-uv.json)
@@ -44,11 +44,15 @@ removed by this method, so review the result visually before accepting another
 source. The selected 1254px source has 23.68% coverage at cutoff 0.5 and empty
 outer edges. No crop or UV repacking is applied to either foliage size.
 
-The [bark recipe](../assets/meadows/beech-bark-near-recipe.json) combines the
-owned bark and endgrain sources. It places a 95px square endgrain patch in the
-1024px bark image at the measured near/middle cap region. The recipe records
-source hashes, saturation, filter, placement and output hash. Its alpha is
-fully opaque.
+The earlier [bark recipe](../assets/meadows/beech-bark-near-recipe.json) puts a
+95px endgrain patch on a downward root cap. Follow-up inspection distinguishes
+that underside from the exposed stump cut. The new
+[stump recipe](../assets/meadows/beech-stump-recipe.json) places a 130px patch at
+image box `(842, 153, 972, 283)`, covering all 9,793 sampled stump-top texel
+centers. The [continuous recipe](../assets/meadows/beech-continuous-recipe.json)
+uses the owned bark without a cut patch. Source hashes, interpolation, placement
+and output hashes are recorded. Both candidates are fully opaque and emit no
+paired normal study.
 
 Run `python tools/asset_pipeline.py`, `python tools/validate_staging.py` and
 the [native authoring workflow](UNITY_PIPELINE.md). For the finite cutout
@@ -61,8 +65,9 @@ The fixture samples an owned diagnostic shader, not Valheim's vegetation shader.
 
 The complete BC3 albedo mip payload is 1,398,128 bytes at 1024px and 349,552 bytes
 at 512px. Each paired normal study costs the same amount as its albedo. The
-current native authoring fixture contains 32 textures totaling 20,622,848
-compressed payload bytes, including previous studies. These figures describe
+earlier beech authoring fixture contained 32 textures totaling 20,622,848
+compressed payload bytes, including previous studies. The current aggregate is
+recorded in [native validation](evidence/native-validation.json). These figures describe
 texture payloads, not measured residency, bundle overhead, frame time or a
 whole-scene VRAM budget.
 
@@ -86,11 +91,18 @@ foliage. Actual screen-space coverage and LOD transitions remain unapproved.
 
 ## Remaining acceptance work
 
-The near/middle endgrain patch overlaps 9,025 distant trunk texels. The distant
-mesh therefore retains original bark in the review. Resolve this atlas conflict
-before any shared bark binding; other bark consumers include stumps, logs and
-small trees. The middle underside cap also stretches its endgrain with the
-retained low-detail geometry.
+The earlier near/middle patch overlaps 9,025 distant trunk texels. Moving the
+patch to the true stump cut fixes the base-level fit, but a one-texel sampling
+margin reaches the distant trunk from 128px mips downward, with direct overlap
+at 8px. The new studies therefore separate standing-tree and stump materials.
+The [scope follow-up](evidence/beech-bark-scope-followup.json) classifies all
+20 consumers across ten meshes. Logs use a separate albedo, `410654931012585407`,
+and material, `2002271956048927406`; they are not consumers of this bark texture.
+
+Original zero alpha maps to the distant underside, but some partial alpha also
+extends above the mesh's local origin. That origin does not establish the ground
+surface. Stored blend state does not prove active shader behavior, so the opaque
+studies still require original-alpha and material-specific binding review.
 
 Small-tree and healthy sapling materials store cutoff 0.5. The unhealthy sapling
 stores cutoff 0.26, an orange tint and different ripple strength, which need a

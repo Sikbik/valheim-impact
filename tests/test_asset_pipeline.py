@@ -1,4 +1,5 @@
 import importlib.util
+import hashlib
 import io
 from pathlib import Path
 import struct
@@ -96,6 +97,105 @@ class AssetPipelineTests(unittest.TestCase):
             for path in ['../outside.png', '/etc/passwd', 'original.resS', 'pack.dat']:
                 with self.subTest(path=path), self.assertRaises(ValueError):
                     pipeline.safe_file(Path(directory), path)
+
+    def test_build_albedo_only_preserves_cutout_payload_without_normal_work(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            pixels = np.zeros((8, 8, 4), dtype=np.uint8)
+            pixels[:4] = (48, 144, 64, 255)
+            Image.fromarray(pixels).save(root / 'source.png')
+            manifest = root / 'spec.json'
+            manifest.write_text(json.dumps({'assets': [dict(id='sample', source='source.png',
+                size=[8, 8], periodic=False, alpha_policy='cutout', alpha_cutoff=0.5,
+                generate_normal=False)]}))
+            original_convert = Image.Image.convert
+
+            def reject_height_conversion(image, mode=None, *args, **kwargs):
+                self.assertNotEqual(mode, 'L', 'Albedo-only output must skip height conversion')
+                return original_convert(image, mode, *args, **kwargs)
+
+            with patch.object(pipeline, 'ROOT', root), \
+                    patch.object(Image.Image, 'convert', reject_height_conversion), \
+                    patch.object(pipeline, 'normal_from_height', side_effect=AssertionError('Unexpected normal work')):
+                pipeline.build(manifest)
+            output = root / 'build/staging/meadows'
+            self.assertEqual({path.name for path in output.iterdir()}, {
+                'manifest.json', 'contact-sheet.png', 'sample_albedo.png',
+                'sample_albedo.dds', 'sample_albedo-unity.dds'})
+            report = json.loads((output / 'manifest.json').read_text())
+            self.assertEqual(len(report['assets']), 1)
+            record = report['assets'][0]
+            self.assertEqual(record['id'], 'sample_albedo')
+            self.assertEqual(record['role'], 'albedo')
+            self.assertIs(record['srgb'], True)
+            self.assertIsNone(record['normal_encoding'])
+            self.assertEqual(record['alpha_policy'], 'cutout')
+            self.assertEqual(record['alpha_range'], [0, 255])
+            self.assertEqual(record['alpha_cutoff'], 0.5)
+            self.assertEqual(len(record['cutout_mips']), 4)
+            self.assertEqual(record['compressed_payload_bytes'], 112)
+            self.assertEqual(report['compressed_payload_bytes'], 112)
+            self.assertEqual(record['source_sha256'], hashlib.sha256((root / 'source.png').read_bytes()).hexdigest())
+            np.testing.assert_array_equal(np.asarray(Image.open(output / record['png'])), pixels)
+            for kind in ('png', 'dds', 'unity_dds'):
+                data = (output / record[kind]).read_bytes()
+                self.assertEqual(record[kind + '_sha256'], hashlib.sha256(data).hexdigest())
+                if kind != 'png':
+                    self.assertEqual(len(data), 240)
+                    self.assertEqual(data[84:88], b'DXT5')
+                    self.assertEqual(struct.unpack_from('<I', data, 28)[0], 4)
+                    decoded = np.asarray(Image.open(io.BytesIO(data)).convert('RGBA'))
+                    expected_alpha = pixels[:, :, 3] if kind == 'dds' else pixels[::-1, :, 3]
+                    np.testing.assert_array_equal(decoded[:, :, 3], expected_alpha)
+
+    def test_build_default_and_explicit_true_emit_identical_albedo_normal_pairs(self):
+        reports, payloads = [], []
+        for options in ({}, {'generate_normal': True}):
+            with self.subTest(options=options), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                Image.new('RGB', (8, 8), 'green').save(root / 'source.png')
+                manifest = root / 'spec.json'
+                manifest.write_text(json.dumps({'assets': [dict(id='sample', source='source.png',
+                    size=[8, 8], periodic=False, alpha_policy='opaque', normal_strength=0,
+                    **options)]}))
+                with patch.object(pipeline, 'ROOT', root):
+                    pipeline.build(manifest)
+                output = root / 'build/staging/meadows'
+                report = json.loads((output / 'manifest.json').read_text())
+                self.assertEqual([(r['id'], r['role']) for r in report['assets']],
+                                 [('sample_albedo', 'albedo'), ('sample_normal', 'normal')])
+                self.assertEqual(report['compressed_payload_bytes'], 224)
+                self.assertEqual({p.name for p in output.iterdir()}, {'manifest.json', 'contact-sheet.png',
+                    'sample_albedo.png', 'sample_albedo.dds', 'sample_albedo-unity.dds',
+                    'sample_normal.png', 'sample_normal.dds', 'sample_normal-unity.dds'})
+                reports.append(report)
+                payloads.append({p.name: p.read_bytes() for p in output.iterdir()})
+        self.assertEqual(reports[0], reports[1])
+        self.assertEqual(payloads[0], payloads[1])
+
+    def test_build_rejects_non_boolean_normal_flag_before_any_output_mutation(self):
+        for flag in (None, 0, 1, 0.0, 'false', 'true', [], {}):
+            for existing_output in (False, True):
+                with self.subTest(flag=flag, existing_output=existing_output), \
+                        tempfile.TemporaryDirectory() as directory:
+                    root = Path(directory)
+                    Image.new('RGB', (8, 8), 'green').save(root / 'source.png')
+                    asset = dict(id='first', source='source.png', size=[8, 8], periodic=False,
+                                 alpha_policy='opaque', normal_strength=0)
+                    manifest = root / 'spec.json'
+                    manifest.write_text(json.dumps({'assets': [asset, dict(asset, id='last', generate_normal=flag)]}))
+                    output = root / 'build/staging/meadows'
+                    prior = {'first_albedo.png': b'previous texture', 'manifest.json': b'previous manifest'}
+                    if existing_output:
+                        output.mkdir(parents=True)
+                        for name, data in prior.items():
+                            (output / name).write_bytes(data)
+                    with patch.object(pipeline, 'ROOT', root), self.assertRaisesRegex(ValueError, 'generate_normal'):
+                        pipeline.build(manifest)
+                    if existing_output:
+                        self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, prior)
+                    else:
+                        self.assertFalse(output.exists())
 
     def test_build_preflights_linked_outputs_before_writing_any_texture(self):
         for linked_directory in (True, False):

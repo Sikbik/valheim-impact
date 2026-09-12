@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "scope": "Material-specific albedo study, no runtime binding or original-alpha approval.",
+  "sources": [
+    {
+      "path": "assets/meadows/beech-bark-surface-v1.png",
+      "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+    }
+  ],
+  "operations": [
+    {
+      "source": 0,
+      "convert": "RGBA",
+      "alpha": 255
+    }
+  ],
+  "output": "assets/meadows/beech-continuous-v1.png",
+  "output_sha256": "6e399070933e094d0cfb7ac97077c8a1e5a5ecfa2fc50788ff0eda8f794ced31",
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "encoding": {
+    "format": "PNG",
+    "optimize": true,
+    "image_library": "Pillow 12.3.0"
+  }
+}

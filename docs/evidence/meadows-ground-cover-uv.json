@@ -1,0 +1,253 @@
+{
+  "schema_version": 1,
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "scope": "Scoped retained-geometry UV review of two grass variants and eight beech bark meshes. No authored model, native mesh streaming, game or final approval.",
+  "renderer": "Blender 5.2.1 LTS, EEVEE, unlit albedo. Grass uses constant tint and cutoff0.46; original bark uses diagnostic cutoff0.5. These are not the original shaders.",
+  "geometry": "Original triangles and UVs retained. Unity X mirrored with reversed triangle winding, then Y-up rotated to Z-up.",
+  "rows": [
+    {
+      "scene": "VI Meadows Grass Review",
+      "mesh_id": "2397346978479642237",
+      "slot": 0,
+      "variant": "tall original",
+      "triangles": 36,
+      "face_corners": 108,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Meadows Grass Review",
+      "mesh_id": "2397346978479642237",
+      "slot": 0,
+      "variant": "tall hd",
+      "triangles": 36,
+      "face_corners": 108,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Meadows Grass Review",
+      "mesh_id": "2397346978479642237",
+      "slot": 0,
+      "variant": "tall balanced",
+      "triangles": 36,
+      "face_corners": 108,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Meadows Grass Review",
+      "mesh_id": "2397346978479642237",
+      "slot": 0,
+      "variant": "short original",
+      "triangles": 36,
+      "face_corners": 108,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Meadows Grass Review",
+      "mesh_id": "2397346978479642237",
+      "slot": 0,
+      "variant": "short hd",
+      "triangles": 36,
+      "face_corners": 108,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Meadows Grass Review",
+      "mesh_id": "2397346978479642237",
+      "slot": 0,
+      "variant": "short balanced",
+      "triangles": 36,
+      "face_corners": 108,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "5636204498416708811",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 232,
+      "face_corners": 696,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "5636204498416708811",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 232,
+      "face_corners": 696,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-719559034922650275",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 34,
+      "face_corners": 102,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-719559034922650275",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 34,
+      "face_corners": 102,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "521127269846282531",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 6,
+      "face_corners": 18,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "521127269846282531",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 6,
+      "face_corners": 18,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-2546151573137180296",
+      "slot": 0,
+      "variant": "original",
+      "triangles": 32,
+      "face_corners": 96,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-2546151573137180296",
+      "slot": 0,
+      "variant": "authored",
+      "triangles": 32,
+      "face_corners": 96,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "1918554502850406428",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 22,
+      "face_corners": 66,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "1918554502850406428",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 22,
+      "face_corners": 66,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-279755266753387489",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 34,
+      "face_corners": 102,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-279755266753387489",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 34,
+      "face_corners": 102,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-4549926859537839438",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 22,
+      "face_corners": 66,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "-4549926859537839438",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 22,
+      "face_corners": 66,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "8633005213437286470",
+      "slot": 1,
+      "variant": "original",
+      "triangles": 34,
+      "face_corners": 102,
+      "uv_max_absolute_error": 0
+    },
+    {
+      "scene": "VI Beech Bark Scope Review",
+      "mesh_id": "8633005213437286470",
+      "slot": 1,
+      "variant": "authored",
+      "triangles": 34,
+      "face_corners": 102,
+      "uv_max_absolute_error": 0
+    }
+  ],
+  "face_corners": 3144,
+  "maximum_uv_error": 0,
+  "sources": [
+    {
+      "path": "assets/meadows/grass-tall-rgba-v1.png",
+      "sha256": "c39b2d7a3061d6498a44db9444a2ca02ea53404f92d36c61400e134328dacab8"
+    },
+    {
+      "path": "assets/meadows/grass-short-rgba-v1.png",
+      "sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117"
+    },
+    {
+      "path": "assets/meadows/beech-continuous-v1.png",
+      "sha256": "6e399070933e094d0cfb7ac97077c8a1e5a5ecfa2fc50788ff0eda8f794ced31"
+    },
+    {
+      "path": "assets/meadows/beech-stump-v1.png",
+      "sha256": "3fe0fe604238a968ec9c61413c4cabc1d72e61d991cea21ba6c2fd34fb9c2e0e"
+    }
+  ],
+  "local_capture_hashes": [
+    {
+      "view": "grass-uv-front.png",
+      "sha256": "fc34af57ede87adada3324eb3f356e5a37607aacd98d0d52e79a19d0a7f62151"
+    },
+    {
+      "view": "grass-uv-rear-4k.png",
+      "sha256": "7a868900d949a719910fd99071f0eeec6f0f4fa71aff0e750a3d763add6676ec"
+    },
+    {
+      "view": "beech-bark-scope-front.png",
+      "sha256": "5a55489f8488df35cbadcc194e66048e45176540c6f72072e367c4e9da1a024f"
+    },
+    {
+      "view": "beech-bark-scope-rear.png",
+      "sha256": "25624143fae858bc21f0bb795e3f27cef29b6cc1f45cb28fb200eb769979e7d3"
+    }
+  ],
+  "visual_findings": [
+    "Both grass variants retain bottom-rooted shapes on all six cards; neutral tint is supplied separately from the authored white albedo.",
+    "Short blade thickness and sideways bend were fitted independently to avoid exaggerated curling on the low, wide cards.",
+    "Continuous bark removes the earlier endgrain patch from standing-tree and small-tree surfaces.",
+    "The separate stump atlas maps the cut to the upward island. The earlier cap patch targeted the underside.",
+    "The original full imported beech model and imported collider are excluded from appearance-stage promotion.",
+    "Original bark alpha behavior, actual lighting, normals and material-specific runtime integration remain open."
+  ]
+}
