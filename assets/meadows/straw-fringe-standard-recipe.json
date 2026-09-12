@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "variant": "standard",
+  "size": 512,
+  "source": {
+    "path": "assets/meadows/straw-fringe-standard-rgba-v1.png",
+    "sha256": "0f4a2f40d67ad245489c84970fa7e8accb637216dce11955a87324a17d951023"
+  },
+  "output": "assets/meadows/straw-fringe-standard-v1.png",
+  "report": "docs/evidence/straw-fringe-fit.json"
+}

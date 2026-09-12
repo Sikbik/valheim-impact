@@ -1,0 +1,78 @@
+{
+  "scope": "Blender albedo-only comparison on locally extracted original game meshes. Not a game shader, weather, normal, moss or LOD approval.",
+  "resolution": [
+    3840,
+    2160
+  ],
+  "originalScenePreserved": true,
+  "uvChecks": [
+    {
+      "mesh": "VI Review Rock_3_Untitled",
+      "original_uv_loops": 606,
+      "blender_uv_loops": 606,
+      "max_uv_error": 4.988860990984278e-10
+    },
+    {
+      "mesh": "VI Review wood_pole with local shape transform",
+      "original_uv_loops": 132,
+      "blender_uv_loops": 132,
+      "max_uv_error": 4.68688954313734e-09
+    }
+  ],
+  "textureChecks": {
+    "rock_original": {
+      "dimensions": [
+        512,
+        512
+      ],
+      "alpha_extrema": [
+        254,
+        255
+      ],
+      "alpha_zero_pixels": 0,
+      "alpha_opaque_pixels": 133733
+    },
+    "rock_authored": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_zero_pixels": 0,
+      "alpha_opaque_pixels": 1048576,
+      "periodic_rgb_rows_equal": true,
+      "periodic_rgb_columns_equal": true
+    },
+    "timber_original": {
+      "dimensions": [
+        128,
+        128
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_zero_pixels": 0,
+      "alpha_opaque_pixels": 16384
+    },
+    "timber_authored": {
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "alpha_zero_pixels": 0,
+      "alpha_opaque_pixels": 1048576,
+      "periodic_rgb_rows_equal": true,
+      "periodic_rgb_columns_equal": true
+    }
+  },
+  "renderSha256": "6fa0313ba9f073a0cb1b3f6acd9ec41ec6d72acafdf128a5dc6413bec9da321a",
+  "trackedOriginalPixels": false
+}

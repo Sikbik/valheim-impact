@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-12",
+  "game_version_from_local_log": "l-1.0.12",
+  "unity_version_from_local_log": "6000.0.75f1",
+  "steam_build_id": "25253764",
+  "selected_install_fingerprints_checked": 12,
+  "installation_changed": [],
+  "valheim_processes": [],
+  "materials_inspected": 10,
+  "texture_references_inspected": 19,
+  "inspection_json_sha256": "4afe804bf8fd025a871fe7deab0e0a57d185bd7b2c79cc75dd270330fbdb55db",
+  "runtime_dll_sha256": {
+    "ValheimImpact.Core.dll": "ffb66a53aeb8fcf6636b89f888076223a4b408ab5ba8968eb515180cd20045d6",
+    "ValheimImpact.Unity.dll": "c54354f0d0970ef1411cf76ceafff1d9cc692338fbb2f75b8f58d355e2af9605"
+  },
+  "game_performance_baseline": null,
+  "new_overhaul_vram": null,
+  "warning": "Observed idle GPU-wide memory is not game memory or a performance result."
+}

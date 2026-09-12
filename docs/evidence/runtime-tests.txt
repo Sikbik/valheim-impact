@@ -1,0 +1,125 @@
+PASS frame summary uses nearest-rank percentiles and milliseconds
+PASS bounded frame window retains newest samples and total observed count
+PASS invalid frame deltas are rejected from timing evidence
+PASS owned bundle has explicit sRGB and full mip contract
+PASS owned bundle rejects empty asset selector
+PASS owned bundle rejects unsupported texture dimensions
+PASS owned bundle rejects changed content before engine loading
+PASS owned bundle rejects invalid UnityFS header despite matching digest
+PASS later override replaces earlier name
+PASS override source is retained
+PASS indexing allocates no textures
+PASS original dimensions retained
+PASS all original compressed mip bytes retained
+PASS second request reuses GPU resource
+PASS native aliases reserve one payload and do not allocate until a tick
+PASS native offers do no engine work
+PASS native scheduler starts one async request
+PASS ready native texture transfers ownership and releases its bundle and reservation
+PASS cache counts original bytes after native adoption
+PASS catalog identity reuses resident aliases without native or raw duplicate
+PASS resident native content is not prepared again
+PASS urgent alias completes the same active native request once
+PASS native eviction reload is counted and labeled
+PASS same bytes with different color interpretation stay separate
+PASS disposing preparation does not destroy textures transferred to residency
+PASS imminent large payload preempts queued guesses within budget
+PASS active native load is never preempted
+PASS expired GPU payload retains reservation during deferred destruction
+PASS reservation remains for a full intervening frame
+PASS deferred destruction eventually releases bounded budget
+PASS expired distant guesses cool down while imminent demand bypasses cooldown
+PASS repeated ticks in one frame cannot start additional native requests
+PASS native concurrency is limited to two active requests
+PASS queued demand completes itself without requiring unrelated active requests to finish
+PASS disposal releases active native handles and preserves transferred resources
+PASS preempting a ready GPU texture waits for deferred destruction before replacement
+PASS replacement is admitted after deferred GPU retirement within the same budget
+PASS native failure cleans up and falls back to full original raw data
+PASS native failure cannot prepare a duplicate resident fallback
+PASS catalog rejects a different source offset
+PASS source changed after native preparation is rejected before material adoption
+PASS identical content shares a resource across names
+PASS different color spaces remain separate
+PASS only two distinct GPU uploads occurred
+PASS resident accounting excludes reused data
+PASS unused resources retain the full grace period
+PASS observing an alias protects the shared allocation
+PASS release veto preserves aliases and residency
+PASS release exception preserves cache accounting
+PASS release includes every alias exactly once
+PASS unused shared allocation is released once
+PASS eviction subtracts only the released allocation
+PASS pinned color-space resource remains resident
+PASS evicted alias reloads its complete original payload
+PASS evicted content is uploaded as a new resource
+PASS all name aliases and content identity rebuild after eviction
+PASS reload restarts grace period
+PASS upload and reload totals distinguish residency from lifetime work
+PASS release restores original material binding before disposal
+PASS released material remembers that its HD binding needs reload
+PASS binding reload uses exact requested alias
+PASS returning object restores its evicted material
+PASS returning object receives new full-resolution resource once
+PASS eviction does not overwrite another mod's material change
+PASS reload preserves a material changed after eviction
+PASS failed reload leaves the vanilla material usable and retryable
+PASS spawn or material changes invalidate an incremental census
+PASS aborted census preserves every allocation
+PASS stable census releases only unobserved resources
+PASS stable census keeps the referenced full-resolution texture
+PASS fast fingerprint matches the standard SHA256 vector
+PASS native fingerprint matches managed SHA256 for a full buffer
+PASS fingerprint reuse still reloads every original byte
+PASS eviction retains only the fingerprint and avoids rehashing reloads
+PASS a previously unseen alias is fingerprinted before sharing
+PASS changed bundle cannot reuse a stale fingerprint after eviction
+Fingerprint backend: OpenSSL 3 native SHA256
+PASS nearby texture accepts background preparation
+PASS queued and ready bytes cannot exceed preparation budget
+PASS real file preparation finishes on worker
+PASS prepared payload creates no GPU resource and remains accounted
+PASS texture factory stays on requesting thread
+PASS prepared upload preserves exact bytes and dimensions
+PASS request consumes prepared data and releases reservation
+PASS resident resource is never prefetched again
+PASS consumed buffer frees budget for another texture
+PASS second preparation completes
+PASS unused prepared buffers expire after ten seconds
+PASS expired preparation can be requested again
+PASS source changed after preparation is rejected before upload
+PASS background read enters fingerprint step
+PASS queued demand reads its own bytes
+PASS queued demand runs immediately without waiting for unrelated active read
+PASS demand joins exactly its active read
+PASS active read retains reservation until demand can consume it
+PASS joined read completes and uploads after worker finishes
+PASS active read joins safely without duplicate upload
+PASS speculative outer-area preparation is accepted
+PASS speculative payload becomes ready
+PASS imminent request replaces lower-priority ready bytes within the cap
+PASS priority replacement never expands the CPU buffer limit
+PASS preempted speculative data is no longer retained
+PASS imminent replacement finishes
+PASS priority request receives its own exact bytes
+PASS speculative bytes can prepare again
+PASS discarded payload fingerprints survive without retaining raw data
+PASS unused distant payload is not reread every expiry cycle
+PASS imminent demand bypasses distant retry cooldown
+PASS disposal finishes active work, releases buffers and rejects new work
+PASS worker failure completes rather than stranding request
+PASS worker error reaches demand and releases budget
+PASS truncated directory rejected
+PASS actual HIGHER index contains all 2671 effective valid names
+PASS actual native catalog matches every installed source range and timestamp
+PASS actual native catalog preserves 2571 distinct content and color identities
+PASS 8K textures remain available
+PASS two real 4K guesses occupy enough space to obstruct 8K
+PASS lower-priority 8K guess cannot displace nearer data
+PASS imminent real 8K texture displaces one 4K guess instead of missing preparation
+PASS actual 8K payload prepares in background within 128 MiB
+PASS actual 8K texture loads at original resolution and offset
+PASS actual 8K texture retains its complete mip chain
+PASS actual 8K upload consumes prepared payload within budget
+Available compressed data GiB: 22.18283300101757
+Failures: 0

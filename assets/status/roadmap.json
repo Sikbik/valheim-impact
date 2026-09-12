@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "scope": "Checkpoints represent biome approval, separate from overall inventory work. Meadows asset IDs describe a pilot scope, not a complete biome inventory. Shared assets may participate in more than one biome.",
+  "biomes": [
+    {
+      "id": "meadows",
+      "name": "Meadows",
+      "state": "active",
+      "asset_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-8605274158951166907",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:2790173395324991560",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:5074722651943391187",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:6499687211232451560",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567"
+      ],
+      "approval_evidence": []
+    },
+    {
+      "id": "black-forest",
+      "name": "Black Forest",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "swamp",
+      "name": "Swamp",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "mountains",
+      "name": "Mountains",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "plains",
+      "name": "Plains",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "mistlands",
+      "name": "Mistlands",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "ashlands",
+      "name": "Ashlands",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "deep-north",
+      "name": "Deep North",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    },
+    {
+      "id": "ocean",
+      "name": "Ocean",
+      "state": "planned",
+      "asset_ids": [],
+      "approval_evidence": []
+    }
+  ]
+}

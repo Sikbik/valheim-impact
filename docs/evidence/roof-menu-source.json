@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "scope": "Existing local serialized-asset inventory evidence for the exact roof fixture hierarchy. This does not prove that an identically named renderer is loaded in the running menu.",
+  "derivation": "The inventory extractor resolves renderer.m_GameObject, then follows GameObject Transform components through Transform.m_Father and their m_GameObject pointers. It records the reversed GameObject m_Name chain. This hierarchy was read from that existing inventory, not inferred from the prefab filename.",
+  "inventory": {
+    "path": "local/texture-inventory/complete/inventory.json",
+    "sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+    "record_selector": {
+      "list": "uv_references",
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7659890841992530565"
+    }
+  },
+  "extractor": {
+    "path": "tools/texture_inventory.py",
+    "sha256": "91c702dd12498a6c06a0b53d126b9f9c32d51efe137ed7c1d136b3120f79c73f",
+    "hierarchy_function_line": 157,
+    "uv_reference_assignment_line": 322
+  },
+  "hierarchy": "wood_roof_67/New/default",
+  "prefab_paths": [
+    "Assets/GameElements/Pieces/wood_roof_67.prefab"
+  ],
+  "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7659890841992530565",
+  "renderer_game_object_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2157704478480370309",
+  "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+  "mesh_name": "default",
+  "vertices": 312,
+  "submesh_triangles": [
+    222,
+    32
+  ],
+  "selected_slot": 0,
+  "ordered_material_ids": [
+    "CAB-8923bd833c4171316cf3c761b642c1c8:-4672229894483433817",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:3815874719294672528"
+  ],
+  "source_bundles": [
+    "c4210710"
+  ]
+}

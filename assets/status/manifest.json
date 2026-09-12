@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "snapshot_at": "2026-09-12T19:42:09Z",
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "evidence": [
+    {
+      "id": "inventory-summary",
+      "path": "assets/coverage.json",
+      "sha256": "d9cf59544aca33ce03ad95c6e5e5510735768b84d876f32f73d0b254d26338c4",
+      "title": "Complete serialized inventory",
+      "scope": "Metadata counts and category estimates. No authored or visible coverage is inferred.",
+      "targets": []
+    },
+    {
+      "id": "authored-sources",
+      "path": "assets/provenance.json",
+      "sha256": "f0b5965ae3245698efa6732971c9ac971e1c10b3d6663fec86412cfbd9236066",
+      "title": "Original authored surface provenance",
+      "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+          "stages": [
+            "authored"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+          "stages": [
+            "authored"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+          "stages": [
+            "authored"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stone-timber-uv",
+      "path": "docs/evidence/game-mesh-uv.json",
+      "sha256": "9e41b204d7458574b85ff78b04e3941e59e8873890ef9b82cddb0167d3a993c1",
+      "title": "Stone and timber UV review",
+      "scope": "Blender albedo review on the original Rock_3_Untitled and pole meshes, with retained UVs and material transforms. No native game shader claim.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8605274158951166907",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5074722651943391187",
+          "stages": [
+            "uv_reviewed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roof-uv",
+      "path": "docs/evidence/roof-uv-review.json",
+      "sha256": "9e0b4ed68c698a9760707156f3f3baf223773c8876f0147f4b4ff239b6715dcd",
+      "title": "67-degree roof atlas UV review",
+      "scope": "Three isolated original roof submeshes use the fitted atlas. Companion faces, assembled roofs and native shaders are outside this UV review.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2790173395324991560",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6499687211232451560",
+          "stages": [
+            "uv_reviewed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "native-textures",
+      "path": "docs/evidence/native-validation.json",
+      "sha256": "848b0285a7ca80903531656d6f15b9505c1302641f8cc3554fea0264527ba5f8",
+      "title": "Native replacement texture sampling",
+      "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+          "stages": [
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+          "stages": [
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+          "stages": [
+            "native_validated"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "game-menu-fixture",
+      "path": "docs/evidence/game-menu-binding.json",
+      "sha256": "3d64e9b3cc3c08d5300bb19e12716caade8f186c77175584552790974b799faa",
+      "title": "Three material replacements in game menu fixtures",
+      "scope": "Standing stone, pole and complete 67-degree roof fixtures used production-bound authored albedos. The roof companion cutout remains original. No final art or world approval.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+          "stages": [
+            "game_fixture_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+          "stages": [
+            "game_fixture_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+          "stages": [
+            "game_fixture_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+          "stages": [
+            "game_fixture_validated"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roof-fixture-identity",
+      "path": "docs/evidence/roof-menu-source.json",
+      "sha256": "8bbd21b9c5bb59ab0ab85d1e31894ad0538c043d89de71e31cfa54d76ab01190",
+      "title": "Exact original roof fixture identity",
+      "scope": "Explicit serialized mesh ID, renderer hierarchy, topology and slot order establish the retained roof geometry used by the menu fixture.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+          "stages": []
+        }
+      ]
+    },
+    {
+      "id": "default-roof-layout",
+      "path": "docs/evidence/default-roof-layout.json",
+      "sha256": "524278c64f03a9cfa052ab94be52ef80897eea167985d11940d158e6f2ab407f",
+      "title": "Default roof alpha and UV preparation",
+      "scope": "Original alpha and whole-image UV layout inspection only. Standard and corner fringe replacements still need authored fitting.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+          "stages": []
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+          "stages": []
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+          "stages": []
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+          "stages": []
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+          "stages": []
+        }
+      ]
+    },
+    {
+      "id": "straw-fringe-authored",
+      "path": "docs/evidence/straw-fringe-authored.json",
+      "sha256": "c533e8d19f2de04dcf9f7744a5f863fb93c7cf3cca03131fe76780ccc37a68d3",
+      "title": "Authored standard straw-fringe candidate",
+      "scope": "512 RGBA candidate for straw_roof_alpha only. Mask derived from original project art; no copied game pixels or masks. UV, compressed mips, native shader and game checks pending. The smallest mips lose cutout coverage.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+          "stages": [
+            "authored"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "staged-cutout-adapter",
+      "path": "docs/evidence/cutout-binding-native.json",
+      "sha256": "64e093e2a502742319fba035c6d4b9acf16939fce90f2b9a6d68068481241e89",
+      "title": "Staged cutout adapter native checks",
+      "scope": "35 checks passed with an owned diagnostic shader, including stored-float and keyword state checks, asynchronous ownership and complete drain. The installed game is unchanged. This does not validate the new fringe texture, original game shader or mesh streaming.",
+      "targets": []
+    }
+  ],
+  "asset_notes": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+      "note": "Authored granite is proved on a standing-stone menu fixture. Shared rock scope is broader; no Deep North scene approval."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+      "note": "Authored timber is proved on the pole material. The same original image also serves woodwall, whose visible scene coverage is not established."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+      "note": "Authored atlas binding is proved. The full roof companion cutout remains original, so complete roof art is not approved."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8605274158951166907",
+      "note": "Retained original geometry with authored albedo UV review. This is a different mesh from the standing-stone game fixture; no name-based game progress is assigned."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5074722651943391187",
+      "note": "Retained original geometry with authored albedo UV review. No authored model or native mesh-streaming validation."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+      "note": "Retained original geometry used in the exact game fixture. Original companion cutout remains; no authored model or native mesh-streaming validation."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2790173395324991560",
+      "note": "Retained original geometry. Only material slot 1 received the authored atlas during the isolated UV review."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6499687211232451560",
+      "note": "Retained original geometry. Isolated slot 0 UV review does not establish LOD transition quality."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+      "note": "An authored 512 RGBA candidate targets straw_roof_alpha. The installed cutout and shared opaque material remain original. UV, native compression and game validation are pending; the two smallest mips lose cutout coverage."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+      "note": "Original corner cutout layout inspected. Separate authored alpha silhouette and fiber fitting are pending."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+      "note": "Original mesh inspected for opaque slot 1 and fringe slot 2. No authored material or model review yet."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+      "note": "Original mesh inspected for opaque slot 1 and fringe slot 2. No authored material or model review yet."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+      "note": "Original mesh inspected for opaque slot 1 and two fringe slots. No authored material or model review yet."
+    }
+  ],
+  "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18"
+}

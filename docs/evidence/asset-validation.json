@@ -1,0 +1,209 @@
+{
+  "decoder": "texture2ddecoder 1.0.6",
+  "engine_render_validation": false,
+  "assets": [
+    {
+      "id": "grass_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 1.7669474283854167,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "grass_normal",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 0.137664794921875,
+      "alpha_mean_absolute_error": 0.5809478759765625,
+      "coverage_at_128": 0.5891876220703125,
+      "decoded_coverage_at_128": 0.0082550048828125,
+      "max_decoded_tangent_xy_length": 0.01999615495526575,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "earth_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 1.7311808268229167,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "earth_normal",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 0.14275614420572916,
+      "alpha_mean_absolute_error": 0.609039306640625,
+      "coverage_at_128": 0.622711181640625,
+      "decoded_coverage_at_128": 0.013671875,
+      "max_decoded_tangent_xy_length": 0.01999615495526586,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "timber_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 1.9296112060546875,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "timber_normal",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 0.1300201416015625,
+      "alpha_mean_absolute_error": 0.5141754150390625,
+      "coverage_at_128": 0.5672607421875,
+      "decoded_coverage_at_128": 0.0564727783203125,
+      "max_decoded_tangent_xy_length": 0.01999615495526586,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "granite_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 1.79351806640625,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "granite_normal",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 0.14700826009114584,
+      "alpha_mean_absolute_error": 0.5548553466796875,
+      "coverage_at_128": 0.562469482421875,
+      "decoded_coverage_at_128": 0.0084075927734375,
+      "max_decoded_tangent_xy_length": 0.022866478019001095,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "leaf_color_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 2.3653411865234375,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "leaf_color_normal",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 0.15394083658854166,
+      "alpha_mean_absolute_error": 0.566558837890625,
+      "coverage_at_128": 0.6132965087890625,
+      "decoded_coverage_at_128": 0.0702056884765625,
+      "max_decoded_tangent_xy_length": 0.033734608890363275
+    },
+    {
+      "id": "thatch_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 3.04351806640625,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "thatch_normal",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 0.14672342936197916,
+      "alpha_mean_absolute_error": 0.4608917236328125,
+      "coverage_at_128": 0.5249481201171875,
+      "decoded_coverage_at_128": 0.0840606689453125,
+      "max_decoded_tangent_xy_length": 0.022866478019001095,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "beech_card_albedo",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 1.2551841735839844,
+      "alpha_mean_absolute_error": 1.4793891906738281,
+      "coverage_at_128": 0.3347625732421875,
+      "decoded_coverage_at_128": 0.33477020263671875
+    },
+    {
+      "id": "beech_card_normal",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 0.6666666666666666,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "max_decoded_tangent_xy_length": 0.01999615495526575
+    },
+    {
+      "id": "granite_hd_albedo",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 3.2082897822062173,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "granite_hd_normal",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 0.16039911905924478,
+      "alpha_mean_absolute_error": 0.48529052734375,
+      "coverage_at_128": 0.5199136734008789,
+      "decoded_coverage_at_128": 0.048526763916015625,
+      "max_decoded_tangent_xy_length": 0.02772967769359016,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "timber_hd_albedo",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 2.4279276529947915,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "timber_hd_normal",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 0.22994359334309897,
+      "alpha_mean_absolute_error": 0.6071662902832031,
+      "coverage_at_128": 0.6267738342285156,
+      "decoded_coverage_at_128": 0.0196075439453125,
+      "max_decoded_tangent_xy_length": 0.01999615495526586,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "thatch_hd_albedo",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 3.4080737431844077,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "thatch_hd_normal",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 0.16359488169352213,
+      "alpha_mean_absolute_error": 0.3991098403930664,
+      "coverage_at_128": 0.5119781494140625,
+      "decoded_coverage_at_128": 0.13767719268798828,
+      "max_decoded_tangent_xy_length": 0.02772967769359016,
+      "png_edge_max_error": 0
+    },
+    {
+      "id": "roof_atlas_hd_albedo",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 2.800337473551432,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "roof_atlas_hd_normal",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 0.6666666666666666,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0,
+      "max_decoded_tangent_xy_length": 0.01999615495526575
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+test_alpha_is_exact_and_never_taken_from_generated_preview (test_asset_pipeline.AssetPipelineTests.test_alpha_is_exact_and_never_taken_from_generated_preview) ... ok
+test_build_preflights_linked_outputs_before_writing_any_texture (test_asset_pipeline.AssetPipelineTests.test_build_preflights_linked_outputs_before_writing_any_texture) ... ok
+test_dxt5_full_chain_decodes_upright (test_asset_pipeline.AssetPipelineTests.test_dxt5_full_chain_decodes_upright) ... ok
+test_mips_filter_albedo_in_linear_light (test_asset_pipeline.AssetPipelineTests.test_mips_filter_albedo_in_linear_light) ... ok
+test_normal_encoding_has_correct_png_to_unity_slope (test_asset_pipeline.AssetPipelineTests.test_normal_encoding_has_correct_png_to_unity_slope) ... ok
+test_periodic_rgb_preserves_alpha (test_asset_pipeline.AssetPipelineTests.test_periodic_rgb_preserves_alpha) ... ok
+test_release_input_rejects_symlinks_even_inside_root (test_asset_pipeline.AssetPipelineTests.test_release_input_rejects_symlinks_even_inside_root) ... ok
+test_release_input_rejects_traversal_and_resources (test_asset_pipeline.AssetPipelineTests.test_release_input_rejects_traversal_and_resources) ... ok
+test_transparent_rgb_does_not_bleed_into_visible_mips (test_asset_pipeline.AssetPipelineTests.test_transparent_rgb_does_not_bleed_into_visible_mips) ... ok
+test_unity_payload_flips_storage_rows_without_changing_normal_sign (test_asset_pipeline.AssetPipelineTests.test_unity_payload_flips_storage_rows_without_changing_normal_sign) ... ok
+test_listed_symlink_is_rejected (test_package_staging.PackageTests.test_listed_symlink_is_rejected) ... ok
+test_only_verified_manifest_entries_are_collected (test_package_staging.PackageTests.test_only_verified_manifest_entries_are_collected) ... ok
+test_copy_allowlist (test_prepare_unity.SafetyTests.test_copy_allowlist) ... ok
+test_real_inputs_and_tamper_detection (test_prepare_unity.SafetyTests.test_real_inputs_and_tamper_detection) ... ok
+test_rejects_escape_absolute_resource_and_links (test_prepare_unity.SafetyTests.test_rejects_escape_absolute_resource_and_links) ... ok
+test_staging_preflights_output_symlink (test_prepare_unity.SafetyTests.test_staging_preflights_output_symlink) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.043s
+
+OK

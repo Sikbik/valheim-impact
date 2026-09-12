@@ -1,0 +1,33 @@
+{
+  "capturedAt": "2026-09-12T16:36:16.734291+00:00",
+  "scope": "Read-only preservation and final offline/runtime/native authoring checks. No game deployment or gameplay performance claim.",
+  "installationFilesChecked": 12,
+  "installationFilesChanged": [],
+  "valheimProcesses": [],
+  "pythonTests": {
+    "command": "python -m unittest discover -s tests -p test_*.py -q",
+    "run": 50,
+    "passed": 49,
+    "skipped": 1,
+    "note": "The optional display test is exercised separately with Python+Tk."
+  },
+  "runtimeAssertions": {
+    "command": "python tools/build.py --config local/build.json --test",
+    "passed": 145,
+    "failures": 0
+  },
+  "nativeTextures": 16,
+  "nativeLifecycleChecks": 14,
+  "nativeLifecycleFinalAllocatedBytes": 0,
+  "gameplayValidated": false,
+  "olderHardwareValidated": false,
+  "windowsValidated": false,
+  "graphicalInstallerTests": {
+    "passed": 1,
+    "suiteWithGuiEnabled": 28,
+    "note": "Separate Python+Tk run exercises preview and stale-input disabling against a disposable fixture."
+  },
+  "installerBinarySha256": "39792fd26f5e0f9588ea34d26543fda62e9140c9f40ff42f454a20864fa457df",
+  "experimentalPackageSha256": "a135684667c0dae29170d3ae1bcd71130bd5dec350895708b92356eaa06af07e",
+  "installerUiCaptureSha256": "a32fa2923674699de9bcc5e1501283489ddaab4aaa26dd5aafc6804359815204"
+}

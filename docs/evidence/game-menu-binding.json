@@ -1,0 +1,337 @@
+{
+  "schemaVersion": 2,
+  "startedUtc": "2026-09-12T18:46:17.6185000Z",
+  "scope": "Local main-menu fixture only. Left uses the captured original; right uses production-bound authored texture. Existing loaded game meshes and shaders are borrowed. No character/world load, game-bundle load, scene coverage, route performance or hardware-target claim.",
+  "status": "passed: standing stone, timber pole and complete 67-degree roof mesh fixtures",
+  "threePairProbePassed": true,
+  "expectedPairs": 3,
+  "builtPairs": 3,
+  "menuGuard": {
+    "phase": "completed",
+    "scene": "start",
+    "demoMode": true,
+    "dontSaveAnything": true,
+    "expectedPluginsOnly": true,
+    "plugins": [
+      "org.valheimimpact.diagnostics",
+      "org.valheimimpact.validation"
+    ],
+    "quitRequested": true,
+    "createdObjectsCleaned": true
+  },
+  "platform": {
+    "unityVersion": "6000.0.75f1",
+    "graphicsApi": "Vulkan",
+    "gpu": "AMD Radeon RX 9070 XT (RADV GFX1201)",
+    "colorSpace": "Linear",
+    "screenWidth": 2560,
+    "screenHeight": 1440
+  },
+  "pairs": [
+    {
+      "material": "stone_huge",
+      "mesh": "default",
+      "expectedOwned": "granite_hd_albedo",
+      "actualTexture": "granite_hd_albedo",
+      "limitation": null,
+      "sourceRenderer": "high",
+      "sourceHierarchy": "highstone_2/high",
+      "slotReadLimitation": null,
+      "materialCandidates": 2,
+      "originalTextureCandidates": 1,
+      "meshCandidates": 2,
+      "rendererCandidates": 1,
+      "distinctSourcePairs": 1,
+      "actualWidth": 1024,
+      "actualHeight": 1024,
+      "visiblePixels": 33221,
+      "changedPixels": 23623,
+      "expectedSelectedSlot": 0,
+      "expectedSubmeshes": 1,
+      "selectedSlot": 0,
+      "materialSlotCount": 1,
+      "meshVertices": 106,
+      "meshSubmeshes": 1,
+      "scannedRenderers": 20374,
+      "meshLayoutCandidates": 1,
+      "slotReadRejected": 0,
+      "slotLayoutRejected": 0,
+      "companionMaterialCount": 0,
+      "companionTextureCount": 0,
+      "rowCenterY": 4.4,
+      "applied": true,
+      "referencePreserved": true,
+      "companionSlotsPreserved": true,
+      "slotAssignmentsPreserved": true,
+      "allSubmeshesPreserved": true,
+      "rendererScanTruncated": false,
+      "distinctSourcePairsIsLowerBound": false,
+      "meshBoundsSize": [
+        2.159269,
+        3.32463813,
+        1.122049
+      ],
+      "fixtureRotationEuler": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "submeshIndexCounts": [
+        528
+      ],
+      "sourceSlots": [
+        {
+          "slot": 0,
+          "materialId": 370060,
+          "textureId": 58304,
+          "textureWidth": 512,
+          "textureHeight": 512,
+          "material": "stone_huge",
+          "shader": "Custom/StaticRock",
+          "texture": "rock_256",
+          "hasMainTexture": true,
+          "originalTextureMatch": true,
+          "ownedTextureMatch": false,
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "offset": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "material": "woodpole",
+      "mesh": "Cube_Cube_Material",
+      "expectedOwned": "timber_hd_albedo",
+      "actualTexture": "timber_hd_albedo",
+      "limitation": null,
+      "sourceRenderer": "New (11)",
+      "sourceHierarchy": "dvergrprops_crate_ashlands/destruction/New (11)",
+      "slotReadLimitation": null,
+      "materialCandidates": 1,
+      "originalTextureCandidates": 1,
+      "meshCandidates": 1,
+      "rendererCandidates": 39,
+      "distinctSourcePairs": 1,
+      "actualWidth": 1024,
+      "actualHeight": 1024,
+      "visiblePixels": 24512,
+      "changedPixels": 24512,
+      "expectedSelectedSlot": 0,
+      "expectedSubmeshes": 1,
+      "selectedSlot": 0,
+      "materialSlotCount": 1,
+      "meshVertices": 66,
+      "meshSubmeshes": 1,
+      "scannedRenderers": 20374,
+      "meshLayoutCandidates": 817,
+      "slotReadRejected": 0,
+      "slotLayoutRejected": 0,
+      "companionMaterialCount": 0,
+      "companionTextureCount": 0,
+      "rowCenterY": 0.0,
+      "applied": true,
+      "referencePreserved": true,
+      "companionSlotsPreserved": true,
+      "slotAssignmentsPreserved": true,
+      "allSubmeshesPreserved": true,
+      "rendererScanTruncated": false,
+      "distinctSourcePairsIsLowerBound": false,
+      "meshBoundsSize": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fixtureRotationEuler": [
+        0.0,
+        0.0,
+        90.0
+      ],
+      "submeshIndexCounts": [
+        132
+      ],
+      "sourceSlots": [
+        {
+          "slot": 0,
+          "materialId": 69948,
+          "textureId": 53810,
+          "textureWidth": 128,
+          "textureHeight": 128,
+          "material": "woodpole",
+          "shader": "Custom/Piece",
+          "texture": "Planks5c_low",
+          "hasMainTexture": true,
+          "originalTextureMatch": true,
+          "ownedTextureMatch": false,
+          "scale": [
+            0.3,
+            0.13
+          ],
+          "offset": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "material": "wood_roof_mat",
+      "mesh": "default",
+      "expectedOwned": "roof_atlas_hd_albedo",
+      "actualTexture": "roof_atlas_hd_albedo",
+      "limitation": null,
+      "sourceRenderer": "default",
+      "sourceHierarchy": "wood_roof_67/New/default",
+      "slotReadLimitation": null,
+      "materialCandidates": 1,
+      "originalTextureCandidates": 1,
+      "meshCandidates": 2,
+      "rendererCandidates": 1,
+      "distinctSourcePairs": 1,
+      "actualWidth": 1024,
+      "actualHeight": 1024,
+      "visiblePixels": 20898,
+      "changedPixels": 5098,
+      "expectedSelectedSlot": 0,
+      "expectedSubmeshes": 2,
+      "selectedSlot": 0,
+      "materialSlotCount": 2,
+      "meshVertices": 312,
+      "meshSubmeshes": 2,
+      "scannedRenderers": 20374,
+      "meshLayoutCandidates": 1,
+      "slotReadRejected": 0,
+      "slotLayoutRejected": 0,
+      "companionMaterialCount": 1,
+      "companionTextureCount": 5,
+      "rowCenterY": -4.4,
+      "applied": true,
+      "referencePreserved": true,
+      "companionSlotsPreserved": true,
+      "slotAssignmentsPreserved": true,
+      "allSubmeshesPreserved": true,
+      "rendererScanTruncated": false,
+      "distinctSourcePairsIsLowerBound": false,
+      "meshBoundsSize": [
+        2.044734,
+        5.248722,
+        2.520274
+      ],
+      "fixtureRotationEuler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "submeshIndexCounts": [
+        666,
+        96
+      ],
+      "sourceSlots": [
+        {
+          "slot": 0,
+          "materialId": 190850,
+          "textureId": 552646,
+          "textureWidth": 128,
+          "textureHeight": 128,
+          "material": "wood_roof_mat",
+          "shader": "Custom/Piece",
+          "texture": "wood_roof_d",
+          "hasMainTexture": true,
+          "originalTextureMatch": true,
+          "ownedTextureMatch": false,
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "offset": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "slot": 1,
+          "materialId": 67078,
+          "textureId": 154750,
+          "textureWidth": 64,
+          "textureHeight": 64,
+          "material": "straw_roof_alpha",
+          "shader": "Custom/Piece",
+          "texture": "straw_roof",
+          "hasMainTexture": true,
+          "originalTextureMatch": false,
+          "ownedTextureMatch": false,
+          "scale": [
+            1.0,
+            1.0
+          ],
+          "offset": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ],
+  "capture": {
+    "width": 3840,
+    "height": 2160,
+    "sha256": "2790ed381efccc470e5e5ec3123d5fc0aa214fcdbc2f137092252ee41299ac62",
+    "localPath": "local/game-validation/menu-run-12/comparison-4k.png",
+    "tracked": false,
+    "reason": "Includes original game reference pixels",
+    "roofView": "top surface; fixture rotation Y=180 degrees"
+  },
+  "sourceSha256": {
+    "tools/game/MenuValidationProbe.cs": "42d26decaa771040511dfe2f3d79c4b1b05347c260317de42350c0bee68b4b09",
+    "tools/game/build_probe.py": "91e8fa41ebf675eb2bf2c9ad9a6d60146a093f802103b717ec07813dbbda8193",
+    "src/ValheimImpact.Unity/OwnedMaterialHost.cs": "17bbf05e0050c37eb9babd23f9027732bac2f1114356f8756631d7406d16ced3",
+    "src/ValheimImpact.Unity/OwnedMaterialBinder.cs": "1e9c6385acc6e15bcd12f70548f6c6fde42b77fb9e4baab0d084655058e327c3",
+    "assets/bindings.json": "f0bbdcf1385bebaea25d50c6b04ead4ca0da02f90a0c32c0510bd0feb5f8d098"
+  },
+  "runtimeSha256": "ce3c85f45bc75065bbbf4b61d01b3732c64641feac8e5a62edd167b01ff3a110",
+  "probeSha256": "fb0bbb4a53f86d8b44d09602f89419f39d706047a39fde64dbb7211d0012ebd3",
+  "package": {
+    "path": "build/valheim-impact-0.3.0-candidate4-linux.zip",
+    "sha256": "efce0d498a894082807b5612391312757be45b2bdec0e035b17a357197c19d1b",
+    "bytes": 4205007
+  },
+  "cleanup": {
+    "temporaryProbeRemoved": true,
+    "discoverablePrivateInstallerDlls": 0,
+    "onlyProductionPluginEnabled": true,
+    "unexpectedHostRemovalWarning": false
+  },
+  "preservation": {
+    "existingLocalSaveTreeMetadataUnchanged": true,
+    "steamChangedOnlyCloudCacheMetadata": true,
+    "checkedEntries": {
+      "local": {
+        "metadataEntries": 24,
+        "sha256Entries": 0
+      },
+      "steam": {
+        "metadataEntries": 38,
+        "sha256Entries": 15
+      }
+    },
+    "characterOrWorldOpened": false
+  },
+  "limitations": [
+    "Full roof mesh retains original cutout straw overlay; much of the visible top layer is still original. Atlas binding success is not complete roof art approval.",
+    "No placed building, weather, LOD transition, woodwall or biome coverage proof",
+    "No representative hardware, route performance, physical VRAM, Windows, or final art approval claim",
+    "Normal process exit reports remaining native payload and is not an asynchronous drain proof"
+  ],
+  "exitPayload": {
+    "materialLeases": 0,
+    "residentBytes": 4194384,
+    "pendingBytes": 0,
+    "retiringBytes": 0,
+    "completedNativeTextures": 3,
+    "loaderErrors": 0
+  }
+}

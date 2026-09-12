@@ -1,0 +1,37 @@
+name: Asset contribution
+description: Propose a texture, model or visual improvement
+title: "[Asset] "
+body:
+  - type: markdown
+    attributes:
+      value: "Read CONTRIBUTING.md before uploading files. Submit original work and use a public pseudonym if preferred."
+  - type: input
+    id: identity
+    attributes:
+      label: Exact asset identity
+      description: CAB:path_id from the tracker, or explain why this is new authored content.
+    validations:
+      required: true
+  - type: dropdown
+    id: biome
+    attributes:
+      label: Biome or shared scope
+      options: [Meadows, Black Forest, Swamp, Mountains, Plains, Mistlands, Ashlands, Deep North, Ocean, Shared]
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed work and validation
+      description: Describe art direction, intended source files, materials and checks you can perform.
+    validations:
+      required: true
+  - type: checkboxes
+    id: rights
+    attributes:
+      label: Contribution requirements
+      options:
+        - label: I can submit this artwork under CC BY 4.0 and have read the contribution guide.
+          required: true
+        - label: I will keep original game payloads, private paths and personal information out of the submission.
+          required: true

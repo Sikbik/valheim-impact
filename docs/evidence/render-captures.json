@@ -1,0 +1,34 @@
+{
+  "editor": "6000.0.75f1",
+  "graphicsApi": "Vulkan",
+  "colorSpace": "Linear",
+  "resolution": [
+    3840,
+    2160
+  ],
+  "scope": "Owned blockout and same-art texture resolution studies. Not game screenshots or preset/performance validation.",
+  "graniteComparison": "Left: same authored BC3 artwork with 256 base mip. Right: 1024 base mip. Identical quad coverage, unlit shader, trilinear filtering. Higher detail retained as candidate; game UV fitting pending.",
+  "nightAdjustment": "Raised owned blockout ambient and moonlight after first Linear capture obscured material readability. Not a game lighting change.",
+  "captures": [
+    {
+      "path": "unity/Assets/Captures/meadows-daylight-4k.png",
+      "sha256": "683ca8a022aa9bb52b526ade0d66d1fe3409a76c54a1caec11980dabc53947e1",
+      "bytes": 1999699
+    },
+    {
+      "path": "unity/Assets/Captures/meadows-sunset-4k.png",
+      "sha256": "678056215408c53561653ae37df71e741b973d43e60ff7d7bc0d117d6e90e92f",
+      "bytes": 1603977
+    },
+    {
+      "path": "unity/Assets/Captures/meadows-night-4k.png",
+      "sha256": "004045f37da92bdad1495b2a0001df68eca062a7ef16e1376387ac45559f6172",
+      "bytes": 1290019
+    },
+    {
+      "path": "unity/Assets/Captures/granite-256-vs-1024-4k.png",
+      "sha256": "3fc8e4a6857f742891c0ff35c88453cdfecce23b28788b10ddcc1043d27330b4",
+      "bytes": 9411410
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "profile": "legacy-before-valheim-impact",
+  "phase": "isolated",
+  "legacyEntries": 2495,
+  "hashedFiles": 233,
+  "symlinks": 4,
+  "legacyInventoryMatches": true,
+  "activeLegacyPlugins": 0,
+  "gameWasClosed": true,
+  "patchers": [],
+  "scope": "Reversible local Linux plugin isolation. Large resource payloads are preserved by same-filesystem rename and metadata, not full hashing. No user world session was opened."
+}

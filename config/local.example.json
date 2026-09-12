@@ -1,0 +1,5 @@
+{
+  "dotnet": "dotnet",
+  "roslyn_csc": "/absolute/path/to/roslyn/tasks/netcore/bincore/csc.dll",
+  "game_dir": "/absolute/path/to/Valheim"
+}

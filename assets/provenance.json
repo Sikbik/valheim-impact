@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-09-12",
+  "assets": [
+    {
+      "key": "scene",
+      "dest": "assets/concepts/meadows-lighting-v1.png",
+      "status": "process-reference-too-realistic",
+      "sha256": "b79f5eacb9b257b5da336c768d906f2814a8141c20c06844417b871d9cd96d72",
+      "original_game_pixels": false,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "scene_revision",
+      "dest": "assets/concepts/meadows-lighting-v2.png",
+      "status": "recommended-concept",
+      "sha256": "e8a44677aa58cb8c9a088fbe5354c7b8e7524f843a7eb58c40a4e5212afbdacc",
+      "original_game_pixels": false,
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "materials",
+      "dest": "assets/meadows/material-sheet-v1.png",
+      "status": "authored-study",
+      "sha256": "9a239494a2d0bdcaa60b7de2672f84a7d6b35e2d72c2e28cd855723bc09cd8dc",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "foliage",
+      "dest": "assets/meadows/beech-cutout-v1.png",
+      "status": "authored-probe-card",
+      "sha256": "d24255948649ea1ae6d45498e7121fe053a495459249f9e09523005b8d5a3431",
+      "original_game_pixels": false,
+      "dimensions": [
+        1363,
+        1154
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "granite_surface",
+      "dest": "assets/meadows/granite-surface-v1.png",
+      "status": "dedicated-1k-source-menu-standing-stone-albedo-validated",
+      "sha256": "49d76e5071066c821d45a0e4bf49584d63ccefa25172972bfc1e8b1a7b249df4",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "timber_surface",
+      "dest": "assets/meadows/timber-surface-v1.png",
+      "status": "dedicated-1k-source-menu-pole-albedo-validated",
+      "sha256": "f82c479385e4002ad7b8e71388c264369cc3c4d69fa23394d242510bf90aa489",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "thatch_surface",
+      "dest": "assets/meadows/thatch-surface-v1.png",
+      "status": "dedicated-1k-candidate-not-game-validated",
+      "sha256": "1cfb2ed2d29b6fe33a407b06dca72478c9de3c4c40397cd3dc1ec188161607c9",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "roof_atlas",
+      "dest": "assets/meadows/roof-atlas-v1.png",
+      "status": "native-and-uv-validated-with-menu-atlas-binding-proof-original-fringe-remains",
+      "sha256": "b6da43a04caca69f5af270fed153e07218575c89180ab26c9bf07774faf8c96a",
+      "parents": [
+        {
+          "path": "assets/meadows/thatch-surface-v1.png",
+          "sha256": "1cfb2ed2d29b6fe33a407b06dca72478c9de3c4c40397cd3dc1ec188161607c9"
+        },
+        {
+          "path": "assets/meadows/timber-surface-v1.png",
+          "sha256": "f82c479385e4002ad7b8e71388c264369cc3c4d69fa23394d242510bf90aa489"
+        }
+      ],
+      "layout_sha256": "3a70a52211b2147265e5f3970c33307d3caf9cee2347fe4ca1acd2b9810c070b",
+      "original_game_pixels": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored inputs, see transformation metadata"
+    },
+    {
+      "key": "straw_fringe_rgb",
+      "dest": "assets/meadows/straw-fringe-source-rgb-v1.png",
+      "status": "authored RGB source with painted neutral background, not usable as cutout",
+      "sha256": "7322cb1b76c54f5c1e953fac5f62ad1650c4aedc828c6fb6dc0b12b18165509b",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "straw_fringe_derived",
+      "dest": "assets/meadows/straw-fringe-standard-rgba-v1.png",
+      "status": "derived-alpha candidate, pending mesh and game validation",
+      "sha256": "0f4a2f40d67ad245489c84970fa7e8accb637216dce11955a87324a17d951023",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "straw_fringe_fitted",
+      "dest": "assets/meadows/straw-fringe-standard-v1.png",
+      "status": "512 RGBA standard-fringe candidate, not native, UV or game validated",
+      "sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "recipe": "assets/meadows/straw-fringe-standard-recipe.json",
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored inputs, see transformation metadata"
+    }
+  ],
+  "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."
+}

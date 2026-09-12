@@ -1,0 +1,2 @@
+-r requirements-assets.txt
+UnityPy==1.25.3

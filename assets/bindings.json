@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "bindings": [
+    {
+      "id": "shared-rock",
+      "materialName": "stone_huge",
+      "shaderName": "Custom/StaticRock",
+      "textureProperty": "_MainTex",
+      "originalTextureName": "rock_256",
+      "originalWidth": 512,
+      "originalHeight": 512,
+      "ownedTextureId": "granite_hd_albedo"
+    },
+    {
+      "id": "timber-wall",
+      "materialName": "woodwall",
+      "shaderName": "Custom/Piece",
+      "textureProperty": "_MainTex",
+      "originalTextureName": "Planks5c_low",
+      "originalWidth": 128,
+      "originalHeight": 128,
+      "ownedTextureId": "timber_hd_albedo"
+    },
+    {
+      "id": "timber-pole",
+      "materialName": "woodpole",
+      "shaderName": "Custom/Piece",
+      "textureProperty": "_MainTex",
+      "originalTextureName": "Planks5c_low",
+      "originalWidth": 128,
+      "originalHeight": 128,
+      "ownedTextureId": "timber_hd_albedo"
+    },
+    {
+      "id": "roof-67-atlas",
+      "materialName": "wood_roof_mat",
+      "shaderName": "Custom/Piece",
+      "textureProperty": "_MainTex",
+      "originalTextureName": "wood_roof_d",
+      "originalWidth": 128,
+      "originalHeight": 128,
+      "ownedTextureId": "roof_atlas_hd_albedo"
+    }
+  ]
+}

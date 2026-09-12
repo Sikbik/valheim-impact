@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "scope": "Newly authored standard straw-fringe candidate only. Intended cutout material scope is explicit; no runtime allowlist or installed content change.",
+  "target_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+  "target_texture_name": "straw_roof",
+  "target_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3815874719294672528",
+  "target_material_name": "straw_roof_alpha",
+  "shader_name": "Custom/Piece",
+  "original_dimensions": [
+    64,
+    64
+  ],
+  "candidate": {
+    "path": "assets/meadows/straw-fringe-standard-v1.png",
+    "sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c",
+    "dimensions": [
+      512,
+      512
+    ],
+    "alpha_extrema": [
+      0,
+      255
+    ],
+    "cutoff": 0.69,
+    "coverage": 0.5492820739746094
+  },
+  "authored": true,
+  "uv_reviewed": false,
+  "native_validated": false,
+  "game_fixture_validated": false,
+  "approved": false,
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "evidence": {
+    "docs/evidence/default-roof-layout.json": "524278c64f03a9cfa052ab94be52ef80897eea167985d11940d158e6f2ab407f",
+    "docs/evidence/straw-fringe-key.json": "8b4d94bc5a3ba88f1b0c100770742c0e31b91ec6b06d7443e6ddf3ff7bc80857",
+    "docs/evidence/straw-fringe-fit.json": "9ba61de66dfae256d2a1a30f645b3b96d0437d9cc57038e4dbb11bdf9dbf9d80"
+  },
+  "limits": [
+    "Shared opaque straw_roof and separate corner texture are not covered by this candidate.",
+    "Mask is derived from the original project artwork, not source transparency or a copied game mask.",
+    "2x2 and 1x1 uncompressed mips fall completely below cutoff; coverage preservation needs work.",
+    "Horizontal repeat, full roof geometry, two-sided shading, compression and actual-game behavior remain unvalidated."
+  ]
+}

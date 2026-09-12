@@ -1,0 +1,64 @@
+{
+  "phase": "Meadows prototype",
+  "candidate": "0.3.0 candidate 4",
+  "package_bytes": 4205007,
+  "native_texture_payload_bytes": 12933024,
+  "native_texture_count": 22,
+  "mip_levels": 216,
+  "material_fixtures": 3,
+  "native_binding_checks": 24,
+  "milestones": [
+    {
+      "title": "Art direction and material library",
+      "state": "active",
+      "detail": "Nordic silhouettes, a coherent palette and first stone, timber and roof studies are established. Production artwork and material standards still need broader validation.",
+      "evidence": "assets/provenance.json"
+    },
+    {
+      "title": "A complete playable Meadows scene",
+      "state": "active",
+      "detail": "Three material fixtures pass in the game menu. Terrain, foliage, water, complete buildings and a played scene still need review.",
+      "evidence": "docs/evidence/game-menu-binding.json"
+    },
+    {
+      "title": "Every biome, one coherent world",
+      "state": "pending",
+      "detail": "Meadows leads the work. Black Forest, Swamp, Mountains, Plains, Mistlands, Ashlands, Deep North and Ocean each need scoped artwork and approval.",
+      "evidence": null
+    },
+    {
+      "title": "Buildings, equipment and creatures",
+      "state": "active",
+      "detail": "Wood and roof materials are being developed. Shared structures, equipment, characters and creatures remain a substantial asset backlog.",
+      "evidence": "docs/ROOF_ATLAS.md"
+    },
+    {
+      "title": "Lighting, weather, water and effects",
+      "state": "pending",
+      "detail": "Develop consistent sunlight, night readability, weather, water and effects across biome transitions. Concepts are not completed game lighting.",
+      "evidence": null
+    },
+    {
+      "title": "Streaming and measured performance",
+      "state": "active",
+      "detail": "Bounded texture ownership is tested. Representative 6 GB hardware, exploration frame times, full-world residency and model or shader streaming remain unverified.",
+      "evidence": "docs/evidence/cutout-binding-native.json"
+    },
+    {
+      "title": "Installer and platform compatibility",
+      "state": "active",
+      "detail": "Linux installation, verification and rollback have local fixture coverage. Wider Linux testing, Windows validation and a supported release package remain.",
+      "evidence": "docs/MILESTONE_03.md"
+    },
+    {
+      "title": "Contribution workflow and public alpha",
+      "state": "active",
+      "detail": "Public source, asset submissions and evidence checks are being prepared. A playable alpha needs accepted artwork, compatibility results and release documentation.",
+      "evidence": null
+    }
+  ],
+  "staged_native_binding_checks": 35,
+  "staged_evidence": "docs/evidence/cutout-binding-native.json",
+  "public_repository": "https://github.com/Sikbik/valheim-impact",
+  "public_url": "https://sikbik.github.io/valheim-impact/"
+}

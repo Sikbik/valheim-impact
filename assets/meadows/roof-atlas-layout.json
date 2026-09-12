@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "reference_size": [
+    128,
+    128
+  ],
+  "output_size": [
+    1024,
+    1024
+  ],
+  "output": "assets/meadows/roof-atlas-v1.png",
+  "sources": {
+    "thatch": {
+      "path": "assets/meadows/thatch-surface-v1.png",
+      "sha256": "1cfb2ed2d29b6fe33a407b06dca72478c9de3c4c40397cd3dc1ec188161607c9"
+    },
+    "timber": {
+      "path": "assets/meadows/timber-surface-v1.png",
+      "sha256": "f82c479385e4002ad7b8e71388c264369cc3c4d69fa23394d242510bf90aa489"
+    }
+  },
+  "regions": [
+    {
+      "source": "thatch",
+      "box": [
+        0,
+        0,
+        48,
+        128
+      ],
+      "quarter_turns": 0
+    },
+    {
+      "source": "timber",
+      "box": [
+        48,
+        0,
+        128,
+        128
+      ],
+      "quarter_turns": 0
+    }
+  ],
+  "layout_note": "PIL top-down coordinates. The 3/8 split is a fitting choice within the unoccupied UV gap, not an exact original pixel seam. Thatch U is at most 0.362706006; timber U is at least 0.664012015 across all eight inspected roof meshes. No original pixels are used."
+}

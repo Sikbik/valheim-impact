@@ -1,0 +1,268 @@
+{
+  "schema_version": 1,
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "scope": "Bounded original default/45 roof reference preparation. No art or runtime changes.",
+  "coordinate_conventions": {
+    "png": "PIL top-down rows; UnityPy decoded PNG already flipped from texture byte order.",
+    "unity_uv": "U right, V up. Original UV0 exported unchanged.",
+    "repeat_point": "x=floor(frac(u)*W); y=H-1-floor(frac(v)*H). Apply material scale and offset before repeat.",
+    "uv_union_diagnostic": "All 64x64 texel centers tested against the selected UV triangle union; repeated triangles count only once. UV area sum includes overlapping sheets and is not world/screen area."
+  },
+  "layout_findings": {
+    "type": "Whole-image straw tiles with graded alpha silhouettes, not the two-region wood_roof_d atlas.",
+    "straw_roof": "Opaque and fringe materials share the same complete image. The alpha silhouette is densest through the horizontal middle with ragged fibers toward both top and bottom.",
+    "straw_roof_corner": "Separate whole-image corner silhouette, with cutout margins on all four sides, rounded upper silhouette and ragged lower fibers.",
+    "uv_subdivision": "Default/45 fringe sheets divide UVs at U=0.5 and V=0.372882992. These are mesh subdivisions of the same continuous image, not different atlas surfaces.",
+    "uv_subdivision_topdown": "V=0.372882992 is normalized PNG y=0.627117008, continuous source edge y=40.135488512 at 64 pixels.",
+    "tile_wrap": "Selected sample UVs stay in [0,1]. Exact U or V=1 wraps to 0 under Repeat. Full-image border behavior and mip alpha coverage still matter."
+  },
+  "replacement_scope": {
+    "material_specific": "A SetTexture change on the opaque straw_roof material can use an opaque authored image while leaving the sibling straw_roof_alpha material and original Texture2D untouched. Shared input identity does not imply shared mutation.",
+    "opaque_only_limit": "This is a partial visual change. Original fringe color, detail and alpha remain until separately authored and fitted.",
+    "coherent_next_fit": [
+      "Fit a continuous authored straw RGB surface across the full image, retaining vertical grain for the standard roof tile.",
+      "Author a compatible graded-alpha fringe silhouette for straw_roof_alpha, using the local original only as a layout guide. Keep the color and cutout silhouette aligned with strand tips.",
+      "Prepare a separate corner alpha silhouette and matching corner fiber flow for straw_roof_corner_alpha. Its side and upper margins differ from the standard image.",
+      "Preserve saved material-specific mode, cutoff, two-sided normals, transforms and other behavior when binding; do not force alpha to 255 on fringe materials.",
+      "Validate original-to-authored silhouettes on the selected fringe submeshes, at the saved cutoff and across authored/compressed mipmaps. Do not copy original RGBA/masks into tracked or released artwork."
+    ]
+  },
+  "limits": [
+    "Image alpha percentages and UV-union texels are measurements, not visible screen coverage or native shader validation.",
+    "Only three high-detail representative meshes exported; no LOD, placement, weather or assembled-roof render validation.",
+    "Support normal-map alpha extrema are channel data and must not be treated as transparency."
+  ],
+  "textures": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+      "name": "straw_roof_corner",
+      "dimensions": [
+        64,
+        64
+      ],
+      "mip_count": 7,
+      "settings": {
+        "m_Aniso": 1,
+        "m_FilterMode": 0,
+        "m_MipBias": 0.0,
+        "m_WrapU": 0,
+        "m_WrapV": 0,
+        "m_WrapW": 0
+      },
+      "decoded_rgba_alpha": {
+        "pixels": 4096,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero": 303,
+        "alpha_255": 1167,
+        "alpha_intermediate": 2626,
+        "positive_coverage": 0.926025390625,
+        "coverage_at_saved_cutoff_0_69": 0.592529296875
+      },
+      "png_sha256": "ce6b00ad915caf15379eea5eca5aaf9f24d8375584a696d05245709aa309bc47"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+      "name": "straw_roof",
+      "dimensions": [
+        64,
+        64
+      ],
+      "mip_count": 7,
+      "settings": {
+        "m_Aniso": 1,
+        "m_FilterMode": 0,
+        "m_MipBias": 0.0,
+        "m_WrapU": 0,
+        "m_WrapV": 0,
+        "m_WrapW": 0
+      },
+      "decoded_rgba_alpha": {
+        "pixels": 4096,
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_zero": 14,
+        "alpha_255": 1186,
+        "alpha_intermediate": 2896,
+        "positive_coverage": 0.99658203125,
+        "coverage_at_saved_cutoff_0_69": 0.59716796875
+      },
+      "png_sha256": "1aa9d15a019ac6b5d61f52f104227727468bc1fe0ef3af08dd438bae748badfc"
+    }
+  ],
+  "materials": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3672209594003148970",
+      "name": "straw_roof_corner_alpha",
+      "shader_name": "Custom/Piece",
+      "saved_properties": {
+        "_Mode": 1.0,
+        "_Cutoff": 0.6899999976158142,
+        "_Cull": 0.0,
+        "_ZWrite": 1.0,
+        "_TwoSidedNormals": 1.0,
+        "_BumpScale": 1.0,
+        "_Glossiness": 0.33000001311302185,
+        "_RippleDistance": 0.0
+      },
+      "texture_slots": [
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_BumpMap",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1213961191642561888",
+          "texture_name": "straw_roof_corner_n"
+        },
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_MainTex",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+          "texture_name": "straw_roof_corner"
+        },
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_NoiseTex",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7967419701672495675",
+          "texture_name": "Noise"
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-9186947265058469545",
+      "name": "straw_roof",
+      "shader_name": "Custom/Piece",
+      "saved_properties": {
+        "_Mode": 0.0,
+        "_Cutoff": 0.0,
+        "_Cull": 0.0,
+        "_ZWrite": 1.0,
+        "_TwoSidedNormals": 0.0,
+        "_BumpScale": 0.47999998927116394,
+        "_Glossiness": 0.20000000298023224,
+        "_RippleDistance": 0.0
+      },
+      "texture_slots": [
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_BumpMap",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7624041961498091769",
+          "texture_name": "straw_roof_n"
+        },
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_MainTex",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+          "texture_name": "straw_roof"
+        },
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_NoiseTex",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7967419701672495675",
+          "texture_name": "Noise"
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:3815874719294672528",
+      "name": "straw_roof_alpha",
+      "shader_name": "Custom/Piece",
+      "saved_properties": {
+        "_Mode": 1.0,
+        "_Cutoff": 0.6899999976158142,
+        "_Cull": 0.0,
+        "_ZWrite": 1.0,
+        "_TwoSidedNormals": 1.0,
+        "_BumpScale": 1.0,
+        "_Glossiness": 0.20000000298023224,
+        "_RippleDistance": 0.10000000149011612
+      },
+      "texture_slots": [
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_BumpMap",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7624041961498091769",
+          "texture_name": "straw_roof_n"
+        },
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_MainTex",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+          "texture_name": "straw_roof"
+        },
+        {
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          },
+          "property": "_NoiseTex",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7967419701672495675",
+          "texture_name": "Noise"
+        }
+      ]
+    }
+  ],
+  "originalReferenceArtifactsTracked": false
+}

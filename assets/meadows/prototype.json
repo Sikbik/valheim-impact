@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "status": "owned-material-probes-not-game-replacements",
+  "assets": [
+    {
+      "id": "grass",
+      "source": "assets/meadows/material-sheet-v1.png",
+      "crop_box": [
+        0,
+        104,
+        418,
+        522
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.12
+    },
+    {
+      "id": "earth",
+      "source": "assets/meadows/material-sheet-v1.png",
+      "crop_box": [
+        418,
+        104,
+        836,
+        522
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.12
+    },
+    {
+      "id": "timber",
+      "source": "assets/meadows/material-sheet-v1.png",
+      "crop_box": [
+        836,
+        104,
+        1254,
+        522
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.12
+    },
+    {
+      "id": "granite",
+      "source": "assets/meadows/material-sheet-v1.png",
+      "crop_box": [
+        0,
+        731,
+        418,
+        1149
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.12
+    },
+    {
+      "id": "leaf_color",
+      "source": "assets/meadows/material-sheet-v1.png",
+      "crop_box": [
+        418,
+        731,
+        836,
+        1149
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "periodic": false,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.12
+    },
+    {
+      "id": "thatch",
+      "source": "assets/meadows/material-sheet-v1.png",
+      "crop_box": [
+        836,
+        731,
+        1254,
+        1149
+      ],
+      "size": [
+        256,
+        256
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.08
+    },
+    {
+      "id": "beech_card",
+      "source": "assets/meadows/beech-cutout-v1.png",
+      "crop_box": [
+        104,
+        0,
+        1258,
+        1154
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "alpha_policy": "cutout",
+      "normal_strength": 0
+    },
+    {
+      "id": "granite_hd",
+      "source": "assets/meadows/granite-surface-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.08
+    },
+    {
+      "id": "timber_hd",
+      "source": "assets/meadows/timber-surface-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.06
+    },
+    {
+      "id": "thatch_hd",
+      "source": "assets/meadows/thatch-surface-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": true,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.06
+    },
+    {
+      "id": "roof_atlas_hd",
+      "source": "assets/meadows/roof-atlas-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": false,
+      "alpha_policy": "opaque",
+      "normal_strength": 0
+    }
+  ]
+}

@@ -1,0 +1,316 @@
+{
+  "authored_visible_coverage": null,
+  "bundles_scanned": 283,
+  "candidate_pool_definition": "Unique textures linked by _MainTex, excluding estimated UI, effects and support maps. Includes unclassified records and is not exhaustive of other albedo properties.",
+  "categories": [
+    {
+      "category": "building",
+      "maintex_linked_textures": 242,
+      "texture_objects": 274
+    },
+    {
+      "category": "character",
+      "maintex_linked_textures": 140,
+      "texture_objects": 196
+    },
+    {
+      "category": "effect",
+      "maintex_linked_textures": 75,
+      "texture_objects": 95
+    },
+    {
+      "category": "equipment_item",
+      "maintex_linked_textures": 435,
+      "texture_objects": 578
+    },
+    {
+      "category": "support_map",
+      "maintex_linked_textures": 6,
+      "texture_objects": 1226
+    },
+    {
+      "category": "terrain_water",
+      "maintex_linked_textures": 7,
+      "texture_objects": 44
+    },
+    {
+      "category": "ui",
+      "maintex_linked_textures": 60,
+      "texture_objects": 187
+    },
+    {
+      "category": "unclassified",
+      "maintex_linked_textures": 116,
+      "texture_objects": 220
+    },
+    {
+      "category": "vegetation",
+      "maintex_linked_textures": 35,
+      "texture_objects": 39
+    },
+    {
+      "category": "world_surface",
+      "maintex_linked_textures": 242,
+      "texture_objects": 328
+    }
+  ],
+  "category_method": "Path and filename heuristic. UI and support-map rules precede world categories.",
+  "coverage_note": "No authored binding results are supplied to this read-only inventory. Candidate and serialized renderer counts do not establish visible coverage or remaining visible work.",
+  "first_surface_candidates": [
+    {
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "dimensions": [
+        128,
+        128
+      ],
+      "layout_assessment": "atlas",
+      "local_mesh_uv_samples": 3,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4672229894483433817",
+      "material_name": "wood_roof_mat",
+      "note": "Thatch on the left approximately one third and timber on the right. UVs select both regions. Requires atlas fitting.",
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "original_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+      "original_texture_name": "wood_roof_d",
+      "property": "_MainTex",
+      "saved_material_mode": 0.0,
+      "saved_zwrite": 1.0,
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "serialized_renderers": 15,
+      "shader_name": "Custom/Piece",
+      "source_paths": [
+        "Assets/GameElements/Pieces/_res/roof/model/wood_roof_mat.mat"
+      ],
+      "status": "metadata_and_local_uv_inspection_only",
+      "unique_linked_meshes": 8
+    },
+    {
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "dimensions": [
+        128,
+        128
+      ],
+      "layout_assessment": "continuous_directional_surface",
+      "local_mesh_uv_samples": 3,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4922003881561132676",
+      "material_name": "woodpole",
+      "note": "Horizontal grain tile sampled with the existing small scale. Same albedo as woodwall, distinct normal and UV transform.",
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "original_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+      "original_texture_name": "Planks5c_low",
+      "property": "_MainTex",
+      "saved_material_mode": 0.0,
+      "saved_zwrite": 1.0,
+      "scale": {
+        "x": 0.30000001192092896,
+        "y": 0.12999999523162842
+      },
+      "serialized_renderers": 43,
+      "shader_name": "Custom/Piece",
+      "source_paths": [
+        "Assets/GameElements/Pieces/_res/materials/woodpole.mat"
+      ],
+      "status": "metadata_and_local_uv_inspection_only",
+      "unique_linked_meshes": 4
+    },
+    {
+      "alpha_extrema": [
+        254,
+        255
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "layout_assessment": "continuous_surface",
+      "local_mesh_uv_samples": 3,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-652227259079398966",
+      "material_name": "stone_huge",
+      "note": "Continuous stone image on split rock UV islands. Preserve normal and moss channels. Shared material name also reaches a separate Deep North source material.",
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "original_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+      "original_texture_name": "rock_256",
+      "property": "_MainTex",
+      "saved_material_mode": 0.0,
+      "saved_zwrite": 1.0,
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "serialized_renderers": 177,
+      "shader_name": "Custom/StaticRock",
+      "source_paths": [
+        "Assets/world/Props/DeepNorth/HotSpring/stone_huge.mat"
+      ],
+      "status": "metadata_and_local_uv_inspection_only",
+      "unique_linked_meshes": 45
+    },
+    {
+      "alpha_extrema": [
+        254,
+        255
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "layout_assessment": "continuous_surface",
+      "local_mesh_uv_samples": 2,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7750279688942954104",
+      "material_name": "stone_huge",
+      "note": "Continuous stone image on split rock UV islands. Preserve normal and moss channels. Shared material name also reaches a separate Deep North source material.",
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "original_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+      "original_texture_name": "rock_256",
+      "property": "_MainTex",
+      "saved_material_mode": 0.0,
+      "saved_zwrite": 1.0,
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "serialized_renderers": 22,
+      "shader_name": "Custom/StaticRock",
+      "source_paths": [
+        "Assets/world/Props/stone/stone_huge.mat"
+      ],
+      "status": "metadata_and_local_uv_inspection_only",
+      "unique_linked_meshes": 2
+    },
+    {
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "dimensions": [
+        512,
+        512
+      ],
+      "layout_assessment": "atlas_with_alpha",
+      "local_mesh_uv_samples": 3,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260",
+      "material_name": "beech_bark",
+      "note": "Bark, endgrain and edge regions share one image. Actual alpha varies and saved material is blended. Defer from opaque set.",
+      "offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "original_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "original_texture_name": "beech_bark",
+      "property": "_MainTex",
+      "saved_material_mode": 3.0,
+      "saved_zwrite": 0.0,
+      "scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "serialized_renderers": 7,
+      "shader_name": "Custom/Vegetation",
+      "source_paths": [
+        "Assets/world/Props/Beech/materials/beech_bark.mat"
+      ],
+      "status": "metadata_and_local_uv_inspection_only",
+      "unique_linked_meshes": 4
+    },
+    {
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "dimensions": [
+        128,
+        128
+      ],
+      "layout_assessment": "continuous_directional_surface",
+      "local_mesh_uv_samples": 3,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8290753221864760512",
+      "material_name": "woodwall",
+      "note": "Horizontal grain tile. Preserve negative U scale and original offset, normals and noise channel.",
+      "offset": {
+        "x": 0.0,
+        "y": 0.014000000432133675
+      },
+      "original_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+      "original_texture_name": "Planks5c_low",
+      "property": "_MainTex",
+      "saved_material_mode": 0.0,
+      "saved_zwrite": 1.0,
+      "scale": {
+        "x": -0.5600000023841858,
+        "y": 0.11999999731779099
+      },
+      "serialized_renderers": 461,
+      "shader_name": "Custom/Piece",
+      "source_paths": [
+        "Assets/GameElements/Pieces/_res/materials/woodwall.mat"
+      ],
+      "status": "metadata_and_local_uv_inspection_only",
+      "unique_linked_meshes": 22
+    }
+  ],
+  "input_scope": "All bundles named by installed SoftRef asset locations and dependency rows",
+  "local_full_inventory": "local/texture-inventory/complete/inventory.json",
+  "local_original_reference_directory": "local/texture-inventory/complete/references",
+  "maintex_linked_textures_total": 1358,
+  "manifest_asset_locations": 21884,
+  "manifest_image_locations": 4755,
+  "manifest_sha256": "76a813ec3583c1c1933e5ffeb7268326be01df76be58f609e26d29a401a0493a",
+  "repeatability_validation": {
+    "full_inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+    "local_uv_material_mesh_samples": 17,
+    "metadata_byte_identical": true,
+    "original_reference_files_byte_identical": 44,
+    "reference_extraction_errors": 0
+  },
+  "schema_version": 1,
+  "serialized_materials": 3907,
+  "serialized_meshes": 10336,
+  "serialized_renderers": 93734,
+  "serialized_shaders": 77,
+  "serialized_texture_objects_by_type": {
+    "Cubemap": 2,
+    "Texture2D": 3179,
+    "Texture2DArray": 2,
+    "Texture3D": 4
+  },
+  "snapshot_date": "2026-09-12",
+  "surface_candidate_pool_without_validated_binding_record": 1217,
+  "unresolved_links": {
+    "builtin_resource_links": 52,
+    "null_shader_pointers": 36
+  },
+  "authored_uv_review": {
+    "materials": [
+      "stone_huge",
+      "woodpole"
+    ],
+    "tool": "Blender",
+    "resolution": [
+      3840,
+      2160
+    ],
+    "scope": "Albedo-only on original mesh UV0 with original material transforms; shared stone_huge scope, no Deep North visual approval",
+    "game_shader_validated": false,
+    "evidence": "docs/evidence/game-mesh-uv.json"
+  }
+}

@@ -1,0 +1,819 @@
+{
+  "startedUtc": "2026-09-12T18:31:05.2474590Z",
+  "unityVersion": "6000.0.75f1",
+  "graphicsApi": "Vulkan",
+  "error": "",
+  "scope": "Owned Standard material fixture using the production exact binder and native async bundle loader. No game scene, world, save, performance, total VRAM, custom game shader or UV approval claim.",
+  "completed": true,
+  "passed": true,
+  "cleanupPending": false,
+  "checks": [
+    {
+      "name": "worker validated enabled installed profile, explicit rules and mapped owned archive hashes",
+      "passed": true
+    },
+    {
+      "name": "renderer discovery acquires exact demand for both shared material slots without starting a load",
+      "passed": true
+    },
+    {
+      "name": "exact identity demand returns immediately, keeps originals and rejects Instance-name mismatch",
+      "passed": true
+    },
+    {
+      "name": "native async apply shares one owned texture across both renderer material slots and preserves the exact-name miss",
+      "passed": true
+    },
+    {
+      "name": "opaque eligibility is rechecked before apply and transparent pending demand releases without a write",
+      "passed": true
+    },
+    {
+      "name": "apply preserves shader, original UV scale and offset, and unrelated texture channel",
+      "passed": true
+    },
+    {
+      "name": "foreign material change is preserved and releases only its own demand",
+      "passed": true
+    },
+    {
+      "name": "alpha keyword change after apply restores the owned slot, preserves the foreign keyword and releases demand",
+      "passed": true
+    },
+    {
+      "name": "disable restores both shared slots before releasing leases and retains deferred-destruction reservation",
+      "passed": true
+    },
+    {
+      "name": "disable preserves captured UV transforms and unrelated material channel",
+      "passed": true
+    },
+    {
+      "name": "disable finishes after native release acknowledgement with zero owned allocations and valid originals",
+      "passed": true
+    },
+    {
+      "name": "1056 distinct surviving materials reclaim unseen records after renderer churn without exhausting the 1024-record cap",
+      "passed": true
+    },
+    {
+      "name": "new renderer demand remains admitted after more than one registry capacity of material churn",
+      "passed": true
+    },
+    {
+      "name": "churn fixture shutdown releases all queued demand without native allocation leftovers",
+      "passed": true
+    },
+    {
+      "name": "2048-slot renderer keeps first-slot demand, avoids material-list expansion and emits one bounded fallback warning",
+      "passed": true
+    },
+    {
+      "name": "oversized renderer demand cancels without starting a native load",
+      "passed": true
+    },
+    {
+      "name": "missing material-count capability retains first-slot coverage with one warning",
+      "passed": true
+    },
+    {
+      "name": "throwing material-count capability falls back once and retains first-slot coverage",
+      "passed": true
+    },
+    {
+      "name": "eight-slot discovery reaches 128 distinct materials while admitting at most 64 material observations per frame budget",
+      "passed": true
+    },
+    {
+      "name": "bounded multi-slot discovery releases all fixture-only queued demand without native allocations",
+      "passed": true
+    },
+    {
+      "name": "process quit restores originals and preserves foreign changes before releasing leases, without claiming native drain",
+      "passed": true
+    },
+    {
+      "name": "normal process quit suppresses unexpected-removal errors while reporting the remaining owned allocation honestly",
+      "passed": true
+    },
+    {
+      "name": "dynamic host removal still reports undrained ownership when no process-quit callback occurred",
+      "passed": true
+    },
+    {
+      "name": "simulated quit fixture finishes its separately pumped native drain with zero retained owned allocations",
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "frame": 6,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 1,
+      "leases": 4
+    },
+    {
+      "frame": 7,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 1,
+      "leases": 4
+    },
+    {
+      "frame": 8,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 9,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 10,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 11,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 12,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 13,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 14,
+      "applied": 4,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 15,
+      "applied": 4,
+      "restored": 1,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 16,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 17,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 18,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 19,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 20,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 21,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 22,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 23,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 24,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 25,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 26,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 27,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 28,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 29,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 30,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 31,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 32,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 33,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 34,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 35,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 36,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 37,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 38,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 39,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 40,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 41,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 42,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 43,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 44,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 45,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 46,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 47,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 48,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 49,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 50,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 51,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 52,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 53,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 54,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 55,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 1,
+      "leases": 2
+    },
+    {
+      "frame": 56,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 57,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 58,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 59,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 60,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 61,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 62,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 63,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 64,
+      "applied": 2,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 65,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 66,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 67,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 68,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 0
+    }
+  ],
+  "compiledRuntimeSha256": {
+    "ValheimImpact.Core.dll": "a61e170558be6623534271bf606cc22f41e8e933a255c5b3a84b612c50982a61",
+    "ValheimImpact.Unity.dll": "ce3c85f45bc75065bbbf4b61d01b3732c64641feac8e5a62edd167b01ff3a110"
+  },
+  "regressionBeforeFix": {
+    "report": "local/binding-fixture/multislot-red.json",
+    "failedCheck": "renderer discovery acquires exact demand for both shared material slots without starting a load",
+    "completed": true,
+    "cleanupPending": false
+  },
+  "sourceSha256": {
+    "src/ValheimImpact.Unity/OwnedMaterialBinder.cs": "1e9c6385acc6e15bcd12f70548f6c6fde42b77fb9e4baab0d084655058e327c3",
+    "src/ValheimImpact.Unity/OwnedMaterialHost.cs": "17bbf05e0050c37eb9babd23f9027732bac2f1114356f8756631d7406d16ced3",
+    "src/ValheimImpact.Unity/OwnedBundleLoad.cs": "00fd640aa7d69eb3b2ba330b9ee434ad4f6321f4f923e254bc4dcfed3c426071",
+    "tools/unity/MaterialBindingProbe.cs": "c0fe985534a074dd9a843b21a3bc5cb5d971951f416c587c2dcfe32e841aca2b"
+  }
+}

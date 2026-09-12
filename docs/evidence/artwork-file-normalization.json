@@ -1,0 +1,102 @@
+{
+  "schema_version": 1,
+  "scope": "Public artwork copies omit ancillary file metadata. Pixel samples and compressed pixel data are unchanged. Historical validation retains its original input file hashes.",
+  "assets": [
+    {
+      "path": "assets/concepts/meadows-lighting-v1.png",
+      "previous_file_sha256": "fc64e2f2765a88679651b38ec711359949018a3e5de795f9aeb3f11b3e415362",
+      "sha256": "b79f5eacb9b257b5da336c768d906f2814a8141c20c06844417b871d9cd96d72",
+      "decoded_rgba_sha256": "f5dd9384b11fe5d8690c811a0a992fe97172b658305ba3f0dd711b45057b406b",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/concepts/meadows-lighting-v2.png",
+      "previous_file_sha256": "dfa62840b6af33e7bd0520a919c7fe9911678532e91b39a18c85cc6fca6d0172",
+      "sha256": "e8a44677aa58cb8c9a088fbe5354c7b8e7524f843a7eb58c40a4e5212afbdacc",
+      "decoded_rgba_sha256": "29058d635383f19c3b944565aef31982952e439b79e754f4a98a97f4d179ecf0",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/meadows/beech-cutout-v1.png",
+      "previous_file_sha256": "448fd965c576b36e897e870c82da3b88110c0f5bdecdce944146ef5f5a6b493c",
+      "sha256": "d24255948649ea1ae6d45498e7121fe053a495459249f9e09523005b8d5a3431",
+      "decoded_rgba_sha256": "46684f5ef94823e33cafea86a2e86cfcfd60b3acaa3e51ddee1d8151f6a5c894",
+      "dimensions": [
+        1363,
+        1154
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/meadows/granite-surface-v1.png",
+      "previous_file_sha256": "1e8ef178c8f79bbd2c4fe18bdda92b12a5a7a5a2737bce9f0fa98c5c039c73a1",
+      "sha256": "49d76e5071066c821d45a0e4bf49584d63ccefa25172972bfc1e8b1a7b249df4",
+      "decoded_rgba_sha256": "993762f341ab3d190aacc00b15d3d9c9cd156774964b14319bfe5b7903b9dc0e",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/meadows/material-sheet-v1.png",
+      "previous_file_sha256": "6d782e269a84ec88aa3d7a8d0ef4e4e22b2f82683fdf213001d51cefddf29436",
+      "sha256": "9a239494a2d0bdcaa60b7de2672f84a7d6b35e2d72c2e28cd855723bc09cd8dc",
+      "decoded_rgba_sha256": "eb7d45e66c9d256275fa0edcad9ba72f67b46e607291484d19b4f9327140fab4",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/meadows/straw-fringe-source-rgb-v1.png",
+      "previous_file_sha256": "d190416fac3c07e4060efd79e0decd26bae41fcfa14565c4542da20d3dca981f",
+      "sha256": "7322cb1b76c54f5c1e953fac5f62ad1650c4aedc828c6fb6dc0b12b18165509b",
+      "decoded_rgba_sha256": "3c94f009debe0561f8b3a39aa25f622a7fd9279f0342d4c5697ef4191cdd3137",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/meadows/thatch-surface-v1.png",
+      "previous_file_sha256": "fc442a9b636aa0f725331abbf0442a98a78c6c19aae40886a14db6cfde4b6418",
+      "sha256": "1cfb2ed2d29b6fe33a407b06dca72478c9de3c4c40397cd3dc1ec188161607c9",
+      "decoded_rgba_sha256": "cf3dffaeba3901c771e36241ad07ae68b758918f400dbf5d003233855ce6100d",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    },
+    {
+      "path": "assets/meadows/timber-surface-v1.png",
+      "previous_file_sha256": "1189ed0ccecaaf04d0a1e1d1ffeb255acad9ad8529fec1c55700ced5cc65eb6e",
+      "sha256": "f82c479385e4002ad7b8e71388c264369cc3c4d69fa23394d242510bf90aa489",
+      "decoded_rgba_sha256": "c00d99b7131b01b71575ddad405c0b5908011f6c4a6bb5a505d9b7b83154768d",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "pixels_identical": true,
+      "compressed_pixel_chunks_unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "startedUtc": "2026-09-12T18:23:24.8573480Z",
+  "phase": "completed",
+  "scope": "Local main-menu fixture only. Left uses the captured original; right uses production-bound authored texture. Existing loaded game meshes and shaders are borrowed. No character/world load, game-bundle load, scene coverage, route performance or hardware-target claim.",
+  "quitRequested": true,
+  "createdObjectsCleaned": true,
+  "rockDiagnosticScannedRenderers": 20374,
+  "rockDiagnosticRelevantRenderers": 72,
+  "rockDiagnosticOmittedRecords": 0,
+  "rockDiagnosticScanTruncated": false,
+  "diagnosticProbeSha256": "093d8747de303300ccbcf272ec0a3087f44e285bb080e41dc6d16a0107f4ab75",
+  "selectedStandingStone": {
+    "renderer": "high",
+    "rendererType": "MeshRenderer",
+    "hierarchy": "highstone_2/high",
+    "scene": null,
+    "mesh": "default",
+    "slotReadLimitation": null,
+    "instanceId": 370046,
+    "meshId": 262032,
+    "vertices": 106,
+    "submeshes": 1,
+    "materialSlotCount": 1,
+    "enabled": true,
+    "activeInHierarchy": false,
+    "sceneValid": false,
+    "hierarchyTruncated": false,
+    "materialSlotsTruncated": false,
+    "firstSlot": {
+      "slot": 0,
+      "materialId": 370060,
+      "textureId": 58304,
+      "textureWidth": 512,
+      "textureHeight": 512,
+      "material": "stone_huge",
+      "shader": "Custom/StaticRock",
+      "texture": "rock_256",
+      "hasMainTexture": true,
+      "originalTextureMatch": true,
+      "ownedTextureMatch": false,
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "offset": [
+        0.0,
+        0.0
+      ]
+    },
+    "slots": [
+      {
+        "slot": 0,
+        "materialId": 370060,
+        "textureId": 58304,
+        "textureWidth": 512,
+        "textureHeight": 512,
+        "material": "stone_huge",
+        "shader": "Custom/StaticRock",
+        "texture": "rock_256",
+        "hasMainTexture": true,
+        "originalTextureMatch": true,
+        "ownedTextureMatch": false,
+        "scale": [
+          1.0,
+          1.0
+        ],
+        "offset": [
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "selectorRejections": [
+      "mesh name differs from Rock_3_Untitled",
+      "mesh vertex count differs from 136"
+    ]
+  },
+  "conclusion": "The old Rock_3_Untitled/stone_huge selector has no loaded renderer pair. Use the observed highstone_2/high hierarchy with stone_huge and the 106-vertex single-submesh default mesh for the next guarded fixture. This does not change the production material allowlist.",
+  "trackedOriginalPixels": false
+}

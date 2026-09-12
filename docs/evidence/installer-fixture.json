@@ -1,0 +1,62 @@
+{
+  "platform": "Linux x86_64, local development host only",
+  "binarySha256": "39792fd26f5e0f9588ea34d26543fda62e9140c9f40ff42f454a20864fa457df",
+  "binaryBytes": 22303992,
+  "packageSha256": "a135684667c0dae29170d3ae1bcd71130bd5dec350895708b92356eaa06af07e",
+  "packageBytes": 1740759,
+  "relocatedExecutable": true,
+  "pythonAndTkEnvironmentRemoved": true,
+  "temporaryFixture": true,
+  "realGameMutated": false,
+  "results": [
+    {
+      "step": "verify-package",
+      "ok": true,
+      "sha256": "a135684667c0dae29170d3ae1bcd71130bd5dec350895708b92356eaa06af07e"
+    },
+    {
+      "step": "gui-smoke",
+      "ok": true,
+      "report": {
+        "tk": 9.0,
+        "title": "Valheim Impact | Local installer",
+        "dimensions": [
+          629,
+          841
+        ],
+        "availableFonts": 596,
+        "defaultProfile": "Balanced",
+        "applyDisabled": true,
+        "realGameMutated": false
+      }
+    },
+    {
+      "step": "install",
+      "ok": true,
+      "profile": "Balanced",
+      "installed": true,
+      "changes": 21
+    },
+    {
+      "step": "update",
+      "ok": true,
+      "profile": "High",
+      "installed": true,
+      "changes": 21
+    },
+    {
+      "step": "rollback",
+      "ok": true,
+      "profile": "Balanced",
+      "installed": true,
+      "changes": 1
+    },
+    {
+      "step": "uninstall",
+      "ok": true,
+      "profile": null,
+      "installed": false,
+      "changes": 21
+    }
+  ]
+}

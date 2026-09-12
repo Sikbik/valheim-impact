@@ -1,0 +1,25 @@
+name: Bug report
+description: Report a reproducible runtime, installer or tracker issue
+title: "[Bug] "
+body:
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Versions and test scope
+      description: Include project revision, OS, game and renderer versions, and relevant hardware. Remove usernames, paths, tokens and save data from logs.
+  - type: textarea
+    id: checks
+    attributes:
+      label: Relevant checks or evidence

@@ -1,0 +1,54 @@
+# Local game inputs and generated extraction/cache data
+local/
+.local/
+reference-images/
+extracted/
+downloads/
+cache/
+*.resS
+*.dat
+
+# Build and tool outputs
+bin/
+obj/
+build/
+dist/
+.venv/
+__pycache__/
+*.pyc
+*.dll
+*.pdb
+*.log
+
+# Captures can be selected deliberately for documentation later
+captures/raw/
+.superpowers/
+
+# Unity Editor generated state
+unity/[Ll]ibrary/
+unity/[Tt]emp/
+unity/[Oo]bj/
+unity/[Ll]ogs/
+unity/[Uu]ser[Ss]ettings/
+unity/[Mm]emoryCaptures/
+unity/[Bb]uilds/
+unity/.vs/
+unity/OwnedInputs/
+unity/Bundles/
+unity/Assets/Owned/
+unity/Assets/Owned.meta
+unity/Assets/Probes/
+unity/Assets/Probes.meta
+unity/Assets/GeneratedRuntime/
+unity/Assets/GeneratedRuntime.meta
+unity/Assets/Captures/
+unity/Assets/Captures.meta
+
+# Workstation notes and private integrations
+.env*
+*.key
+*.pem
+
+# Workstation package selections; use the portable manifest for a fresh clone
+/unity/Packages/manifest.json
+/unity/Packages/packages-lock.json

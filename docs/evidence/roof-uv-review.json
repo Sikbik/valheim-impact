@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "scope": "Local selected-submesh albedo and UV review. No native game shader approval.",
+  "render_size": [
+    3840,
+    2160
+  ],
+  "texture_checks": {
+    "original_albedo": {
+      "size": [
+        128,
+        128
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "fully_opaque_pixels": 16384,
+      "sha256": "41da1c7c34b9ce13634b4b8e75c2b60fe92aa2925512d7e616ab1544d58438ac"
+    },
+    "authored_albedo": {
+      "size": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "fully_opaque_pixels": 1048576,
+      "sha256": "b6da43a04caca69f5af270fed153e07218575c89180ab26c9bf07774faf8c96a"
+    }
+  },
+  "selected_uv_face_corners": 942,
+  "max_uv_error": 4.99298047351715e-10,
+  "original_scenes_preserved": true,
+  "open_document_path_preserved": true,
+  "visual_observations": [
+    "Thatch remains on broad selected roof planes; timber remains on selected structural trim.",
+    "No visible cross-region contamination or alpha holes in the three isolated samples.",
+    "The inner-corner high and LOD samples retain the same overall UV grain direction in this view.",
+    "Authored fibers are much more defined and warmer than the 128 px original; color comparison is qualitative because rows occupy different positions under studio lights."
+  ],
+  "limitations": [
+    "Only the selected material submesh is shown. Excluded submeshes obscured these planes in the initial inspection view.",
+    "This does not establish the complete assembled roof appearance or prefab placement.",
+    "Blender Closest/Repeat base-level sampling and Principled lighting do not validate native mipmaps, shader normals, weather or LOD transitions.",
+    "Default and 45-degree roof materials are outside this exact wood_roof_mat scope."
+  ],
+  "artifacts": {
+    "local/roof-review/roof-review.blend": {
+      "sha256": "dd6c6beb29aae27c7ad64b76f2955645b288019b5409e2a6fee0a42095e6fd9e",
+      "bytes": 163761
+    },
+    "local/roof-review/roof-review-4k0001.png": {
+      "sha256": "58384f08c31e05707474ff08d1c9b1efc637f0305918c0497825162231cc6c23",
+      "bytes": 8786563
+    },
+    "local/roof-review/blender-review.json": {
+      "sha256": "b0c2462d4dda7d9ecaee549715125a7419021a8ebb63f7ee710e0cc548e18038",
+      "bytes": 80130
+    },
+    "tools/blender/RoofUVReview.py": {
+      "sha256": "0cb8677fe5225db79d47107c7cd09db2c279b83a6273075105250dbb664be311",
+      "bytes": 14325
+    }
+  },
+  "originalReferenceArtifactsTracked": false,
+  "sourceSha256": {
+    "tools/fit_roof_atlas.py": "5cfd20fc8c3010b33d73de78a4960c2b6a7ee9fe3373858fe867e5eb888cc8f5",
+    "assets/meadows/roof-atlas-layout.json": "b72c06451a64c7ce7085bcbebda6582cd7e0c84b6cd6e365a10b5df5fdce3b4b",
+    "tools/blender/RoofUVReview.py": "0cb8677fe5225db79d47107c7cd09db2c279b83a6273075105250dbb664be311"
+  }
+}

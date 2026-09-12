@@ -1,0 +1,276 @@
+{
+  "editor": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "textures": [
+    {
+      "id": "grass_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2532354676158598,
+        "max_error": 1.4847409464281185
+      }
+    },
+    {
+      "id": "grass_normal",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.24274444580078125,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "earth_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.38022921771278345,
+        "max_error": 2.1703650881262035
+      }
+    },
+    {
+      "id": "earth_normal",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.24508285522460938,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "timber_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2767717023642674,
+        "max_error": 2.1703650881262035
+      }
+    },
+    {
+      "id": "timber_normal",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2124176025390625,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "granite_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.3592337014401543,
+        "max_error": 1.8016335616045467
+      }
+    },
+    {
+      "id": "granite_normal",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.246734619140625,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "leaf_color_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2666479432432657,
+        "max_error": 1.8118216482914704
+      }
+    },
+    {
+      "id": "leaf_color_normal",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.20990753173828125,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "thatch_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.34222047763759306,
+        "max_error": 2.2190252151793004
+      }
+    },
+    {
+      "id": "thatch_normal",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.21556854248046875,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "beech_card_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.11542900616492283,
+        "max_error": 2.0
+      }
+    },
+    {
+      "id": "beech_card_normal",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.0,
+        "max_error": 0.0
+      }
+    },
+    {
+      "id": "granite_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.30501410171854126,
+        "max_error": 2.770571578101581
+      }
+    },
+    {
+      "id": "granite_hd_normal",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.24030351638793945,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "timber_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2747242219217287,
+        "max_error": 2.1703650881262035
+      }
+    },
+    {
+      "id": "timber_hd_normal",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.25670695304870605,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "thatch_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.3312101144465732,
+        "max_error": 2.4368331330340425
+      }
+    },
+    {
+      "id": "thatch_hd_normal",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.19894981384277344,
+        "max_error": 1.0
+      }
+    },
+    {
+      "id": "roof_atlas_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2974031771702148,
+        "max_error": 2.4368331330340425
+      }
+    },
+    {
+      "id": "roof_atlas_hd_normal",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.0,
+        "max_error": 0.0
+      }
+    }
+  ],
+  "compressed_payload_bytes": 12933024,
+  "native_bundles_bytes": 4694231,
+  "gpu_base_mip_validation": true,
+  "game_validation": false,
+  "note": "Native layout and GPU sampling evidence, not a VRAM or frame-time benchmark."
+}

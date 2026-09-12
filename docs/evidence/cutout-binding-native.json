@@ -1,0 +1,1698 @@
+{
+  "startedUtc": "2026-09-12T19:26:47.1094240Z",
+  "unityVersion": "6000.0.75f1",
+  "graphicsApi": "Vulkan",
+  "error": "",
+  "scope": "Owned Standard and diagnostic cutout material fixtures using the production exact binder and native async bundle loader. No game scene, world, save, performance, total VRAM, custom game shader or UV approval claim.",
+  "completed": true,
+  "passed": true,
+  "cleanupPending": false,
+  "checks": [
+    {
+      "name": "worker validated enabled installed profile, explicit rules and mapped owned archive hashes",
+      "passed": true
+    },
+    {
+      "name": "renderer discovery acquires exact demand for both shared material slots without starting a load",
+      "passed": true
+    },
+    {
+      "name": "exact identity demand returns immediately, keeps originals and rejects Instance-name mismatch",
+      "passed": true
+    },
+    {
+      "name": "native async apply shares one owned texture across both renderer material slots and preserves the exact-name miss",
+      "passed": true
+    },
+    {
+      "name": "opaque eligibility is rechecked before apply and transparent pending demand releases without a write",
+      "passed": true
+    },
+    {
+      "name": "apply preserves shader, original UV scale and offset, and unrelated texture channel",
+      "passed": true
+    },
+    {
+      "name": "foreign material change is preserved and releases only its own demand",
+      "passed": true
+    },
+    {
+      "name": "alpha keyword change after apply restores the owned slot, preserves the foreign keyword and releases demand",
+      "passed": true
+    },
+    {
+      "name": "disable restores both shared slots before releasing leases and retains deferred-destruction reservation",
+      "passed": true
+    },
+    {
+      "name": "disable preserves captured UV transforms and unrelated material channel",
+      "passed": true
+    },
+    {
+      "name": "disable finishes after native release acknowledgement with zero owned allocations and valid originals",
+      "passed": true
+    },
+    {
+      "name": "1056 distinct surviving materials reclaim unseen records after renderer churn without exhausting the 1024-record cap",
+      "passed": true
+    },
+    {
+      "name": "new renderer demand remains admitted after more than one registry capacity of material churn",
+      "passed": true
+    },
+    {
+      "name": "churn fixture shutdown releases all queued demand without native allocation leftovers",
+      "passed": true
+    },
+    {
+      "name": "2048-slot renderer keeps first-slot demand, avoids material-list expansion and emits one bounded fallback warning",
+      "passed": true
+    },
+    {
+      "name": "oversized renderer demand cancels without starting a native load",
+      "passed": true
+    },
+    {
+      "name": "missing material-count capability retains first-slot coverage with one warning",
+      "passed": true
+    },
+    {
+      "name": "throwing material-count capability falls back once and retains first-slot coverage",
+      "passed": true
+    },
+    {
+      "name": "eight-slot discovery reaches 128 distinct materials while admitting at most 64 material observations per frame budget",
+      "passed": true
+    },
+    {
+      "name": "bounded multi-slot discovery releases all fixture-only queued demand without native allocations",
+      "passed": true
+    },
+    {
+      "name": "process quit restores originals and preserves foreign changes before releasing leases, without claiming native drain",
+      "passed": true
+    },
+    {
+      "name": "normal process quit suppresses unexpected-removal errors while reporting the remaining owned allocation honestly",
+      "passed": true
+    },
+    {
+      "name": "dynamic host removal still reports undrained ownership when no process-quit callback occurred",
+      "passed": true
+    },
+    {
+      "name": "simulated quit fixture finishes its separately pumped native drain with zero retained owned allocations",
+      "passed": true
+    },
+    {
+      "name": "native material presence/getter APIs expose stored mode blend and depth floats absent from ShaderLab without missing-value reads",
+      "passed": true
+    },
+    {
+      "name": "alpha-test mutation is a declared and enabled native shader keyword before testing its rejection",
+      "passed": true
+    },
+    {
+      "name": "alpha-blend mutation is a declared and enabled native shader keyword before testing its rejection",
+      "passed": true
+    },
+    {
+      "name": "alpha-premultiply mutation is a declared and enabled native shader keyword before testing its rejection",
+      "passed": true
+    },
+    {
+      "name": "cutout opt-in accepts one exact state and rejects default opaque admission, missing floats and every blended or changed state before demand; matched=1, leases=1",
+      "passed": true
+    },
+    {
+      "name": "exact cutout discovery retains originals and only queues asynchronous owned demand",
+      "passed": true
+    },
+    {
+      "name": "native cutout adoption shares one owned texture while preserving cutoff cull saved blend depth values keywords UVs and companion channel",
+      "passed": true
+    },
+    {
+      "name": "cutoff change during asynchronous preparation rejects adoption and releases pending demand without overwriting the change",
+      "passed": true
+    },
+    {
+      "name": "applied cutout cull and keyword changes restore only owned texture slots while a foreign texture remains untouched",
+      "passed": true
+    },
+    {
+      "name": "cutout disable restores the original before releasing its lease and retains deferred native retirement accounting",
+      "passed": true
+    },
+    {
+      "name": "cutout shutdown reaches acknowledged zero native ownership after restoration",
+      "passed": true
+    }
+  ],
+  "samples": [
+    {
+      "frame": 3,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 1,
+      "leases": 4
+    },
+    {
+      "frame": 4,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 5,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 6,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 7,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 8,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 9,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 10,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 11,
+      "applied": 4,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 12,
+      "applied": 4,
+      "restored": 1,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 13,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 14,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 15,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 16,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 3,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 17,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 18,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 19,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 20,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 21,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 22,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 23,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 24,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 25,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 26,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 27,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 28,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 29,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 30,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 31,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 32,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 33,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 34,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 35,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 36,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 37,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 38,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 39,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 40,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 41,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 42,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 43,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 44,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 45,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 46,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 47,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 48,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 49,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 50,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 51,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 0,
+      "leases": 0
+    },
+    {
+      "frame": 52,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 1,
+      "leases": 2
+    },
+    {
+      "frame": 53,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 54,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 55,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 56,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 57,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 58,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 59,
+      "applied": 2,
+      "restored": 0,
+      "foreign": 0,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 2
+    },
+    {
+      "frame": 60,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 61,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 62,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 63,
+      "applied": 2,
+      "restored": 1,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 64,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 1,
+      "leases": 4
+    },
+    {
+      "frame": 65,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 66,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 67,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 68,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 69,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 1398128,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 70,
+      "applied": 0,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 71,
+      "applied": 4,
+      "restored": 0,
+      "foreign": 1,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 4
+    },
+    {
+      "frame": 72,
+      "applied": 4,
+      "restored": 2,
+      "foreign": 4,
+      "pending": 0,
+      "resident": 1398128,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 1
+    },
+    {
+      "frame": 73,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 4,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 74,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 4,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 75,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 4,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 1398128,
+      "engineStarts": 2,
+      "leases": 0
+    },
+    {
+      "frame": 76,
+      "applied": 4,
+      "restored": 3,
+      "foreign": 4,
+      "pending": 0,
+      "resident": 0,
+      "retiring": 0,
+      "engineStarts": 2,
+      "leases": 0
+    }
+  ],
+  "cutoutCandidates": [
+    {
+      "label": "exact cutout",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": true,
+      "admitted": true,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 0,
+      "leasesAfter": 1,
+      "matchedBefore": 0,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "missing cutout opt-in",
+      "material": "VI no cutout opt-in",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "mode changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        2.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "cutoff changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.4000000059604645,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "cull changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        2.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "zwrite changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "source blend changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        5.0,
+        0.0
+      ]
+    },
+    {
+      "label": "destination blend changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        10.0
+      ]
+    },
+    {
+      "label": "queue changed",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 3000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "alpha-test enabled",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": true,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "alpha-blend enabled",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": true,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "alpha-premultiply enabled",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": true,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "missing saved floats",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": false,
+      "admitted": false,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 1,
+      "matchedBefore": 1,
+      "matchedAfter": 1,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "values": [
+        0.0,
+        0.6899999976158142,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "exact cutout",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": true,
+      "admitted": true,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 1,
+      "leasesAfter": 2,
+      "matchedBefore": 1,
+      "matchedAfter": 2,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "exact cutout",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": true,
+      "admitted": true,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 2,
+      "leasesAfter": 3,
+      "matchedBefore": 2,
+      "matchedAfter": 3,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "exact cutout",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": true,
+      "admitted": true,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 3,
+      "leasesAfter": 4,
+      "matchedBefore": 3,
+      "matchedAfter": 4,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    {
+      "label": "exact cutout",
+      "material": "Valheim Impact Cutout Material Fixture",
+      "shader": "Valheim Impact/Cutout Binding Fixture",
+      "expectedAdmission": true,
+      "admitted": true,
+      "alphaTest": false,
+      "alphaBlend": false,
+      "alphaPremultiply": false,
+      "declaresAlphaTest": true,
+      "declaresAlphaBlend": true,
+      "declaresAlphaPremultiply": true,
+      "renderQueue": 2000,
+      "leasesBefore": 4,
+      "leasesAfter": 5,
+      "matchedBefore": 4,
+      "matchedAfter": 5,
+      "properties": [
+        "_Mode",
+        "_Cutoff",
+        "_Cull",
+        "_ZWrite",
+        "_SrcBlend",
+        "_DstBlend"
+      ],
+      "present": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "values": [
+        1.0,
+        0.6899999976158142,
+        0.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    }
+  ],
+  "deployment": "Staging only. Installed candidate4 and game allowlist are unchanged.",
+  "source_hashes": {
+    "src/ValheimImpact.Core/MaterialBindingRule.cs": "981bf31786e37cc838715690914f7f38626f81ea07a4fbd13ccf05d09b4f46ba",
+    "src/ValheimImpact.Core/OwnedMaterialRegistry.cs": "83c35274a17cf0fad85338e8dc21ac1206144966975ad8f7c411085cb2e2b4d2",
+    "src/ValheimImpact.Unity/OwnedMaterialBinder.cs": "3715a97c33f964575d041ab9da98c1a174f34415c4e7ead152e34d7b6dd18c5d",
+    "tools/unity/MaterialBindingProbe.cs": "b42252e373904aa63e5c357751b902ffda20fd3d1a25c8334c17e540c700acc9",
+    "tools/unity/CutoutBindingFixture.shader": "ed87c0eccb0278b821595f3ecd0961119da7fb354d593dd04d4a67ef5b39d986",
+    "tools/package_install.py": "dfecb241aff723795708a3256e775884b3e3f2e220c0b90c129d96f5930fb3e9"
+  },
+  "staged_artifact_hashes": {
+    "build/runtime/ValheimImpact.Core.dll": "b8c2e6bc55e7cd12f07204880f8a6aa3e8bcc60438e848cc701eed78c3de1461",
+    "build/runtime/ValheimImpact.Unity.dll": "af71a7336700ec970ef7fbdb1445b8a09a18b8ec9126218479baf931dadb67ba"
+  },
+  "setup_correction": "The first diagnostic shader lacked declared keyword variants, so EnableKeyword did not change native state. The fixture now declares variants and separately asserts each state change before testing admission. Production binder did not change for that fixture correction."
+}
