@@ -40,3 +40,13 @@ for(const preview of previewFiles) {
 }
 console.log(`Verified ${previewFiles.length} comparison files for ${snapshot.assets.length} inventory entries.`);
 console.log(`Static export verified: homepage, ${scripts} script(s), ${styles} stylesheet(s), ${evidence.size} evidence links.`);
+
+const biomes=JSON.parse(readFileSync(path.join(root,'data/biomes.json'),'utf8'));
+const biomeSummary=JSON.parse(readFileSync(new URL('../data/biome-summary.json',import.meta.url),'utf8'));
+assert.equal(createHash('sha256').update(readFileSync(path.join(root,'data/biomes.json'))).digest('hex'),biomeSummary.data_sha256,'Exported biome bytes must match the application descriptor');
+assert.deepEqual(biomes.inputs,biomeSummary.inputs,'Exported biome membership must match the application snapshot');
+assert.equal(biomes.inputs.catalog_sha256,snapshot.inputs.catalog_sha256,'Biome membership must match the catalog');
+assert.equal(biomes.biomes.length,9,'All nine inventory biomes must be present');
+const known=new Set(snapshot.assets.map(asset=>asset.id));
+for(const biome of biomes.biomes) assert.ok(biome.asset_ids.every(id=>known.has(id)),'Unknown inventory biome asset');
+console.log(`Verified independent biome browsing for ${biomes.summary.assigned} assigned assets.`);

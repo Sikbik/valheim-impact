@@ -40,6 +40,8 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_*.py' -v
       - name: Check tracker snapshot and evidence
         run: python tools/refresh_tracker.py --check
+      - name: Check biome browsing inventory
+        run: python tools/prepare_biome_inventory.py --check
       - name: Install tracker dependencies
         run: npm ci --prefix status-site
       - name: Test tracker

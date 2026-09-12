@@ -1,0 +1,1234 @@
+{
+  "schema_version": 1,
+  "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "softref_manifest_sha256": "792f7c5846988fae4b374cf01f70b37a6fd93998c19adc31d76e3019d7b70afa",
+  "ordinary_spawn_lists": [
+    "CAB-8923bd833c4171316cf3c761b642c1c8:-4855181374041268385",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:2080410718791025706",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:4237988115216628356",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:6624918191379918"
+  ],
+  "bundles": [
+    {
+      "name": "1080ee37",
+      "sha256": "7cc7f051e0c8125e176679ab7d72112da072e44cca90700bc836b7afcee112e7",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "1100f0ac",
+      "sha256": "748e3c4d582c1df055f0a95fa592134ac1990c978365870d65fec7bfd91d2471",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "1146ffac",
+      "sha256": "c5050e2e4a8ac2f0b699479ca2c4db2e060d1c6449cf3ebe6290d801ff4655c7",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "17a773de",
+      "sha256": "8e51838a3c30c769dea4a79eb8ed1fe00d2bb5bff2f9f75dc7c57eaae1e5acec",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "19016ac3",
+      "sha256": "c1d89eca3806eb03c37574dfdfccaa3d14dcb9c458bd9c3bc6cf9728994c224c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "1a7b3844",
+      "sha256": "209281504d2eb94b57c7273176db2cc5a71d3b61e49c6bda4121ab1e2c39f105",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "1e488b5",
+      "sha256": "3dc8d3186c08f65815a29724e88ac58a036d5e41d44cc158d4c37f7984d7f935",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "1f1009e8",
+      "sha256": "6f91c7ecdec9e8d6d5ba46b73fe8d29c7102fb7a54e75cfc323d674314a4283e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "1f1eed3b",
+      "sha256": "836560ada584ec36d92b70a7eca266139ac90901ee1bb88f3b48c237b5bdc8aa",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "208de01b",
+      "sha256": "dce95fd5933da593c6c696c6d1af9322e0680a34d0a40927857cae621bee767c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "20e810b7",
+      "sha256": "d269aa5d83766d5b481838aad0b2ff8290dc3392712914bc79dd7d9da1ef4e61",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "20f08430",
+      "sha256": "7359f62b707a3b220926ceb6da87f2a134d577acfc90da22e2f99025f6155172",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "21111e61",
+      "sha256": "af42123a2822bb7b6efefdbf946b5a8c30298daf4446e6f4e491e7b00a215202",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "21380151",
+      "sha256": "573da642edd6971b0f46a43c78a92590411a758e461805b860f75cc9964f280a",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "22f9ae75",
+      "sha256": "8f30b9f2da5da12fbb4cae3f67469ab9aaf2c44ffd54fdb0e98989a8fd52096b",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "23eb494c",
+      "sha256": "d88952c6ea8e13b43bca55dbe0a9b8abc06d8d945af5f05f3c34c20315effb38",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "25830207",
+      "sha256": "ac518abb4da08e496af95dcb17594fb4b0f7a9848bd53520e1c99cd6e00411e1",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "261108d7",
+      "sha256": "a640bdbd23cf346403e3188d4e99037f2c5c276759e06770086d6b746ffd0b24",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "2705ac22",
+      "sha256": "90892115788ca30cb85d846880895f194be83ddcc0068bfb479bf65e41d52931",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "2837ebd3",
+      "sha256": "f77bdba8c6a15ef2cd4cad206f3487f37271793728faedf9dc452a724c565b1a",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "2babeef3",
+      "sha256": "bb48af139b027a35f2fe56792cdbc888c05438c0df113764842ca9c5a837ca70",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "2dd816d",
+      "sha256": "5e2e99f1114e438a94c3abd9f657fc4f51b2d709fb6a7aeb00d3a351aac1cbc0",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "32e50755",
+      "sha256": "2a3ddaa71a4d90e6b34d72fec9dc9c7c38c9a51422220471d56316ac95da2215",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "32fd94e5",
+      "sha256": "3e309fbf54b029a7359f8b55233b9966f1a34dbd13b79f7b6c42fe527b68d5d4",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "3303f8a1",
+      "sha256": "1039d3bffbe84b95e7b85b4fa9ced8ce503d66550c02d026943facb69850c98b",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "35a276c7",
+      "sha256": "5865107e20fb8b945388a3e73f71acda9512cb60b68a13780e15f97ff31b047d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "386f863a",
+      "sha256": "d2c312f204dfb6b71f208298b73ff1fec11ca2df55a695ec3b9f04e3207bac91",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "3986cf27",
+      "sha256": "177b98e33dd75f474e764e068760362bf5bbecde40d8f325a1675b1163ddfe0e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "39baf8c4",
+      "sha256": "934bc835f0d92424277b612da50a463921e42f3a0bc43b76f9d271e171463d9f",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "3e896e5d",
+      "sha256": "90bc5afe773b4a16a3eaf746f97465257c883f35e3e42d4d4e5850c5177d11ea",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "3f8c1181",
+      "sha256": "8554870dbacc51ad9027401ff44840ff409080f5c635c2c8f8f72e7e34f9cdf2",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "409f6edb",
+      "sha256": "11d0fcd700e9011b34db83072927ad10dbd808d72363de10aefa370f2bd3e338",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "40cd7b84",
+      "sha256": "9a971fa23f2c393f2dd481b4f696d91a24ee4380046ad829663436da7bd1a252",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "44017dfa",
+      "sha256": "72ec17f489ee36457d27b6ff420396ff6e7bd89dc410261b1340c0e9f480eb12",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "446fa012",
+      "sha256": "b00f3df7d3a19e50a0cd19e34a50064668543d33c7dd7bbe8df3026e2ffc7966",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "451d0248",
+      "sha256": "841939bedc627ee64cd2a689e20d0c05be9b04b507b95bef170fa68504bdc908",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "452de26",
+      "sha256": "5554874d880242b1b89dbec6d400b25597a0e79469db745f83375c9cf6445e55",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "45b1bfb",
+      "sha256": "1e34004fe3983fefb9434f6ef0b2d0ff8f5dd195b5febacc4f699f8a0c6edaf4",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4846dcaa",
+      "sha256": "0dd7c676d55e3f2e36e22def07644c98a21a5d32b0755ce988d9de5b7525fba7",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "48ccb2f",
+      "sha256": "cae0ced70167f73921e6c40f661fd8e04f2c269ac48724c3b7ace7eafcd24be5",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4941a0a",
+      "sha256": "d010950b2e0f44c4c11ce93f7cbdd2e2a637434e8dc2fc2751342d6bb44ff419",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4a83d2b7",
+      "sha256": "f2386f372731c197dff1818681f5bc004b0aebbb0c489179461fdeac44aecf14",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "4b26884b",
+      "sha256": "cb94ecc5b95669951682f14a1d71bf9e1391e4ba221e5cb8832b40e6a1d48cf9",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4c5d3677",
+      "sha256": "076e403a264a6b244c267aa9afd6649efbfe493fcc36cdbfe55e271ed526c741",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4c997571",
+      "sha256": "cf6697841adf63cc410e5149cb225b4a34f3813e63259f44035e9f427fc003a5",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4dc3900",
+      "sha256": "1340a476f28ab25936b127521b465b684f6d4e9406766372f3fd2f99e922c65f",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "4ddf4a2a",
+      "sha256": "b9db8ecca7a30bd2555cf6eb3fde760cd154472631cb604485c067a36fe4d9b4",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "51aa0540",
+      "sha256": "9069ba7f57c97e96916ca8675a7c16ac83e9e020cd9d78b7dc74e53155a52096",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "51b7c0e8",
+      "sha256": "5ec5894af48e530b5f866a8d93e468349229bb39f668c858b47dbcc767018e4d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "52eac62c",
+      "sha256": "7527fb7d19489232a4d80ca5fad49de9d34d5dbc4918839bb019db4240bdbf74",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "5521083d",
+      "sha256": "a57013598a685ac45b61e4a426ad30cf96aa6e6218bf0e3f48d14252a9cedd91",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "553b7f45",
+      "sha256": "69eb7d7b465628f92edf06edcb6dbcc8950fab288fb1a36a276cb0c5aa78091c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "5655535a",
+      "sha256": "05a34c8df0b19681b3dd2bfd90f763fcf5ac2cee9e4c679c47a3c80a3e343043",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "56becf05",
+      "sha256": "bc73f78161754f3202de89815c904a84d4ee5b8d89e461b18bcdb1de787b2bf9",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "57438a33",
+      "sha256": "68a0c665b4538296165835f6fef23a46fc335ae4b92815c0b8f4fcb6dd7359a8",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "585f929e",
+      "sha256": "98fc1962efe82f8355edb0960784aab8d2845cffc4a2ce86356aa3f3df64c9e8",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "58dec500",
+      "sha256": "1bcbb364b07a37470d62893476456cdc1790e98f3035b7ca918b1abe0da8cdf4",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "5a1b7f51",
+      "sha256": "43b61453ac0372c9b477a70c1af062efef9ffe513c18ecfaf3c4d2f4ef32f7e6",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "5a7b7426",
+      "sha256": "1fa0769a5a132b4c18b3588a2ab8d74d145b78580d307eed8950d3867ef99f26",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "5d59e538",
+      "sha256": "3ca30032ed1cdc1b8c910969624ec5828beb0bfbb71918514840ac625fed005d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "5f09202f",
+      "sha256": "8e069dd96f5b1624a44b3481f2822fd792e08e52a854e096fa743b942e19cc01",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "5f8a169c",
+      "sha256": "6b0dddeff3fafd716369a6f9457b40a9712d80e348c28aae73e2bd042b01f613",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "60912263",
+      "sha256": "1411f6f3edeb4e38af620e0cbab3b3203582df922812a54a90a26b6f14c1ebe9",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "63b239d6",
+      "sha256": "a70400ffffc9210f3ff8aa96abc6cf899c999452a182b60e478011c4303ddee1",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "643ce2e1",
+      "sha256": "5b18e896cb94f41ce647790a648df770a4bf8b5cb08ca57831863d3fa5e8ccd7",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "6608f78d",
+      "sha256": "5fec3306dfba0f21001c563e1a455c71ad4408888e0808b1a28458480dfe4e45",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "688aec4c",
+      "sha256": "ff0359376f9822265ca4b9d5a5ce1cf2fa984a8840c0065e95ee845ede995c05",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "6932ca4f",
+      "sha256": "51d70aa5b33478f46c35ff1d68f6fb02c4fb63afa63f05693d9330e45be9819d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "6ec7e976",
+      "sha256": "545788178ab95e7708d2550cbd7217f18a77c2306c9ec526f61c3bf45fd91d81",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "6f682a3b",
+      "sha256": "c699fe87f8927752c975ab37c8bc20cf200d55249dd516c11d4c21e125e9742b",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "7176ff77",
+      "sha256": "be14881869d9aa98c9969ff12fb65324361768cda1dcd9b2775e4954593771fd",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "71e73dbd",
+      "sha256": "e433b9731ff861f7230427a057c2c3edd16e9bf640fe1543cce50fcb4cdb7211",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "7372cfa8",
+      "sha256": "b78d7855a72a966fa29014db2255bc04928435a9ef5fdc5701f8812989262d78",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "7654487f",
+      "sha256": "6924ac5c45e9d8b1a128e9cdfec9f7488fdd7b804595aa1e24e1601df7de28a6",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "7cca43e5",
+      "sha256": "5b76dc4a03792e9a00893a0d3f30afdd30b4475da829b64989a192d4df6dbe24",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "7e6031c0",
+      "sha256": "9d7aec07880549c81c9fe404200bb9a5d745b05382de84f83a42163825e3251d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8160c574",
+      "sha256": "c8f9220067f18d667836cabcd50c7b9f7eb3069627bdc2e26feb96715ecb4492",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "81bc7a51",
+      "sha256": "192e2efec2cd4a3fcefd88ed7fd6d6d4effafbf103642e164a99b62b8ca7c66e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "81f75fa8",
+      "sha256": "de2b40d9da21f86a1762ddfdaa6e158c6a8ac5f8cf1192c3b0107cef8aceb4ed",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "827205f5",
+      "sha256": "11ad4b1f85f2aaaa80ac9b8c385166d42597a12294790cc95121d02f9edc4f8c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "82d08114",
+      "sha256": "2d4fd5ef0a307056d441910eb6c6816576f421e775e3371f004a81573b5d9c29",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8358ebc3",
+      "sha256": "090ba76043e780dff6e1372cdd4d871b20166244630844550d34969b2cb5b43f",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "83b289a",
+      "sha256": "ed31a5b3fde873ed46b97226ed53546ced9ed843eec96e77921e29167c0c04b6",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8577ad21",
+      "sha256": "366aacb051955c45f8504eaebbfafd222bdcb4de042f11e07bdf4e3b52dae3ed",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "86c8ff36",
+      "sha256": "7456b14217e800ee3b1b4b4b3257983f728771d7fa799163d1103f14688f3a75",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "87ee5025",
+      "sha256": "f4c042f5b02d857f064e6def50f9ca289fd2ec85b220b7e0e97ce9b791da0250",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "885950eb",
+      "sha256": "16d13338c4079e80f6eff6fd6bf7f02ded23e16da8a66949067668512ad2bcbf",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8979186b",
+      "sha256": "9daf91544977bb8de27683094335d91528b30f94cebeea4b0775a50ec5e7c65f",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8a08835d",
+      "sha256": "af6df0a0bceaa837ace2d3507539f55f97193b2505a9dfda1b1e99cc5dfbaad0",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8c615f77",
+      "sha256": "4070e9f1c83e41600ed69092948105857c5daa54f6433d7163839d4669355958",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8cb0b090",
+      "sha256": "65c81995c0d215565560f40d7a01467d24fa3a1566f00978d4b0c191ceeb6ad2",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "8df31063",
+      "sha256": "6733fc5a2c5b7816863117c1ab3a92185b6f448565f5edfadc3b0485a5586880",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "96faf98f",
+      "sha256": "516db5d55e1070d617c0c560b06010161d1d95900e0ad36a808a187ce9d3f03f",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "979a6093",
+      "sha256": "13313052014fa5e0a0d2861344c0b8288d134677b7fe617e891d71f92dba852e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "98c14cfe",
+      "sha256": "010811b2a5912ea8d784d323cbd4c2aebf2dfdf2d18b84a354059de773f910e0",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "9974c10a",
+      "sha256": "7818273907264adad1bb9597458579792adaedb90e8acf201f4462926eb1f56a",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "999411b2",
+      "sha256": "f2f591670da44c1951c850dcca19905067deec5756b088e4fc15e4baed8afd09",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "9a69469c",
+      "sha256": "8442234ce4e9f18fd9686cb4362e0ba5eb707063f1a54698e440dac7b10e3f76",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "9ab8cd61",
+      "sha256": "2be4742b536042985b2144793bde43fa97ee61b00c42115bb74dc69314ac3d7d",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "9ace3f16",
+      "sha256": "bda7346a8f6beebfe26c6d46c69f18563146cbd62f8decb97684257c5a058648",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "9b09f76a",
+      "sha256": "8827c54e7ac179be5e64582ad892a318c5446741a802dce73e6d8c6b4b05353a",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "9c647120",
+      "sha256": "25f8a212643b2b0b088dede23fc635cda0aae7b7ee54820cd628b26d7cec85b6",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "9dabdf09",
+      "sha256": "6fe696369ee520ca005570e306f80aafb073279b78f7bf6e5fbcdf3fdae45b3c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a01a3ad",
+      "sha256": "6a0b6bd0529df904db16049b9b3ab98fa0ba7b91b13564cdad1b77bd1d1b62e0",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a2d8687b",
+      "sha256": "820ced331cc0398bc4432be88cd791feada291a27abe3decacc3d63fbb275703",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a4db025d",
+      "sha256": "4ec6fb4c5a88b463fb95a4dc4906ff9ae7c5379db8e7fbfa06654e8fc08aa853",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a60d5f84",
+      "sha256": "24bc11959ca420bbfcd4d35f1683a9bf243f9605df9d2c938c45ac7318e047a2",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a72952c",
+      "sha256": "e787075f90e94457e4e8e7628f2b10af2811f36e33d31147c9580de3f5ff3838",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a8d2a0fd",
+      "sha256": "09242ffb5a825b59ffa4f6406f8cdd94cc72205c223c452e11a87f62009cfc20",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "a9a350a4",
+      "sha256": "477459ceea1ff8da58bb8e06063df575213a8ddcfbbb9786ea90b23ab6bd2c25",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "aa4ca77c",
+      "sha256": "c32cc49b142d9eeb2a7078727a98fde6b1b8e9c0a8b5d5168489d568e7fa51c9",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ab4fa3dd",
+      "sha256": "a009a197b61437c6f7a3dc438d8cb2e520b59087e15658b57605f369617b9029",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "ad28f558",
+      "sha256": "a6ce2161182ae0a1d94cc63bb09d604f3a3c99c970b2d64c0993f3ce86a0fc61",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ae441e07",
+      "sha256": "90aae8c3f20e7f2fc3668398a6342d7b3b62caee425827530b2f38e216614d83",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "aecdf22e",
+      "sha256": "a1cd090ca78533255e188777302115fddb6479d64c04a068b0e04d40c4a372a2",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b03002af",
+      "sha256": "52d5659762e8ec72d1bdbac2a2b74382a50c4744cc316854c5cc2062aa521a07",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b0978089",
+      "sha256": "acfa958444b516bcfbc92c66d73dac28bc8bf86e710a3141e3a4b78da330ca15",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b1388091",
+      "sha256": "1c8db71262ed53d7495ee1a3e2f8348098bb66c5a5d2874964514b91eef2b936",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b1a62a74",
+      "sha256": "22547df96df0ec991d07900dec0084b976b56b2a94fc6e3a499eb48b6dbc69c0",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b1eb6ef4",
+      "sha256": "92ece5e18c3fbaa2a6db466200ad7bde1d4ffaa44df12dbda8b1c34523997415",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b3a2b0f3",
+      "sha256": "1d73fde9a3ff544ca4b78d758ca310768a497d0ba8125b8dc8b0682ef91cf9c1",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "b51de604",
+      "sha256": "1c656526be7a439ae05bdd1accf16f0981fdff2d433d159c5e6c4b3ce4e71c8b",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "b53e4ad5",
+      "sha256": "aee6991531bc264af258391e0d1755b6da373edf7f65238cdb21addf4d3b8654",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "b580301b",
+      "sha256": "29482439a9dd1e47fa612da27027ab35960ba9cdf9ed6f581f93e242d2e01b5f",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b67f29db",
+      "sha256": "2f54020afc4edcab84656852c1a193fc3dbb651741bb668331758e6c113dee5e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "b7a4eb4d",
+      "sha256": "69b89060e54f1eb7bdbfc32d4c123782298f9c115ec5a8877b83e5eeaf7f76ba",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ba621cac",
+      "sha256": "72452500fe04f2f3e0ad24c89de57db065ac841112ea0344a36b058ffdc6d1e0",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "bb5d2516",
+      "sha256": "7650cfebffd8de70874e507671e895ce1daa1c9b1bff809a7fbba00a5159cfbb",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "bd1d8c7a",
+      "sha256": "5bf2a7fb74a0697de4a0c33be3e755dbb7de6c2716f54c78e60f91bd5177b15b",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "bd8d2f62",
+      "sha256": "78ae4c9cf76e69958d0b85ac08a36ed5bc1cf4eb358c2ca94449765f2d0eb7cc",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "bdd6be4c",
+      "sha256": "ea8dfad1382e2cd0e430c4a8cd4e576f5d5d92b606acb045b60d1c0266a4c491",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c1aa127e",
+      "sha256": "5f76e550dc974a081c40ea2151f91923f6cd697bd2137262ff61980e035a4921",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c1ac74e4",
+      "sha256": "06137409ac3014b5b7340264cfb2e3d1a0c641a24e1993c5753741f1e76499fb",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c356035e",
+      "sha256": "988e5d6b4d2cbc92ff75846efaa1f68a072aa20aa63ee73a0e72d7345d8c92f1",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "c4210710",
+      "sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "c53fca07",
+      "sha256": "cabedcfe3d22e2beaa285a7d7b775a02e055f302214ae65f37915f94a1606a37",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c58d692a",
+      "sha256": "8321c76718aa72165f57bbbc33a3834a520da177663dec7ed304d4d3f305b947",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "c6918a3e",
+      "sha256": "bec49a8c652a167cad4fe6f739eb5d47d33d83b2a00ef10371336b51bce6f89e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c71dfca4",
+      "sha256": "79a08090b68cbf554286383e85ac14f45796ad0e1bdf80bb08e1b8d96c08ec8a",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "c7eb51a6",
+      "sha256": "484a35a3ed73af9154aa1a358f3bc0a2d5e34900b12f861f61ec7feb85fd0e72",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c869526c",
+      "sha256": "013cc21c9c11238cd932665ba9eba85a2196777661840599185795597d5037fc",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "c920e237",
+      "sha256": "5f1bcc26fc18e6df2455ecdc31c06c484b3e4b8c455fa4fe477c4f7705c3ad44",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ca1f5e71",
+      "sha256": "da94de4afe498edf9d73f09ac0a4bcf189d08624fa213bc4d0a5300f507db393",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ca596f18",
+      "sha256": "409fffd3d6193d9849b249c180fb8e06f1c574e95ca9b4bcbb401f1e05be5df6",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "cab66e7f",
+      "sha256": "9c6ce7a34afa0ba7152221ef0d5a1866416a81cb66ecc4dfc8cb675678a52bd8",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "cbcc2dd2",
+      "sha256": "6cfdec4b8986a92da4d1ef03605bb904a2a178f4a30997b60dbe51b43cd9d57d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "cd230c7f",
+      "sha256": "a5cca8bcf0c34588691c4742c8b7217ba3c85549efe393ad6207c7945b8c1fa2",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "cdc6e806",
+      "sha256": "d499af26b37a4279b8318642be0bb3ca3cb54ef4393e734b7a4a5a4ca90f1478",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ceeec7a8",
+      "sha256": "cf187da7ec8180acd882a274fb028b04bee89a6598291d55910998906dfe226a",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "cfa976c9",
+      "sha256": "a3d9bdccc2a7519ac796a79d00931e69a5d0dc6e37c6dda801781ce56272e00e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d060153e",
+      "sha256": "a64ac55da952f470fbbd8cc9e4b07c073e0236626a91777ff30e55b85451acea",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d0963ef3",
+      "sha256": "fff588e6d85c969306959bdd19cee15db39eddc26268615907c17da794cfa048",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d27ddaae",
+      "sha256": "3217c9abf8c386858ceabc96f3e3c7ed5bd6db7b32875d0603ff41feb0e6a739",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d30d0cac",
+      "sha256": "3d30716036c65f0f80a3da2646c328e055ddf2d599f9edb6f3ec4d977e3a3006",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d43c4359",
+      "sha256": "9a969ed9ddafed8f99c17e19ffc00e075874b3ef271763bc5db904f67f610829",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d59cfac",
+      "sha256": "ac70efccb66366438873a5cd66047d3f6e00a0552db440fd85ae0e29289feea6",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "d6708500",
+      "sha256": "d7b1b46b2403fc3b29901911bac9e6b896b4dcc615ba93db15a2f82e3a03af0e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d8d3665",
+      "sha256": "163a31973e69f7d7f4d4264a37f2f6361710f0cd5ff878518e09eedf86a5adea",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "d9afdb37",
+      "sha256": "d444402da27dd9fa688839d60abbba5774e0074b9c3e022d366016410a624400",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "d9b97a3d",
+      "sha256": "f81d2a040ee01f6ed76fd0879653a2e3c44e6f23e051ffc82c5df1257ce550bf",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "da22697",
+      "sha256": "91f50226f9a0ffcb8cf2b9a660dff7abe76c29272113a17841e20823bf616bf2",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "dbfc5ab3",
+      "sha256": "2b89ccb29b060ce024c587aa58c3017875a5bb2064b9c8af88a03f7c70e7f085",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "dd3c60c6",
+      "sha256": "841adebd3070ad8e196bfd00697166d7640238373b4dc5ade08bd7c805ab8b1c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e029c1c3",
+      "sha256": "53465f9f30893f774ea21638727c86139872532802effdb6273c96d2e9bb2607",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e06fccc7",
+      "sha256": "e5b80b3a8426884c3ca5ecd23ae2fec84e31780e0f9c9faa1082ed65d60925b0",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "e0f2f40f",
+      "sha256": "1c085b46c0817473de673e3412fd01c23a1f47da28ab772f186081e399d9335d",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e13071d",
+      "sha256": "fb8a970c46998f20c03a2a0ccb991fd4cac3e80b37430aec2f4ebbba045b8716",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "e2aa4d0a",
+      "sha256": "d5615fbbe6dc14e1df79e8ba5c02b647ed6d071da8b531a8cfe893437c732895",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e2e39ee3",
+      "sha256": "c48ef0fd673a6be3a65fdcc94682c223870b9d7484a07536cfc61493c2c1df0f",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e2ff7dab",
+      "sha256": "0834320bc6b3d3f5a75b158698fa720653624b238d2a31c06dda192dcae9519b",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e37b38ce",
+      "sha256": "e2eb865d1ad9c37cd6b1a8937363da908606ab49a1e85f7cf2a84c238a212a61",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e6bae5dd",
+      "sha256": "550d1095852ab6415bb180b2a879a77104029012ef4668bfcccccc59f97a9430",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e74f433e",
+      "sha256": "cb65234fb2e7efab0ac0c61f4fe1ffbd5116fd16709fe0e898794db425d8596b",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e92770bf",
+      "sha256": "24387b4e20c636bb4bdba90f33ab33b1861b40e061fd5e277d8bbee07bb9ddf8",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "e9434766",
+      "sha256": "b2a972e84cdb3a66b50ea44498ba8d3a107625f6dd5f0421048e353abc473ed4",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "eac409ee",
+      "sha256": "cf81b4756d03843c26af8d815bc35f49ced626dc546b788d279ad518f77caea3",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "ebb697f8",
+      "sha256": "1e69dc4001c2c90317f0d3b54e9c7a2b85649cd26f2ebb089560a42e1925b4bf",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ec2725ad",
+      "sha256": "9de76bcedfb52d75342c413041a04c10b73d62dd97499fd1f70b949079ea6da0",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "eddc9642",
+      "sha256": "946103761b9947d8beed54115e5525e3092f771bd01f49725034ebb8dcedd0d4",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "eedf3266",
+      "sha256": "8bd743257f17518b9d1b945c5f30231ebbb6d3b193302d3ecb3529f92b3586d0",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "efbc8659",
+      "sha256": "14eda2e9588a072cf6aa8c9e6b2c0e8517b616e918d41ca582392a3d20a142ef",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "f3aa55b4",
+      "sha256": "450e1aee5d8414a6db4e468c277a98883f0c4c136984dc74dd060b30d2565050",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "f7b26635",
+      "sha256": "e823089698681ccdc0ce2e8a559bb906d95501b71f29b9d1230001bf8686a693",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "f7d5292f",
+      "sha256": "581b18aa37bde5806e2bc2e763f0c5bec9d494eacf996e818d905e4e24341b7c",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "f9971522",
+      "sha256": "13b136d9a71e77ccf5651c891a4bad2ded35cc611c0dc48c63863fe3d13d8880",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "fac4ecb7",
+      "sha256": "49ea566ecf4f8bf5b4ebe25956c53bd455f40d8eae06e7dd5a2c93e428670b11",
+      "in_prior_inventory": true
+    },
+    {
+      "name": "fae11f2d",
+      "sha256": "0791e5fe70debe55ed702278571c93e9a1ae2c99943f911708ff06c3fab76ce6",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "fde62796",
+      "sha256": "f0ae3d987e111437efa362604e7d8d686e4b65a48ddba5e16d27e601b65983fb",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "fe66e03b",
+      "sha256": "868bed86de26bc028fd070f7ea9a1893fa66a9f1b5b2553e7daee743c29ffd3e",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "feb554bd",
+      "sha256": "c34d844b7c4b4f80d3af55593423adf998cc33696a6daa07a15d853c41aa19ae",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ff20db3b",
+      "sha256": "cf12dfab1eb1d8e259405e7646bba88d5e887689100cc0318de54ca82604da9a",
+      "in_prior_inventory": false
+    },
+    {
+      "name": "ff8ca4ac",
+      "sha256": "cea2e588ef067722b34aeebb5a21297335d4fb1cbfe183fe6cb7af15dc7a44dd",
+      "in_prior_inventory": false
+    }
+  ],
+  "configured_rows": 663,
+  "joined_rows": 634,
+  "disabled_rows": 73,
+  "distinct_assets": 2975,
+  "unresolved_rows": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:2080410718791025706/m_spawners/15",
+      "kind": "spawn",
+      "label": "_SpawnList_ashlands (ordinary spawn list): Lava Rock",
+      "enabled": true,
+      "prefab_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8521671829965772175",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:4237988115216628356/m_spawners/10",
+      "kind": "spawn",
+      "label": "_SpawnList_DeepNorth (ordinary spawn list): Giant Troll",
+      "enabled": true,
+      "prefab_id": "CAB-8923bd833c4171316cf3c761b642c1c8:367677281588502697",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7824301328241812464/m_locations/3",
+      "kind": "location",
+      "label": "_LocationList_DeepNorth (configured location): NorthVillage",
+      "enabled": true,
+      "prefab_id": "CAB-71baa26864f6deca277f5a6f1350e6fd:-401563670246466681",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7685449674747599336/m_locations/5",
+      "kind": "location",
+      "label": "_LocationList_Ashlands (configured location): FortressRuins",
+      "enabled": true,
+      "prefab_id": "CAB-6261a353a0f6d19dbb60abcc9e069b4e:1495675012077427293",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7685449674747599336/m_locations/16",
+      "kind": "location",
+      "label": "_LocationList_Ashlands (configured location): AshlandRuins",
+      "enabled": true,
+      "prefab_id": "CAB-61c2ec831a4d79a8addf323261fad654:4214872539649134393",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/5",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/6",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/21",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/22",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/23",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/27",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/30",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/32",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/33",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): GoblinCamp2",
+      "enabled": true,
+      "prefab_id": "CAB-0aa3994d944935b2d62ab08647da934a:2538285978201109547",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/35",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/37",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/57",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): WoodFarm1",
+      "enabled": true,
+      "prefab_id": "CAB-a8c68c010cde603df65ff1f889e5c1c3:469770876430085103",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/58",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): WoodVillage1",
+      "enabled": true,
+      "prefab_id": "CAB-6060766d392c8f86bdcfc689dcd93140:-1503648492918485166",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/59",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/61",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/62",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/63",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/96",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-7289478991328343318/m_locations/101",
+      "kind": "location",
+      "label": "_ZoneSystem (configured location): ",
+      "enabled": false,
+      "prefab_id": null,
+      "reason": "Unresolved prefab reference"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-4859272144544607499/m_alts/4/m_addLocations/0",
+      "kind": "location",
+      "label": "AltBiomes_Erik (alternate configuration): WoodVillage2",
+      "enabled": true,
+      "prefab_id": "CAB-ef06ac4d9493f821ea7eb3be942dcb68:1618644050770920636",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-4859272144544607499/m_alts/24/m_addLocations/0",
+      "kind": "location",
+      "label": "AltBiomes_Erik (alternate configuration): GoblinCamp2_1",
+      "enabled": true,
+      "prefab_id": "CAB-9ea77602cdd3b01998ca8e5c611e621d:3243475117891527311",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-3296552234079057428/m_vegetation/0",
+      "kind": "vegetation",
+      "label": "_LocationList_Mistlands (configured vegetation): Mist area",
+      "enabled": true,
+      "prefab_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4734676705387637914",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:-3296552234079057428/m_vegetation/1",
+      "kind": "vegetation",
+      "label": "_LocationList_Mistlands (configured vegetation): Mist area _edge",
+      "enabled": true,
+      "prefab_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2522733994322772562",
+      "reason": "No catalog texture or mesh reference reached"
+    },
+    {
+      "id": "CAB-4fa65c91aa342391f97cc62455bd888a:4101917178451691946/m_locations/3",
+      "kind": "location",
+      "label": "_LocationList_Hildir (configured location): Hildir_plainsfortress",
+      "enabled": true,
+      "prefab_id": "CAB-45702639087f445383ab75af75205b5f:-5742939939563755278",
+      "reason": "No catalog texture or mesh reference reached"
+    }
+  ],
+  "limitations": [
+    "Configured references include disabled and alternate-biome content. They do not prove active spawning.",
+    "Membership uses direct descendant renderer and component mesh, texture, and material references. It does not recursively classify item drops or arbitrary gameplay prefab links.",
+    "A catalog asset may participate in several biomes. Membership does not grant artwork or runtime approval."
+  ],
+  "membership_sha256": "aec76c601d6c0ba3bfeb391348ac3b4e0bfa1d6a75baced89a9b7154cdb62008",
+  "additional_review_pilot_ids": [
+    "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:-8605274158951166907",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:2790173395324991560",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:5074722651943391187",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:5860067156705892813",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:6499687211232451560",
+    "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567"
+  ],
+  "published_distinct_assets": 2981
+}
