@@ -1,12 +1,12 @@
 # Meadows material roadmap
 
-The next Meadows work is organized into five bounded batches. Exact serialized identities define each starting scope. A matching name or directory does not establish placed Meadows use or approval.
+Meadows work is organized into five bounded batches, with current progress and remaining gates below. Exact serialized identities define each starting scope. A matching name or directory does not establish placed Meadows use or approval.
 
 ## 1. Beech bark family
 
 Start from material `CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260`. It binds albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400`, normal `CAB-8923bd833c4171316cf3c761b642c1c8:-3552050549463384350`, and shared moss `CAB-8923bd833c4171316cf3c761b642c1c8:-3043036005615678986`.
 
-The current bark study is deliberately unmapped. The source is a packed atlas with bark, cut ends, and edge regions rather than a simple tile. The main tree and blob LOD meshes use different atlas regions and materially different alpha distributions. Map the authored atlas to every bark island, preserve repeat behavior, and validate all LODs before adding a runtime binding.
+An authored 1024px atlas now fits the near and middle gameplay-tree bark slots, including the underside cap. These scopes have UV and native texture evidence. Correct affine UV inspection found that the 95px cut-end patch overlaps 9,025 distant trunk texels, so the distant mesh keeps original bark. Resolve that conflict and review logs, stumps, small trees, moss and normals before adding a shared binding. The standalone imported beech model has different material assignments and is not the gameplay tree. See [beech material candidates](BEECH_MATERIALS.md).
 
 ## 2. Meadows grass cards
 
@@ -14,7 +14,9 @@ Resolve materials `CAB-8923bd833c4171316cf3c761b642c1c8:1669900682560515117` and
 
 ## 3. Beech leaf cards and LODs
 
-Target material `CAB-8923bd833c4171316cf3c761b642c1c8:-695329477639400634`, albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833`, and normal `CAB-8923bd833c4171316cf3c761b642c1c8:3954888016727907068`. Review the three known blob meshes `CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811`, `CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275`, and `CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531`. Coordinate albedo, normal, alpha coverage, two-sided shading, wind, and every LOD transition.
+Target material `CAB-8923bd833c4171316cf3c761b642c1c8:-695329477639400634`, albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833`, and normal `CAB-8923bd833c4171316cf3c761b642c1c8:3954888016727907068`. Review the three known blob meshes `CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811`, `CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275`, and `CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531`. A shared authored branch now produces 1024px and 512px candidates. All three large-tree and four small-tree/imported meshes have scoped front/rear UV review; both sizes pass native texture and diagnostic cutout sampling. Small foliage albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984` is included.
+
+Remaining gates are companion normals, the unhealthy sapling cutoff 0.26 and tint, actual game shader, two-sided lighting, wind, and every LOD transition. The final 1x1 mip is transparent and fractional tail coverage falls, so distant appearance is not approved. Geometry is retained, not newly authored.
 
 ## 4. Terrain arrays
 

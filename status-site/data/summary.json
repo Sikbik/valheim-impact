@@ -5,7 +5,7 @@
       "id": "authored-sources",
       "path": "assets/provenance.json",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
-      "sha256": "1946244d438e22aa78b080f72edbb14e2d6ffd220f6478acb498d3f12f7d026a",
+      "sha256": "33136f4902ad3cb33ca8033eec5e35984a12b6424cbb891e8c16e4907e8171ca",
       "stages": [
         "authored"
       ],
@@ -61,6 +61,31 @@
       "title": "Complete serialized inventory"
     },
     {
+      "id": "meadows-beech-materials",
+      "path": "docs/evidence/contributions/meadows-beech-materials.json",
+      "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
+      "sha256": "838ab2fa0cdbb0bdb98e211e7e506d38a907cd3c359916a71adc43d42af72c2e",
+      "stages": [
+        "authored",
+        "native_validated",
+        "uv_reviewed"
+      ],
+      "target_count": 10,
+      "targets": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470"
+      ],
+      "title": "Beech foliage and near bark material review"
+    },
+    {
       "id": "meadows-straw-materials",
       "path": "docs/evidence/contributions/meadows-straw-materials.json",
       "scope": "Two authored cutouts pass scoped top-facing roof UV review and native BC3 mip sampling. Three original roof meshes retain geometry and companion slots. Actual game shader, underside, weather, LOD and final approval remain pending.",
@@ -84,7 +109,7 @@
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
-      "sha256": "c922ce7c5bb57c9d7a40666e24053dfbc5bb59321e63b1937d148f289e53ecd3",
+      "sha256": "d3f053fe703b79510dae871bc9668f75cc4956b39e0af2aa429c56a13dec4771",
       "stages": [
         "native_validated"
       ],
@@ -170,10 +195,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "5df86e034cbde9cd7ef934a59d4a31c6122dd2d8c0282a4310711d65e7641fa5"
+    "status_manifest_sha256": "d5dd1e8c4b9d4dba6d9993f16a7abbfb6ad847ceda9e528b3377cc76f2285148"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T21:08:33Z",
+  "snapshot_at": "2026-09-12T22:29:57Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",
@@ -208,8 +233,8 @@
         "world_surface": 328
       }
     },
-    "evidence_records": 11,
-    "evidence_target_assets": 13,
+    "evidence_records": 12,
+    "evidence_target_assets": 23,
     "meshes": 10336,
     "stage_counts": {
       "mesh": {
@@ -218,15 +243,15 @@
         "game_fixture_validated": 1,
         "inventoried": 10336,
         "native_validated": 0,
-        "uv_reviewed": 8
+        "uv_reviewed": 15
       },
       "texture": {
         "approved": 0,
-        "authored": 5,
+        "authored": 8,
         "game_fixture_validated": 3,
         "inventoried": 3187,
-        "native_validated": 5,
-        "uv_reviewed": 5
+        "native_validated": 8,
+        "uv_reviewed": 8
       }
     },
     "textures": 3187

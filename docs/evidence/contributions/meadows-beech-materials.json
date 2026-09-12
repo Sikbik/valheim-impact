@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Three original albedo identities have exact authored-source mappings and retained local source provenance.",
+      "passed": true
+    },
+    {
+      "name": "Seven retained meshes have scoped front/rear albedo and alpha review, with 5376 imported face corners and zero measured UV error.",
+      "passed": true
+    },
+    {
+      "name": "Near and middle bark underside caps sample the owned endgrain patch; distant and small-tree comparisons retain original bark.",
+      "passed": true
+    },
+    {
+      "name": "HD foliage passes 11 point mip samples and 10 fractional diagnostics; Balanced passes 10 and 9, on Vulkan in Linear color.",
+      "passed": true
+    },
+    {
+      "name": "The final 1x1 mip is transparent for both foliage candidates; distance-transition appearance remains unapproved.",
+      "passed": true
+    },
+    {
+      "name": "All three albedo payloads pass native texture validation; paired normal studies remain unmapped.",
+      "passed": true
+    },
+    {
+      "name": "Both finite cutout fixtures destroy their owned textures, materials and bundles.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech-material-layout.json SHA256 829eaef6ce3b39dfea946de6cdc2b9b0e7fb5db6744454d3e8179081d84599e8",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech-material-uv.json SHA256 f24951554fce0c8f859d2b7f7a7b57f99ae1ffc5d5c7ed962a03c984630b28fb",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech_branch_hd_albedo-sampling.json SHA256 a0aad3d0ee26e3be3d2397f2fb3bcd10e4e286735390cf7b68c1ab3c0d595cb4",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech_branch_balanced_albedo-sampling.json SHA256 05b50648457504bb1f67663e16e18c72b8402c869ff687c068c872edb7a143b4",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 d3f053fe703b79510dae871bc9668f75cc4956b39e0af2aa429c56a13dec4771",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/beech-branch-rgba-v1.png",
+      "sha256": "1570f0f106843776957508a903716b6da884206aa972197b739e75baccb147b4"
+    },
+    {
+      "path": "assets/meadows/beech-bark-near-atlas-v1.png",
+      "sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf"
+    }
+  ]
+}

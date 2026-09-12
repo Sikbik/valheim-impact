@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "scope": "Near and middle beech bark slot1 only; shared distant trunk overlaps the endgrain patch. No runtime binding.",
+  "sources": [
+    {
+      "path": "assets/meadows/beech-bark-surface-v1.png",
+      "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+    },
+    {
+      "path": "assets/meadows/beech-endgrain-source-v1.png",
+      "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+    }
+  ],
+  "operations": [
+    {
+      "source": 0,
+      "convert": "RGB",
+      "resize": [
+        1024,
+        1024
+      ],
+      "filter": "LANCZOS"
+    },
+    {
+      "source": 1,
+      "crop": "centered square",
+      "saturation": 0.72,
+      "resize": [
+        95,
+        95
+      ],
+      "filter": "LANCZOS",
+      "paste_box": [
+        278,
+        537,
+        373,
+        632
+      ]
+    },
+    {
+      "convert": "RGBA",
+      "alpha": 255
+    }
+  ],
+  "output": "assets/meadows/beech-bark-near-atlas-v1.png",
+  "output_sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf",
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "encoding": {
+    "format": "PNG",
+    "optimize": true,
+    "image_library": "Pillow 12.3.0"
+  }
+}

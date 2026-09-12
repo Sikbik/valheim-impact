@@ -1,0 +1,1400 @@
+{
+  "schema_version": 1,
+  "scope": "Serialized material-slot and affine texture-coordinate measurements for eight beech meshes. Source suitability and scoped fitting evidence only.",
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
+  "bundle": {
+    "name": "c4210710",
+    "sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+    "matched_inventory": true
+  },
+  "approvals": {
+    "art": false,
+    "native": false,
+    "game": false,
+    "global_uv": false,
+    "runtime_binding": false
+  },
+  "method": {
+    "coordinates": "Affine UV0 triangles sampled at texel centers, with whole-triangle repeat shifts. Long edges retain their full linear span.",
+    "supersedes": "Earlier shortest-path UV edge unwrapping measurements.",
+    "units": "Distinct texture-space texel centers, not projected screen or world surface coverage.",
+    "excluded": "Vertex arrays, triangle indices, UV coordinate arrays and original image pixels are not included."
+  },
+  "albedos": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "name": "beech_bark",
+      "dimensions": [
+        512,
+        512
+      ],
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "alpha_zero": 1331,
+      "alpha_partial": 97985,
+      "alpha_opaque": 162828,
+      "coverage_at_0_5": 0.9742660522460938,
+      "coverage_at_0_69": 0.96405029296875
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+      "name": "beech_leaf_small",
+      "dimensions": [
+        64,
+        64
+      ],
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "alpha_zero": 2289,
+      "alpha_partial": 1771,
+      "alpha_opaque": 36,
+      "coverage_at_0_5": 0.224365234375,
+      "coverage_at_0_69": 0.14501953125
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+      "name": "beech_leaf",
+      "dimensions": [
+        256,
+        256
+      ],
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "alpha_zero": 41898,
+      "alpha_partial": 17297,
+      "alpha_opaque": 6341,
+      "coverage_at_0_5": 0.2486724853515625,
+      "coverage_at_0_69": 0.2254638671875
+    }
+  ],
+  "meshes": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "consumers": [
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech1/Lod1",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4640136191904998588"
+        },
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_blob_lod2/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5656436232139650397"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 80,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:-695329477639400634"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0048329997807741165,
+            0.9993559718132019,
+            0.9993280172348022
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 65280,
+            "min": 0,
+            "max": 255,
+            "mean": 62.61844362745098,
+            "zero": 41654,
+            "under_128": 48993,
+            "under_250": 55456,
+            "coverage_0_5": 0.24949448529411763
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 65536,
+            "min": 0,
+            "max": 255,
+            "mean": 62.41325378417969,
+            "zero": 41898,
+            "under_128": 49239,
+            "under_250": 55702,
+            "coverage_0_5": 0.2486724853515625
+          },
+          "underside_triangles": 0,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 0,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": null
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 65280,
+            "min": 0,
+            "max": 255,
+            "mean": 62.61844362745098,
+            "zero": 41654,
+            "under_128": 48993,
+            "under_250": 55456,
+            "coverage_0_5": 0.24949448529411763
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 34,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+          ],
+          "uv_bounds": [
+            0.01285099983215332,
+            0.008346999995410442,
+            0.5279489755630493,
+            0.9242150187492371
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 30954,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70262324739937,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 33235,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70103806228374,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "underside_triangles": 2,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 714,
+            "min": 254,
+            "max": 255,
+            "mean": 254.94117647058823,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 30240,
+            "min": 254,
+            "max": 255,
+            "mean": 254.69699074074074,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "uv_region_count_by_shared_coordinates": 5
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:2005030479268777572",
+      "consumers": [
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:886151793047473764"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 384,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0,
+            1.0,
+            0.9999279975891113
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 261523,
+            "min": 0,
+            "max": 255,
+            "mean": 247.24649457217913,
+            "zero": 1276,
+            "under_128": 6540,
+            "under_250": 19555,
+            "coverage_0_5": 0.9749926392707333
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 262090,
+            "min": 0,
+            "max": 255,
+            "mean": 247.10874890304856,
+            "zero": 1306,
+            "under_128": 6719,
+            "under_250": 19786,
+            "coverage_0_5": 0.9743637681712389
+          },
+          "underside_triangles": 0,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 0,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": null
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 261523,
+            "min": 0,
+            "max": 255,
+            "mean": 247.24649457217913,
+            "zero": 1276,
+            "under_128": 6540,
+            "under_250": 19555,
+            "coverage_0_5": 0.9749926392707333
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 232,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:7776510296790109796"
+          ],
+          "uv_bounds": [
+            0.01285099983215332,
+            0.010390999726951122,
+            0.5287079811096191,
+            0.9920700192451477
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 36960,
+            "min": 254,
+            "max": 255,
+            "mean": 254.7091720779221,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 39640,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70681130171545,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "underside_triangles": 8,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 1300,
+            "min": 254,
+            "max": 255,
+            "mean": 254.8846153846154,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 35660,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70277621985417,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "uv_region_count_by_shared_coordinates": 5
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "consumers": [
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech1/Lod3",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3750265480304485564"
+        },
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_blob_lod3/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5092399839612760355"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 16,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:-695329477639400634"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0048329997807741165,
+            0.9993559718132019,
+            0.9993280172348022
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 65280,
+            "min": 0,
+            "max": 255,
+            "mean": 62.61844362745098,
+            "zero": 41654,
+            "under_128": 48993,
+            "under_250": 55456,
+            "coverage_0_5": 0.24949448529411763
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 65536,
+            "min": 0,
+            "max": 255,
+            "mean": 62.41325378417969,
+            "zero": 41898,
+            "under_128": 49239,
+            "under_250": 55702,
+            "coverage_0_5": 0.2486724853515625
+          },
+          "underside_triangles": 0,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 0,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": null
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 65280,
+            "min": 0,
+            "max": 255,
+            "mean": 62.61844362745098,
+            "zero": 41654,
+            "under_128": 48993,
+            "under_250": 55456,
+            "coverage_0_5": 0.24949448529411763
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 6,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+          ],
+          "uv_bounds": [
+            0.0,
+            0.0,
+            1.0,
+            0.9069589972496033
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 177098,
+            "min": 0,
+            "max": 255,
+            "mean": 251.8165422534416,
+            "zero": 517,
+            "under_128": 1715,
+            "under_250": 4433,
+            "coverage_0_5": 0.9903160961727405
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 179251,
+            "min": 0,
+            "max": 255,
+            "mean": 251.67591812597976,
+            "zero": 537,
+            "under_128": 1843,
+            "under_250": 4655,
+            "coverage_0_5": 0.9897183279312249
+          },
+          "underside_triangles": 2,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 7844,
+            "min": 0,
+            "max": 255,
+            "mean": 191.82024477307496,
+            "zero": 517,
+            "under_128": 1705,
+            "under_250": 3892,
+            "coverage_0_5": 0.7826364099949006
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 169254,
+            "min": 81,
+            "max": 255,
+            "mean": 254.59704349675636,
+            "zero": 0,
+            "under_128": 10,
+            "under_250": 541,
+            "coverage_0_5": 0.999940917201366
+          },
+          "uv_region_count_by_shared_coordinates": 2
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "consumers": [
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_blob_lod1/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2243076085700373707"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech1/Lod0",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5516269426419721404"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 200,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:-695329477639400634"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0048329997807741165,
+            0.9993559718132019,
+            0.9993280172348022
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 65280,
+            "min": 0,
+            "max": 255,
+            "mean": 62.61844362745098,
+            "zero": 41654,
+            "under_128": 48993,
+            "under_250": 55456,
+            "coverage_0_5": 0.24949448529411763
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 65536,
+            "min": 0,
+            "max": 255,
+            "mean": 62.41325378417969,
+            "zero": 41898,
+            "under_128": 49239,
+            "under_250": 55702,
+            "coverage_0_5": 0.2486724853515625
+          },
+          "underside_triangles": 0,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 0,
+            "min": null,
+            "max": null,
+            "mean": null,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": null
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 65280,
+            "min": 0,
+            "max": 255,
+            "mean": 62.61844362745098,
+            "zero": 41654,
+            "under_128": 48993,
+            "under_250": 55456,
+            "coverage_0_5": 0.24949448529411763
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 232,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+          ],
+          "uv_bounds": [
+            0.01285099983215332,
+            0.010390999726951122,
+            0.5287079811096191,
+            0.9920700192451477
+          ],
+          "alpha_at_texel_centers": {
+            "pixels": 36960,
+            "min": 254,
+            "max": 255,
+            "mean": 254.7091720779221,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_pixel_repeat_margin": {
+            "pixels": 39640,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70681130171545,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "underside_triangles": 8,
+          "underside_alpha_at_texel_centers": {
+            "pixels": 1300,
+            "min": 254,
+            "max": 255,
+            "mean": 254.8846153846154,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "other_surface_alpha_at_texel_centers": {
+            "pixels": 35660,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70277621985417,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "uv_region_count_by_shared_coordinates": 5
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "consumers": [
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_small_blob2/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6828500291063340001"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech_small2/beech",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7002907136463373863"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech_small2/beech_low",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:905040026024248871"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 36,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:8623728463208380881"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0048329997807741165,
+            0.9993559718132019,
+            0.9993280172348022
+          ],
+          "unique_uv_coordinates": 4,
+          "original": {
+            "unique_texel_fraction": 1.0,
+            "alpha": {
+              "pixels": 4096,
+              "min": 0,
+              "max": 255,
+              "mean": 53.803466796875,
+              "zero": 2289,
+              "under_128": 3177,
+              "under_250": 4026,
+              "coverage_0_5": 0.224365234375
+            }
+          },
+          "authored512_alpha_diagnostic": {
+            "unique_texel_fraction": 0.9929542541503906,
+            "alpha": {
+              "pixels": 260297,
+              "min": 0,
+              "max": 255,
+              "mean": 60.67715340553291,
+              "zero": 174626,
+              "under_128": 198003,
+              "under_250": 212243,
+              "coverage_0_5": 0.23931893183555708
+            }
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 34,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+          ],
+          "uv_bounds": [
+            0.41844698786735535,
+            0.011498999781906605,
+            0.4328800141811371,
+            0.225164994597435
+          ],
+          "unique_uv_coordinates": 21,
+          "uv_region_count_by_shared_coordinates": 2
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "consumers": [
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_small/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3133599438715554482"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech_Sapling/unhealthy",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3595068799906333846"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech_Sapling/healthy",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6377910788048012438"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 72,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:1406518094360602383",
+            "CAB-8923bd833c4171316cf3c761b642c1c8:6394467468834360399",
+            "CAB-8923bd833c4171316cf3c761b642c1c8:8623728463208380881"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0,
+            1.0,
+            0.9999279975891113
+          ],
+          "unique_uv_coordinates": 12,
+          "original": {
+            "unique_texel_fraction": 1.0,
+            "alpha": {
+              "pixels": 4096,
+              "min": 0,
+              "max": 255,
+              "mean": 53.803466796875,
+              "zero": 2289,
+              "under_128": 3177,
+              "under_250": 4026,
+              "coverage_0_5": 0.224365234375
+            }
+          },
+          "authored512_alpha_diagnostic": {
+            "unique_texel_fraction": 0.9976310729980469,
+            "alpha": {
+              "pixels": 261523,
+              "min": 0,
+              "max": 255,
+              "mean": 60.39270350982514,
+              "zero": 175852,
+              "under_128": 199229,
+              "under_250": 213469,
+              "coverage_0_5": 0.23819702282399635
+            }
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 22,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+          ],
+          "uv_bounds": [
+            0.41844698786735535,
+            0.011498999781906605,
+            0.4328800141811371,
+            0.225164994597435
+          ],
+          "unique_uv_coordinates": 20,
+          "uv_region_count_by_shared_coordinates": 2
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "consumers": [
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_small_blob1/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7799408053716981732"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech_small1/beech_low",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2457907305929355915"
+        },
+        {
+          "kind": "gameplay-prefab",
+          "hierarchy": "Beech_small1/beech",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2738728615736554123"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 24,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:8623728463208380881"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0048329997807741165,
+            0.9993559718132019,
+            0.9993280172348022
+          ],
+          "unique_uv_coordinates": 4,
+          "original": {
+            "unique_texel_fraction": 1.0,
+            "alpha": {
+              "pixels": 4096,
+              "min": 0,
+              "max": 255,
+              "mean": 53.803466796875,
+              "zero": 2289,
+              "under_128": 3177,
+              "under_250": 4026,
+              "coverage_0_5": 0.224365234375
+            }
+          },
+          "authored512_alpha_diagnostic": {
+            "unique_texel_fraction": 0.9929542541503906,
+            "alpha": {
+              "pixels": 260297,
+              "min": 0,
+              "max": 255,
+              "mean": 60.67715340553291,
+              "zero": 174626,
+              "under_128": 198003,
+              "under_250": 212243,
+              "coverage_0_5": 0.23931893183555708
+            }
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 22,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+          ],
+          "uv_bounds": [
+            0.41844698786735535,
+            0.011498999781906605,
+            0.4328800141811371,
+            0.225164994597435
+          ],
+          "unique_uv_coordinates": 20,
+          "uv_region_count_by_shared_coordinates": 2
+        }
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+      "consumers": [
+        {
+          "kind": "standalone-imported-model",
+          "hierarchy": "beech_small2/default",
+          "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6886546297189345210"
+        }
+      ],
+      "slots": [
+        {
+          "slot": 0,
+          "triangles": 84,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:8623728463208380881"
+          ],
+          "uv_bounds": [
+            -0.0006440000142902136,
+            0.0,
+            1.0,
+            0.9999279975891113
+          ],
+          "unique_uv_coordinates": 12,
+          "original": {
+            "unique_texel_fraction": 1.0,
+            "alpha": {
+              "pixels": 4096,
+              "min": 0,
+              "max": 255,
+              "mean": 53.803466796875,
+              "zero": 2289,
+              "under_128": 3177,
+              "under_250": 4026,
+              "coverage_0_5": 0.224365234375
+            }
+          },
+          "authored512_alpha_diagnostic": {
+            "unique_texel_fraction": 0.9976310729980469,
+            "alpha": {
+              "pixels": 261523,
+              "min": 0,
+              "max": 255,
+              "mean": 60.39270350982514,
+              "zero": 175852,
+              "under_128": 199229,
+              "under_250": 213469,
+              "coverage_0_5": 0.23819702282399635
+            }
+          },
+          "uv_region_count_by_shared_coordinates": 1
+        },
+        {
+          "slot": 1,
+          "triangles": 34,
+          "base_vertex": 0,
+          "material_ids": [
+            "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+          ],
+          "uv_bounds": [
+            0.41844698786735535,
+            0.011498999781906605,
+            0.4328800141811371,
+            0.225164994597435
+          ],
+          "unique_uv_coordinates": 21,
+          "uv_region_count_by_shared_coordinates": 2
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-695329477639400634",
+      "name": "beech_leaf",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3954888016727907068",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cull": 0.0,
+        "_Cutoff": 0.5,
+        "_DstBlend": 0.0,
+        "_Height": 35.0,
+        "_Mode": 0.0,
+        "_RippleDistance": 2.0,
+        "_RippleSpeed": 150.0,
+        "_SphereNormals": 0.0,
+        "_SphereOffset": 10.0,
+        "_SrcBlend": 1.0,
+        "_SwayDistance": 25.0,
+        "_SwaySpeed": 10.0,
+        "_TwoSidedNormals": 0.0,
+        "_ZWrite": 1.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        }
+      },
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:1406518094360602383",
+      "name": "beech_leaf_sapling_unhealthy",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2050658297191628794",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cull": 0.0,
+        "_Cutoff": 0.25999999046325684,
+        "_DstBlend": 10.0,
+        "_Height": 5.0,
+        "_Mode": 3.0,
+        "_RippleDistance": 1.0,
+        "_RippleSpeed": 200.0,
+        "_SphereNormals": 1.0,
+        "_SphereOffset": 0.5,
+        "_SrcBlend": 1.0,
+        "_SwayDistance": 1.5,
+        "_SwaySpeed": 30.0,
+        "_TwoSidedNormals": 0.0,
+        "_ZWrite": 0.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 0.34558820724487305,
+          "g": 0.562221109867096,
+          "r": 1.0
+        }
+      },
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925",
+      "name": "beech_bark_small",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3552050549463384350",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cull": 2.0,
+        "_Cutoff": 0.5,
+        "_DstBlend": 10.0,
+        "_Height": 5.0,
+        "_Mode": 3.0,
+        "_RippleDistance": 0.0,
+        "_RippleSpeed": 100.0,
+        "_SphereNormals": 0.0,
+        "_SphereOffset": 0.0,
+        "_SrcBlend": 1.0,
+        "_SwayDistance": 5.0,
+        "_SwaySpeed": 25.0,
+        "_TwoSidedNormals": 0.0,
+        "_ZWrite": 0.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        }
+      },
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260",
+      "name": "beech_bark",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3552050549463384350",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cull": 2.0,
+        "_Cutoff": 0.5,
+        "_DstBlend": 10.0,
+        "_Height": 35.0,
+        "_Mode": 3.0,
+        "_RippleDistance": 0.0,
+        "_RippleSpeed": 100.0,
+        "_SphereNormals": 0.0,
+        "_SphereOffset": 0.0,
+        "_SrcBlend": 1.0,
+        "_SwayDistance": 25.0,
+        "_SwaySpeed": 10.0,
+        "_TwoSidedNormals": 0.0,
+        "_ZWrite": 0.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        }
+      },
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:6394467468834360399",
+      "name": "beech_leaf_sapling",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2050658297191628794",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cull": 0.0,
+        "_Cutoff": 0.5,
+        "_DstBlend": 10.0,
+        "_Height": 5.0,
+        "_Mode": 3.0,
+        "_RippleDistance": 0.5,
+        "_RippleSpeed": 200.0,
+        "_SphereNormals": 1.0,
+        "_SphereOffset": 0.5,
+        "_SrcBlend": 1.0,
+        "_SwayDistance": 1.5,
+        "_SwaySpeed": 30.0,
+        "_TwoSidedNormals": 0.0,
+        "_ZWrite": 0.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        }
+      },
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:7776510296790109796",
+      "name": "trunk",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": null,
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cutoff": 0.5,
+        "_DstBlend": 0.0,
+        "_Mode": 0.0,
+        "_SrcBlend": 1.0,
+        "_ZWrite": 1.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 0.6399999856948853,
+          "g": 0.6399999856948853,
+          "r": 0.6399999856948853
+        }
+      },
+      "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+      "shader_name": "Standard"
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:8623728463208380881",
+      "name": "beech_leaf_small",
+      "textures": [
+        {
+          "property": "_BumpMap",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2050658297191628794",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        },
+        {
+          "property": "_MainTex",
+          "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+          "scale": {
+            "x": 1.0,
+            "y": 1.0
+          },
+          "offset": {
+            "x": 0.0,
+            "y": 0.0
+          }
+        }
+      ],
+      "floats": {
+        "_Cull": 0.0,
+        "_Cutoff": 0.5,
+        "_DstBlend": 10.0,
+        "_Height": 5.0,
+        "_Mode": 3.0,
+        "_RippleDistance": 0.5,
+        "_RippleSpeed": 200.0,
+        "_SphereNormals": 0.0,
+        "_SphereOffset": 1.0,
+        "_SrcBlend": 1.0,
+        "_SwayDistance": 5.0,
+        "_SwaySpeed": 25.0,
+        "_TwoSidedNormals": 0.0,
+        "_ZWrite": 0.0
+      },
+      "colors": {
+        "_Color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        }
+      },
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation"
+    }
+  ],
+  "bark_fit": {
+    "candidate_sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "source_sha256": [
+      "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4",
+      "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+    ],
+    "original_pixels_used": false,
+    "original_masks_used": false,
+    "near_middle_gameplay_mesh_ids": [
+      "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275"
+    ],
+    "slot": 1,
+    "patch_dimensions": [
+      95,
+      95
+    ],
+    "patch_checks": [
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+        "slot": 1,
+        "underside_triangles": 8,
+        "side_patch_overlap_pixels": 0,
+        "underside_patch_overlap_pixels": 5208
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+        "slot": 1,
+        "underside_triangles": 2,
+        "side_patch_overlap_pixels": 0,
+        "underside_patch_overlap_pixels": 2863
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+        "slot": 1,
+        "underside_triangles": 2,
+        "side_patch_overlap_pixels": 9025,
+        "underside_patch_overlap_pixels": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2005030479268777572",
+        "slot": 1,
+        "underside_triangles": 8,
+        "side_patch_overlap_pixels": 0,
+        "underside_patch_overlap_pixels": 5208
+      }
+    ],
+    "limitation": "All 9025 patch texels overlap distant mesh trunk-side UVs. This fit cannot advance as a shared all-consumer bark replacement. The standalone full-detail canopy is outside gameplay tree validation."
+  },
+  "caveats": [
+    "Full-detail imported beech.obj slot0 is canopy-like geometry assigned bark material, not leaf material. Its slot1 uses the Standard trunk material.",
+    "Bark near and middle slot1 alpha samples are 254 or 255, including one-pixel repeat margins. This supports opaque authored texels for scoped tests, not a shader-state change.",
+    "Distant bark underside includes 517 zero-alpha texels and 1705 texels below 128. Its sides include 10 of 169254 texels below 128, increasing to 52 with one-pixel repeat margin. Alpha cannot be discarded globally.",
+    "Stored Mode3, SrcBlend1, DstBlend10 and ZWrite0 do not establish the live shader alpha path. Small leaf materials have no valid keywords; ALPHAPREMULTIPLY_ON is stored only as an invalid keyword.",
+    "Unhealthy sapling material 1406518094360602383 has cutoff .26 and color(1,.562221,.345588,1), compared with cutoff .5 and white for healthy and ordinary small leaves. It also has RippleDistance 1 rather than .5.",
+    "Healthy and unhealthy sapling child transforms have uniform scale .45. Small-tree children are identity. Prefab root editor translations must not be treated as mesh-local placement.",
+    "Large blob foliage samples a baked canopy image; small foliage samples a branch image. Similar UV extents do not make those source compositions interchangeable.",
+    "Existing leaf normals describe original shapes and do not establish compatibility with replacement leaf artwork.",
+    "Mesh rendering, mip filtering, compression, wind, weather, lighting, shader behavior and final acceptance require separate evidence."
+  ],
+  "small_branch_candidate": {
+    "source_sha256": "1570f0f106843776957508a903716b6da884206aa972197b739e75baccb147b4",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "review_target_dimensions": [
+      512,
+      512
+    ],
+    "original_alpha_mean": 0.2109939874387255,
+    "original_coverage_at_67": 0.305419921875,
+    "authored_alpha_mean": 0.23673647960388594,
+    "authored_coverage_at_67": 0.2402830877396478,
+    "scope": "Whole-image source suitable for scoped card-mesh review. Alpha-only512 diagnostics do not establish RGB fitting or compressed mip fidelity.",
+    "card_patterns": [
+      {
+        "mesh_ids": [
+          "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+          "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489"
+        ],
+        "unique_uv_coordinates": 4,
+        "triangles_per_pattern": 2,
+        "pattern_repetitions": [
+          12,
+          18
+        ]
+      },
+      {
+        "mesh_ids": [
+          "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+          "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470"
+        ],
+        "unique_uv_coordinates": 12,
+        "triangles_per_pattern": 12,
+        "pattern_repetitions": [
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  "source_sampler": {
+    "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+    "filter": "point",
+    "wrap_u": "repeat",
+    "wrap_v": "repeat",
+    "anisotropy": 1,
+    "mip_bias": 0,
+    "mip_count": 7
+  }
+}

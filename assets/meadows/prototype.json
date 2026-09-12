@@ -224,6 +224,59 @@
       "alpha_policy": "cutout",
       "alpha_cutoff": 0.69,
       "normal_strength": 0
+    },
+    {
+      "id": "beech_branch_hd",
+      "source": "assets/meadows/beech-branch-rgba-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": false,
+      "alpha_policy": "cutout",
+      "normal_strength": 0,
+      "alpha_cutoff": 0.5
+    },
+    {
+      "id": "beech_branch_balanced",
+      "source": "assets/meadows/beech-branch-rgba-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "alpha_policy": "cutout",
+      "normal_strength": 0,
+      "alpha_cutoff": 0.5
+    },
+    {
+      "id": "beech_bark_near_hd",
+      "source": "assets/meadows/beech-bark-near-atlas-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": false,
+      "alpha_policy": "opaque",
+      "normal_strength": 0.025
     }
   ]
 }

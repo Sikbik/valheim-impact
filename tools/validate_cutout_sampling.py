@@ -22,19 +22,26 @@ from tools.validate_native import compare_readback
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def compare_mask(alpha, mask, cutoff, *, quantized_native_alpha=False):
+def compare_mask(alpha, mask, cutoff, *, quantized_native_alpha=False, sampled_alpha=None):
     """Allow sparse one-byte BC3 rounding uncertainty at the exact cutoff."""
     if (type(cutoff) not in (int, float) or not math.isfinite(cutoff) or
             not 0 < cutoff < 1 or alpha.ndim != 2 or alpha.size == 0 or
             mask.shape != (*alpha.shape, 4) or alpha.dtype != np.uint8 or
             mask.dtype != np.uint8):
         raise ValueError('Invalid alpha, native mask dimensions or cutoff')
+    if sampled_alpha is not None and (sampled_alpha.shape != alpha.shape or
+                                       sampled_alpha.dtype != np.uint8):
+        raise ValueError('Invalid sampled native alpha')
     if not np.all((mask == 0) | (mask == 255)) or not np.all(mask == mask[:, :, :1]):
         raise ValueError('Expected a binary RGBA native mask')
     native = mask[:, :, 0] == 255
     expected = alpha >= math.ceil(cutoff * 255)
     mismatched = native != expected
-    if np.any(mismatched & (np.abs(alpha.astype(float) - cutoff * 255) > 1)):
+    mask_reference = alpha if sampled_alpha is None else sampled_alpha
+    reference_expected = mask_reference >= math.ceil(cutoff * 255)
+    reference_mismatched = native != reference_expected
+    if np.any(reference_mismatched &
+              (np.abs(mask_reference.astype(float) - cutoff * 255) > 1)):
         raise ValueError('Native mask differs away from cutoff rounding uncertainty')
     disagreements = int(mismatched.sum())
     # A fractional GPU sample may contain many sub-byte alpha values that all
@@ -108,7 +115,7 @@ def validate(texture_id):
         decoded = np.asarray(Image.frombytes('RGBA', (width, height), raw, 'raw', 'BGRA'))
         color, mask = read_samples(native, row)
         errors = compare_readback(decoded, color, True)
-        comparison = compare_mask(decoded[:, :, 3], mask, cutoff)
+        comparison = compare_mask(decoded[:, :, 3], mask, cutoff, sampled_alpha=color[:, :, 3])
         if comparison['native_passing_pixels'] != row['passingPixels']:
             raise ValueError('Native mask count differs from report')
         levels.append({'level': level, 'dimensions': [width, height],

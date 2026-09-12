@@ -43,6 +43,18 @@ class CutoutSamplingTests(unittest.TestCase):
         mask = np.zeros((20, 20, 4), dtype=np.uint8)
         self.assertEqual(compare_mask(alpha, mask, .69, quantized_native_alpha=True)['disagreements'], 400)
 
+    def test_point_mask_uses_independent_native_color_only_for_cutoff_uncertainty(self):
+        decoded = np.array([[126]], dtype=np.uint8)
+        mask = np.full((1, 1, 4), 255, dtype=np.uint8)
+        sampled = np.array([[128]], dtype=np.uint8)
+        result = compare_mask(decoded, mask, .5, sampled_alpha=sampled)
+        self.assertEqual(result['disagreements'], 1)
+        self.assertEqual(compare_mask(decoded, mask, .5,
+                                      sampled_alpha=np.array([[130]], dtype=np.uint8))['disagreements'], 1)
+        rejected_mask = np.zeros((1, 1, 4), dtype=np.uint8)
+        with self.assertRaisesRegex(ValueError, 'away from cutoff'):
+            compare_mask(decoded, rejected_mask, .5, sampled_alpha=np.array([[130]], dtype=np.uint8))
+
     def test_invalid_shape_and_cutoff_are_rejected(self):
         for cutoff in [0, 1, float('nan'), True, '0.69']:
             with self.subTest(cutoff=cutoff), self.assertRaises(ValueError):
