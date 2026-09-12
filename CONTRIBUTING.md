@@ -146,6 +146,15 @@ changed evidence. Opening a PR never adds a checkmark automatically. Merged,
 reviewed evidence supports progress updates; final approval remains an explicit
 review decision, never an automated consequence of tests or merging.
 
+## Biome inventory assignments
+
+Biome membership is separate from review and completion. To make untouched
+assets browsable, add exact configured associations to
+`assets/status/biome-membership.json`, following
+[the biome mapping workflow](docs/BIOME_INVENTORY.md). Refresh its generated data
+with `python tools/prepare_biome_inventory.py` and check mode. Adding membership
+must not mark artwork complete or approve a biome.
+
 ## Local game testing
 
 Keep game files, saves, extracted references, and personal settings outside

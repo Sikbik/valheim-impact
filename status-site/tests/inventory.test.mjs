@@ -72,3 +72,25 @@ test('biome sort follows journey order and puts unassigned entries last',()=>{
  assert.deepEqual(sortAssets([c,b,a],'biome',map).map(a=>a.id),[a.id,b.id,c.id]);
  assert.deepEqual(sortAssets([c,b,a],'name',map).map(a=>a.id),[c.id,b.id,a.id]);
 });
+
+
+test('every biome can browse untouched catalog assets independently of the review pilot',()=>{
+ const membership=JSON.parse(readFileSync(new URL('../public/data/biomes.json',import.meta.url)));
+ const roadmap=JSON.parse(readFileSync(new URL('../../assets/status/roadmap.json',import.meta.url)));
+ assert.equal(membership.inputs.catalog_sha256,data.inputs.catalog_sha256);
+ for(const biome of membership.biomes) {
+  const textures=filterAssets(data.assets,{...defaults,biome:biome.id},membership.biomes);
+  const meshes=filterAssets(data.assets,{...defaults,kind:'mesh',biome:biome.id},membership.biomes);
+  assert.equal(textures.length,biome.texture_count);
+  assert.equal(meshes.length,biome.mesh_count);
+  assert.ok(textures.some(asset=>stages.slice(1).every(stage=>!asset.stages[stage])),biome.name+' needs untouched texture entries');
+  assert.ok(meshes.some(asset=>stages.slice(1).every(stage=>!asset.stages[stage])),biome.name+' needs untouched mesh entries');
+  if(biome.id==='meadows') assert.ok(biome.asset_ids.length>roadmap.biomes[0].asset_ids.length);
+ }
+ const assigned=new Set(membership.biomes.flatMap(biome=>biome.asset_ids));
+ assert.equal(membership.summary.assigned,assigned.size);
+ for(const kind of ['texture','mesh']) {
+  const unassigned=filterAssets(data.assets,{...defaults,kind,biome:'unassigned'},membership.biomes);
+  assert.ok(unassigned.every(asset=>!assigned.has(asset.id)));
+ }
+});

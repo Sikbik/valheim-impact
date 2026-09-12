@@ -36,9 +36,17 @@ fixtures remain in the validation ledger and evidence summaries.
 
 ## Inventory previews and biome controls
 
-The inventory supports exact-scope biome filtering and biome sorting in journey
-order. Shared entries can appear in several biome filters, but appear once in
-the full inventory. Unassigned entries have no recorded biome mapping.
+The inventory uses `assets/status/biome-membership.json` for biome filtering and
+sorting. This browsing map includes untouched assets and is independent of the
+small review pilot in `roadmap.json`. The map comes from serialized game
+configuration and exact prefab, renderer, material and texture references.
+An entry can belong to several biomes without receiving any progress stage.
+Unassigned entries have no recorded association in the current map.
+
+The biome selector shows texture or mesh counts for the selected inventory tab.
+The checkpoint panel retains its separate review scope and links to the broader
+inventory. See [biome inventory mapping](BIOME_INVENTORY.md) for sources,
+limitations and the refresh workflow.
 
 Each row and detail panel provides before and after previews. Missing originals
 and unfinished replacements remain explicit. Preview availability does not add
@@ -51,7 +59,8 @@ bounds, the authored preview recipe and contributor checks.
 | --- | --- |
 | `assets/status/catalog.json` | Portable metadata only, no completion flags or game payloads. |
 | `assets/status/manifest.json` | Pinned input hashes, exact evidence targets and claimed stages. |
-| `assets/status/roadmap.json` | Explicit biome scopes and separate approval records. |
+| `assets/status/roadmap.json` | Explicit biome review scopes and separate approval records. |
+| `assets/status/biome-membership.json` | Biome browsing membership, including untouched assets. |
 | `assets/provenance.json` | Authored file hashes, credits, license and ownership declarations. |
 | `docs/evidence/` | Public validation summaries and contribution reviews. |
 | `status-site/` | Webpage, derived inventory, evidence pages and tests. |
@@ -78,6 +87,7 @@ data. The original extraction is not needed for contributor checks.
 ```sh
 python tools/refresh_tracker.py
 python tools/refresh_tracker.py --check
+python tools/prepare_biome_inventory.py --check
 python tools/check_public_content.py
 python tools/check_comparisons.py --check
 npm ci --prefix status-site
