@@ -13,8 +13,8 @@ a registered before/after comparison.
 | Stone | Dedicated 1024px albedo, selected mesh UV review, native checks, and a standing-stone menu fixture. | Shared moss/normal response, other rock geometry, weather, and broader biome scope. |
 | Timber | Dedicated 1024px albedo, selected pole UV review, and a timber-pole menu fixture. | Wall coverage, other timber pieces, construction joins, LODs, and weather. |
 | 67-degree roof atlas | 1024px atlas fitted to measured regions, selected submesh UV reviews, and a full-mesh menu fixture. | Original companion straw layer, placed buildings, oblique views, and LOD transitions. |
-| Standard straw fringe | Original 512px RGBA candidate with measured alpha and uncompressed mips. | Coverage at small mips, repeat edges, compression, full-mesh UV review, native and game validation. |
-| Corner straw fringe | Exact reference metadata and layout preparation. | Authored candidate and all replacement validation. |
+| Standard straw fringe | Original 512px RGBA, scoped top-facing roof UV review, coverage-preserving BC3 mips and native sampling. | Underside, actual game shader, weather, repeat edges at distance and LOD review. |
+| Corner straw fringe | Separate original 512px RGBA, scoped outer-corner UV review, BC3 mips and native sampling. | Actual game shader, underside, complete building and LOD review. |
 | Grass, earth, leaves, and beech card | Palette and processing studies on owned probe geometry. | Exact production mappings, terrain semantics, atlas fitting, native game rendering, and world review. |
 
 These descriptions are scoped to the recorded evidence. They are not counts of
@@ -79,3 +79,6 @@ measured cost. Compare candidate resolutions with the same geometry, camera,
 lighting, and shader. Preserve crisp 4K presentation while evaluating the
 Balanced target of 6 GB VRAM, 16 GB RAM at 1080p. Neither a high-resolution source
 nor compressed payload accounting proves those targets are met.
+
+See the [Meadows batch roadmap](MEADOWS_ROADMAP.md) for the next exact material
+families, terrain-array prerequisite and placed-scene acceptance gates.

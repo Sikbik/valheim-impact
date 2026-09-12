@@ -11,7 +11,7 @@
     {
       "title": "Art direction and material library",
       "state": "active",
-      "detail": "Nordic silhouettes, a coherent palette and first stone, timber and roof studies are established. Production artwork and material standards still need broader validation.",
+      "detail": "Original stone, timber, roof and straw candidates are recorded, with a beech bark study. Production material standards and broader visual consistency still need review.",
       "evidence": "assets/provenance.json"
     },
     {
@@ -29,7 +29,7 @@
     {
       "title": "Buildings, equipment and creatures",
       "state": "active",
-      "detail": "Wood and roof materials are being developed. Shared structures, equipment, characters and creatures remain a substantial asset backlog.",
+      "detail": "Standard and corner straw now have scoped roof UV and native mip evidence. Complete buildings, companion channels, equipment and creatures remain in the backlog.",
       "evidence": "docs/ROOF_ATLAS.md"
     },
     {
@@ -53,12 +53,15 @@
     {
       "title": "Contribution workflow and public alpha",
       "state": "active",
-      "detail": "Public source, asset submissions and evidence checks are being prepared. A playable alpha needs accepted artwork, compatibility results and release documentation.",
+      "detail": "Public source, contribution instructions and an evidence-backed tracker are available. A playable alpha still needs accepted artwork, compatibility results and release documentation.",
       "evidence": null
     }
   ],
   "staged_native_binding_checks": 35,
-  "staged_evidence": "docs/evidence/cutout-binding-native.json",
+  "staged_evidence": "docs/evidence/contributions/meadows-straw-materials.json",
   "public_repository": "https://github.com/Sikbik/valheim-impact",
-  "public_url": "https://sikbik.github.io/valheim-impact/"
+  "public_url": "https://sikbik.github.io/valheim-impact/",
+  "staged_native_texture_count": 26,
+  "staged_mip_levels": 256,
+  "staged_texture_payload_bytes": 14331232
 }

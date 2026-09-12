@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "previews": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3915711535683601241",
+      "file": "after-granite.webp",
+      "source": "assets/meadows/granite-surface-v1.png",
+      "source_sha256": "49d76e5071066c821d45a0e4bf49584d63ccefa25172972bfc1e8b1a7b249df4",
+      "label": "Authored granite source",
+      "scope": "Source artwork for the scoped standing-stone replacement. Wider shared rock appearances remain unreviewed."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8477877035390755812",
+      "file": "after-timber.webp",
+      "source": "assets/meadows/timber-surface-v1.png",
+      "source_sha256": "f82c479385e4002ad7b8e71388c264369cc3c4d69fa23394d242510bf90aa489",
+      "label": "Authored timber source",
+      "scope": "Source artwork for the pole material. Shared wall transforms and companion normals require separate review."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2604212865869356004",
+      "file": "after-roof-atlas.webp",
+      "source": "assets/meadows/roof-atlas-v1.png",
+      "source_sha256": "b6da43a04caca69f5af270fed153e07218575c89180ab26c9bf07774faf8c96a",
+      "label": "Fitted roof atlas",
+      "scope": "Fitted albedo with scoped roof evidence. Original companion cutouts remain in the installed candidate."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+      "file": "after-straw-standard.webp",
+      "source": "assets/meadows/straw-fringe-standard-v1.png",
+      "source_sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c",
+      "label": "Standard straw candidate",
+      "scope": "512px cutout with scoped UV and native mip checks. Game appearance and final approval pending."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+      "file": "after-straw-corner.webp",
+      "source": "assets/meadows/straw-fringe-corner-v1.png",
+      "source_sha256": "f49065a82ea0c5e1149a53f902da2aa9a380e5a2c72331bedb3a2f3832a63ec6",
+      "label": "Corner straw candidate",
+      "scope": "512px corner cutout with scoped UV and native mip checks. Game appearance and final approval pending."
+    }
+  ]
+}

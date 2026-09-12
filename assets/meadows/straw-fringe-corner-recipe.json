@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "variant": "corner",
+  "size": 512,
+  "source": {
+    "path": "assets/meadows/straw-fringe-corner-rgba-v1.png",
+    "sha256": "960c0d8f0c0dd9e5e8830e0e57936d7d46fe1dabce54bd330e6eedfd5abcf737"
+  },
+  "output": "assets/meadows/straw-fringe-corner-v1.png",
+  "report": "docs/evidence/straw-fringe-corner-fit.json"
+}

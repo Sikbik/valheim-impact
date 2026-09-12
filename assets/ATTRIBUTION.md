@@ -12,10 +12,14 @@ Future contributions must provide the contributor's preferred public credit
 and any required third-party attribution. A pseudonym is welcome. Do not submit
 personal contact information in artwork metadata.
 
-Valheim's name, game, source asset names and metadata belong to their respective
-rights holders. The project license does not grant rights to game assets,
-trademarks, third-party packages or other material the project does not own.
-No original game texture pixels or mesh geometry are included here.
+Valheim's name, game, source asset names, metadata, and artwork belong to their
+respective rights holders. The project license does not grant rights to game
+assets, trademarks, third-party packages, or other material the project does not
+own. The bounded reference sprite sheets in `status-site/public/comparisons/`
+contain small excerpts of original Valheim artwork for identification and
+comparison. They are credited to Iron Gate, marked as game references, and
+excluded from the project artwork license. No full original game textures,
+resource streams, or extracted mesh geometry are included.
 
 Concept illustrations describe an art direction. They are not game screenshots
 or proof that a biome has been completed.

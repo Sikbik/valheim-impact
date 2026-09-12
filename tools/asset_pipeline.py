@@ -5,11 +5,13 @@ import io
 import json
 from pathlib import Path
 import struct
+import sys
 
 import numpy as np
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 
 
 def safe_destination(root, relative):
@@ -100,12 +102,23 @@ def resize_float(values, size):
         size, Image.Resampling.BOX)) for c in range(values.shape[2])], axis=2)
 
 
-def mip_chain(image, role):
+def mip_chain(image, role, alpha_cutoff=None):
     if role not in ('albedo', 'normal'):
         raise ValueError('Unsupported texture role')
+    if alpha_cutoff is not None:
+        from tools.cutout_mips import cutoff_byte
+        cutoff_byte(alpha_cutoff)
+        if role != 'albedo':
+            raise ValueError('alpha_cutoff is supported only for albedo')
     result = [image.convert('RGBA')]
+    ordinary = result[0]
+    target_coverage = None
+    if alpha_cutoff is not None:
+        from tools.cutout_mips import preserve_cutout_coverage
+        threshold = cutoff_byte(alpha_cutoff)
+        target_coverage = float((np.asarray(ordinary)[:, :, 3] >= threshold).mean())
     while result[-1].size != (1, 1):
-        current = result[-1]
+        current = ordinary
         size = max(1, current.width // 2), max(1, current.height // 2)
         values = np.asarray(current, dtype=np.float64) / 255
         if role == 'albedo':
@@ -124,7 +137,17 @@ def mip_chain(image, role):
             values = np.ones((size[1], size[0], 4))
             values[:, :, 3] = xyz[:, :, 0] * .5 + .5
             values[:, :, 1] = xyz[:, :, 1] * .5 + .5
-        result.append(Image.fromarray(quantize(values)))
+        ordinary = Image.fromarray(quantize(values))
+        emitted = ordinary
+        if alpha_cutoff is not None:
+            pixels = np.asarray(ordinary).copy()
+            pixels[:, :, 3], _ = preserve_cutout_coverage(
+                pixels[:, :, 3], alpha_cutoff, target_coverage)
+            emitted = Image.fromarray(pixels)
+            if max(size) <= 4:
+                from tools.cutout_mips import preserve_bc3_tail_coverage
+                emitted, _ = preserve_bc3_tail_coverage(ordinary, alpha_cutoff, target_coverage)
+        result.append(emitted)
     return result
 
 
@@ -185,6 +208,12 @@ def build(manifest_path):
         if asset['id'] in identifiers or not asset['id'].replace('_', '').isalnum():
             raise ValueError('Invalid or duplicate asset identifier')
         identifiers.add(asset['id'])
+        alpha_cutoff = asset.get('alpha_cutoff')
+        if alpha_cutoff is not None:
+            from tools.cutout_mips import cutoff_byte
+            cutoff_byte(alpha_cutoff)
+            if asset['alpha_policy'] != 'cutout':
+                raise ValueError('alpha_cutoff is allowed only for cutout albedo')
         for role in ('albedo', 'normal'):
             names.extend(asset['id'] + '_' + role + suffix for suffix in ('.png', '.dds', '-unity.dds'))
     for name in names:
@@ -200,8 +229,16 @@ def build(manifest_path):
             raise ValueError('Crop outside actual image')
         cropped = image.crop(box)
         alpha = np.asarray(cropped)[:, :, 3]
-        if asset['alpha_policy'] == 'cutout' and not (alpha.min() == 0 and alpha.max() == 255):
-            raise ValueError('Cutout requires actual transparent and opaque pixels')
+        alpha_cutoff = asset.get('alpha_cutoff')
+        if alpha_cutoff is not None and asset['alpha_policy'] != 'cutout':
+            raise ValueError('alpha_cutoff is allowed only for cutout albedo')
+        if asset['alpha_policy'] == 'cutout':
+            if alpha_cutoff is None and not (alpha.min() == 0 and alpha.max() == 255):
+                raise ValueError('Cutout requires actual transparent and opaque pixels')
+            if alpha_cutoff is not None:
+                from tools.cutout_mips import cutoff_byte
+                if alpha.min() != 0 or not np.any(alpha >= cutoff_byte(alpha_cutoff)):
+                    raise ValueError('Cutout requires transparent pixels and alpha passing its cutoff')
         if asset['alpha_policy'] == 'opaque' and not np.all(alpha == 255):
             raise ValueError('Opaque assets must be fully opaque')
         albedo = fit_albedo(cropped, tuple(asset['size']), periodic=asset['periodic'])
@@ -215,11 +252,11 @@ def build(manifest_path):
             dds = output / (identifier + '.dds')
             unity_dds = output / (identifier + '-unity.dds')
             prepared.save(png)
-            mips = mip_chain(prepared, role)
+            mips = mip_chain(prepared, role, alpha_cutoff=alpha_cutoff if role == 'albedo' else None)
             dds.write_bytes(encode_dds(mips))
             unity_dds.write_bytes(encode_unity_dds(mips))
             pixels = np.asarray(prepared)
-            records.append(dict(id=identifier, source=asset['source'], source_sha256=sha256(source),
+            record = dict(id=identifier, source=asset['source'], source_sha256=sha256(source),
                 source_dimensions=original_size, crop_box=box, dimensions=list(prepared.size),
                 role=role, srgb=role == 'albedo', normal_encoding='DXT5nm A=X G=Y' if role == 'normal' else None,
                 alpha_policy=asset['alpha_policy'] if role == 'albedo' else 'tangent_x',
@@ -228,7 +265,12 @@ def build(manifest_path):
                 png=png.name, png_sha256=sha256(png), dds=dds.name, dds_sha256=sha256(dds),
                 unity_dds=unity_dds.name, unity_dds_sha256=sha256(unity_dds),
                 unity_row_order='bottom-up per mip; strip 128-byte DDS header',
-                periodic=asset['periodic'], game_uv_validated=False, engine_validated=False))
+                periodic=asset['periodic'], game_uv_validated=False, engine_validated=False)
+            if role == 'albedo' and alpha_cutoff is not None:
+                from tools.cutout_mips import report_chain
+                record['alpha_cutoff'] = alpha_cutoff
+                record['cutout_mips'] = report_chain(mips, alpha_cutoff)['mips']
+            records.append(record)
         thumbnails.append((asset['id'], albedo))
     report = dict(schema_version=1, status='offline-authored-probe-only', assets=records,
         compressed_payload_bytes=sum(r['compressed_payload_bytes'] for r in records),

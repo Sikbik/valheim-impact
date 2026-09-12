@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "meshes": [
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+      "name": "wood_roof_new",
+      "mesh_sha256": "7c360e1237e9a3493c712bcec52ae5c9896674a7734d7c8f2c72ca71bbc69809",
+      "submesh_triangles": [
+        220,
+        2,
+        24
+      ],
+      "fringe_slots": [
+        2
+      ],
+      "uv_corners_checked": 738,
+      "max_uv_error": 4.68688954313734e-09,
+      "pair_shares_mesh_and_uv": true
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+      "name": "wood_roof_45_new",
+      "mesh_sha256": "147c16c7652fca44889fe99aed997236765cd1b9c4d1791c8cd752520c289857",
+      "submesh_triangles": [
+        220,
+        2,
+        16
+      ],
+      "fringe_slots": [
+        2
+      ],
+      "uv_corners_checked": 714,
+      "max_uv_error": 4.68688954313734e-09,
+      "pair_shares_mesh_and_uv": true
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+      "name": "wood_roof_ocorner_45_new",
+      "mesh_sha256": "5abffe9698b88c52ad8a884939899cddc6f2b48a5779b30332795c1c92ab37bb",
+      "submesh_triangles": [
+        396,
+        2,
+        4,
+        6
+      ],
+      "fringe_slots": [
+        2,
+        3
+      ],
+      "uv_corners_checked": 1224,
+      "max_uv_error": 4.68688954313734e-09,
+      "pair_shares_mesh_and_uv": true
+    }
+  ],
+  "cutoff": 0.69,
+  "uv_scale": [
+    1,
+    1
+  ],
+  "uv_offset": [
+    0,
+    0
+  ],
+  "dimensions": [
+    3840,
+    2160
+  ],
+  "inputs": {
+    "standard_original": {
+      "sha256": "1aa9d15a019ac6b5d61f52f104227727468bc1fe0ef3af08dd438bae748badfc"
+    },
+    "corner_original": {
+      "sha256": "ce6b00ad915caf15379eea5eca5aaf9f24d8375584a696d05245709aa309bc47"
+    },
+    "standard_authored": {
+      "path": "assets/meadows/straw-fringe-standard-v1.png",
+      "sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c"
+    },
+    "corner_authored": {
+      "path": "assets/meadows/straw-fringe-corner-v1.png",
+      "sha256": "f49065a82ea0c5e1149a53f902da2aa9a380e5a2c72331bedb3a2f3832a63ec6"
+    },
+    "timber_original": {
+      "sha256": "76cda3532750e9a072b89da7b3a1922dd600c444921d44779637e06532c44642"
+    }
+  },
+  "original_scene_preserved": true,
+  "open_document_preserved": true,
+  "companion_slots_unchanged": [
+    0,
+    1
+  ],
+  "sampler": "Closest / Repeat, base level only",
+  "native_shader": false,
+  "backface_culling_disabled": true,
+  "render_sha256": "30261d30a1cd7e2abf0b3fd4ccb5635db0e02f2f26685687b59e83f4e627212d",
+  "visual_review": "Top-facing layout and fringe silhouette reviewed on all three complete source meshes, with identical companion slots. Original-containing render remains private.",
+  "limitations": [
+    "Base-level albedo and cutout only, generic shading.",
+    "Underside appearance, actual game shader, world lighting and LOD transitions remain unreviewed.",
+    "No authored geometry or final art approval."
+  ]
+}

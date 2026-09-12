@@ -1,0 +1,370 @@
+{
+  "alpha_source": "authored RGBA input alpha; this fitting step applies no reference mask or color key",
+  "compressed_mips_validated": false,
+  "cutoff": 0.69,
+  "cutoff_byte_minimum": 176,
+  "dimensions": [
+    512,
+    512
+  ],
+  "fit": "whole-image BOX with alpha-weighted linear RGB, top-down rows preserved",
+  "limitations": [
+    "Alpha coverage is a texel measurement, not visible screen or mesh coverage.",
+    "Mip cutout loss is reported without changing the newly authored silhouette.",
+    "Original Point/Repeat sampling, geometry, two-sided shading and compressed mips need native review."
+  ],
+  "mip_filter": "BOX, linear sRGB RGB weighted by alpha; alpha averaged, no coverage adjustment",
+  "mips": [
+    {
+      "alpha_counts": {
+        "intermediate": 164674,
+        "opaque": 0,
+        "zero": 97470
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.5715370178222656,
+      "dimensions": [
+        512,
+        512
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 0,
+      "mean_alpha": 0.5704258937461704,
+      "passing_pixels": 149825,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 3.0637254901960784e-05
+      },
+      "rgba_sha256": "501c4eec6df33aaec16dd2673ad9fe5a16ba4f36d178fb5b43f9d0a34c938d9f",
+      "total_pixels": 262144
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 41223,
+        "opaque": 0,
+        "zero": 24313
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.567138671875,
+      "dimensions": [
+        256,
+        256
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 1,
+      "mean_alpha": 0.5705348594515931,
+      "passing_pixels": 37168,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 3.0637254901960784e-05
+      },
+      "rgba_sha256": "dae8b30e512f86bb52fdcbf360790afbaa5ecd0dbff15f9b2a6fadd677b1749f",
+      "total_pixels": 65536
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 10447,
+        "opaque": 0,
+        "zero": 5937
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.55841064453125,
+      "dimensions": [
+        128,
+        128
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 2,
+      "mean_alpha": 0.5706844554227941,
+      "passing_pixels": 9149,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 0.0
+      },
+      "rgba_sha256": "4aaa512b8cbec1d3b5d0ae69c02e67e7094784bc1582e054a2ba99c83c5fd756",
+      "total_pixels": 16384
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 2736,
+        "opaque": 0,
+        "zero": 1360
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.552001953125,
+      "dimensions": [
+        64,
+        64
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 3,
+      "mean_alpha": 0.5709175857843137,
+      "passing_pixels": 2261,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 0.0
+      },
+      "rgba_sha256": "d54e7b8615184c919993ff463acfe658700e108b7aa1a487ecb8042f2671ce2f",
+      "total_pixels": 4096
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 728,
+        "opaque": 0,
+        "zero": 296
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.5380859375,
+      "dimensions": [
+        32,
+        32
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 4,
+      "mean_alpha": 0.5711894914215686,
+      "passing_pixels": 551,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0006127450980392157,
+        "top_bottom": 0.0
+      },
+      "rgba_sha256": "120dc14673e404b4ed5f4d18d0b798f5b0cb3e99881f2434e8fa0c05b42fd51c",
+      "total_pixels": 1024
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 200,
+        "opaque": 0,
+        "zero": 56
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.546875,
+      "dimensions": [
+        16,
+        16
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 5,
+      "mean_alpha": 0.5714920343137255,
+      "passing_pixels": 140,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 0.0058823529411764705
+      },
+      "rgba_sha256": "42f4c6ce041b2043550e94e65c1ead23bf838d5b8ef4de037431f76c07cd0660",
+      "total_pixels": 256
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 58,
+        "opaque": 0,
+        "zero": 6
+      },
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "coverage": 0.4375,
+      "dimensions": [
+        8,
+        8
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 6,
+      "mean_alpha": 0.5716911764705882,
+      "passing_pixels": 28,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.000980392156862745,
+        "top_bottom": 0.10392156862745099
+      },
+      "rgba_sha256": "08f1aaf873df5cf64d6195cd8ef623e31b0e898d551c24009082cdc1ca46849a",
+      "total_pixels": 64
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 16,
+        "opaque": 0,
+        "zero": 0
+      },
+      "alpha_extrema": [
+        26,
+        253
+      ],
+      "coverage": 0.5,
+      "dimensions": [
+        4,
+        4
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.5,
+        "right": 0.5,
+        "top": 0.0
+      },
+      "level": 7,
+      "mean_alpha": 0.5723039215686274,
+      "passing_pixels": 8,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 0.1715686274509804
+      },
+      "rgba_sha256": "b18cb9937680deae950530ba2e7ce178e7f44b705bad12f0fb9e871f12dea946",
+      "total_pixels": 16
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 4,
+        "opaque": 0,
+        "zero": 0
+      },
+      "alpha_extrema": [
+        134,
+        157
+      ],
+      "coverage": 0.0,
+      "dimensions": [
+        2,
+        2
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 8,
+      "mean_alpha": 0.5715686274509804,
+      "passing_pixels": 0,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.00196078431372549,
+        "top_bottom": 0.08823529411764706
+      },
+      "rgba_sha256": "bf96fd61c06cf0d31f7fe74e0f0f2c13cac2e8aa8ed1435ad543db3ec36c8f71",
+      "total_pixels": 4
+    },
+    {
+      "alpha_counts": {
+        "intermediate": 1,
+        "opaque": 0,
+        "zero": 0
+      },
+      "alpha_extrema": [
+        146,
+        146
+      ],
+      "coverage": 0.0,
+      "dimensions": [
+        1,
+        1
+      ],
+      "edge_coverage": {
+        "bottom": 0.0,
+        "left": 0.0,
+        "right": 0.0,
+        "top": 0.0
+      },
+      "level": 9,
+      "mean_alpha": 0.5725490196078431,
+      "passing_pixels": 0,
+      "repeat_edge_mean_alpha_difference": {
+        "left_right": 0.0,
+        "top_bottom": 0.0
+      },
+      "rgba_sha256": "a96bb8cac8b3ec0694fdd85fdab489d82c34108e5ab3355fa6cfac1fdc00a392",
+      "total_pixels": 1
+    }
+  ],
+  "mips_with_zero_visible_pixels": [
+    8,
+    9
+  ],
+  "mips_without_cutout": [
+    8,
+    9
+  ],
+  "native_shader_validated": false,
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "output": "assets/meadows/straw-fringe-corner-v1.png",
+  "provenance": {
+    "path": "assets/provenance.json",
+    "record_sha256": "5cc015106e7cd6cf418f835ff25d75236b1449219f2b69adc3cf7a8b7dcd5994"
+  },
+  "recipe": {
+    "path": "assets/meadows/straw-fringe-corner-recipe.json",
+    "sha256": "521d51b64a857930fee411487de0a16f0ff7ca358ed0db3a0b4cc33dd371af7b"
+  },
+  "reference_comparison": {
+    "base_coverage_delta": -0.020992279052734375,
+    "coverage": 0.592529296875,
+    "passing_pixels": 2427,
+    "source": "docs/evidence/default-roof-layout.json, scalar counts only",
+    "total_pixels": 4096,
+    "used_to_modify_alpha": false
+  },
+  "report": "docs/evidence/straw-fringe-corner-fit.json",
+  "schema_version": 1,
+  "sha256": "f49065a82ea0c5e1149a53f902da2aa9a380e5a2c72331bedb3a2f3832a63ec6",
+  "source": {
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGBA",
+    "path": "assets/meadows/straw-fringe-corner-rgba-v1.png",
+    "sha256": "960c0d8f0c0dd9e5e8830e0e57936d7d46fe1dabce54bd330e6eedfd5abcf737"
+  },
+  "variant": "corner"
+}

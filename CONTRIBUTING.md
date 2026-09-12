@@ -40,6 +40,7 @@ python -m pip install -r requirements-inspection.txt
 python tools/asset_pipeline.py
 python -m unittest discover -s tests -p 'test_*.py' -v
 python tools/refresh_tracker.py --check
+python tools/check_comparisons.py --check
 ```
 
 Run a narrower test module during development and the relevant broader suite
@@ -87,8 +88,11 @@ establish rights. Flag uncertain rights for review before adding the file.
 
 Do not submit original game textures, masks, extracted geometry, game DLLs,
 resource payloads, downloaded third-party packs, saves, or private exports.
-Do not include symlinks to those inputs. Local reference inspection can inform
-original artwork without placing its source files in the repository or release.
+Do not include symlinks to those inputs. The only original-pixel exception is
+the authorized, bounded 192px game-reference comparison format documented in
+[tracker comparison previews](docs/TRACKER_PREVIEWS.md). Local reference
+inspection can inform original artwork without otherwise placing its source
+files in the repository or release.
 
 ## Asset validation
 
@@ -107,8 +111,10 @@ correct. Label concepts and isolated previews accurately.
 A native texture load proves only the cited loading or readback behavior. Game
 validation must name the tested game and Unity version, platform/API, exact
 assets, scene scope, capture dimensions, and outcome. Distinguish a menu fixture
-from a placed-world test. Keep original-containing captures local and publish
-sanitized measurements and summaries permitted by the evidence contract.
+from a placed-world test. Keep full original-containing captures local. Publish
+sanitized measurements and summaries permitted by the evidence contract, plus
+only the bounded tracker reference previews described in
+[tracker comparison previews](docs/TRACKER_PREVIEWS.md).
 
 The Balanced goal is 6 GB VRAM, 16 GB RAM at 1080p, with crisp 4K presentation
 also required. Component budgets, high-resolution captures, and a successful

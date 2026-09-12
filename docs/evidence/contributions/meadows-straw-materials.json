@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+      "stages": [
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Both 512px candidates have actual alpha and exact authored source provenance",
+      "passed": true
+    },
+    {
+      "name": "All 2676 imported UV face corners match within 0.0000001 on the three scoped roof meshes",
+      "passed": true
+    },
+    {
+      "name": "Fringe slots reviewed with retained geometry and identical companion slots 0 and 1",
+      "passed": true
+    },
+    {
+      "name": "BC3 cutout coverage remains nonzero through every mip at cutoff 0.69",
+      "passed": true
+    },
+    {
+      "name": "Both textures pass 10 point mip samples and 9 fractional diagnostic samples on Vulkan in Linear color",
+      "passed": true
+    },
+    {
+      "name": "Owned native textures, materials and bundles are destroyed after both fixtures",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/straw-fringe-uv.json SHA256 f0260d7e46e0343de57930ecd93942e973ade9ba944af3e79c51956b3d77d5ec",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/straw_fringe_standard_albedo-sampling.json SHA256 caf92ac991b8f522f6576d3d7107c98fac14d2bc2d624d39249799a06013461e",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/straw_fringe_corner_albedo-sampling.json SHA256 c7fce858234d32caaf1bedd97d63f93292a0cb83b0262895fe95afc305e62d83",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/straw-fringe-standard-v1.png",
+      "sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c"
+    },
+    {
+      "path": "assets/meadows/straw-fringe-corner-v1.png",
+      "sha256": "f49065a82ea0c5e1149a53f902da2aa9a380e5a2c72331bedb3a2f3832a63ec6"
+    }
+  ]
+}
