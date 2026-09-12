@@ -21,8 +21,9 @@ artwork has passed native texture checks and a guarded main-menu fixture using
 selected loaded game meshes and shaders. The runtime replaces only explicitly
 listed albedo slots and preserves the original texture as a fallback.
 
-Opt-in cutout binding support has passed a native fixture. That result does not
-validate the separate straw-fringe artwork in the game. Placed buildings, LOD
+Standard and corner straw artwork now has scoped roof UV review and native
+compressed mip sampling evidence. The cutout adapter has a separate native
+fixture. Actual straw appearance in the game remains unverified. Placed buildings, LOD
 transitions, weather, broader biome coverage, coordinated lighting, and model
 or shader streaming still need validation. See the tracker for exact asset IDs,
 evidence, and unchecked stages.
@@ -61,7 +62,8 @@ C# or Unity validation.
 - [Runtime](docs/RUNTIME.md): build configuration, exact matching, and lifecycle.
 - [Unity setup](docs/UNITY_SETUP.md): native bundle authoring and validation.
 - [Installer](docs/INSTALLER.md): reviewed local installation and recovery.
-- [Status tracking](docs/STATUS_TRACKING.md): evidence and progress rules.
+- [Status tracking](docs/STATUS_TRACKING.md): evidence, previews and biome controls.
+- [Meadows roadmap](docs/MEADOWS_ROADMAP.md): current material batches and scene gates.
 
 Builds and test packages are experimental. A successful source build is not a
 release or a validated installation. Use the installer's preview and rollback
@@ -74,7 +76,8 @@ under [CC BY 4.0](assets/LICENSE), with credits and scope recorded in
 [artwork attribution](assets/ATTRIBUTION.md) and per-file provenance. Preserve
 applicable notices and attribution when redistributing or modifying it.
 
-Valheim Impact is an independent community project. Game assets, extracted
-textures or geometry, game assemblies, and downloaded third-party packs are
-not included or relicensed. Contributors must have the rights to share every
+Valheim Impact is an independent community project. Full game textures, extracted geometry, game assemblies and downloaded packs
+are excluded. The tracker includes bounded comparative reference thumbnails,
+credited separately to Iron Gate and excluded from the project artwork license.
+See [comparison preview scope](docs/TRACKER_PREVIEWS.md). Contributors must have the rights to share every
 file they submit under its stated license.

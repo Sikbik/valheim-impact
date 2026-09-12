@@ -5,7 +5,7 @@
       "id": "authored-sources",
       "path": "assets/provenance.json",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
-      "sha256": "f0b5965ae3245698efa6732971c9ac971e1c10b3d6663fec86412cfbd9236066",
+      "sha256": "1946244d438e22aa78b080f72edbb14e2d6ffd220f6478acb498d3f12f7d026a",
       "stages": [
         "authored"
       ],
@@ -20,7 +20,7 @@
     {
       "id": "default-roof-layout",
       "path": "docs/evidence/default-roof-layout.json",
-      "scope": "Original alpha and whole-image UV layout inspection only. Standard and corner fringe replacements still need authored fitting.",
+      "scope": "Original layout inspection preceding the authored standard and corner candidates. This historical inspection earns no art stage.",
       "sha256": "524278c64f03a9cfa052ab94be52ef80897eea167985d11940d158e6f2ab407f",
       "stages": [],
       "target_count": 5,
@@ -61,10 +61,30 @@
       "title": "Complete serialized inventory"
     },
     {
+      "id": "meadows-straw-materials",
+      "path": "docs/evidence/contributions/meadows-straw-materials.json",
+      "scope": "Two authored cutouts pass scoped top-facing roof UV review and native BC3 mip sampling. Three original roof meshes retain geometry and companion slots. Actual game shader, underside, weather, LOD and final approval remain pending.",
+      "sha256": "ea04add63116f9e172c1cf30e6d367ce8a0fa60d58d5c0ead4b4fb026c1f7731",
+      "stages": [
+        "authored",
+        "native_validated",
+        "uv_reviewed"
+      ],
+      "target_count": 5,
+      "targets": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567"
+      ],
+      "title": "Standard and corner straw material review"
+    },
+    {
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
-      "sha256": "848b0285a7ca80903531656d6f15b9505c1302641f8cc3554fea0264527ba5f8",
+      "sha256": "c922ce7c5bb57c9d7a40666e24053dfbc5bb59321e63b1937d148f289e53ecd3",
       "stages": [
         "native_validated"
       ],
@@ -135,7 +155,7 @@
     {
       "id": "straw-fringe-authored",
       "path": "docs/evidence/straw-fringe-authored.json",
-      "scope": "512 RGBA candidate for straw_roof_alpha only. Mask derived from original project art; no copied game pixels or masks. UV, compressed mips, native shader and game checks pending. The smallest mips lose cutout coverage.",
+      "scope": "Historical initial standard candidate and ordinary mip limitation. The later Meadows straw review records corrected compressed mips, UV layout and native sampling.",
       "sha256": "c533e8d19f2de04dcf9f7744a5f863fb93c7cf3cca03131fe76780ccc37a68d3",
       "stages": [
         "authored"
@@ -150,10 +170,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "68edc661193e4b9b6cd1f2e66e184ed5e37032369a7f74f0730705e18d243fd3"
+    "status_manifest_sha256": "5df86e034cbde9cd7ef934a59d4a31c6122dd2d8c0282a4310711d65e7641fa5"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T19:42:09Z",
+  "snapshot_at": "2026-09-12T21:08:33Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",
@@ -188,7 +208,7 @@
         "world_surface": 328
       }
     },
-    "evidence_records": 10,
+    "evidence_records": 11,
     "evidence_target_assets": 13,
     "meshes": 10336,
     "stage_counts": {
@@ -198,15 +218,15 @@
         "game_fixture_validated": 1,
         "inventoried": 10336,
         "native_validated": 0,
-        "uv_reviewed": 5
+        "uv_reviewed": 8
       },
       "texture": {
         "approved": 0,
-        "authored": 4,
+        "authored": 5,
         "game_fixture_validated": 3,
         "inventoried": 3187,
-        "native_validated": 3,
-        "uv_reviewed": 3
+        "native_validated": 5,
+        "uv_reviewed": 5
       }
     },
     "textures": 3187

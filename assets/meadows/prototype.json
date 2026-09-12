@@ -188,6 +188,42 @@
       "periodic": false,
       "alpha_policy": "opaque",
       "normal_strength": 0
+    },
+    {
+      "id": "straw_fringe_standard",
+      "source": "assets/meadows/straw-fringe-standard-v1.png",
+      "crop_box": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "alpha_policy": "cutout",
+      "alpha_cutoff": 0.69,
+      "normal_strength": 0
+    },
+    {
+      "id": "straw_fringe_corner",
+      "source": "assets/meadows/straw-fringe-corner-v1.png",
+      "crop_box": [
+        0,
+        0,
+        512,
+        512
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "alpha_policy": "cutout",
+      "alpha_cutoff": 0.69,
+      "normal_strength": 0
     }
   ]
 }

@@ -1,0 +1,304 @@
+{
+  "schema_version": 1,
+  "texture_id": "straw_fringe_standard_albedo",
+  "source_sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c",
+  "bundle_sha256": "a7ee6fc432442cef58afd93ef038766bb12fda381116d04ab3696e39b7613de4",
+  "dds_sha256": "4e0e0bad2693f6096daa58f48ff87026db28459e82e7afb13d79f9cec9c8e5ef",
+  "unity_dds_sha256": "6be645f181e9d495c6c3b9fa361d85e4973cfc78b2d5c5949df5bc09d73aabea",
+  "native_report_sha256": "c5fa49f3783429548d5f38ebe5a37f06fc8f1eecaadbc085311d2cad2d5a017a",
+  "editor": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "cutoff": 0.6899999976158142,
+  "owned_objects_destroyed": true,
+  "point_mips": [
+    {
+      "level": 0,
+      "dimensions": [
+        512,
+        512
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.18577626105805528,
+        "max_error": 3.2908227754390253
+      },
+      "disagreements": 4,
+      "decoder_passing_pixels": 143946,
+      "native_passing_pixels": 143948,
+      "total_pixels": 262144,
+      "native_coverage": 0.5491180419921875,
+      "color_sha256": "0d1d1f9dbd49a8ff6d63610ab99005a5e4b016db33c4f6b07e2391e10c027353",
+      "mask_sha256": "ebb727b74ee084a970a11bcfbe7bbc0a43c067f6486589254f5247b5454eb03d"
+    },
+    {
+      "level": 1,
+      "dimensions": [
+        256,
+        256
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.2094175777275545,
+        "max_error": 3.149018173820565
+      },
+      "disagreements": 1,
+      "decoder_passing_pixels": 35928,
+      "native_passing_pixels": 35929,
+      "total_pixels": 65536,
+      "native_coverage": 0.5482330322265625,
+      "color_sha256": "c4608811fa428f59f431a13c5087f7b93eb708b03b1933c773268f66764e63cc",
+      "mask_sha256": "00cfffd0065a886be8a6a81a0c010ecc2dc29ea9f41ab74258642979ff6a9251"
+    },
+    {
+      "level": 2,
+      "dimensions": [
+        128,
+        128
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.2399076112698677,
+        "max_error": 2.5904656294674453
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 8965,
+      "native_passing_pixels": 8965,
+      "total_pixels": 16384,
+      "native_coverage": 0.54718017578125,
+      "color_sha256": "7ef0eb623dd770481d77d0ace1a77de2330cee9618e0746591edea0d01bb4f8e",
+      "mask_sha256": "3cc891979f8868a705e182fb1bf5cf58d70783b3efd1686d56c3fecd03c0eee0"
+    },
+    {
+      "level": 3,
+      "dimensions": [
+        64,
+        64
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.2777560533069182,
+        "max_error": 2.5904656294674453
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 2246,
+      "native_passing_pixels": 2246,
+      "total_pixels": 4096,
+      "native_coverage": 0.54833984375,
+      "color_sha256": "e4c2b3316901f61608db22861aba83a6b55c32d3ed7fc953b61920a55f52af95",
+      "mask_sha256": "525fb66efcc103cdd1235f4e7c950d3825a2e1f468b0c949d140386d53879e18"
+    },
+    {
+      "level": 4,
+      "dimensions": [
+        32,
+        32
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.29169210201503337,
+        "max_error": 2.5904656294674453
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 561,
+      "native_passing_pixels": 561,
+      "total_pixels": 1024,
+      "native_coverage": 0.5478515625,
+      "color_sha256": "9d209b4c37e5ee9e172e7cbc745207561aec1d07b3e471da61fd0c1c21c79562",
+      "mask_sha256": "4d56472646e453d338beeeee3f3b37b80278175c001fac5399debe72a8b4a827"
+    },
+    {
+      "level": 5,
+      "dimensions": [
+        16,
+        16
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.36366966234396486,
+        "max_error": 2.5904656294674453
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 137,
+      "native_passing_pixels": 137,
+      "total_pixels": 256,
+      "native_coverage": 0.53515625,
+      "color_sha256": "a135b3914fd8d5da702206f5c18986747e661dbc9f0cec44d0f0c2d21d9977d9",
+      "mask_sha256": "ad84498b2d96d4937399103481602c7d6f994cc68ace4b2d75ca49587cce4a82"
+    },
+    {
+      "level": 6,
+      "dimensions": [
+        8,
+        8
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.30150124458349437,
+        "max_error": 2.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 34,
+      "native_passing_pixels": 34,
+      "total_pixels": 64,
+      "native_coverage": 0.53125,
+      "color_sha256": "1a653e69ab62fb2f31f86ab31eb9e5fd25f992085b3aad05a89a7345eae7f067",
+      "mask_sha256": "7daac6078d447503c75fd8830632a3434e640afd5725c22b8068ce106b624c22"
+    },
+    {
+      "level": 7,
+      "dimensions": [
+        4,
+        4
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.5906462269510784,
+        "max_error": 2.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 9,
+      "native_passing_pixels": 9,
+      "total_pixels": 16,
+      "native_coverage": 0.5625,
+      "color_sha256": "b85c0520d11b2ec554bd4953baaea2f7b9c23af4a548949f6a8a6c512feeb7bb",
+      "mask_sha256": "fed32499f265a84c188fda9c58bff1591305e90fcb1b2d231ab01106708e84d3"
+    },
+    {
+      "level": 8,
+      "dimensions": [
+        2,
+        2
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.27816271953928595,
+        "max_error": 1.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 2,
+      "native_passing_pixels": 2,
+      "total_pixels": 4,
+      "native_coverage": 0.5,
+      "color_sha256": "469941bf22a888233d1c40db7c4938b35424f86219114abbe923f9af62f76eac",
+      "mask_sha256": "db7c762423466b69ba08116f2e44aa08b9d0383c2de88c54a15a05b8f10c48dc"
+    },
+    {
+      "level": 9,
+      "dimensions": [
+        1,
+        1
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.21566271953928595,
+        "max_error": 0.461933310322042
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 1,
+      "native_passing_pixels": 1,
+      "total_pixels": 1,
+      "native_coverage": 1.0,
+      "color_sha256": "aa19c6bd15dc336980e619369b87739bb69f3356e49607cb26f365a8ff8b8d64",
+      "mask_sha256": "2c5aaf41bb79b35d23604986f34bcac5674f30be3d718990fa8b02e8f8935b19"
+    }
+  ],
+  "fractional_trilinear_diagnostics": [
+    {
+      "lod": 0.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.54632568359375,
+      "threshold_rounding_disagreements": 1,
+      "color_sha256": "27d020fac12d6bb29eb7fba447ff30047edf1422af7d4992d074a1b4afb6346c",
+      "mask_sha256": "e7d3f59e09379d6d57bcd17bff2e9e32e66a7280e30517735b12bf1f5bab2f8d"
+    },
+    {
+      "lod": 1.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.546875,
+      "threshold_rounding_disagreements": 0,
+      "color_sha256": "815fb8d42fb2f1395c021267d6b15c4beab94a7488f5403381a53c82a532b1da",
+      "mask_sha256": "ebe7678438ad2391ef747abcea3124f83d51a7d3c7514ebdbf7f87f35fedcc0a"
+    },
+    {
+      "lod": 2.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.54534912109375,
+      "threshold_rounding_disagreements": 3,
+      "color_sha256": "3b6d4762d1e2b91fae627ef5b4c60d03d87434ffedd9666fc963e72e7ca174a1",
+      "mask_sha256": "5690b0423c53aef0a473aeb7f6101906b9b1f98c82fff1bfeee808fe3ee7d2dd"
+    },
+    {
+      "lod": 3.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.5428466796875,
+      "threshold_rounding_disagreements": 2,
+      "color_sha256": "5c0e39ac8fa1db255b1a810715fd48306a39c069f73dea7069032756ac842588",
+      "mask_sha256": "544d95cbc2e3e2ab2aea39278194dc2b3a0c875f1cbf7fad88df103a5477efe3"
+    },
+    {
+      "lod": 4.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.54083251953125,
+      "threshold_rounding_disagreements": 2,
+      "color_sha256": "070a18c4a84e2dabb63793b8ca03c3b3de167dcd82019a291bfa7345f43a37c1",
+      "mask_sha256": "f554aea568a887cf1b44489e7a51060194e3a2fcfe86dc338229b0b4b574c819"
+    },
+    {
+      "lod": 5.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.54345703125,
+      "threshold_rounding_disagreements": 6,
+      "color_sha256": "45d15ba6127981ec1d31ba1b429f0ede3839186124bd40a3c8e7df1b73a18b8d",
+      "mask_sha256": "a76d42b77bbe150884e065cc9a6799d6c527b7c04e7a489875b71383a359ad2e"
+    },
+    {
+      "lod": 6.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.5926513671875,
+      "threshold_rounding_disagreements": 11,
+      "color_sha256": "f52e0af6fa0167d509d5904823c9fe81efb6b34b84fe487222ffa031ba75977d",
+      "mask_sha256": "0a43382272afc17b38f0b2e48207200faea8e75090e8795e76071abf1c95d1cb"
+    },
+    {
+      "lod": 7.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.65643310546875,
+      "threshold_rounding_disagreements": 26,
+      "color_sha256": "2f1e272d4d334500508c1a0294d4370c78c82a932b0cf11a2c5157ccf3df1c2f",
+      "mask_sha256": "6c478be352f7add48902af53f1b86de3de12f88aec5a8e36e077d890dfbdfb74"
+    },
+    {
+      "lod": 8.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 1.0,
+      "threshold_rounding_disagreements": 0,
+      "color_sha256": "d0138f29536075f3a596cb1f7299ff5840e7883986b46a6eaaebc6c71b11773f",
+      "mask_sha256": "5feb357f5823b9ee06dca37739f72269d1fd62cd9f5dc9e14c43ff508978aa06"
+    }
+  ],
+  "game_shader_validated": false,
+  "limitations": [
+    "Texel coverage is not screen-space or whole-mesh coverage.",
+    "Small mips have quantized silhouettes; a single texel is either visible or absent.",
+    "Fractional native samples are diagnostic, not acceptance of LOD transitions in game.",
+    "No game shader, weather, world, or performance approval."
+  ]
+}

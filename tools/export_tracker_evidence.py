@@ -495,7 +495,7 @@ def summarize(path, data):
         s.metric('Candidate base-level passing coverage', candidate['coverage'], percent)
         s.check('No original game pixels used', data['original_game_pixels'], False)
         s.check('No original game masks used', data['original_masks_used'], False)
-        s.notes.append('The silhouette is heuristically derived from original authored RGB. It is a standard-fringe candidate only. The 2 × 2 and 1 × 1 mips have zero passing texels at cutoff 0.69; coverage preservation, compression, UV, native shader and game checks remain pending.')
+        s.notes.append('This historical review measured ordinary mips of the initial standard candidate. The 2 × 2 and 1 × 1 levels had zero passing texels at cutoff 0.69. Later material evidence is recorded separately; this record grants only the initial authored stage.')
     elif path == 'docs/evidence/cutout-binding-native.json':
         s.check('Staged fixture completed', data['completed'])
         s.check('Staged fixture passed', data['passed'])
@@ -558,7 +558,7 @@ def evidence_page(root, record, snapshot, *, known_ids=None):
         raise ValueError('Evidence schema differs from reviewed adapter') from error
     scope = public_text(record['scope'])
     if path == 'docs/evidence/straw-fringe-authored.json':
-        scope = '512 RGBA original-artwork candidate for the standard straw-fringe material only. No copied game pixels or masks. UV, compressed mip, native shader and game checks remain pending.'
+        scope = 'Historical initial 512 RGBA candidate for the standard straw-fringe material. No copied game pixels or masks. This record predates the separate UV and native sampling review.'
     return render(record['title'], scope, record['sha256'], timestamp(snapshot), targets(record), summary)
 
 

@@ -208,7 +208,7 @@
     {
       "key": "straw_fringe_fitted",
       "dest": "assets/meadows/straw-fringe-standard-v1.png",
-      "status": "512 RGBA standard-fringe candidate, not native, UV or game validated",
+      "status": "512px cutout candidate with scoped roof UV and native mip sampling evidence; game validation pending",
       "sha256": "a9b28e2316ecb886ed2a0f71d017723ae3679c1cf53a60b23c8db8f7ea6dd73c",
       "original_game_pixels": false,
       "original_masks_used": false,
@@ -225,6 +225,73 @@
       "credit": "Valheim Impact contributors",
       "license": "CC-BY-4.0",
       "source": "project-authored inputs, see transformation metadata"
+    },
+    {
+      "key": "straw_fringe_corner_source",
+      "dest": "assets/meadows/straw-fringe-corner-rgba-v1.png",
+      "status": "authored corner cutout source, mesh and native review pending",
+      "sha256": "960c0d8f0c0dd9e5e8830e0e57936d7d46fe1dabce54bd330e6eedfd5abcf737",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "straw_fringe_corner",
+      "dest": "assets/meadows/straw-fringe-corner-v1.png",
+      "status": "512px cutout candidate with scoped roof UV and native mip sampling evidence; game validation pending",
+      "sha256": "f49065a82ea0c5e1149a53f902da2aa9a380e5a2c72331bedb3a2f3832a63ec6",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        253
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored inputs, see transformation metadata",
+      "parents": [
+        {
+          "path": "assets/meadows/straw-fringe-corner-rgba-v1.png",
+          "sha256": "960c0d8f0c0dd9e5e8830e0e57936d7d46fe1dabce54bd330e6eedfd5abcf737"
+        }
+      ],
+      "recipe": "assets/meadows/straw-fringe-corner-recipe.json"
+    },
+    {
+      "key": "beech_bark_surface",
+      "dest": "assets/meadows/beech-bark-surface-v1.png",
+      "status": "dedicated-1k-beech-bark-surface-candidate-not-uv-native-or-game-validated",
+      "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored bark study with periodic edge fitting"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."

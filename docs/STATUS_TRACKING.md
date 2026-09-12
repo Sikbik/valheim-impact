@@ -34,6 +34,17 @@ streaming and performance, installer compatibility, and the public alpha.
 They are maintained in `status-site/data/project.json`. Individual successful
 fixtures remain in the validation ledger and evidence summaries.
 
+## Inventory previews and biome controls
+
+The inventory supports exact-scope biome filtering and biome sorting in journey
+order. Shared entries can appear in several biome filters, but appear once in
+the full inventory. Unassigned entries have no recorded biome mapping.
+
+Each row and detail panel provides before and after previews. Missing originals
+and unfinished replacements remain explicit. Preview availability does not add
+a validation stage. See [comparison publication](TRACKER_PREVIEWS.md) for rights,
+bounds, the authored preview recipe and contributor checks.
+
 ## Contributor files
 
 | File | Purpose |
@@ -68,6 +79,7 @@ data. The original extraction is not needed for contributor checks.
 python tools/refresh_tracker.py
 python tools/refresh_tracker.py --check
 python tools/check_public_content.py
+python tools/check_comparisons.py --check
 npm ci --prefix status-site
 npm test --prefix status-site
 GITHUB_PAGES=true npm run build --prefix status-site

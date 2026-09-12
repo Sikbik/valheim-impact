@@ -50,3 +50,25 @@ test('every completion is traceable to a registered scoped evidence target',()=>
   for(const id of asset.evidence[stage])assert.ok(evidence.get(id)?.targets.includes(asset.id));
  }
 });
+
+test('biome filter uses exact scope IDs and includes shared assets without duplicates',()=>{
+ const base=data.assets.find(a=>a.kind==='texture');
+ const other={...base,id:'different:1',name:base.name};
+ const mappings=[{id:'meadows',name:'Meadows',asset_ids:[base.id]}, {id:'black-forest',name:'Black Forest',asset_ids:[base.id]}];
+ const input=[base,other];
+ assert.deepEqual(filterAssets(input,{...defaults,biome:'meadows'},mappings).map(a=>a.id),[base.id]);
+ assert.deepEqual(filterAssets(input,{...defaults,biome:'black-forest'},mappings).map(a=>a.id),[base.id]);
+ assert.deepEqual(filterAssets(input,{...defaults,biome:'unassigned'},mappings).map(a=>a.id),[other.id]);
+ assert.equal(filterAssets(input,{...defaults,biome:'swamp'},mappings).length,0);
+ assert.equal(filterAssets(input,{...defaults,biome:'all'},mappings).length,2);
+});
+
+test('biome sort follows journey order and puts unassigned entries last',()=>{
+ const base=data.assets.find(a=>a.kind==='texture');
+ const a={...base,id:'a:1',name:'Zebra'};
+ const b={...base,id:'b:2',name:'Beech'};
+ const c={...base,id:'c:3',name:'Ash'};
+ const map=[{id:'meadows',name:'Meadows',asset_ids:[a.id]}, {id:'black-forest',name:'Black Forest',asset_ids:[b.id]}];
+ assert.deepEqual(sortAssets([c,b,a],'biome',map).map(a=>a.id),[a.id,b.id,c.id]);
+ assert.deepEqual(sortAssets([c,b,a],'name',map).map(a=>a.id),[c.id,b.id,a.id]);
+});

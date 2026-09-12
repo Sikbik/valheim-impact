@@ -266,10 +266,58 @@
         "mean_error": 0.0,
         "max_error": 0.0
       }
+    },
+    {
+      "id": "straw_fringe_standard_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.18577626105805528,
+        "max_error": 3.2908227754390253
+      }
+    },
+    {
+      "id": "straw_fringe_standard_normal",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.0,
+        "max_error": 0.0
+      }
+    },
+    {
+      "id": "straw_fringe_corner_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.2677563121127593,
+        "max_error": 2.5904656294674453
+      }
+    },
+    {
+      "id": "straw_fringe_corner_normal",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.0,
+        "max_error": 0.0
+      }
     }
   ],
-  "compressed_payload_bytes": 12933024,
-  "native_bundles_bytes": 4694231,
+  "compressed_payload_bytes": 14331232,
+  "native_bundles_bytes": 4977302,
   "gpu_base_mip_validation": true,
   "game_validation": false,
   "note": "Native layout and GPU sampling evidence, not a VRAM or frame-time benchmark."

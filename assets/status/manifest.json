@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T19:42:09Z",
+  "snapshot_at": "2026-09-12T21:08:33Z",
   "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
   "evidence": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "authored-sources",
       "path": "assets/provenance.json",
-      "sha256": "f0b5965ae3245698efa6732971c9ac971e1c10b3d6663fec86412cfbd9236066",
+      "sha256": "1946244d438e22aa78b080f72edbb14e2d6ffd220f6478acb498d3f12f7d026a",
       "title": "Original authored surface provenance",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
       "targets": [
@@ -107,7 +107,7 @@
     {
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
-      "sha256": "848b0285a7ca80903531656d6f15b9505c1302641f8cc3554fea0264527ba5f8",
+      "sha256": "c922ce7c5bb57c9d7a40666e24053dfbc5bb59321e63b1937d148f289e53ecd3",
       "title": "Native replacement texture sampling",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
       "targets": [
@@ -182,7 +182,7 @@
       "path": "docs/evidence/default-roof-layout.json",
       "sha256": "524278c64f03a9cfa052ab94be52ef80897eea167985d11940d158e6f2ab407f",
       "title": "Default roof alpha and UV preparation",
-      "scope": "Original alpha and whole-image UV layout inspection only. Standard and corner fringe replacements still need authored fitting.",
+      "scope": "Original layout inspection preceding the authored standard and corner candidates. This historical inspection earns no art stage.",
       "targets": [
         {
           "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
@@ -211,7 +211,7 @@
       "path": "docs/evidence/straw-fringe-authored.json",
       "sha256": "c533e8d19f2de04dcf9f7744a5f863fb93c7cf3cca03131fe76780ccc37a68d3",
       "title": "Authored standard straw-fringe candidate",
-      "scope": "512 RGBA candidate for straw_roof_alpha only. Mask derived from original project art; no copied game pixels or masks. UV, compressed mips, native shader and game checks pending. The smallest mips lose cutout coverage.",
+      "scope": "Historical initial standard candidate and ordinary mip limitation. The later Meadows straw review records corrected compressed mips, UV layout and native sampling.",
       "targets": [
         {
           "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
@@ -228,6 +228,48 @@
       "title": "Staged cutout adapter native checks",
       "scope": "35 checks passed with an owned diagnostic shader, including stored-float and keyword state checks, asynchronous ownership and complete drain. The installed game is unchanged. This does not validate the new fringe texture, original game shader or mesh streaming.",
       "targets": []
+    },
+    {
+      "id": "meadows-straw-materials",
+      "path": "docs/evidence/contributions/meadows-straw-materials.json",
+      "sha256": "ea04add63116f9e172c1cf30e6d367ce8a0fa60d58d5c0ead4b4fb026c1f7731",
+      "title": "Standard and corner straw material review",
+      "scope": "Two authored cutouts pass scoped top-facing roof UV review and native BC3 mip sampling. Three original roof meshes retain geometry and companion slots. Actual game shader, underside, weather, LOD and final approval remain pending.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
+          "stages": [
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
+          "stages": [
+            "uv_reviewed"
+          ]
+        }
+      ]
     }
   ],
   "asset_notes": [
@@ -265,23 +307,23 @@
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7569662044289518567",
-      "note": "An authored 512 RGBA candidate targets straw_roof_alpha. The installed cutout and shared opaque material remain original. UV, native compression and game validation are pending; the two smallest mips lose cutout coverage."
+      "note": "Authored 512px cutout has scoped roof UV review and native BC3 sampling at cutoff 0.69. The installed game and shared opaque material remain original. Actual game shader, underside, weather and LOD review remain pending."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5625371641502064416",
-      "note": "Original corner cutout layout inspected. Separate authored alpha silhouette and fiber fitting are pending."
+      "note": "Authored 512px cutout has scoped roof UV review and native BC3 sampling at cutoff 0.69. The installed game and shared opaque material remain original. Actual game shader, underside, weather and LOD review remain pending."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6155225557725131527",
-      "note": "Original mesh inspected for opaque slot 1 and fringe slot 2. No authored material or model review yet."
+      "note": "Retained original geometry. Authored fringe slots received top-facing UV and silhouette review, with original companion slots 0 and 1. No authored model, native mesh streaming or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7768300691103960695",
-      "note": "Original mesh inspected for opaque slot 1 and fringe slot 2. No authored material or model review yet."
+      "note": "Retained original geometry. Authored fringe slots received top-facing UV and silhouette review, with original companion slots 0 and 1. No authored model, native mesh streaming or final approval."
     },
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
-      "note": "Original mesh inspected for opaque slot 1 and two fringe slots. No authored material or model review yet."
+      "note": "Retained original geometry. Authored fringe slots received top-facing UV and silhouette review, with original companion slots 0 and 1. No authored model, native mesh streaming or final approval."
     }
   ],
   "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18"

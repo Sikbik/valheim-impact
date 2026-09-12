@@ -115,3 +115,33 @@ textures, exported meshes, or game assemblies into tracked assets.
 Public evidence should identify exact assets and measured outcomes without
 including original payloads, private paths, or account state. See
 [CONTRIBUTING.md](../CONTRIBUTING.md) for rights and evidence requirements.
+
+## Explicit cutout mip sampling
+
+The finite `tools/unity/CutoutSamplingProbe.cs` fixture belongs in the local
+project's `Assets/GeneratedRuntime/Editor/` folder. Stage
+`tools/unity/CutoutSampling.shader` under `Assets/GeneratedRuntime/` and let the
+Editor compile before building the authored bundles. The probe requires the
+stopped Unity 6000.0.75f1 Editor, Vulkan and Linear color. It uses only owned
+textures and a diagnostic shader, without modifying a game installation.
+
+After `MeadowsBuild.Build()` completes, evaluate each call in that Editor:
+
+```csharp
+CutoutSamplingProbe.Run("straw_fringe_standard_albedo", 0.69f);
+CutoutSamplingProbe.Run("straw_fringe_corner_albedo", 0.69f);
+```
+
+Then validate the readbacks from the asset Python environment:
+
+```sh
+python tools/validate_native.py
+python tools/validate_cutout_sampling.py straw_fringe_standard_albedo
+python tools/validate_cutout_sampling.py straw_fringe_corner_albedo
+```
+
+Point samples cover every mip. Fractional trilinear samples are diagnostics;
+saved 8-bit alpha cannot recover every sub-byte shader cutoff decision. The
+reports distinguish those rounding differences and record destroyed owned
+objects. These fixtures do not validate the game shader, roof undersides,
+weather, world appearance, screen-space coverage or frame times.

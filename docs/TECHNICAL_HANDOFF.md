@@ -15,7 +15,7 @@ starting a feature or asset family.
 | Core C# regression tests | Python, .NET runtime, and Roslyn compiler. |
 | Runtime plugin compilation | Core build tools plus read-only Valheim/Unity and BepInEx assembly references. |
 | Native authored bundle validation | Unity 6000.0.75f1 with Linux build support, Vulkan, and the Built-in Render Pipeline. |
-| Public tracker metadata | Python and the checked-in sanitized catalog and evidence, without game files. |
+| Public tracker metadata | Python and the checked-in sanitized catalog, evidence, and bounded comparison previews. |
 
 Native Linux/Vulkan is the currently exercised engine path. Compilation support
 or recognized platform metadata does not establish Windows compatibility.
@@ -122,8 +122,12 @@ and routes are required before claiming that target is met.
 
 Inspect only a legally obtained local game installation. Keep original pixels,
 UV and geometry exports, game assemblies, third-party packs, saves, and private
-logs outside public source and packages. Sanitize public evidence instead of
-copying raw inspection output. Do not follow resource-file symlinks when staging.
+logs outside public source and packages. The narrow exception is the authorized
+192px tracker reference format in
+[tracker comparison previews](TRACKER_PREVIEWS.md), which never permits full
+sources, resource streams, or extracted geometry. Sanitize other public evidence
+instead of copying raw inspection output. Do not follow resource-file symlinks
+when staging.
 
 Game tests require explicit local installation and rollback. Confirm the game
 is closed immediately before changing files, and never terminate an active
