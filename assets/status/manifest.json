@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T21:08:33Z",
+  "snapshot_at": "2026-09-12T22:29:57Z",
   "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
   "evidence": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "authored-sources",
       "path": "assets/provenance.json",
-      "sha256": "1946244d438e22aa78b080f72edbb14e2d6ffd220f6478acb498d3f12f7d026a",
+      "sha256": "33136f4902ad3cb33ca8033eec5e35984a12b6424cbb891e8c16e4907e8171ca",
       "title": "Original authored surface provenance",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
       "targets": [
@@ -107,7 +107,7 @@
     {
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
-      "sha256": "c922ce7c5bb57c9d7a40666e24053dfbc5bb59321e63b1937d148f289e53ecd3",
+      "sha256": "d3f053fe703b79510dae871bc9668f75cc4956b39e0af2aa429c56a13dec4771",
       "title": "Native replacement texture sampling",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
       "targets": [
@@ -270,6 +270,81 @@
           ]
         }
       ]
+    },
+    {
+      "id": "meadows-beech-materials",
+      "path": "docs/evidence/contributions/meadows-beech-materials.json",
+      "sha256": "838ab2fa0cdbb0bdb98e211e7e506d38a907cd3c359916a71adc43d42af72c2e",
+      "title": "Beech foliage and near bark material review",
+      "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+          "stages": [
+            "uv_reviewed"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+          "stages": [
+            "uv_reviewed"
+          ]
+        }
+      ]
     }
   ],
   "asset_notes": [
@@ -324,6 +399,46 @@
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4913270748202539969",
       "note": "Retained original geometry. Authored fringe slots received top-facing UV and silhouette review, with original companion slots 0 and 1. No authored model, native mesh streaming or final approval."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+      "note": "Authored 1024px foliage has front/rear UV review on three large-tree meshes and native diagnostic sampling at cutoff 0.5. The final 1x1 mip is transparent. Original normals, actual shader, wind and LOD transitions remain unreviewed."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+      "note": "Authored 512px foliage has white-tint UV review on four retained meshes and native diagnostic sampling at cutoff 0.5. The unhealthy sapling uses cutoff 0.26 and orange tint, which remain unreviewed. Original normals and game appearance remain pending."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "note": "Authored 1024px bark atlas is reviewed only on near and middle large-tree slots. Its endgrain patch overlaps the distant trunk UVs, so no shared runtime binding is approved. Logs, stumps, small trees, moss and normals need review."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Bark slot 1 includes the authored near atlas and underside-cap review."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Bark slot 1 includes the authored near atlas; the low-detail cap stretches endgrain."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Bark remains original because the candidate patch conflicts with distant trunk UVs."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. White-tint view only; unhealthy tint, growth and wind remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+      "note": "Retained original geometry with scoped authored foliage UV review. No authored model, native mesh streaming, game fixture or final approval. Imported model identity only; no gameplay-prefab join is established here."
     }
   ],
   "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18"

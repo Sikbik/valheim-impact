@@ -23,3 +23,8 @@ resource streams, or extracted mesh geometry are included.
 
 Concept illustrations describe an art direction. They are not game screenshots
 or proof that a biome has been completed.
+
+The beech branch RGB source, derived RGBA foliage, endgrain source and fitted
+bark atlas are original project artwork under the artwork license above.
+Their exact derivations are recorded in `provenance.json` and the bark recipe.
+No original game masks or pixels were used to construct these candidates.

@@ -1,0 +1,331 @@
+{
+  "schema_version": 1,
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "geometry": "Retained original geometry, mirrored X with reversed triangle winding, then Y-up rotated to Z-up. No authored model claim.",
+  "renderer": "Blender 5.2.1 LTS, EEVEE, Standard color view, unlit albedo with graded alpha. This is not the original game shader.",
+  "uv_import": {
+    "rows": [
+      {
+        "mesh_id": "5636204498416708811",
+        "slot": 0,
+        "version": "original",
+        "triangles": 200,
+        "face_corners": 600,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "5636204498416708811",
+        "slot": 1,
+        "version": "original",
+        "triangles": 232,
+        "face_corners": 696,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "5636204498416708811",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 200,
+        "face_corners": 600,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "5636204498416708811",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 232,
+        "face_corners": 696,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-719559034922650275",
+        "slot": 0,
+        "version": "original",
+        "triangles": 80,
+        "face_corners": 240,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-719559034922650275",
+        "slot": 1,
+        "version": "original",
+        "triangles": 34,
+        "face_corners": 102,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-719559034922650275",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 80,
+        "face_corners": 240,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-719559034922650275",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 34,
+        "face_corners": 102,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "521127269846282531",
+        "slot": 0,
+        "version": "original",
+        "triangles": 16,
+        "face_corners": 48,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "521127269846282531",
+        "slot": 1,
+        "version": "original",
+        "triangles": 6,
+        "face_corners": 18,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "521127269846282531",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 16,
+        "face_corners": 48,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "521127269846282531",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 6,
+        "face_corners": 18,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "1918554502850406428",
+        "slot": 0,
+        "version": "original",
+        "triangles": 24,
+        "face_corners": 72,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "1918554502850406428",
+        "slot": 1,
+        "version": "original",
+        "triangles": 22,
+        "face_corners": 66,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "1918554502850406428",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 24,
+        "face_corners": 72,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "1918554502850406428",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 22,
+        "face_corners": 66,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-279755266753387489",
+        "slot": 0,
+        "version": "original",
+        "triangles": 36,
+        "face_corners": 108,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-279755266753387489",
+        "slot": 1,
+        "version": "original",
+        "triangles": 34,
+        "face_corners": 102,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-279755266753387489",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 36,
+        "face_corners": 108,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-279755266753387489",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 34,
+        "face_corners": 102,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-4549926859537839438",
+        "slot": 0,
+        "version": "original",
+        "triangles": 72,
+        "face_corners": 216,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-4549926859537839438",
+        "slot": 1,
+        "version": "original",
+        "triangles": 22,
+        "face_corners": 66,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-4549926859537839438",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 72,
+        "face_corners": 216,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "-4549926859537839438",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 22,
+        "face_corners": 66,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "8633005213437286470",
+        "slot": 0,
+        "version": "original",
+        "triangles": 84,
+        "face_corners": 252,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "8633005213437286470",
+        "slot": 1,
+        "version": "original",
+        "triangles": 34,
+        "face_corners": 102,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "8633005213437286470",
+        "slot": 0,
+        "version": "authored",
+        "triangles": 84,
+        "face_corners": 252,
+        "uv_max_absolute_error": 0
+      },
+      {
+        "mesh_id": "8633005213437286470",
+        "slot": 1,
+        "version": "authored",
+        "triangles": 34,
+        "face_corners": 102,
+        "uv_max_absolute_error": 0
+      }
+    ],
+    "face_corners": 5376,
+    "max_absolute_error": 0
+  },
+  "authored_inputs": [
+    {
+      "path": "assets/meadows/beech-branch-rgba-v1.png",
+      "sha256": "1570f0f106843776957508a903716b6da884206aa972197b739e75baccb147b4"
+    },
+    {
+      "path": "assets/meadows/beech-bark-near-atlas-v1.png",
+      "sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf"
+    }
+  ],
+  "views": [
+    {
+      "capture": "beech-final-uv-front-4k.png",
+      "sha256": "da6da44b20dd1379cc28642688ef43b9f0443fefa95ee4b4dc20db989ba9ec7f",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "scope": "Three large-tree mesh comparisons, front; authored bark only on near and middle meshes.",
+      "published": false
+    },
+    {
+      "capture": "beech-final-uv-rear-4k.png",
+      "sha256": "04e0fbb97951c660b4dbf3ee76198c67e30d67dd73c8c32f618d199f3658217b",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "scope": "Same large-tree comparisons from the opposite side.",
+      "published": false
+    },
+    {
+      "capture": "beech-small-uv-front-4k.png",
+      "sha256": "beece8182612a05b9fe35104b9edd367b3ca29b8bf22c1d151066458a0901925",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "scope": "Four small-beech mesh comparisons, white leaf tint, 512px candidate, original bark.",
+      "published": false
+    },
+    {
+      "capture": "beech-small-uv-rear-4k.png",
+      "sha256": "761d73499af7cdd60ba13c2123d8245162011c20cbb4fdb839a6630c7a0a3a0c",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "scope": "Same small-beech comparisons from the opposite side.",
+      "published": false
+    },
+    {
+      "capture": "beech-bark-near-underside.png",
+      "sha256": "30d8d48857a3d0c7aebfc2e23589ed4444af33aa5300e0cb5430953e76256fc0",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "scope": "Near trunk underside cap, authored on image left, original on right.",
+      "published": false
+    },
+    {
+      "capture": "beech-bark-middle-underside.png",
+      "sha256": "1910710683b1f0475f26e1231d3389dcf606daecca7227cc850424cd0355b8bf",
+      "dimensions": [
+        2048,
+        1024
+      ],
+      "scope": "Middle trunk underside cap, authored on image left, original on right.",
+      "published": false
+    },
+    {
+      "capture": "beech-512-left-1024-right-4k.png",
+      "sha256": "ce48cd69720a7230e65bebdb99675138effb97d868c88347d59a96143d72eec9",
+      "dimensions": [
+        3840,
+        2160
+      ],
+      "scope": "Matched small-beech 2 geometry and camera; 512px on left, 1024px on right.",
+      "published": false
+    }
+  ],
+  "observations": [
+    "Whole-branch foliage follows the retained large-tree cards and all four inspected small-tree card layouts without atlas repacking. Front and rear views retain transparent silhouette gaps.",
+    "The near and middle underside caps sample the authored endgrain patch. Their trunk side islands do not intersect it. The middle cap visibly stretches its rings with the retained low-detail geometry.",
+    "The distant tree keeps original bark because its side UVs intersect the entire endgrain patch. Small-tree bark also remains original in these comparisons.",
+    "At the matched 3840 by 2160 view, 512px keeps the small-tree outline and leaf groups readable; 1024px retains finer leaf and twig edges. This is a visual staging comparison, not a final preset or performance measurement.",
+    "Brighter leaf groups and the pale bark remain candidates for review with actual material normals, lighting and tint. Repeated branch fans and close cut-end stretching require game art review."
+  ],
+  "limitations": [
+    "No original game geometry or full original images are included in the public evidence. Capture hashes identify retained local review files.",
+    "No normal-map, game shader, wind, unhealthy sapling tint, growth, weather or LOD-transition acceptance.",
+    "The imported fourth small-beech mesh has no gameplay-prefab join established in this review.",
+    "UV review is scoped to these slots and views; no whole shared-material approval, runtime binding or final art approval."
+  ]
+}

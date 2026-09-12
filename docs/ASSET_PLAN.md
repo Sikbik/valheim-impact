@@ -15,7 +15,9 @@ a registered before/after comparison.
 | 67-degree roof atlas | 1024px atlas fitted to measured regions, selected submesh UV reviews, and a full-mesh menu fixture. | Original companion straw layer, placed buildings, oblique views, and LOD transitions. |
 | Standard straw fringe | Original 512px RGBA, scoped top-facing roof UV review, coverage-preserving BC3 mips and native sampling. | Underside, actual game shader, weather, repeat edges at distance and LOD review. |
 | Corner straw fringe | Separate original 512px RGBA, scoped outer-corner UV review, BC3 mips and native sampling. | Actual game shader, underside, complete building and LOD review. |
-| Grass, earth, leaves, and beech card | Palette and processing studies on owned probe geometry. | Exact production mappings, terrain semantics, atlas fitting, native game rendering, and world review. |
+| Beech foliage | Shared authored branch source, 1024px and 512px candidates, seven retained-mesh UV reviews and native sampling. | Companion normals, unhealthy sapling state, game shader, wind, tiny-mip coverage and LOD transitions. |
+| Beech bark | 1024px near/middle atlas with owned cut-end patch, scoped UV and native texture review. | Distant atlas conflict, stumps/logs/other shared users, moss, normals and game appearance. |
+| Grass, earth, leaves, and early beech card | Palette and processing studies on owned probe geometry. | Exact production mappings, terrain semantics, atlas fitting, native game rendering, and world review. |
 
 These descriptions are scoped to the recorded evidence. They are not counts of
 visible game coverage. Consult the [tracker](https://sikbik.github.io/valheim-impact/)
@@ -28,9 +30,13 @@ The six-material sheet is 1254 by 1254 with three columns and two rows. Explicit
 418px square crops avoid stretching rectangular cells or taking neighboring
 materials. Those studies produce 256px probe albedos.
 
-The beech source is 1363 by 1154 RGBA. A square crop preserves the branch before
+The early beech probe source is 1363 by 1154 RGBA. A square crop preserves the branch before
 fitting to a 512px probe card. Its alpha comes from the authored image, not a game
 mask. It is not a replacement for the game's leaf atlas.
+
+The later [beech material candidates](BEECH_MATERIALS.md) use a separate
+1254px whole-branch source, with an estimated authored alpha mask and explicit
+large-tree and small-tree identities. The early probe remains a study.
 
 Dedicated stone, timber, and thatch surface sources are fitted to 1024px without
 upscaling. A continuous thatch tile is distinct from a fitted roof atlas and

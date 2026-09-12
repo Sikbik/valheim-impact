@@ -40,6 +40,30 @@
       "source_sha256": "f49065a82ea0c5e1149a53f902da2aa9a380e5a2c72331bedb3a2f3832a63ec6",
       "label": "Corner straw candidate",
       "scope": "512px corner cutout with scoped UV and native mip checks. Game appearance and final approval pending."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3647773947989605833",
+      "file": "after-beech-canopy.webp",
+      "source": "assets/meadows/beech-branch-rgba-v1.png",
+      "source_sha256": "1570f0f106843776957508a903716b6da884206aa972197b739e75baccb147b4",
+      "label": "Beech canopy candidate",
+      "scope": "Authored branch source for the 1024px large-tree candidate. Scoped UV and native sampling only; actual shader and distant coverage pending."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5355041863167301984",
+      "file": "after-beech-small.webp",
+      "source": "assets/meadows/beech-branch-rgba-v1.png",
+      "source_sha256": "1570f0f106843776957508a903716b6da884206aa972197b739e75baccb147b4",
+      "label": "Small beech foliage candidate",
+      "scope": "Shared authored source for the 512px small-tree candidate. White-tint UV review only; unhealthy sapling state and game appearance pending."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "file": "after-beech-bark-near.webp",
+      "source": "assets/meadows/beech-bark-near-atlas-v1.png",
+      "source_sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf",
+      "label": "Near and middle beech bark",
+      "scope": "Fitted 1024px near/middle atlas. The cut-end patch conflicts with distant trunk UVs; wider shared bark scope remains original."
     }
   ]
 }

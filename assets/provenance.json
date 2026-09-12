@@ -292,6 +292,108 @@
       "credit": "Valheim Impact contributors",
       "license": "CC-BY-4.0",
       "source": "project-authored bark study with periodic edge fitting"
+    },
+    {
+      "key": "beech_branch_rgb",
+      "dest": "assets/meadows/beech-branch-source-rgb-v1.png",
+      "status": "authored working source with neutral background",
+      "sha256": "2587c46cbf69bfec2592bff1240fddb203af792f6c58b967094c25496818a02f",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "beech_branch_rgba",
+      "dest": "assets/meadows/beech-branch-rgba-v1.png",
+      "status": "authored branch atlas candidate with derived alpha",
+      "sha256": "1570f0f106843776957508a903716b6da884206aa972197b739e75baccb147b4",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "derived from project-authored RGB with an explicit neutral-background alpha estimate",
+      "parents": [
+        {
+          "path": "assets/meadows/beech-branch-source-rgb-v1.png",
+          "sha256": "2587c46cbf69bfec2592bff1240fddb203af792f6c58b967094c25496818a02f"
+        }
+      ],
+      "recipe": "tools/key_authored_foliage.py",
+      "thresholds": {
+        "transparent": 10,
+        "opaque": 32
+      }
+    },
+    {
+      "key": "beech_endgrain",
+      "dest": "assets/meadows/beech-endgrain-source-v1.png",
+      "status": "authored endgrain fitting source",
+      "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "beech_bark_near",
+      "dest": "assets/meadows/beech-bark-near-atlas-v1.png",
+      "status": "authored atlas candidate limited to near and middle bark UV scope",
+      "sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "fitted from original project-authored bark and endgrain",
+      "parents": [
+        {
+          "path": "assets/meadows/beech-bark-surface-v1.png",
+          "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+        },
+        {
+          "path": "assets/meadows/beech-endgrain-source-v1.png",
+          "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+        }
+      ],
+      "recipe": "assets/meadows/beech-bark-near-recipe.json"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."
