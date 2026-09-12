@@ -13,7 +13,7 @@ from PIL import Image
 import texture2ddecoder
 
 from tools import asset_pipeline
-from tools.cutout_mips import preserve_cutout_coverage
+from tools.cutout_mips import preserve_cutout_coverage, report_chain
 from tools.validate_staging import cutout_coverage_measurement
 
 
@@ -183,6 +183,51 @@ class CutoutMipTests(unittest.TestCase):
                 self.assertEqual(int(np.asarray(corrected)[0, 0, 3]), 255)
                 np.testing.assert_array_equal(np.asarray(corrected)[0, 0, :3],
                                               np.asarray(ordinary)[0, 0, :3])
+
+    def test_tall_grass_coarse_mips_survive_bc3_with_truthful_uniform_scale_report(self):
+        root = Path(__file__).resolve().parents[1]
+        source = Image.open(root / 'assets/meadows/grass-tall-rgba-v1.png').convert('RGBA')
+        cutoff, threshold = 0.46000000834465027, 118
+        for size in (512, 256):
+            with self.subTest(size=size):
+                base = asset_pipeline.fit_albedo(source, (size, size))
+                ordinary = asset_pipeline.mip_chain(base, 'albedo')
+                corrected = asset_pipeline.mip_chain(base, 'albedo', alpha_cutoff=cutoff)
+                report = report_chain(corrected, cutoff, ordinary_mips=ordinary)
+                blob = asset_pipeline.encode_dds(corrected)
+                offset = 128
+                for level, mip in enumerate(corrected):
+                    length = max(1, (mip.width + 3) // 4) * max(1, (mip.height + 3) // 4) * 16
+                    raw = texture2ddecoder.decode_bc3(blob[offset:offset + length], mip.width, mip.height)
+                    decoded = np.asarray(Image.frombytes('RGBA', mip.size, raw, 'raw', 'BGRA'))[:, :, 3]
+                    pixels = np.asarray(mip)
+                    measurement = cutout_coverage_measurement(pixels[:, :, 3], decoded, cutoff)
+                    self.assertLessEqual(abs(measurement['coverage_delta']),
+                                         measurement['allowed_coverage_delta'], (size, mip.size))
+                    self.assertEqual(report['mips'][level]['coverage'], measurement['coverage'])
+                    if mip.size == (32, 32):
+                        original_pixels = np.asarray(ordinary[level])
+                        original_alpha = original_pixels[:, :, 3]
+                        np.testing.assert_array_equal(pixels[:, :, :3], original_pixels[:, :, :3])
+                        self.assertTrue(np.all(pixels[:, :, 3][original_alpha == 0] == 0))
+                        for value in np.unique(original_alpha):
+                            self.assertEqual(len(np.unique(pixels[:, :, 3][original_alpha == value])), 1)
+                        scale = report['mips'][level]['alpha_scale']
+                        expected_alpha = np.rint(np.clip(original_alpha.astype(float) * scale, 0, 255)).astype(np.uint8)
+                        np.testing.assert_array_equal(pixels[:, :, 3], expected_alpha)
+                        self.assertLessEqual(abs(float((decoded >= threshold).mean()) - report['authored_base_coverage']),
+                                             measurement['allowed_coverage_delta'])
+                    offset += length
+
+    def test_coarse_mip_with_matching_bc3_coverage_keeps_existing_alpha_adjustment(self):
+        alpha = np.zeros((64, 64), dtype=np.uint8)
+        alpha[:32] = 255
+        source = self.image(alpha)
+        ordinary = asset_pipeline.mip_chain(source, 'albedo')
+        corrected = asset_pipeline.mip_chain(source, 'albedo', alpha_cutoff=self.cutoff)
+        for level in (1, 2, 3):
+            expected, _ = preserve_cutout_coverage(np.asarray(ordinary[level])[:, :, 3], self.cutoff, 0.5)
+            np.testing.assert_array_equal(np.asarray(corrected[level])[:, :, 3], expected)
 
     def test_validator_uses_actual_cutoff_and_discrete_tail_tolerance(self):
         source = np.array([[170, 180]], dtype=np.uint8)

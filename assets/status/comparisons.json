@@ -58,12 +58,44 @@
       "scope": "Shared authored source for the 512px small-tree candidate. White-tint UV review only; unhealthy sapling state and game appearance pending."
     },
     {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079",
+      "file": "after-grass-tall.webp",
+      "source": "assets/meadows/grass-tall-rgba-v1.png",
+      "source_sha256": "c39b2d7a3061d6498a44db9444a2ca02ea53404f92d36c61400e134328dacab8",
+      "label": "Tall Meadows grass",
+      "scope": "Neutral white cutout. Terrain color is supplied by the original shader; wind, distance and world approval remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943",
+      "file": "after-grass-short.webp",
+      "source": "assets/meadows/grass-short-rgba-v1.png",
+      "source_sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117",
+      "label": "Short Meadows grass",
+      "scope": "Five fitted authored blades. Neutral white RGB with real alpha; original-shader HD fixture and scoped UV/native checks."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "file": "after-beech-continuous.webp",
+      "source": "assets/meadows/beech-continuous-v1.png",
+      "source_sha256": "6e399070933e094d0cfb7ac97077c8a1e5a5ecfa2fc50788ff0eda8f794ced31",
+      "label": "Continuous standing-tree bark",
+      "scope": "Standing-tree material candidate without a cut patch. Original alpha and runtime binding remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "file": "after-beech-stump.webp",
+      "source": "assets/meadows/beech-stump-v1.png",
+      "source_sha256": "3fe0fe604238a968ec9c61413c4cabc1d72e61d991cea21ba6c2fd34fb9c2e0e",
+      "label": "Separate beech stump atlas",
+      "scope": "Stump-only material candidate with correctly placed exposed cut. It must not be shared with standing-tree materials."
+    },
+    {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
       "file": "after-beech-bark-near.webp",
       "source": "assets/meadows/beech-bark-near-atlas-v1.png",
       "source_sha256": "ea1d4a4d0fb5cf21b63cba629c4b7ac1ab01a4a1f40818b10b5c23ae99cb20cf",
-      "label": "Near and middle beech bark",
-      "scope": "Fitted 1024px near/middle atlas. The cut-end patch conflicts with distant trunk UVs; wider shared bark scope remains original."
+      "label": "Earlier near/middle bark study",
+      "scope": "Historical fitting study: this patch targets a downward root cap and conflicts with distant trunk UVs. Current candidates use separate continuous bark and stump materials."
     }
   ]
 }

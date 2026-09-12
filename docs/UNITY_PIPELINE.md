@@ -41,6 +41,12 @@ names, changed hashes, wrong color semantics, and incomplete BC3 mip chains.
 No game installation is read. PNGs and top-down preview DDS files are not copied.
 Preparation alone does not execute Unity or establish native validation.
 
+Prototype entries emit albedo and a paired normal study by default. Set
+`generate_normal` to `false` for an albedo-only material study. The flag must be
+a JSON boolean. Preparation and bundle building copy only the roles listed in
+the resulting staging manifest, so a stale unlisted normal file is not packaged.
+This option does not establish that an original material's normal needs replacing.
+
 To build that separate project with an explicitly selected Editor:
 
 ```sh

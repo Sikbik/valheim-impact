@@ -4,6 +4,10 @@ from pathlib import Path
 import shutil
 import tempfile
 import unittest
+from unittest.mock import patch
+
+from PIL import Image
+from tools import asset_pipeline
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location('prepare_unity', ROOT / 'tools/prepare_unity.py')
@@ -59,7 +63,8 @@ class SafetyTests(unittest.TestCase):
 
     def test_real_inputs_and_tamper_detection(self):
         manifest, files = pipeline.validate_inputs(ROOT / 'build/staging/meadows')
-        self.assertEqual(len(files), len(json.loads((ROOT / 'assets/meadows/prototype.json').read_text())['assets']) * 2)
+        assets = json.loads((ROOT / 'assets/meadows/prototype.json').read_text())['assets']
+        self.assertEqual(len(files), sum(2 if a.get('generate_normal', True) else 1 for a in assets))
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             for name, data in files:
@@ -92,11 +97,41 @@ class SafetyTests(unittest.TestCase):
             shutil.copytree(ROOT / 'build/staging/meadows', root / 'build/staging/meadows')
             (root / 'build/staging/meadows/unowned.resS').write_text('must stay out')
             dest, count = pipeline.prepare(root)
-            self.assertEqual(count, len(json.loads((ROOT / 'assets/meadows/prototype.json').read_text())['assets']) * 2)
+            assets = json.loads((ROOT / 'assets/meadows/prototype.json').read_text())['assets']
+            self.assertEqual(count, sum(2 if a.get('generate_normal', True) else 1 for a in assets))
             actual = {str(p.relative_to(dest)) for p in dest.rglob('*') if p.is_file()}
             expected = set(pipeline.TEMPLATE_FILES) | {'OwnedInputs/manifest.json'}
             expected |= {'OwnedInputs/' + r['unity_dds'] for r in json.loads((dest / 'OwnedInputs/manifest.json').read_text())['assets']}
             self.assertEqual(actual, expected)
+
+    def test_mixed_roles_stage_only_manifest_payloads_and_ignore_stale_normal(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            copy_template(root / 'unity')
+            Image.new('RGB', (8, 8), 'green').save(root / 'source.png')
+            manifest = root / 'spec.json'
+            manifest.write_text(json.dumps({'assets': [
+                dict(id='stone', source='source.png', size=[8, 8], periodic=False,
+                     alpha_policy='opaque', normal_strength=0),
+                dict(id='reed', source='source.png', size=[8, 8], periodic=False,
+                     alpha_policy='opaque', normal_strength=0, generate_normal=False)]}))
+            with patch.object(asset_pipeline, 'ROOT', root):
+                asset_pipeline.build(manifest)
+            stage = root / 'build/staging/meadows'
+            self.assertFalse((stage / 'reed_normal-unity.dds').exists())
+            (stage / 'reed_normal-unity.dds').write_bytes(b'stale normal must stay out')
+            destination, count = pipeline.prepare(root)
+            self.assertEqual(count, 3)
+            inputs = destination / 'OwnedInputs'
+            self.assertEqual({p.name for p in inputs.iterdir()}, {
+                'manifest.json', 'stone_albedo-unity.dds', 'stone_normal-unity.dds',
+                'reed_albedo-unity.dds'})
+            staged = json.loads((inputs / 'manifest.json').read_text())
+            self.assertEqual([record['id'] for record in staged['assets']],
+                             ['stone_albedo', 'stone_normal', 'reed_albedo'])
+            for record in staged['assets']:
+                name = record['unity_dds']
+                self.assertEqual((inputs / name).read_bytes(), (stage / name).read_bytes())
 
 
 if __name__ == '__main__':

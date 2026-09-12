@@ -386,10 +386,82 @@
         "mean_error": 0.24732470512390137,
         "max_error": 1.0
       }
+    },
+    {
+      "id": "meadows_grass_tall_hd_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.022080421447753906,
+        "max_error": 2.0
+      }
+    },
+    {
+      "id": "meadows_grass_tall_balanced_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.032611846923828125,
+        "max_error": 2.0
+      }
+    },
+    {
+      "id": "meadows_grass_short_hd_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.013675689697265625,
+        "max_error": 2.0
+      }
+    },
+    {
+      "id": "meadows_grass_short_balanced_albedo",
+      "width": 128,
+      "height": 128,
+      "payload_bytes": 21872,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.0180816650390625,
+        "max_error": 2.0
+      }
+    },
+    {
+      "id": "beech_continuous_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.5123040344022471,
+        "max_error": 2.2190252151793004
+      }
+    },
+    {
+      "id": "beech_stump_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "gpu_sampling": {
+        "mean_error": 0.5105593434535847,
+        "max_error": 2.2190252151793004
+      }
     }
   ],
-  "compressed_payload_bytes": 20622848,
-  "native_bundles_bytes": 6773711,
+  "compressed_payload_bytes": 23965344,
+  "native_bundles_bytes": 8058552,
   "gpu_base_mip_validation": true,
   "game_validation": false,
   "note": "Native layout and GPU sampling evidence, not a VRAM or frame-time benchmark."

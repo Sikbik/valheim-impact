@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "source": "assets/meadows/grass-short-source-alpha-v1.png",
+  "source_sha256": "af2bf50b0e5f98339f0dbde48f632e1652c2d3494a23e1dfe9080e2cb8cfc39d",
+  "purpose": "Neutral white cutout. The original grass shader supplies terrain color.",
+  "operations": [
+    {
+      "source_x_region": [
+        203,
+        273
+      ],
+      "each_row": "Use float64 grayscale samples; skip zero-sum rows.",
+      "source_center": "sum(column*sample)/sum(sample)",
+      "dest_center": "region_midpoint+(source_center-region_midpoint)*0.65; region_midpoint=(start+exclusive_end)/2",
+      "source_x": "(output_column-dest_center)/2.3+source_center",
+      "sampling": "numpy.interp over original source columns, left=0, right=0",
+      "combine": "maximum across regions, then numpy.rint and uint8",
+      "height_unchanged": true
+    },
+    {
+      "source_x_region": [
+        403,
+        455
+      ],
+      "each_row": "Use float64 grayscale samples; skip zero-sum rows.",
+      "source_center": "sum(column*sample)/sum(sample)",
+      "dest_center": "region_midpoint+(source_center-region_midpoint)*0.65; region_midpoint=(start+exclusive_end)/2",
+      "source_x": "(output_column-dest_center)/2.3+source_center",
+      "sampling": "numpy.interp over original source columns, left=0, right=0",
+      "combine": "maximum across regions, then numpy.rint and uint8",
+      "height_unchanged": true
+    },
+    {
+      "source_x_region": [
+        608,
+        689
+      ],
+      "each_row": "Use float64 grayscale samples; skip zero-sum rows.",
+      "source_center": "sum(column*sample)/sum(sample)",
+      "dest_center": "region_midpoint+(source_center-region_midpoint)*0.65; region_midpoint=(start+exclusive_end)/2",
+      "source_x": "(output_column-dest_center)/2.3+source_center",
+      "sampling": "numpy.interp over original source columns, left=0, right=0",
+      "combine": "maximum across regions, then numpy.rint and uint8",
+      "height_unchanged": true
+    },
+    {
+      "source_x_region": [
+        798,
+        874
+      ],
+      "each_row": "Use float64 grayscale samples; skip zero-sum rows.",
+      "source_center": "sum(column*sample)/sum(sample)",
+      "dest_center": "region_midpoint+(source_center-region_midpoint)*0.65; region_midpoint=(start+exclusive_end)/2",
+      "source_x": "(output_column-dest_center)/2.3+source_center",
+      "sampling": "numpy.interp over original source columns, left=0, right=0",
+      "combine": "maximum across regions, then numpy.rint and uint8",
+      "height_unchanged": true
+    },
+    {
+      "source_x_region": [
+        980,
+        1063
+      ],
+      "each_row": "Use float64 grayscale samples; skip zero-sum rows.",
+      "source_center": "sum(column*sample)/sum(sample)",
+      "dest_center": "region_midpoint+(source_center-region_midpoint)*0.65; region_midpoint=(start+exclusive_end)/2",
+      "source_x": "(output_column-dest_center)/2.3+source_center",
+      "sampling": "numpy.interp over original source columns, left=0, right=0",
+      "combine": "maximum across regions, then numpy.rint and uint8",
+      "height_unchanged": true
+    }
+  ],
+  "rgb": [
+    255,
+    255,
+    255
+  ],
+  "output": "assets/meadows/grass-short-rgba-v1.png",
+  "output_sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117",
+  "encoding": {
+    "format": "PNG",
+    "optimize": true,
+    "image_library": "Pillow 12.3.0"
+  },
+  "original_game_pixels": false,
+  "original_masks_used": false
+}

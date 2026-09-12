@@ -1,0 +1,318 @@
+{
+  "schema_version": 1,
+  "measured_on": "2026-09-12",
+  "scope": "Native Vulkan comparison of the HD tall and short grass replacements using the original grass shader and exact inspected card geometry in an isolated synthetic patch.",
+  "technical_checks_passed": true,
+  "artwork_approved": false,
+  "world_validated": false,
+  "biome_approved": false,
+  "performance_validated": false,
+  "game_deployment_performed": false,
+  "engine": {
+    "editor_version": "6000.0.75f1",
+    "graphics_api": "Vulkan",
+    "color_space": "Linear",
+    "render_pipeline": "Built-in"
+  },
+  "identity": {
+    "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1269829194941557289",
+    "shader_name": "Custom/Grass",
+    "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2397346978479642237",
+    "submesh": 0,
+    "vertices": 48,
+    "triangles": 36,
+    "base_vertex": 0,
+    "shared_terrain_color_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5952445177512870087"
+  },
+  "variants": {
+    "tall": {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1669900682560515117",
+      "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079",
+      "replacement_id": "meadows_grass_tall_hd_albedo",
+      "shader_supported": true,
+      "instancing_enabled": true,
+      "pass_count": 4,
+      "cutoff": 0.46,
+      "replacement_bundle_sha256": "8ca5d44023033d33255e1f9ef07daaaf4b7420f64662f945988d0c70b699bd21",
+      "authored_rgba_source_sha256": "c39b2d7a3061d6498a44db9444a2ca02ea53404f92d36c61400e134328dacab8",
+      "authored_alpha_source_sha256": "c3cd5b8c6cb35af8b41c9ca7cfc34f6fac81f8bca216cbeb4d365467f3459162",
+      "original_texture_width": 128,
+      "original_texture_height": 128,
+      "original_texture_mip_count": 1,
+      "original_sampler": {
+        "filter": "Point",
+        "wrap_u": "Repeat",
+        "wrap_v": "Repeat",
+        "anisotropy": 1,
+        "mip_bias": 0
+      },
+      "material_values": {
+        "color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        },
+        "main_texture_scale": {
+          "x": 1,
+          "y": 1
+        },
+        "main_texture_offset": {
+          "x": 0,
+          "y": 0
+        },
+        "terrain_color_scale": 0.009999999776482582,
+        "normal_map_bound": false,
+        "normal_scale": 0.0,
+        "normal_hack": 0.0,
+        "two_sided_normals": 0.0,
+        "wind_height": 0.5,
+        "sway_speed": 60.0,
+        "sway_distance": 2.299999952316284,
+        "push_distance": 2.0,
+        "camera_cull": 1.0,
+        "cull_mode": "Off",
+        "emission_map_bound": false
+      },
+      "original_texture_reference_sha256": "af07641b484f84d936f35cf9f8198003359f320c20e775c23c9f5e3930ebcb66"
+    },
+    "short": {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2753016777081159198",
+      "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943",
+      "replacement_id": "meadows_grass_short_hd_albedo",
+      "shader_supported": true,
+      "instancing_enabled": true,
+      "pass_count": 4,
+      "cutoff": 0.46,
+      "replacement_bundle_sha256": "e6a85bcb378ed0dfcf06cde77923fd49cb15675e081df72346434f2281fe6edb",
+      "authored_rgba_source_sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117",
+      "authored_alpha_source_sha256": "af2bf50b0e5f98339f0dbde48f632e1652c2d3494a23e1dfe9080e2cb8cfc39d",
+      "original_texture_width": 64,
+      "original_texture_height": 64,
+      "original_texture_mip_count": 1,
+      "original_sampler": {
+        "filter": "Point",
+        "wrap_u": "Repeat",
+        "wrap_v": "Repeat",
+        "anisotropy": 1,
+        "mip_bias": 0
+      },
+      "material_values": {
+        "color": {
+          "a": 1.0,
+          "b": 1.0,
+          "g": 1.0,
+          "r": 1.0
+        },
+        "main_texture_scale": {
+          "x": 1,
+          "y": 1
+        },
+        "main_texture_offset": {
+          "x": 0,
+          "y": 0
+        },
+        "terrain_color_scale": 0.009999999776482582,
+        "normal_map_bound": false,
+        "normal_scale": 0.0,
+        "normal_hack": 0.0,
+        "two_sided_normals": 0.0,
+        "wind_height": 0.5,
+        "sway_speed": 60.0,
+        "sway_distance": 1.0,
+        "push_distance": 0.5,
+        "camera_cull": 1.0,
+        "cull_mode": "Off",
+        "emission_map_bound": false
+      },
+      "original_texture_reference_sha256": "84d7d20727949bb201f75b920764be06048a0e0f41f5bfa0e5e3453395f234c6"
+    }
+  },
+  "native_payloads": {
+    "meadows_grass_tall_hd_albedo": {
+      "width": 512,
+      "height": 512,
+      "mip_count": 10,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "compressed_payload_bytes": 349552,
+      "bundle_sha256": "8ca5d44023033d33255e1f9ef07daaaf4b7420f64662f945988d0c70b699bd21",
+      "compressed_payload_sha256": "7a26f9f0ad6fb4d0375bc06f2a2d3056333f6bf7c1c87322bcf7c6289da8c9d7",
+      "native_readback_sha256": "d7c144c5fe7e00cfad05b5ae950ac7c033006a1d66fd794d411c448277dd03fd",
+      "rendered_with_original_shader_here": true
+    },
+    "meadows_grass_tall_balanced_albedo": {
+      "width": 256,
+      "height": 256,
+      "mip_count": 9,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "compressed_payload_bytes": 87408,
+      "bundle_sha256": "f84813f0c150f35b8cc84fa701be09d214cd2bca54c850e2ca285eb558fe6bb1",
+      "compressed_payload_sha256": "14a7e0e8bac2ba2f088329e0c44b39fcfb5e7728c1b10eb856fe9e7300d3fd3c",
+      "native_readback_sha256": "668e67f75d21d9f9603f233634784a3c68fa71603ab0a90f9c24fb3d4a49f68a",
+      "rendered_with_original_shader_here": false
+    },
+    "meadows_grass_short_hd_albedo": {
+      "width": 256,
+      "height": 256,
+      "mip_count": 9,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "compressed_payload_bytes": 87408,
+      "bundle_sha256": "e6a85bcb378ed0dfcf06cde77923fd49cb15675e081df72346434f2281fe6edb",
+      "compressed_payload_sha256": "3d84586be9243ee70e655faa05aa129db53c21649fd192ef120f9a7ad1f522f0",
+      "native_readback_sha256": "24bffbe43972959fb1e808be418df82377e7fc435c41b4a0b987e99b4ef6ffe2",
+      "rendered_with_original_shader_here": true
+    },
+    "meadows_grass_short_balanced_albedo": {
+      "width": 128,
+      "height": 128,
+      "mip_count": 8,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "compressed_payload_bytes": 21872,
+      "bundle_sha256": "297f9ebfeb39b329902345862c0130c9f0966fb348ffab126443720f87620625",
+      "compressed_payload_sha256": "08cf41da7e153d517c460801fd989553bb3bce4ec80fa6f24f8636dd3b3a593c",
+      "native_readback_sha256": "58e3a56bb87a09f2a0d95264659def8eda7bb5d18f45008a8a6b1aefb9216433",
+      "rendered_with_original_shader_here": false
+    }
+  },
+  "captures": {
+    "tall_before_1920x1080": {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 138147,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 0,
+      "private_image_sha256": "c178e84ba812206023730b8c6f8ee67e77c53bb294478d7af78fe4e5aad4bef5"
+    },
+    "tall_after_1920x1080": {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 152145,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 175133,
+      "private_image_sha256": "c766c9bc95f91babc90bb5a6e2588e74fef81ad2a38e40ddf18cb65a28e00da9"
+    },
+    "tall_before_3840x2160": {
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 552663,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 0,
+      "private_image_sha256": "310d91c035592cba8889c616aee8f13e21df0dacf7f34b1594262903f4f26f9b"
+    },
+    "tall_after_3840x2160": {
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 608804,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 701575,
+      "private_image_sha256": "1eedff6529fdc1f6fbf9594db70b13681f0e1a4c9259c02c2ef81fe444a386a6"
+    },
+    "short_before_1920x1080": {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 59591,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 0,
+      "private_image_sha256": "ea7459c5f75f855ac5726dc3a62fd738e4b1b1003ae2c777a374a86f0f78e38e"
+    },
+    "short_after_1920x1080": {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 56443,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 82644,
+      "private_image_sha256": "433dfd13b54d6fd24010010d4b6822ac126bf2e0480459f2029a45fdbe2ec151"
+    },
+    "short_before_3840x2160": {
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 238441,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 0,
+      "private_image_sha256": "ea11cf832bbb8157170161f2a3259634429e7186b812786d8d83e53166e4f6e3"
+    },
+    "short_after_3840x2160": {
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinite_pixels": 0,
+      "magenta_error_pixels": 0,
+      "occupied_pixels": 225092,
+      "hdr_pixels_above_one": 0,
+      "changed_from_original_pixels": 330067,
+      "private_image_sha256": "404edf7e3637011f34a0547136c2ae69015d67b0cde06c49cfd7cceea55b14ea"
+    }
+  },
+  "checks": {
+    "comparison_capture_count": 8,
+    "background_render_count": 4,
+    "error_count": 0,
+    "warning_count": 0,
+    "cleanup_passed": true,
+    "scenes_preserved": true,
+    "shader_globals_restored": true,
+    "frame_hashes_verified": true,
+    "native_bundle_hashes_verified": true,
+    "compressed_payload_hashes_verified": true,
+    "authored_source_hashes_verified": true
+  },
+  "fixture": {
+    "draw_method": "Graphics.DrawMeshInstanced",
+    "instance_count": 9,
+    "uniform_clutter_scale": 1.5,
+    "wind_strength": 0,
+    "wind_animation_exercised": false,
+    "matched_world_xz": true,
+    "matched_camera": true,
+    "light_probe_usage": "Off",
+    "shadow_casting": "Off",
+    "lighting": "Controlled preview lights and ambient color",
+    "original_terrain_color_preserved": true,
+    "only_material_texture_changed": "_MainTex",
+    "hdr_readback_checked_before_encoding": true,
+    "color_output": "Linear HDR values clamped to the display range and encoded as sRGB PNG. No tone mapping."
+  },
+  "evidence_hashes": {
+    "private_report_sha256": "a938b962672fed6adc477795bdf49e32a3138470ba58a48b90d8e1d0b1a1d655",
+    "fixture_sha256": "5ae6e9d66fe348a536e7012101960c6e588df7022dabdf8514b0004ec3566f4a",
+    "source_bundle_sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+    "geometry_json_sha256": "343cec26a78ae52a540f53dc254128bf704abaa3e8f75f40f2366189ff4792e4",
+    "native_texture_catalog_sha256": "528849119729306f638170b0ed6b6234b20c7ac15c708dc65baaff1a2c0bfb18"
+  },
+  "limitations": {
+    "shader_test": "Only the tall 512-pixel and short 256-pixel HD textures were rendered with the original grass shader here. Native payload checks for all four texture sizes are recorded separately; they do not extend this shader-render scope to Balanced textures.",
+    "live_component": "Explicit native instanced draws are exercised. The running game component, placement system and density LOD are not exercised.",
+    "environment": "Ground placement, changing weather, animated wind and representative gameplay scenes remain unreviewed by this fixture.",
+    "capture_rights": "Original game pixels and extracted geometry remain private. This report distributes measurements, identities and hashes only.",
+    "approval": "Technical rendering success does not grant artwork, biome or world approval."
+  }
+}

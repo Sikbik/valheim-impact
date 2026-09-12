@@ -1,0 +1,1302 @@
+{
+  "schema_version": 1,
+  "scope": "Serialized shared-bark consumer mapping, cap distinction, original alpha measurements and owned fitting studies. No runtime binding, native shader execution or game approval.",
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "bundle": {
+    "name": "c4210710",
+    "sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+    "matched_inventory": true
+  },
+  "approvals": {
+    "art": false,
+    "native_shader": false,
+    "game": false,
+    "global_uv": false,
+    "runtime_binding": false,
+    "normal_companions": false
+  },
+  "method": {
+    "coordinates": "Exact serialized material arrays and texture transforms; triangle groups from submesh byte offsets, index counts and base vertices. Affine UV triangles retain their full span and use whole-triangle repeat shifts.",
+    "units": "Distinct texture-space texel centers, not projected visibility or world-surface coverage.",
+    "original_mips": "Decoded the ten original BC7 mip byte ranges separately. No base-image mip regeneration.",
+    "excluded": "Original pixels, alpha masks, geometry arrays, shader programs and workstation locations are excluded.",
+    "root_plane": "Prefab-local Y0 is an inspection reference only. It does not establish terrain height or universal root occlusion."
+  },
+  "bark_texture": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+    "name": "beech_bark",
+    "width": 512,
+    "height": 512,
+    "format": "BC7",
+    "mip_count": 10,
+    "filter": "point",
+    "wrap_u": "repeat",
+    "wrap_v": "repeat",
+    "anisotropy": 1,
+    "mip_bias": 0
+  },
+  "consumer_counts": {
+    "materials": 6,
+    "renderers": 20,
+    "meshes": 10,
+    "material_slot_associations": 21,
+    "unique_bark_submeshes": 11,
+    "gameplay_prefab_renderers": 10,
+    "standalone_imported_model_renderers": 10
+  },
+  "materials": [
+    {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6903426553333840925",
+      "name": "beech_stump",
+      "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+      "shader_name": "Standard",
+      "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "texture_scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "texture_offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "renderer_count": 1
+    },
+    {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7663768329272761871",
+      "name": "trunk",
+      "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+      "shader_name": "Standard",
+      "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "texture_scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "texture_offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "renderer_count": 1
+    },
+    {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925",
+      "name": "beech_bark_small",
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation",
+      "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "texture_scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "texture_offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "renderer_count": 10
+    },
+    {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260",
+      "name": "beech_bark",
+      "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+      "shader_name": "Custom/Vegetation",
+      "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "texture_scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "texture_offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "renderer_count": 7
+    },
+    {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7776510296790109796",
+      "name": "trunk",
+      "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+      "shader_name": "Standard",
+      "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "texture_scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "texture_offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "renderer_count": 1
+    },
+    {
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8895034525412768120",
+      "name": "trunk",
+      "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+      "shader_name": "Standard",
+      "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "texture_scale": {
+        "x": 1.0,
+        "y": 1.0
+      },
+      "texture_offset": {
+        "x": 0.0,
+        "y": 0.0
+      },
+      "renderer_count": 1
+    }
+  ],
+  "consumers": [
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5516269426419721404",
+      "hierarchy": "Beech1/Lod0",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4640136191904998588",
+      "hierarchy": "Beech1/Lod1",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3750265480304485564",
+      "hierarchy": "Beech1/Lod3",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6377910788048012438",
+      "hierarchy": "Beech_Sapling/healthy",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3595068799906333846",
+      "hierarchy": "Beech_Sapling/unhealthy",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4272851201681799502",
+      "hierarchy": "Beech_Stub/stub",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "bark_slots": [
+        {
+          "slot": 0,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6903426553333840925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2738728615736554123",
+      "hierarchy": "Beech_small1/beech",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2457907305929355915",
+      "hierarchy": "Beech_small1/beech_low",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7002907136463373863",
+      "hierarchy": "Beech_small2/beech",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:905040026024248871",
+      "hierarchy": "Beech_small2/beech_low",
+      "kind": "gameplay-prefab",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:886151793047473764",
+      "hierarchy": "beech/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2005030479268777572",
+      "bark_slots": [
+        {
+          "slot": 0,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        },
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7776510296790109796"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2243076085700373707",
+      "hierarchy": "beech_blob_lod1/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5656436232139650397",
+      "hierarchy": "beech_blob_lod2/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5092399839612760355",
+      "hierarchy": "beech_blob_lod3/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7719490345619627535",
+      "hierarchy": "beech_col/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6759980550259335665",
+      "bark_slots": [
+        {
+          "slot": 0,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7663768329272761871"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3133599438715554482",
+      "hierarchy": "beech_small/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6886546297189345210",
+      "hierarchy": "beech_small2/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7799408053716981732",
+      "hierarchy": "beech_small_blob1/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6828500291063340001",
+      "hierarchy": "beech_small_blob2/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "bark_slots": [
+        {
+          "slot": 1,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+        }
+      ]
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2590413077449066120",
+      "hierarchy": "beech_stub/default",
+      "kind": "standalone-imported-model",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "bark_slots": [
+        {
+          "slot": 0,
+          "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8895034525412768120"
+        }
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "bark_submeshes": [
+        {
+          "slot": 0,
+          "triangles": 32,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 6190,
+            "min": 254,
+            "max": 255,
+            "mean": 254.63861066235864,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 6900,
+            "min": 254,
+            "max": 255,
+            "mean": 254.64623188405798,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 34,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 542,
+            "min": 254,
+            "max": 255,
+            "mean": 254.59225092250924,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 778,
+            "min": 254,
+            "max": 255,
+            "mean": 254.59897172236504,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 22,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 546,
+            "min": 254,
+            "max": 255,
+            "mean": 254.5952380952381,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 778,
+            "min": 254,
+            "max": 255,
+            "mean": 254.59897172236504,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 34,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 30954,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70262324739937,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 33235,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70103806228374,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 22,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 546,
+            "min": 254,
+            "max": 255,
+            "mean": 254.5952380952381,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 778,
+            "min": 254,
+            "max": 255,
+            "mean": 254.59897172236504,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2005030479268777572",
+      "bark_submeshes": [
+        {
+          "slot": 0,
+          "triangles": 384,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 261523,
+            "min": 0,
+            "max": 255,
+            "mean": 247.24649457217913,
+            "zero": 1276,
+            "under_128": 6540,
+            "under_250": 19555,
+            "coverage_0_5": 0.9749926392707333
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 262090,
+            "min": 0,
+            "max": 255,
+            "mean": 247.10874890304856,
+            "zero": 1306,
+            "under_128": 6719,
+            "under_250": 19786,
+            "coverage_0_5": 0.9743637681712389
+          }
+        },
+        {
+          "slot": 1,
+          "triangles": 232,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 36960,
+            "min": 254,
+            "max": 255,
+            "mean": 254.7091720779221,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 39640,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70681130171545,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 6,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 177098,
+            "min": 0,
+            "max": 255,
+            "mean": 251.8165422534416,
+            "zero": 517,
+            "under_128": 1715,
+            "under_250": 4433,
+            "coverage_0_5": 0.9903160961727405
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 179251,
+            "min": 0,
+            "max": 255,
+            "mean": 251.67591812597976,
+            "zero": 537,
+            "under_128": 1843,
+            "under_250": 4655,
+            "coverage_0_5": 0.9897183279312249
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 232,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 36960,
+            "min": 254,
+            "max": 255,
+            "mean": 254.7091720779221,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 39640,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70681130171545,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6759980550259335665",
+      "bark_submeshes": [
+        {
+          "slot": 0,
+          "triangles": 232,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 36960,
+            "min": 254,
+            "max": 255,
+            "mean": 254.7091720779221,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 39640,
+            "min": 254,
+            "max": 255,
+            "mean": 254.70681130171545,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+      "bark_submeshes": [
+        {
+          "slot": 1,
+          "triangles": 34,
+          "base_vertex": 0,
+          "alpha_at_source_texel_centers": {
+            "pixels": 542,
+            "min": 254,
+            "max": 255,
+            "mean": 254.59225092250924,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          },
+          "alpha_with_one_source_texel_repeat_margin": {
+            "pixels": 778,
+            "min": 254,
+            "max": 255,
+            "mean": 254.59897172236504,
+            "zero": 0,
+            "under_128": 0,
+            "under_250": 0,
+            "coverage_0_5": 1.0
+          }
+        }
+      ]
+    }
+  ],
+  "log_scope_correction": {
+    "finding": "Cut logs are not consumers of the shared bark albedo. Their material and albedo form a separate inspection scope.",
+    "log_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2002271956048927406",
+    "log_albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407",
+    "log_mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+    "consumers": [
+      {
+        "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3946440429219332066",
+        "hierarchy": "beech_log/log",
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445"
+      },
+      {
+        "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8351220921150202249",
+        "hierarchy": "beech_log_half/PineTree_log (1)",
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445"
+      }
+    ],
+    "prefab_join": "The Beech1 component stores separate stump and log prefab references resolving to Beech_Stub and beech_log."
+  },
+  "cap_distinction": {
+    "near_root_cap": {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "slot": 1,
+      "triangles": 8,
+      "uv_bounds": {
+        "u_min": 0.279302,
+        "u_max": 0.355737,
+        "v_min": 0.391118,
+        "v_max": 0.467553
+      },
+      "local_y_min": -0.97558,
+      "local_y_max": -0.592115,
+      "area_weighted_normal_y": -0.888582
+    },
+    "middle_root_cap": {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "slot": 1,
+      "triangles": 2,
+      "local_y_min": -0.840706,
+      "local_y_max": -0.579004,
+      "area_weighted_normal_y": -0.979601
+    },
+    "stump_root_cap": {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "slot": 0,
+      "triangles": 8,
+      "same_uv_bounds_as_near_root_cap": true,
+      "local_y_min": -0.97558,
+      "local_y_max": -0.592115,
+      "area_weighted_normal_y": -0.885639
+    },
+    "visible_stump_cut_cap": {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "slot": 0,
+      "triangles": 8,
+      "uv_bounds": {
+        "u_min": 0.828903,
+        "u_max": 0.942972,
+        "v_min": 0.729837,
+        "v_max": 0.843906
+      },
+      "local_y_min": 0.585955,
+      "local_y_max": 0.698243,
+      "area_weighted_normal_y": 0.980457,
+      "source_texel_centers": 2448,
+      "source_alpha_min": 254,
+      "source_alpha_max": 255
+    },
+    "interpretation": "The old near/middle cut patch maps to downward root undersides. The exposed stump cut is a separate upward-facing island. Root undersides would be buried with level ground at prefab-local Y0, but slopes, excavation, deformation and lifecycle visibility remain untested."
+  },
+  "owned_sources": [
+    {
+      "path": "assets/meadows/beech-bark-surface-v1.png",
+      "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+    },
+    {
+      "path": "assets/meadows/beech-endgrain-source-v1.png",
+      "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+    }
+  ],
+  "owned_studies": [
+    {
+      "id": "continuous-bark-1024-study",
+      "width": 1024,
+      "height": 1024,
+      "alpha_min": 255,
+      "alpha_max": 255,
+      "sha256": "6e399070933e094d0cfb7ac97077c8a1e5a5ecfa2fc50788ff0eda8f794ced31",
+      "method": "Retain the owned 1024px bark RGB source with fully opaque alpha. No cut patch.",
+      "original_game_pixels": false,
+      "original_masks_used": false
+    },
+    {
+      "id": "stump-cap-1024-study",
+      "width": 1024,
+      "height": 1024,
+      "alpha_min": 255,
+      "alpha_max": 255,
+      "sha256": "3fe0fe604238a968ec9c61413c4cabc1d72e61d991cea21ba6c2fd34fb9c2e0e",
+      "method": "Owned continuous bark with the owned endgrain source at saturation .72, resized to 130 by 130 using Lanczos.",
+      "paste_box": {
+        "left": 842,
+        "top": 153,
+        "right_exclusive": 972,
+        "bottom_exclusive": 283
+      },
+      "original_game_pixels": false,
+      "original_masks_used": false
+    }
+  ],
+  "corrected_patch": {
+    "stump_cut_cap_centers_1024": 9793,
+    "stump_cut_cap_centers_covered_1024": 9793,
+    "overlap_checks": [
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+        "slot": 0,
+        "overlap_centers_1024": 9793
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2005030479268777572",
+        "slot": 0,
+        "overlap_centers_1024": 16900
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2005030479268777572",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6759980550259335665",
+        "slot": 0,
+        "overlap_centers_1024": 0
+      },
+      {
+        "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+        "slot": 1,
+        "overlap_centers_1024": 0
+      }
+    ],
+    "old_near_patch_distant_side_overlap_1024": 9025,
+    "exception": "The standalone imported beech.obj canopy in bark slot0 samples all 16900 corrected patch texels. It is a distinct consumer from the gameplay blob foliage slots.",
+    "mip_method": "Finite uncompressed BOX-filter footprint of the owned rectangle, with direct UV texel centers and a one-texel repeat-sampling margin. Counts indicate patch influence, not a native compressed mip result.",
+    "mip_footprint": [
+      {
+        "mip": 0,
+        "size": 1024,
+        "side_texel_centers": 677011,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 0
+      },
+      {
+        "mip": 1,
+        "size": 512,
+        "side_texel_centers": 169254,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 0
+      },
+      {
+        "mip": 2,
+        "size": 256,
+        "side_texel_centers": 42317,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 0
+      },
+      {
+        "mip": 3,
+        "size": 128,
+        "side_texel_centers": 10638,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 17
+      },
+      {
+        "mip": 4,
+        "size": 64,
+        "side_texel_centers": 2630,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 9
+      },
+      {
+        "mip": 5,
+        "size": 32,
+        "side_texel_centers": 663,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 5
+      },
+      {
+        "mip": 6,
+        "size": 16,
+        "side_texel_centers": 166,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 6
+      },
+      {
+        "mip": 7,
+        "size": 8,
+        "side_texel_centers": 45,
+        "side_centers_with_patch_contribution": 2,
+        "max_patch_contribution_at_side_centers": 0.3394775390625,
+        "side_one_texel_margin_with_patch_contribution": 4
+      },
+      {
+        "mip": 8,
+        "size": 4,
+        "side_texel_centers": 10,
+        "side_centers_with_patch_contribution": 0,
+        "max_patch_contribution_at_side_centers": 0.0,
+        "side_one_texel_margin_with_patch_contribution": 2
+      },
+      {
+        "mip": 9,
+        "size": 2,
+        "side_texel_centers": 4,
+        "side_centers_with_patch_contribution": 1,
+        "max_patch_contribution_at_side_centers": 0.0644683837890625,
+        "side_one_texel_margin_with_patch_contribution": 1
+      },
+      {
+        "mip": 10,
+        "size": 1,
+        "side_texel_centers": 1,
+        "side_centers_with_patch_contribution": 1,
+        "max_patch_contribution_at_side_centers": 0.016117095947265625,
+        "side_one_texel_margin_with_patch_contribution": 1
+      }
+    ],
+    "mip_limit": "No direct distant-side center contribution from 1024 through 16px, but the one-texel margin reaches the patch at 128px. Direct contribution appears at 8px and in 2px and 1px tails. Full-resolution separation is not all-mip isolation."
+  },
+  "distant_alpha": {
+    "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+    "slot": 1,
+    "underside": {
+      "triangles": 2,
+      "source_texel_centers": 7844,
+      "alpha_zero_centers": 517,
+      "alpha_below_128_centers": 1705,
+      "zero_sample_local_y_min": -1.058452,
+      "zero_sample_local_y_max": -0.922888,
+      "below_128_sample_local_y_max": -0.854632
+    },
+    "sides": {
+      "triangles": 4,
+      "source_texel_centers": 169254,
+      "alpha_zero_centers": 0,
+      "alpha_below_128_centers": 10,
+      "alpha_below_250_centers": 541,
+      "below_128_location": "One lower corner shared by two side faces, below prefab-local Y0.",
+      "below_128_local_y_min": -0.832432,
+      "below_128_local_y_max": -0.71776,
+      "below_250_centers_above_local_y_zero": 88,
+      "above_zero_alpha_min": 242,
+      "above_zero_alpha_max": 249,
+      "above_zero_sample_local_y_max": 0.822374
+    },
+    "original_mips": [
+      {
+        "mip": 0,
+        "size": 512,
+        "compressed_bytes": 262144,
+        "compressed_sha256": "4a3ad4383eb545295d795781b63b1e73f504a88a3d539887b9d6add5429c4efc",
+        "sides_at_texel_centers": {
+          "pixels": 169254,
+          "min": 81,
+          "max": 255,
+          "mean": 254.59704349675636,
+          "zero": 0,
+          "under_128": 10,
+          "under_250": 541,
+          "coverage_0_5": 0.999940917201366
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 171022,
+          "min": 56,
+          "max": 255,
+          "mean": 254.53748055805687,
+          "zero": 0,
+          "under_128": 52,
+          "under_250": 634,
+          "coverage_0_5": 0.9996959455508648
+        }
+      },
+      {
+        "mip": 1,
+        "size": 256,
+        "compressed_bytes": 65536,
+        "compressed_sha256": "b01ab4f5deabd6e556a250da08fc067af99de86fc3daee6715b1a0a28a0e8f26",
+        "sides_at_texel_centers": {
+          "pixels": 42317,
+          "min": 93,
+          "max": 255,
+          "mean": 254.62468984096225,
+          "zero": 0,
+          "under_128": 3,
+          "under_250": 138,
+          "coverage_0_5": 0.9999291065056597
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 43203,
+          "min": 65,
+          "max": 255,
+          "mean": 254.46700460616162,
+          "zero": 0,
+          "under_128": 27,
+          "under_250": 199,
+          "coverage_0_5": 0.9993750433997639
+        }
+      },
+      {
+        "mip": 2,
+        "size": 128,
+        "compressed_bytes": 16384,
+        "compressed_sha256": "b3fb20114cc7599955a09ea86ce345c285bb13d3c2831b1bb8b492e119183404",
+        "sides_at_texel_centers": {
+          "pixels": 10638,
+          "min": 125,
+          "max": 255,
+          "mean": 254.64993419815755,
+          "zero": 0,
+          "under_128": 1,
+          "under_250": 38,
+          "coverage_0_5": 0.9999059973679263
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 11084,
+          "min": 12,
+          "max": 255,
+          "mean": 254.0894081559004,
+          "zero": 0,
+          "under_128": 27,
+          "under_250": 87,
+          "coverage_0_5": 0.9975640562973656
+        }
+      },
+      {
+        "mip": 3,
+        "size": 64,
+        "compressed_bytes": 4096,
+        "compressed_sha256": "7937ecb278ea169221990fbf0e0ae9aba11ce3b7d5a6cbc92c3883031c707ac2",
+        "sides_at_texel_centers": {
+          "pixels": 2630,
+          "min": 178,
+          "max": 255,
+          "mean": 254.67946768060835,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 4,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 2854,
+          "min": 0,
+          "max": 255,
+          "mean": 252.6751927119832,
+          "zero": 2,
+          "under_128": 21,
+          "under_250": 41,
+          "coverage_0_5": 0.9926419060967063
+        }
+      },
+      {
+        "mip": 4,
+        "size": 32,
+        "compressed_bytes": 1024,
+        "compressed_sha256": "2e1e09f9d5a89bc78ab79e4bdd6638c90a7e57b7ff3e195be597a726bc8b1293",
+        "sides_at_texel_centers": {
+          "pixels": 663,
+          "min": 211,
+          "max": 255,
+          "mean": 254.7843137254902,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 2,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 777,
+          "min": 7,
+          "max": 255,
+          "mean": 250.36550836550836,
+          "zero": 0,
+          "under_128": 12,
+          "under_250": 32,
+          "coverage_0_5": 0.9845559845559846
+        }
+      },
+      {
+        "mip": 5,
+        "size": 16,
+        "compressed_bytes": 256,
+        "compressed_sha256": "20472c742b89e856befd31689071053913979c218b1fec4889262b0abf0b9164",
+        "sides_at_texel_centers": {
+          "pixels": 166,
+          "min": 224,
+          "max": 255,
+          "mean": 254.62048192771084,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 1,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 224,
+          "min": 60,
+          "max": 255,
+          "mean": 249.0,
+          "zero": 0,
+          "under_128": 3,
+          "under_250": 17,
+          "coverage_0_5": 0.9866071428571429
+        }
+      },
+      {
+        "mip": 6,
+        "size": 8,
+        "compressed_bytes": 64,
+        "compressed_sha256": "f6ed23097024a5f863dbf635da830b0f19a4963e493ae3b63746668103a456ce",
+        "sides_at_texel_centers": {
+          "pixels": 45,
+          "min": 219,
+          "max": 255,
+          "mean": 253.95555555555555,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 1,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 64,
+          "min": 146,
+          "max": 255,
+          "mean": 247.34375,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 9,
+          "coverage_0_5": 1.0
+        }
+      },
+      {
+        "mip": 7,
+        "size": 4,
+        "compressed_bytes": 16,
+        "compressed_sha256": "3134edf65f87333134b6bb91741a151b341c7a17bda417797450b89610039a6e",
+        "sides_at_texel_centers": {
+          "pixels": 10,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 16,
+          "min": 203,
+          "max": 255,
+          "mean": 247.4375,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 4,
+          "coverage_0_5": 1.0
+        }
+      },
+      {
+        "mip": 8,
+        "size": 2,
+        "compressed_bytes": 16,
+        "compressed_sha256": "41db4c8f88880b72040f790ede43ea5c23e7241a80a0995ef569b184c3dd9626",
+        "sides_at_texel_centers": {
+          "pixels": 4,
+          "min": 235,
+          "max": 255,
+          "mean": 248.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 2,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 4,
+          "min": 235,
+          "max": 255,
+          "mean": 248.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 2,
+          "coverage_0_5": 1.0
+        }
+      },
+      {
+        "mip": 9,
+        "size": 1,
+        "compressed_bytes": 16,
+        "compressed_sha256": "b58e62b05a3ccc5a9bf6fdd1435622b1b591148183360e5db6aae0c8236bbe9d",
+        "sides_at_texel_centers": {
+          "pixels": 1,
+          "min": 247,
+          "max": 247,
+          "mean": 247.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 1,
+          "coverage_0_5": 1.0
+        },
+        "sides_with_one_texel_repeat_margin": {
+          "pixels": 1,
+          "min": 247,
+          "max": 247,
+          "mean": 247.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 1,
+          "coverage_0_5": 1.0
+        }
+      }
+    ],
+    "interpretation": "All base-level zero samples are on the underside and the ten base-level side samples below .5 are below the local origin. Partial alpha also reaches above the local origin. These measurements do not establish actual shader alpha use, terrain occlusion or sampled screen-space silhouettes. Opaque authored alpha remains unapproved."
+  },
+  "shader_state_limit": {
+    "shader_id": "CAB-8923bd833c4171316cf3c761b642c1c8:53175774090380313",
+    "shader_name": "Custom/Vegetation",
+    "saved_material_state": "Vegetation bark materials save Mode3, SrcBlend1, DstBlend10, ZWrite0, Cull2, cutoff .5 and no valid keywords.",
+    "parsed_pass_state": "Base forward and deferred pass metadata store fixed opaque blending and depth writes. Cull is linked to the material property.",
+    "instruction_analysis": "Compiled program instruction decoding did not complete for the stored platforms. No alpha-discard conclusion is claimed.",
+    "conclusion": "Saved material blend fields alone do not identify the active alpha path. Preserve material state during the native comparison."
+  },
+  "recommended_next_scope": {
+    "standing_tree_study": "continuous-bark-1024-study",
+    "standing_material_ids": [
+      "CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260",
+      "CAB-8923bd833c4171316cf3c761b642c1c8:3296122902340748925"
+    ],
+    "stump_study": "stump-cap-1024-study",
+    "stump_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6903426553333840925",
+    "reason": "Separate material payloads avoid the corrected stump endgrain contributing to distant standing-tree mips.",
+    "binding_status": "No binding added. Existing matching fields can distinguish these material names and shaders, but the shared large-tree material also occurs on the standalone imported canopy.",
+    "normal_companions": "Open; these are albedo-only studies.",
+    "remaining": [
+      "Review exact near, middle and distant gameplay tree meshes, small-tree high/low renderers, healthy/unhealthy saplings and the stump cut/underside.",
+      "Keep the imported canopy as an explicit separate scope.",
+      "Validate original versus opaque authored alpha under the actual shader and relevant mip/filter states.",
+      "Review normals, moss, two-sided response, wind, rain, snow, shadows and LOD transitions.",
+      "Review level-ground, slope and excavated-root placement before claiming underside alpha is invisible.",
+      "Review logs under their separate texture identity.",
+      "No native, game, performance, global UV, final-art or deployment approval is inferred."
+    ]
+  }
+}

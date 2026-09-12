@@ -80,9 +80,19 @@ def preserve_cutout_coverage(alpha, cutoff, target_coverage):
     }
 
 
-def preserve_bc3_tail_coverage(image, cutoff, target_coverage):
-    """Choose an explainable uniform alpha scale using decoded BC3 coverage."""
+def _decoded_bc3_alpha(image):
     import texture2ddecoder
+    pixels = np.asarray(image.convert('RGBA'))
+    pad_y, pad_x = (-image.height) % 4, (-image.width) % 4
+    padded = Image.fromarray(np.pad(pixels, ((0, pad_y), (0, pad_x), (0, 0)), mode='edge'))
+    stream = io.BytesIO()
+    padded.save(stream, format='DDS', pixel_format='DXT5')
+    raw = texture2ddecoder.decode_bc3(stream.getvalue()[128:], padded.width, padded.height)
+    return np.asarray(Image.frombytes('RGBA', padded.size, raw, 'raw', 'BGRA'))[:image.height, :image.width, 3]
+
+
+def preserve_bc3_tail_coverage(image, cutoff, target_coverage, *, require_coverage_match=False):
+    """Choose an explainable uniform alpha scale using decoded BC3 coverage."""
     threshold = cutoff_byte(cutoff)
     rgba = np.asarray(image.convert('RGBA'))
     alpha = rgba[:, :, 3]
@@ -90,15 +100,13 @@ def preserve_bc3_tail_coverage(image, cutoff, target_coverage):
     for scale in _candidate_scales(alpha, threshold):
         pixels = rgba.copy()
         pixels[:, :, 3] = _scaled_alpha(alpha, scale)
-        pad_y, pad_x = (-image.height) % 4, (-image.width) % 4
-        padded = Image.fromarray(np.pad(pixels, ((0, pad_y), (0, pad_x), (0, 0)), mode='edge'))
-        stream = io.BytesIO()
-        padded.save(stream, format='DDS', pixel_format='DXT5')
-        raw = texture2ddecoder.decode_bc3(stream.getvalue()[128:], padded.width, padded.height)
-        decoded = np.asarray(Image.frombytes('RGBA', padded.size, raw, 'raw', 'BGRA'))[:image.height, :image.width]
+        decoded_alpha = _decoded_bc3_alpha(Image.fromarray(pixels)).astype(np.float64)
         encoded_coverage = float((pixels[:, :, 3] >= threshold).mean())
-        decoded_coverage = float((decoded[:, :, 3] >= threshold).mean())
-        decoded_alpha = decoded[:, :, 3].astype(np.float64)
+        decoded_coverage = float((decoded_alpha >= threshold).mean())
+        if require_coverage_match and (
+                encoded_coverage > 0 and decoded_coverage == 0 or
+                abs(decoded_coverage - encoded_coverage) > .01 + min(1.0, 16 / alpha.size)):
+            continue
         passing = decoded_alpha >= threshold
         if np.any(passing):
             decoded_margin = float(np.min(decoded_alpha[passing] - cutoff * 255))
@@ -112,6 +120,23 @@ def preserve_bc3_tail_coverage(image, cutoff, target_coverage):
     return Image.fromarray(pixels), {'alpha_scale': float(scale),
         'decoded_coverage': decoded_coverage, 'decoded_cutoff_margin': -negative_margin,
         'target_coverage': float(target_coverage)}
+
+
+def preserve_mip_coverage(image, cutoff, target_coverage):
+    """Keep source coverage, with a compression-aware fallback for coarse mips."""
+    if max(image.size) <= 4:
+        return preserve_bc3_tail_coverage(image, cutoff, target_coverage)
+    pixels = np.asarray(image.convert('RGBA')).copy()
+    pixels[:, :, 3], adjustment = preserve_cutout_coverage(pixels[:, :, 3], cutoff, target_coverage)
+    emitted = Image.fromarray(pixels)
+    if max(image.size) <= 32:
+        decoded_coverage = float((_decoded_bc3_alpha(emitted) >= cutoff_byte(cutoff)).mean())
+        source_coverage = adjustment['achieved_coverage']
+        allowed = .01 + min(1.0, 16 / (image.width * image.height))
+        if (source_coverage > 0 and decoded_coverage == 0 or
+                abs(decoded_coverage - source_coverage) > allowed):
+            return preserve_bc3_tail_coverage(image, cutoff, target_coverage, require_coverage_match=True)
+    return emitted, adjustment
 
 
 def report_chain(mips, cutoff, ordinary_mips=None):
@@ -131,10 +156,7 @@ def report_chain(mips, cutoff, ordinary_mips=None):
             ordinary_coverage = float((ordinary_alpha >= threshold).mean())
             record['ordinary_coverage'] = ordinary_coverage
             if level:
-                if max(mip.size) <= 4:
-                    _, adjustment = preserve_bc3_tail_coverage(ordinary_mips[level], cutoff, target)
-                else:
-                    _, adjustment = preserve_cutout_coverage(ordinary_alpha, cutoff, target)
+                _, adjustment = preserve_mip_coverage(ordinary_mips[level], cutoff, target)
                 record.update(alpha_scale=adjustment['alpha_scale'],
                               target_unattainable=not math.isclose(achieved, target, abs_tol=1e-15))
         levels.append(record)

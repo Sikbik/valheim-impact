@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "texture_id": "meadows_grass_short_balanced_albedo",
+  "source_sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117",
+  "bundle_sha256": "297f9ebfeb39b329902345862c0130c9f0966fb348ffab126443720f87620625",
+  "dds_sha256": "932090184e9619ad2fd7b1b1db88a889014d4517b4a4d22525a7fcdf8c00f5e9",
+  "unity_dds_sha256": "2e13245f0dc7bbef2c77182780494d5081536403d3263dab779bb7fb2450d99f",
+  "native_report_sha256": "b8f2f5fd834f505c51ee02db96dae7ae7f084f272c74167dabee617c087911b0",
+  "editor": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "cutoff": 0.46000000834465027,
+  "owned_objects_destroyed": true,
+  "point_mips": [
+    {
+      "level": 0,
+      "dimensions": [
+        128,
+        128
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.0180816650390625,
+        "max_error": 2.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 1080,
+      "native_passing_pixels": 1080,
+      "total_pixels": 16384,
+      "native_coverage": 0.06591796875,
+      "color_sha256": "58e3a56bb87a09f2a0d95264659def8eda7bb5d18f45008a8a6b1aefb9216433",
+      "mask_sha256": "c8e41d1ec1a8e250fda3025fc4528491e0cbc273318e89149fc04ba4ea29befc"
+    },
+    {
+      "level": 1,
+      "dimensions": [
+        64,
+        64
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.0355224609375,
+        "max_error": 2.0
+      },
+      "disagreements": 1,
+      "decoder_passing_pixels": 270,
+      "native_passing_pixels": 269,
+      "total_pixels": 4096,
+      "native_coverage": 0.065673828125,
+      "color_sha256": "7724946486e1667fd5c9933f2df96a05a83e77c401f35563d019b4692186cde6",
+      "mask_sha256": "6e4b6225d793464496f5885a5bfc4a8c1ab7cc4abeeb19d49f282ea0ebaffe78"
+    },
+    {
+      "level": 2,
+      "dimensions": [
+        32,
+        32
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.03662109375,
+        "max_error": 2.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 64,
+      "native_passing_pixels": 64,
+      "total_pixels": 1024,
+      "native_coverage": 0.0625,
+      "color_sha256": "3c79ca7433dfbd24d0654a22c898a94e035b574bc04697baf9e20c80a4d464fe",
+      "mask_sha256": "a3c8e4e5a49330f5d1ab05129ed4dbb1899e661f7f985ed3f5f56b08cb52c004"
+    },
+    {
+      "level": 3,
+      "dimensions": [
+        16,
+        16
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.0419921875,
+        "max_error": 2.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 13,
+      "native_passing_pixels": 13,
+      "total_pixels": 256,
+      "native_coverage": 0.05078125,
+      "color_sha256": "eecfb59d2541eae9657dbd731895d90f2c7189a87512f5daf8b0baa56d18a56b",
+      "mask_sha256": "6fdf4e2eef9a2e3c63c1187244fc590b3d8b0ced0549ff663d80f26a843ccb7b"
+    },
+    {
+      "level": 4,
+      "dimensions": [
+        8,
+        8
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.06640625,
+        "max_error": 1.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 4,
+      "native_passing_pixels": 4,
+      "total_pixels": 64,
+      "native_coverage": 0.0625,
+      "color_sha256": "b518f112fcde5732be1f9834ff75ab3a2084b1ffc181bdc8f172649372704092",
+      "mask_sha256": "ffe2ef3a994e901506b9f2af25a23309bd05de120bbcfb594027f99d9aa1d3e9"
+    },
+    {
+      "level": 5,
+      "dimensions": [
+        4,
+        4
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.109375,
+        "max_error": 1.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 1,
+      "native_passing_pixels": 1,
+      "total_pixels": 16,
+      "native_coverage": 0.0625,
+      "color_sha256": "5d0014899aa883ecd8aa35de73b7d53f613b50a89a89fe93141c68f375d9a733",
+      "mask_sha256": "afb509ad1d7eed0c422573cc7b71867fbba5d232734b31761705741448938bcb"
+    },
+    {
+      "level": 6,
+      "dimensions": [
+        2,
+        2
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.0,
+        "max_error": 0.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 0,
+      "native_passing_pixels": 0,
+      "total_pixels": 4,
+      "native_coverage": 0.0,
+      "color_sha256": "c7fcc1d7fe5bc0264cc69639daf1d9fe92e58a64f77c2bf50fb4144ed62861f4",
+      "mask_sha256": "b3e83d2772e72e0d860617d1daf5108171c3b4438ad1964229eeb2be2eaf0ab8"
+    },
+    {
+      "level": 7,
+      "dimensions": [
+        1,
+        1
+      ],
+      "gpu_sampling": {
+        "mean_error": 0.0,
+        "max_error": 0.0
+      },
+      "disagreements": 0,
+      "decoder_passing_pixels": 0,
+      "native_passing_pixels": 0,
+      "total_pixels": 1,
+      "native_coverage": 0.0,
+      "color_sha256": "0246b7f3eda88ea16cc894037dda29c9c4649ce70d4794430c9ec6050782644f",
+      "mask_sha256": "ca4f36df22f506c59072ade5a8b96907ab04a587c0f52cf2155a21d16a446760"
+    }
+  ],
+  "fractional_trilinear_diagnostics": [
+    {
+      "lod": 0.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.06585693359375,
+      "threshold_rounding_disagreements": 1,
+      "color_sha256": "f7c66584bd754ce654f0beb924ab631d91bd7f5f5837ca2cd6c6e5126360fb4b",
+      "mask_sha256": "bc7e91540f61531e5d594b0adaadcfed8c381b6767a9c5bc3941fe10cd92b299"
+    },
+    {
+      "lod": 1.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.05975341796875,
+      "threshold_rounding_disagreements": 2,
+      "color_sha256": "9deeaaa42d8a6df1df27feb7b4ee859029cd89af33b45cc31bbdd646f23793ee",
+      "mask_sha256": "fdea345576e600efa99df693014922c66d1791b75bdbeb5a270d138e409f256e"
+    },
+    {
+      "lod": 2.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.0380859375,
+      "threshold_rounding_disagreements": 7,
+      "color_sha256": "c5bbde099fd141cd6b27002e51863bda8c8fa142abfb20bb84627b573da6ba01",
+      "mask_sha256": "b8a74a1115f3df9e92654238aaf0b14440b7676d5c0a2423cf8f0bb0c1c577a6"
+    },
+    {
+      "lod": 3.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.01519775390625,
+      "threshold_rounding_disagreements": 1,
+      "color_sha256": "4a4450fed3322bdc9b8390c26c625afe7c5c12ced79f6409ff4915b11f1f1072",
+      "mask_sha256": "ec3c31318fa3f0e7cd3d5531d0f1d8e780544808144415053cbd3ba7c78b9563"
+    },
+    {
+      "lod": 4.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.0,
+      "threshold_rounding_disagreements": 0,
+      "color_sha256": "98b17edf9fdac2e4c5856fce1ed62b93d8e6d96680c795dc72b6d9657ad4b248",
+      "mask_sha256": "04655351096b0bfd2b23a92e1c6dd5019a8371fba2b38f25b55ef28d7ab1f196"
+    },
+    {
+      "lod": 5.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.0,
+      "threshold_rounding_disagreements": 0,
+      "color_sha256": "db1eceffef355399fb5168c62a2540b302a0bb4ae4d519f265ae0f2b9ef59456",
+      "mask_sha256": "04655351096b0bfd2b23a92e1c6dd5019a8371fba2b38f25b55ef28d7ab1f196"
+    },
+    {
+      "lod": 6.5,
+      "dimensions": [
+        128,
+        128
+      ],
+      "coverage": 0.0,
+      "threshold_rounding_disagreements": 0,
+      "color_sha256": "d95de0763a2e70b6cf395eea78919fa2ffa72edce1ef50e5cdd3d86aa34f0fd0",
+      "mask_sha256": "04655351096b0bfd2b23a92e1c6dd5019a8371fba2b38f25b55ef28d7ab1f196"
+    }
+  ],
+  "game_shader_validated": false,
+  "limitations": [
+    "Texel coverage is not screen-space or whole-mesh coverage.",
+    "Small mips have quantized silhouettes; a single texel is either visible or absent.",
+    "Fractional native samples are diagnostic, not acceptance of LOD transitions in game.",
+    "No game shader, weather, world, or performance approval."
+  ]
+}

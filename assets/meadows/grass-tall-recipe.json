@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "source": "assets/meadows/grass-tall-source-alpha-v1.png",
+  "source_sha256": "c3cd5b8c6cb35af8b41c9ca7cfc34f6fac81f8bca216cbeb4d365467f3459162",
+  "purpose": "Neutral white cutout. The original grass shader supplies terrain color.",
+  "operations": [
+    "Use all grayscale source-mask samples as alpha without resizing or cropping."
+  ],
+  "rgb": [
+    255,
+    255,
+    255
+  ],
+  "output": "assets/meadows/grass-tall-rgba-v1.png",
+  "output_sha256": "c39b2d7a3061d6498a44db9444a2ca02ea53404f92d36c61400e134328dacab8",
+  "encoding": {
+    "format": "PNG",
+    "optimize": true,
+    "image_library": "Pillow 12.3.0"
+  },
+  "original_game_pixels": false,
+  "original_masks_used": false
+}

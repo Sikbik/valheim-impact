@@ -114,7 +114,7 @@ def mip_chain(image, role, alpha_cutoff=None):
     ordinary = result[0]
     target_coverage = None
     if alpha_cutoff is not None:
-        from tools.cutout_mips import preserve_cutout_coverage
+        from tools.cutout_mips import preserve_mip_coverage
         threshold = cutoff_byte(alpha_cutoff)
         target_coverage = float((np.asarray(ordinary)[:, :, 3] >= threshold).mean())
     while result[-1].size != (1, 1):
@@ -140,13 +140,7 @@ def mip_chain(image, role, alpha_cutoff=None):
         ordinary = Image.fromarray(quantize(values))
         emitted = ordinary
         if alpha_cutoff is not None:
-            pixels = np.asarray(ordinary).copy()
-            pixels[:, :, 3], _ = preserve_cutout_coverage(
-                pixels[:, :, 3], alpha_cutoff, target_coverage)
-            emitted = Image.fromarray(pixels)
-            if max(size) <= 4:
-                from tools.cutout_mips import preserve_bc3_tail_coverage
-                emitted, _ = preserve_bc3_tail_coverage(ordinary, alpha_cutoff, target_coverage)
+            emitted, _ = preserve_mip_coverage(ordinary, alpha_cutoff, target_coverage)
         result.append(emitted)
     return result
 
@@ -208,13 +202,16 @@ def build(manifest_path):
         if asset['id'] in identifiers or not asset['id'].replace('_', '').isalnum():
             raise ValueError('Invalid or duplicate asset identifier')
         identifiers.add(asset['id'])
+        generate_normal = asset.get('generate_normal', True)
+        if type(generate_normal) is not bool:
+            raise ValueError('generate_normal must be a boolean')
         alpha_cutoff = asset.get('alpha_cutoff')
         if alpha_cutoff is not None:
             from tools.cutout_mips import cutoff_byte
             cutoff_byte(alpha_cutoff)
             if asset['alpha_policy'] != 'cutout':
                 raise ValueError('alpha_cutoff is allowed only for cutout albedo')
-        for role in ('albedo', 'normal'):
+        for role in ('albedo', 'normal') if generate_normal else ('albedo',):
             names.extend(asset['id'] + '_' + role + suffix for suffix in ('.png', '.dds', '-unity.dds'))
     for name in names:
         safe_destination(ROOT, 'build/staging/meadows/' + name)
@@ -242,9 +239,12 @@ def build(manifest_path):
         if asset['alpha_policy'] == 'opaque' and not np.all(alpha == 255):
             raise ValueError('Opaque assets must be fully opaque')
         albedo = fit_albedo(cropped, tuple(asset['size']), periodic=asset['periodic'])
-        height = np.asarray(albedo.convert('L'), dtype=np.float64) / 255
-        normal = normal_from_height(height, asset['normal_strength'], asset['periodic'])
-        for role, prepared in [('albedo', albedo), ('normal', normal)]:
+        prepared_textures = [('albedo', albedo)]
+        if asset.get('generate_normal', True):
+            height = np.asarray(albedo.convert('L'), dtype=np.float64) / 255
+            normal = normal_from_height(height, asset['normal_strength'], asset['periodic'])
+            prepared_textures.append(('normal', normal))
+        for role, prepared in prepared_textures:
             identifier = asset['id'] + '_' + role
             if not identifier.replace('_', '').isalnum():
                 raise ValueError('Unsafe asset identifier')

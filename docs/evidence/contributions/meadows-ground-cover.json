@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2546151573137180296",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-279755266753387489",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4549926859537839438",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-719559034922650275",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1918554502850406428",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2397346978479642237",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:521127269846282531",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5636204498416708811",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8633005213437286470",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Two exact grass albedos map to four authored albedo-only sizes; the inspected materials bind no normal texture.",
+      "passed": true
+    },
+    {
+      "name": "Four grass payloads pass 36 point mip samples and 32 fractional diagnostics at cutoff 0.46, with owned fixture objects destroyed.",
+      "passed": true
+    },
+    {
+      "name": "Tall 32 px mips use bounded uniform alpha scaling after a measured BC 3 coverage failure; source coverage increases and distant appearance remains unapproved.",
+      "passed": true
+    },
+    {
+      "name": "HD tall and short candidates render through the exact original Custom/Grass shader and instancing path at 1080 p and 4 K in an isolated Editor fixture, with frozen wind and matched world coordinates.",
+      "passed": true
+    },
+    {
+      "name": "Nine retained meshes have 3144 imported face corners and zero measured UV error; no authored-model claim.",
+      "passed": true
+    },
+    {
+      "name": "Separate continuous-bark and stump-only 1024 px candidates avoid sharing a cut patch across standing-tree mips. Original bark alpha and normal behavior remain open.",
+      "passed": true
+    },
+    {
+      "name": "All 38 native texture payloads validate; no world, representative-performance or final-art approval is inferred.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/meadows-ground-cover-uv.json SHA256 fe81f35b8e14a287ec7f7b20d1355debec00ae343d36629e2e76b0c10417fbe4",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech-bark-scope-followup.json SHA256 0baad1fa2062d5bddc02d6f1d4f3d33064a857a7e1c833ad3d7be2cafb7dd165",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/meadows-grass-native-shader.json SHA256 ea2399a6c28078fe131e6af2aa0b4009e40dbdbe9b2fe9fc3d7ef3b089f4d9f6",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 a855a5d79c9e3e91c953eb1ff5fb38b99aca86c0bb5ee10665d85cae3fb9da5a",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/asset-validation.json SHA256 b501c30f49eb8d5d17a893b388fefadc4f7e7d86099e509beef7d75a90e78784",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/meadows_grass_tall_hd_albedo-sampling.json SHA256 f5a3ffd881aefc2a4eb88675f330816ae43c71a68613844d43de4b67862071de",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/meadows_grass_tall_balanced_albedo-sampling.json SHA256 8a3cf0565ea4895c5e4f4550975a734ee22e7a73ec694b1e91d0b3183ea33e52",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/meadows_grass_short_hd_albedo-sampling.json SHA256 6677e95629440d11a1782b29dcc60a67a8278e2f6eb5c61493c436cbfaddc460",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/meadows_grass_short_balanced_albedo-sampling.json SHA256 4b8391b590f11a2968f6c3e5de33728da0a27e91de3d86aafa8ddea104114166",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/grass-tall-rgba-v1.png",
+      "sha256": "c39b2d7a3061d6498a44db9444a2ca02ea53404f92d36c61400e134328dacab8"
+    },
+    {
+      "path": "assets/meadows/grass-short-rgba-v1.png",
+      "sha256": "d799f2952564cd9ac3c2a8d1f682e579608ec11a0a9aa54579d348c181342117"
+    },
+    {
+      "path": "assets/meadows/beech-continuous-v1.png",
+      "sha256": "6e399070933e094d0cfb7ac97077c8a1e5a5ecfa2fc50788ff0eda8f794ced31"
+    },
+    {
+      "path": "assets/meadows/beech-stump-v1.png",
+      "sha256": "3fe0fe604238a968ec9c61413c4cabc1d72e61d991cea21ba6c2fd34fb9c2e0e"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "scope": "Material-specific albedo study, no runtime binding or original-alpha approval.",
+  "sources": [
+    {
+      "path": "assets/meadows/beech-bark-surface-v1.png",
+      "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+    },
+    {
+      "path": "assets/meadows/beech-endgrain-source-v1.png",
+      "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+    }
+  ],
+  "operations": [
+    {
+      "source": 0,
+      "convert": "RGBA",
+      "alpha": 255
+    },
+    {
+      "source": 1,
+      "convert": "RGB",
+      "saturation": 0.72,
+      "resize": [
+        130,
+        130
+      ],
+      "filter": "LANCZOS",
+      "paste_box": [
+        842,
+        153,
+        972,
+        283
+      ]
+    }
+  ],
+  "output": "assets/meadows/beech-stump-v1.png",
+  "output_sha256": "3fe0fe604238a968ec9c61413c4cabc1d72e61d991cea21ba6c2fd34fb9c2e0e",
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "encoding": {
+    "format": "PNG",
+    "optimize": true,
+    "image_library": "Pillow 12.3.0"
+  }
+}
