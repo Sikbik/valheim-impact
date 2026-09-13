@@ -124,7 +124,7 @@
   },
   "fitting_helper": {
     "path": "tools/fit_flint.py",
-    "sha256": "c92c8b83e77ac53a75c20678dbb6e3e9a040d5bf0895faf55e35b2d08f2f5dac",
+    "sha256": "84a9272d1eb033a91385362ce0fb80cb21f7c680da1e28543405f9589f2939d5",
     "dependency_manifest": "requirements-assets.txt",
     "dependency_manifest_sha256": "b484fb6fbc42add5d47850a2e23eb01e71983d44b68fa3d698cbc3b1b8a3f35b",
     "pipeline_helper": "tools/asset_pipeline.py",
@@ -133,7 +133,7 @@
       "assets/meadows/flint-surface-source-v1.png"
     ],
     "geometry_inputs": [],
-    "hash_validation": "Verify the parent before decoding and both encoded output hashes before creating either output. Reject linked paths and existing outputs; create each output exclusively."
+    "hash_validation": "Verify the parent before decoding and both decoded RGB and encoded output hashes before creating either output. Report bounded hash and dependency diagnostics on failure. Reject linked paths and existing outputs; create each output exclusively."
   },
   "versions": {
     "numpy": "2.5.3",

@@ -123,7 +123,7 @@
       "id": "meadows-flint",
       "path": "docs/evidence/contributions/meadows-flint.json",
       "scope": "Owned 1024px and 512px opaque surfaces for one exact flint material. All five retained mesh layouts have scoped UV and native comparison evidence. Nine texture-sharing emission materials are excluded. World, distance and final art review remain open.",
-      "sha256": "19b8cbed591e3c7ddf4cdfe012f78ace88b5a4f54d2bfa5a6e2c67dacd7f8846",
+      "sha256": "5748feba927568ccefd435f9064f6164d9eb8574792a83d102529059bb94ccc9",
       "stages": [
         "authored",
         "native_validated",
@@ -304,10 +304,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "e3ca01b6e8b579b35878e14548ae4de478a16539ea399d59e54c3fcf2a28d291"
+    "status_manifest_sha256": "7865c2e03b2c5c89d3d34e4b1a929e631f40333f796c3d58e362012c2d9e39ec"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-13T02:20:46Z",
+  "snapshot_at": "2026-09-13T02:39:31Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",

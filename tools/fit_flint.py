@@ -8,6 +8,7 @@ import hashlib
 import io
 import json
 from pathlib import Path
+import platform
 
 import numpy as np
 from PIL import Image
@@ -26,6 +27,10 @@ OUTPUTS = (
     ('flint-balanced-v1.png',
      'ba062c317bfd97e5a4d32a18bf3518fb8cc78692bdbf300087dfb016075f7a47'),
 )
+RGB_HASHES = {
+    'flint-hd-v1.png': '81279f252e904a3e098453af86df0bc437cf43378fa43ba41a9a8a51908c0867',
+    'flint-balanced-v1.png': '0c182c96ed300198ddf85795ba0a929fec03e6bec4590bf82c38a16fc30e6aac',
+}
 
 
 def owned_source(root):
@@ -73,8 +78,17 @@ def reproduce(root, output_dir):
         buffer = io.BytesIO()
         image.save(buffer, format='PNG', optimize=False, compress_level=6)
         data = buffer.getvalue()
-        if hashlib.sha256(data).hexdigest() != expected:
-            raise ValueError('PNG bytes differ from the pinned recipe; check dependency versions')
+        png_hash = hashlib.sha256(data).hexdigest()
+        rgb_hash = hashlib.sha256(image.tobytes()).hexdigest()
+        if png_hash != expected or rgb_hash != RGB_HASHES[name]:
+            details = dict(output=name, pixels_match=rgb_hash == RGB_HASHES[name],
+                           png_matches=png_hash == expected,
+                           expected_rgb_sha256=RGB_HASHES[name], actual_rgb_sha256=rgb_hash,
+                           expected_png_sha256=expected, actual_png_sha256=png_hash,
+                           versions=dict(python=platform.python_version(), numpy=np.__version__,
+                                         Pillow=Image.__version__, pillow_zlib=Image.core.zlib_version,
+                                         pillow_zlib_ng=getattr(Image.core, 'zlib_ng_version', None)))
+            raise ValueError('Fitted output differs from the pinned recipe: ' + json.dumps(details, sort_keys=True))
         encoded.append((name, data, expected))
     output.mkdir(parents=True, exist_ok=True)
     for name, data, _ in encoded:

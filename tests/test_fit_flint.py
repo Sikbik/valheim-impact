@@ -6,8 +6,10 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 from PIL import Image
+from tools import fit_flint
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -75,6 +77,39 @@ class FlintFitTests(unittest.TestCase):
         self.assert_rejected(self.run_cli(), 'Owned parent hash mismatch')
         self.assertFalse(self.output.exists())
         self.assertEqual(path.read_bytes(), data)
+
+    def test_container_mismatch_reports_matching_pixels_before_either_write(self):
+        reviewed = [Image.open(ROOT / 'assets/meadows' / name).copy() for name in OUTPUTS]
+        altered = (fit_flint.OUTPUTS[0], (OUTPUTS[1], '0' * 64))
+        with mock.patch.object(fit_flint, 'fitted_images', return_value=reviewed), \
+                mock.patch.object(fit_flint, 'OUTPUTS', altered):
+            with self.assertRaisesRegex(ValueError, 'Fitted output differs') as raised:
+                fit_flint.reproduce(self.root, self.output)
+        details = json.loads(str(raised.exception).split(': ', 1)[1])
+        self.assertEqual(details['output'], OUTPUTS[1])
+        self.assertTrue(details['pixels_match'])
+        self.assertFalse(details['png_matches'])
+        self.assertEqual(details['expected_rgb_sha256'], details['actual_rgb_sha256'])
+        self.assertEqual(details['expected_png_sha256'], '0' * 64)
+        self.assertEqual(details['actual_png_sha256'],
+                         'ba062c317bfd97e5a4d32a18bf3518fb8cc78692bdbf300087dfb016075f7a47')
+        self.assertEqual(set(details['versions']),
+                         {'python', 'numpy', 'Pillow', 'pillow_zlib', 'pillow_zlib_ng'})
+        self.assertFalse(self.output.exists())
+
+    def test_pixel_mismatch_is_distinguished_without_creating_outputs(self):
+        reviewed = [Image.open(ROOT / 'assets/meadows' / name).copy() for name in OUTPUTS]
+        rgb = reviewed[0].getpixel((0, 0))
+        reviewed[0].putpixel((0, 0), ((rgb[0] + 1) % 256, rgb[1], rgb[2]))
+        with mock.patch.object(fit_flint, 'fitted_images', return_value=reviewed):
+            with self.assertRaisesRegex(ValueError, 'Fitted output differs') as raised:
+                fit_flint.reproduce(self.root, self.output)
+        details = json.loads(str(raised.exception).split(': ', 1)[1])
+        self.assertEqual(details['output'], OUTPUTS[0])
+        self.assertFalse(details['pixels_match'])
+        self.assertFalse(details['png_matches'])
+        self.assertNotEqual(details['expected_rgb_sha256'], details['actual_rgb_sha256'])
+        self.assertFalse(self.output.exists())
 
     def test_exact_input_leaf_and_ancestor_links_are_rejected(self):
         path = self.parents / PARENT
