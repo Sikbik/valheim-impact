@@ -1447,6 +1447,292 @@
       "alpha_mean_absolute_error": 0.0,
       "coverage_at_128": 1.0,
       "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "dandelion_hd_albedo",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 0.99530029296875,
+      "alpha_mean_absolute_error": 0.0815887451171875,
+      "coverage_at_128": 0.27220916748046875,
+      "decoded_coverage_at_128": 0.2722434997558594,
+      "cutout_mips": [
+        {
+          "level": 0,
+          "dimensions": [
+            512,
+            512
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.27465057373046875,
+          "decoded_coverage": 0.2746315002441406,
+          "coverage_delta": -1.9073486328125e-05,
+          "coverage_quantum": 3.814697265625e-06,
+          "allowed_coverage_delta": 0.01006103515625
+        },
+        {
+          "level": 1,
+          "dimensions": [
+            256,
+            256
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.274658203125,
+          "decoded_coverage": 0.275146484375,
+          "coverage_delta": 0.00048828125,
+          "coverage_quantum": 1.52587890625e-05,
+          "allowed_coverage_delta": 0.010244140625
+        },
+        {
+          "level": 2,
+          "dimensions": [
+            128,
+            128
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.274658203125,
+          "decoded_coverage": 0.27337646484375,
+          "coverage_delta": -0.00128173828125,
+          "coverage_quantum": 6.103515625e-05,
+          "allowed_coverage_delta": 0.0109765625
+        },
+        {
+          "level": 3,
+          "dimensions": [
+            64,
+            64
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.274658203125,
+          "decoded_coverage": 0.27197265625,
+          "coverage_delta": -0.002685546875,
+          "coverage_quantum": 0.000244140625,
+          "allowed_coverage_delta": 0.01390625
+        },
+        {
+          "level": 4,
+          "dimensions": [
+            32,
+            32
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.2861328125,
+          "decoded_coverage": 0.263671875,
+          "coverage_delta": -0.0224609375,
+          "coverage_quantum": 0.0009765625,
+          "allowed_coverage_delta": 0.025625000000000002
+        },
+        {
+          "level": 5,
+          "dimensions": [
+            16,
+            16
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.2890625,
+          "decoded_coverage": 0.2890625,
+          "coverage_delta": 0.0,
+          "coverage_quantum": 0.00390625,
+          "allowed_coverage_delta": 0.0725
+        },
+        {
+          "level": 6,
+          "dimensions": [
+            8,
+            8
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.28125,
+          "decoded_coverage": 0.265625,
+          "coverage_delta": -0.015625,
+          "coverage_quantum": 0.015625,
+          "allowed_coverage_delta": 0.26
+        },
+        {
+          "level": 7,
+          "dimensions": [
+            4,
+            4
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.3125,
+          "decoded_coverage": 0.25,
+          "coverage_delta": -0.0625,
+          "coverage_quantum": 0.0625,
+          "allowed_coverage_delta": 1.01
+        },
+        {
+          "level": 8,
+          "dimensions": [
+            2,
+            2
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.5,
+          "decoded_coverage": 0.5,
+          "coverage_delta": 0.0,
+          "coverage_quantum": 0.25,
+          "allowed_coverage_delta": 1.01
+        },
+        {
+          "level": 9,
+          "dimensions": [
+            1,
+            1
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.0,
+          "decoded_coverage": 0.0,
+          "coverage_delta": 0.0,
+          "coverage_quantum": 1.0,
+          "allowed_coverage_delta": 1.01
+        }
+      ]
+    },
+    {
+      "id": "dandelion_balanced_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 1.7923227945963542,
+      "alpha_mean_absolute_error": 0.1443328857421875,
+      "coverage_at_128": 0.273895263671875,
+      "decoded_coverage_at_128": 0.2739105224609375,
+      "cutout_mips": [
+        {
+          "level": 0,
+          "dimensions": [
+            256,
+            256
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.277862548828125,
+          "decoded_coverage": 0.27783203125,
+          "coverage_delta": -3.0517578125e-05,
+          "coverage_quantum": 1.52587890625e-05,
+          "allowed_coverage_delta": 0.010244140625
+        },
+        {
+          "level": 1,
+          "dimensions": [
+            128,
+            128
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.27783203125,
+          "decoded_coverage": 0.2783203125,
+          "coverage_delta": 0.00048828125,
+          "coverage_quantum": 6.103515625e-05,
+          "allowed_coverage_delta": 0.0109765625
+        },
+        {
+          "level": 2,
+          "dimensions": [
+            64,
+            64
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.27783203125,
+          "decoded_coverage": 0.28173828125,
+          "coverage_delta": 0.00390625,
+          "coverage_quantum": 0.000244140625,
+          "allowed_coverage_delta": 0.01390625
+        },
+        {
+          "level": 3,
+          "dimensions": [
+            32,
+            32
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.287109375,
+          "decoded_coverage": 0.2646484375,
+          "coverage_delta": -0.0224609375,
+          "coverage_quantum": 0.0009765625,
+          "allowed_coverage_delta": 0.025625000000000002
+        },
+        {
+          "level": 4,
+          "dimensions": [
+            16,
+            16
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.2890625,
+          "decoded_coverage": 0.2890625,
+          "coverage_delta": 0.0,
+          "coverage_quantum": 0.00390625,
+          "allowed_coverage_delta": 0.0725
+        },
+        {
+          "level": 5,
+          "dimensions": [
+            8,
+            8
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.28125,
+          "decoded_coverage": 0.265625,
+          "coverage_delta": -0.015625,
+          "coverage_quantum": 0.015625,
+          "allowed_coverage_delta": 0.26
+        },
+        {
+          "level": 6,
+          "dimensions": [
+            4,
+            4
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.3125,
+          "decoded_coverage": 0.25,
+          "coverage_delta": -0.0625,
+          "coverage_quantum": 0.0625,
+          "allowed_coverage_delta": 1.01
+        },
+        {
+          "level": 7,
+          "dimensions": [
+            2,
+            2
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.5,
+          "decoded_coverage": 0.5,
+          "coverage_delta": 0.0,
+          "coverage_quantum": 0.25,
+          "allowed_coverage_delta": 1.01
+        },
+        {
+          "level": 8,
+          "dimensions": [
+            1,
+            1
+          ],
+          "cutoff": 0.14000000059604645,
+          "cutoff_byte_minimum": 36,
+          "coverage": 0.0,
+          "decoded_coverage": 0.0,
+          "coverage_delta": 0.0,
+          "coverage_quantum": 1.0,
+          "allowed_coverage_delta": 1.01
+        }
+      ]
     }
   ]
 }

@@ -28,10 +28,11 @@ transitions, weather, broader biome coverage, coordinated lighting, and model
 or shader streaming still need validation. See the tracker for exact asset IDs,
 evidence, and unchecked stages.
 
-Meadows grass and beech foliage, bark, stump and log candidates extend the
-staged material library. Grass and logs also have isolated original-shader
-comparisons at 1080p and 4K. Companion maps, world integration and visual
-approval remain open; these candidates are separate from the installed fixture.
+Meadows grass, dandelions and beech foliage, bark, stump and log candidates
+extend the staged material library. Grass, logs and [dandelions](docs/DANDELION.md)
+also have isolated original-shader comparisons at 1080p and 4K. Companion maps,
+world integration and visual approval remain open; these candidates are separate
+from the installed fixture.
 
 Current engine validation covers native Linux with Vulkan. Windows support and
 other graphics APIs require their own tests. The Balanced target is **6 GB VRAM,

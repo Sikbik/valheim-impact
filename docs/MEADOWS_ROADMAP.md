@@ -1,6 +1,6 @@
 # Meadows material roadmap
 
-Meadows work is organized into five bounded batches, with current progress and remaining gates below. Exact serialized identities define each starting scope. A matching name or directory does not establish placed Meadows use or approval.
+Meadows work is organized into six bounded batches, with current progress and remaining gates below. Exact serialized identities define each starting scope. A matching name or directory does not establish placed Meadows use or approval.
 
 ## 1. Beech bark family
 
@@ -19,7 +19,7 @@ The other 165 users of the mesh remain outside scope. See
 
 ## 2. Meadows grass cards
 
-Resolved materials `CAB-8923bd833c4171316cf3c761b642c1c8:1669900682560515117` and `CAB-8923bd833c4171316cf3c761b642c1c8:2753016777081159198` use albedos `CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079` and `CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943`. Authored neutral-white cutouts now fit their six-card mesh, with tall 512/256px and short 256/128px candidates. Both use terrain color texture `CAB-8923bd833c4171316cf3c761b642c1c8:5952445177512870087`, cutoff 0.46 and an instanced drawing path. Review instanced integration, compressed alpha, both faces under the actual shader, wind, tint modulation and distance transitions. See [Meadows grass](MEADOWS_GRASS.md).
+Resolved materials `CAB-8923bd833c4171316cf3c761b642c1c8:1669900682560515117` and `CAB-8923bd833c4171316cf3c761b642c1c8:2753016777081159198` use albedos `CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079` and `CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943`. Authored neutral-white cutouts now fit their six-card mesh, with tall 512/256px and short 256/128px candidates. Both use terrain color texture `CAB-8923bd833c4171316cf3c761b642c1c8:5952445177512870087`, cutoff 0.46 and an instanced drawing path. A bounded observer and material-state guard now have isolated native ownership evidence. Production instanced drawing, compressed alpha at distance, both faces under changing light, wind, tint modulation and distance transitions still need world review. See [Meadows grass](MEADOWS_GRASS.md).
 
 ## 3. Beech leaf cards and LODs
 
@@ -29,10 +29,16 @@ Remaining gates are companion normals, the unhealthy sapling cutoff 0.26 and tin
 
 ## 4. Terrain arrays
 
-The live diffuse target is Texture2DArray `CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791`; its companion normal array is `CAB-8923bd833c4171316cf3c761b642c1c8:-3717166463683967554`. Current runtime replacement handles Texture2D albedo, so it cannot bind these arrays correctly. Determine slice order and exact Meadows layer semantics, then add explicit diffuse and normal Texture2DArray construction, loading, residency, restoration, and validation. Individual terrain source tiles are array-generation inputs, not substitutes for the serialized arrays.
+The live diffuse target is Texture2DArray `CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791`; its companion normal array is `CAB-8923bd833c4171316cf3c761b642c1c8:-3717166463683967554`. Current runtime replacement handles Texture2D albedo, so it cannot bind these arrays correctly. Inspection resolves the Meadows grass to diffuse slice 0, with the original normal slice retained. A private one-slice composition study preserves the remaining layers and now renders through the original near/distant shader contract. Visible repetition requires further artwork work. Explicit array loading, residency, restoration and full array validation remain open. Individual terrain source tiles are array-generation inputs, not substitutes for the serialized arrays.
 
 ## 5. Shoreline water discovery
 
 Resolve the active water material and property roles before authoring or binding. Candidate exact textures are `CAB-8923bd833c4171316cf3c761b642c1c8:-189505297896212411`, `CAB-8923bd833c4171316cf3c761b642c1c8:-3900716686149641043`, `CAB-8923bd833c4171316cf3c761b642c1c8:-5943394016187327904`, `CAB-8923bd833c4171316cf3c761b642c1c8:-7324807522022545953`, `CAB-8923bd833c4171316cf3c761b642c1c8:-4427533950003945355`, `CAB-8923bd833c4171316cf3c761b642c1c8:-305452523777261620`, `CAB-8923bd833c4171316cf3c761b642c1c8:6475928566198691941`, and `CAB-8923bd833c4171316cf3c761b642c1c8:-1916312239383379176`. Record transforms, animation, foam roles, reflections, refraction, and shared global scope.
+
+## 6. Dandelions and forage
+
+Dandelion albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638` now has owned 512px and 256px cutout candidates. Exact UV fitting covers two heads, five leaves and two stems on the retained 150-vertex mesh. Seventy-two original-material frames cover six distinct transforms across seven pickable, item, mounted trophy and creature/menu uses at 1080p and 4K. This shared scope includes uses outside the Meadows.
+
+The original material has no normal map. Its cutoff and companion state remain intact. Final tiny mips lose flower-head coverage, and bright highlights clip in the comparison encoding. Native distance transitions, world binding, lighting review and final art approval remain open. See [dandelion candidates](DANDELION.md). Raspberry and shoreline flint are the next discovery candidates; each requires its own exact material, UV and shared-consumer inspection.
 
 These batches advance material coverage without claiming a playable biome. Placed-world scope, companion channels, actual shaders, weather, streaming, measured performance, and final art review remain separate acceptance work.

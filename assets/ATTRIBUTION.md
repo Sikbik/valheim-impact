@@ -37,3 +37,8 @@ The fitted beech-log atlas derives from the project's owned bark and endgrain.
 Its two quality candidates share the same source; the recipe records their
 exact fitting operations. Original game normals remain private comparison
 controls and are not part of that artwork.
+
+The dandelion head and leaf sources and fitted 512px/256px atlases use the same
+artwork license. The stem derives from the owned leaf midrib. The public fitting
+helper and recipe reproduce both atlases without original game pixels or masks.
+Original geometry and game materials are private comparison controls.

@@ -5,7 +5,7 @@
       "id": "authored-sources",
       "path": "assets/provenance.json",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
-      "sha256": "1550aab6c0ae993c1bb337e40d57a37d9c319867b07bdf895946586d0d2f39d9",
+      "sha256": "3287d67c61d61f136566fd432631c5a6376e58a5547882378e6cc666583b326b",
       "stages": [
         "authored"
       ],
@@ -64,7 +64,7 @@
       "id": "meadows-beech-logs",
       "path": "docs/evidence/contributions/meadows-beech-logs.json",
       "scope": "Owned bark and endgrain fit the exact log material. Both quality candidates have scoped UV, native payload and original-material render evidence. Companion normals, world integration and final approval remain open.",
-      "sha256": "67b70cb3c79fa2655338b8e22175646715428334627abff3225ec15d335ab6a0",
+      "sha256": "c86bc1a5ccee9b2a1eaee31364e90def7ee601457c0e97a0174b43543ac1496c",
       "stages": [
         "authored",
         "native_validated",
@@ -81,7 +81,7 @@
       "id": "meadows-beech-materials",
       "path": "docs/evidence/contributions/meadows-beech-materials.json",
       "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
-      "sha256": "0c4938894c1f90d24b5aaa12b33decfefd11e31c58cdf41cb9b76c17f5212d8c",
+      "sha256": "cce435f1ffbb821eb7416543256298f36cdfdf5b92a6203ab5627d21c3eb81d9",
       "stages": [
         "authored",
         "native_validated",
@@ -103,10 +103,37 @@
       "title": "Beech foliage and near bark material review"
     },
     {
+      "id": "meadows-dandelion",
+      "path": "docs/evidence/contributions/meadows-dandelion.json",
+      "scope": "Owned HD and Balanced cutouts fit seven shared consumer uses. Native material comparisons and scoped UV review pass; distant appearance, world binding and final approval remain open.",
+      "sha256": "0c28a35805afe3b499378a2d1cdbcb8994b5a7b283c99a0b7b0f6bcad8adac5e",
+      "stages": [
+        "authored",
+        "native_validated",
+        "uv_reviewed"
+      ],
+      "target_count": 2,
+      "targets": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-2264560222537116440",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638"
+      ],
+      "title": "Dandelion atlas and native material candidates"
+    },
+    {
+      "id": "meadows-grass-ownership",
+      "path": "docs/evidence/contributions/meadows-grass-ownership.json",
+      "scope": "Bounded grass material ownership and asynchronous sampler handling pass isolated native fixtures. These runtime checks add no inventory completion stages.",
+      "sha256": "91f42c66a79ba5ada214fbecda8168a5b2efd4b62feab944dccda44d914b6cc9",
+      "stages": [],
+      "target_count": 0,
+      "targets": [],
+      "title": "Grass ownership and texture sampler checks"
+    },
+    {
       "id": "meadows-ground-cover",
       "path": "docs/evidence/contributions/meadows-ground-cover.json",
       "scope": "Tall and short grass plus continuous bark and stump candidates have scoped UV and native texture evidence. HD grass also passes an isolated original-shader instancing fixture. Wind, world integration, distance transitions and final approval remain open.",
-      "sha256": "e2e7cc57e407e37f32c3e4ecdb8f76849022916aaea48efeb5ffe9b05f5689a5",
+      "sha256": "6227f0f61070350c582296ea852f8a47dc6679955e33ea89746df9ea0c84d3da",
       "stages": [
         "authored",
         "native_validated",
@@ -153,7 +180,7 @@
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
-      "sha256": "a11e5bc58a3664b25fab0eab58c29f262d09068ff5aaf6d01c83f9097bfdfa98",
+      "sha256": "e9d09edf824c31f12b1f4caeb6a1dfaf637b9b37cc68ebc5ceb4f28b5c2dd271",
       "stages": [
         "native_validated"
       ],
@@ -239,10 +266,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "93578a096be51295838849fb678601284543a30d847e5a532cb52b1a7c8b3c0a"
+    "status_manifest_sha256": "4a280df18698ccfa47615c7c76177c7f1d7a833fb8f98a13c4063a05de93c626"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T23:58:03Z",
+  "snapshot_at": "2026-09-13T01:12:24Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",
@@ -277,8 +304,8 @@
         "world_surface": 328
       }
     },
-    "evidence_records": 14,
-    "evidence_target_assets": 29,
+    "evidence_records": 16,
+    "evidence_target_assets": 31,
     "meshes": 10336,
     "stage_counts": {
       "mesh": {
@@ -287,15 +314,15 @@
         "game_fixture_validated": 1,
         "inventoried": 10336,
         "native_validated": 0,
-        "uv_reviewed": 18
+        "uv_reviewed": 19
       },
       "texture": {
         "approved": 0,
-        "authored": 11,
+        "authored": 12,
         "game_fixture_validated": 3,
         "inventoried": 3187,
-        "native_validated": 11,
-        "uv_reviewed": 11
+        "native_validated": 12,
+        "uv_reviewed": 12
       }
     },
     "textures": 3187

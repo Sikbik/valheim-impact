@@ -1,0 +1,493 @@
+{
+  "schema_version": 1,
+  "run_started_at": "2026-09-13T01:06:08.441Z",
+  "passed": true,
+  "scope": "Native owned-texture sampler identity, asynchronous adoption and rejection cleanup using two 512px linear normal textures with identical pixel payloads. No material binding, rendering, game, world, art or performance approval.",
+  "unity_version": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "raw_report_sha256": "cdf68898873d229fc92e721c270ce60eb2e9adb1765559e2e6a2ce027cd23b3c",
+  "native_catalog_sha256": "e7ceb1dd3742e0e6ad665ba5d3a073991fa6b9a1b21324bf2594aba0e99d0553",
+  "fixture_source_sha256": "1572068bc2d9698369a718b1a6b74916cbac571fd84d9f04447a3ed7243a0651",
+  "combined_fixture_source_sha256": "21144694bda06fe7a29ed8dfa3426a0990483f75ff9264cb304249f2fadda8ef",
+  "source_files": [
+    {
+      "path": "src/ValheimImpact.Core/Legacy/TextureIndex.cs",
+      "sha256": "106001adf7f9d13406e8b7efa875145a1e17a3d5654c87973094716302df007c"
+    },
+    {
+      "path": "src/ValheimImpact.Core/StreamingPolicy.cs",
+      "sha256": "ca7d1f7fea802983e9e9f4d0e5685040a9280e75d0acd57b2de432bd54c60bdb"
+    },
+    {
+      "path": "src/ValheimImpact.Core/OwnedTextureBundle.cs",
+      "sha256": "20ad439068742aa6cced73bcc4cdc68e67439d1d5d924dcd0207b4d431e16269"
+    },
+    {
+      "path": "src/ValheimImpact.Core/OwnedTextureScheduler.cs",
+      "sha256": "524dd3f41b1dd1f2af4dc9d5d4694d08d7ee89891eba8d4fee2c9e15df32077d"
+    },
+    {
+      "path": "src/ValheimImpact.Unity/OwnedBundleLoad.cs",
+      "sha256": "d5fd17107539e7c3f5c84458f31ac0573ab65acd8625a2836f947710333cace6"
+    }
+  ],
+  "textures": [
+    {
+      "id": "straw_fringe_standard_normal",
+      "asset_name": "assets/owned/straw_fringe_standard_normal.asset",
+      "bundle_sha256": "e05c9d45591a2ee7876fb68604b423fbcc405e376589362a8566a0fecd30d603",
+      "payload_sha256": "d964528c76418a1012144b868572bc1c13b84fd8c89453d2a1d23d40c5bece88",
+      "declared_wrap_mode": "repeat",
+      "native_state": {
+        "name": "straw_fringe_standard_normal",
+        "width": 512,
+        "height": 512,
+        "mips": 10,
+        "format": "DXT5",
+        "srgb": false,
+        "readable": false,
+        "u": "Repeat",
+        "v": "Repeat",
+        "w": "Repeat",
+        "filter": "Trilinear",
+        "anisotropy": 4,
+        "bias": 0.0
+      }
+    },
+    {
+      "id": "beech_card_normal",
+      "asset_name": "assets/owned/beech_card_normal.asset",
+      "bundle_sha256": "b8a4c9278cbae0ed8074d96f57f55a591dbf638a5d9fdb8f682fe21e6c221d2f",
+      "payload_sha256": "d964528c76418a1012144b868572bc1c13b84fd8c89453d2a1d23d40c5bece88",
+      "declared_wrap_mode": "clamp",
+      "native_state": {
+        "name": "beech_card_normal",
+        "width": 512,
+        "height": 512,
+        "mips": 10,
+        "format": "DXT5",
+        "srgb": false,
+        "readable": false,
+        "u": "Clamp",
+        "v": "Clamp",
+        "w": "Clamp",
+        "filter": "Trilinear",
+        "anisotropy": 4,
+        "bias": 0.0
+      }
+    }
+  ],
+  "case_count": 14,
+  "check_count": 55,
+  "cases": [
+    {
+      "name": "Repeat then Clamp preserve separate native samplers",
+      "passed": true,
+      "expected_sampler_rejection": false,
+      "native_bundle_load_starts": 2,
+      "expected_contract_errors": 0,
+      "ownership_transfers": 2,
+      "peak_accounted_payload_bytes": 699104
+    },
+    {
+      "name": "Clamp then Repeat preserve separate native samplers",
+      "passed": true,
+      "expected_sampler_rejection": false,
+      "native_bundle_load_starts": 2,
+      "expected_contract_errors": 0,
+      "ownership_transfers": 2,
+      "peak_accounted_payload_bytes": 699104
+    },
+    {
+      "name": "equivalent declared Repeat aliases share one native texture",
+      "passed": true,
+      "expected_sampler_rejection": false,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 0,
+      "ownership_transfers": 1,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "equivalent declared Clamp aliases share one native texture",
+      "passed": true,
+      "expected_sampler_rejection": false,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 0,
+      "ownership_transfers": 1,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "unknown legacy samplers remain isolated across bundles",
+      "passed": true,
+      "expected_sampler_rejection": false,
+      "native_bundle_load_starts": 2,
+      "expected_contract_errors": 0,
+      "ownership_transfers": 2,
+      "peak_accounted_payload_bytes": 699104
+    },
+    {
+      "name": "unknown legacy identical bundle and selector aliases share",
+      "passed": true,
+      "expected_sampler_rejection": false,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 0,
+      "ownership_transfers": 1,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "actual Repeat rejects declared Clamp before adoption",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "actual Clamp rejects declared Repeat before adoption",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "changed U rejects and drains the owned candidate",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "changed V rejects and drains the owned candidate",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "changed W rejects and drains the owned candidate",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "changed filter rejects and drains the owned candidate",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "changed anisotropy rejects and drains the owned candidate",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    },
+    {
+      "name": "changed mip bias rejects and drains the owned candidate",
+      "passed": true,
+      "expected_sampler_rejection": true,
+      "native_bundle_load_starts": 1,
+      "expected_contract_errors": 1,
+      "ownership_transfers": 0,
+      "peak_accounted_payload_bytes": 349552
+    }
+  ],
+  "individual_property_mismatches": [
+    {
+      "field": "u",
+      "before": "Clamp",
+      "after": "Repeat",
+      "ownership_transfers": 0,
+      "rejected_and_released": true
+    },
+    {
+      "field": "v",
+      "before": "Clamp",
+      "after": "Repeat",
+      "ownership_transfers": 0,
+      "rejected_and_released": true
+    },
+    {
+      "field": "w",
+      "before": "Clamp",
+      "after": "Repeat",
+      "ownership_transfers": 0,
+      "rejected_and_released": true
+    },
+    {
+      "field": "filter",
+      "before": "Trilinear",
+      "after": "Bilinear",
+      "ownership_transfers": 0,
+      "rejected_and_released": true
+    },
+    {
+      "field": "anisotropy",
+      "before": 4,
+      "after": 1,
+      "ownership_transfers": 0,
+      "rejected_and_released": true
+    },
+    {
+      "field": "bias",
+      "before": 0.0,
+      "after": 0.5,
+      "ownership_transfers": 0,
+      "rejected_and_released": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Repeat then Clamp preserve separate native samplers: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "Repeat then Clamp preserve separate native samplers",
+      "passed": true
+    },
+    {
+      "name": "Repeat then Clamp preserve separate native samplers: actual native U/V/W/filter/aniso/bias 0",
+      "passed": true
+    },
+    {
+      "name": "Repeat then Clamp preserve separate native samplers: actual native U/V/W/filter/aniso/bias 1",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "Clamp then Repeat preserve separate native samplers: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "Clamp then Repeat preserve separate native samplers",
+      "passed": true
+    },
+    {
+      "name": "Clamp then Repeat preserve separate native samplers: actual native U/V/W/filter/aniso/bias 0",
+      "passed": true
+    },
+    {
+      "name": "Clamp then Repeat preserve separate native samplers: actual native U/V/W/filter/aniso/bias 1",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Repeat aliases share one native texture: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Repeat aliases share one native texture",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Repeat aliases share one native texture: actual native U/V/W/filter/aniso/bias 0",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Repeat aliases share one native texture: actual native U/V/W/filter/aniso/bias 1",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Clamp aliases share one native texture: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Clamp aliases share one native texture",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Clamp aliases share one native texture: actual native U/V/W/filter/aniso/bias 0",
+      "passed": true
+    },
+    {
+      "name": "equivalent declared Clamp aliases share one native texture: actual native U/V/W/filter/aniso/bias 1",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy samplers remain isolated across bundles: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy samplers remain isolated across bundles",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy samplers remain isolated across bundles: actual native U/V/W/filter/aniso/bias 0",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy samplers remain isolated across bundles: actual native U/V/W/filter/aniso/bias 1",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy identical bundle and selector aliases share: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy identical bundle and selector aliases share",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy identical bundle and selector aliases share: actual native U/V/W/filter/aniso/bias 0",
+      "passed": true
+    },
+    {
+      "name": "unknown legacy identical bundle and selector aliases share: actual native U/V/W/filter/aniso/bias 1",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "actual Repeat rejects declared Clamp before adoption: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "actual Repeat rejects declared Clamp before adoption",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "actual Clamp rejects declared Repeat before adoption: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "actual Clamp rejects declared Repeat before adoption",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "changed U rejects and drains the owned candidate: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "changed U rejects and drains the owned candidate",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "changed V rejects and drains the owned candidate: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "changed V rejects and drains the owned candidate",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "changed W rejects and drains the owned candidate: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "changed W rejects and drains the owned candidate",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "changed filter rejects and drains the owned candidate: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "changed filter rejects and drains the owned candidate",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "changed anisotropy rejects and drains the owned candidate: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "changed anisotropy rejects and drains the owned candidate",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "changed mip bias rejects and drains the owned candidate: demand starts no engine operation",
+      "passed": true
+    },
+    {
+      "name": "changed mip bias rejects and drains the owned candidate",
+      "passed": true
+    },
+    {
+      "name": "case cleanup destroys only transferred owned textures",
+      "passed": true
+    },
+    {
+      "name": "final owned cleanup preserves scenes, selection, render state and loaded bundles",
+      "passed": true
+    }
+  ],
+  "cleanup_passed": true,
+  "errors": [],
+  "warnings": [],
+  "limits": [
+    "The two bundle hashes and their shared payload identity are pinned by the native catalog. This fixture does not repeat GPU pixel readback.",
+    "Native compatible-alias cases use the same bundle and exact selector. Separate managed scheduler tests cover sharing compatible declared samplers across distinct bundle hashes and selectors.",
+    "Mismatch injection changes only the loader-owned untransferred texture in memory. Each failed candidate is rejected before ownership transfer and destroyed by asynchronous bundle unloading.",
+    "Fixture retirement destroys only exact registered transferred textures with empty AssetDatabase paths after two editor updates. Production deferred retirement behavior remains unchanged.",
+    "The fixture compares loaded scene handles, paths and dirty flags, active scene, selection, active render target, sRGB write state and loaded bundle instance IDs after cleanup.",
+    "Normal textures provide matching payloads with distinct samplers for this loader test. Runtime material bindings remain albedo-only.",
+    "Recorded payload accounting is not a measurement of total engine memory, VRAM or frame-time performance."
+  ],
+  "game_validated": false,
+  "artwork_approved": false,
+  "performance_validated": false,
+  "original_game_assets_used": false
+}

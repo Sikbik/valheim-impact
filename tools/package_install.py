@@ -76,6 +76,17 @@ def build_package(*, catalog, output, runtime_dir=ROOT/'build/runtime',
             raise ValueError('Duplicate or unknown native texture ID')
         seen.add(identifier)
         item = inputs[identifier]
+        # Image periodicity is independent of sampling. Historical staging used
+        # Repeat; an absent native declaration remains unknown in packaged bytes.
+        staged_wrap = item.get('wrap_mode', 'repeat')
+        if type(staged_wrap) is not str or staged_wrap not in ('repeat', 'clamp'):
+            raise ValueError('Invalid staged wrap mode: ' + identifier)
+        if 'wrapMode' in texture:
+            declared_wrap = texture['wrapMode']
+            if type(declared_wrap) is not str or declared_wrap not in ('repeat', 'clamp'):
+                raise ValueError('Invalid declared native wrap mode: ' + identifier)
+            if declared_wrap != staged_wrap:
+                raise ValueError('Native sampler differs from staged wrap mode: ' + identifier)
         source = under(source_root, item['source'])
         if authored.get(item['source']) != item['source_sha256'] or sha256(source) != item['source_sha256']:
             raise ValueError('Source provenance mismatch: ' + identifier)
@@ -103,7 +114,7 @@ def build_package(*, catalog, output, runtime_dir=ROOT/'build/runtime',
     if bindings is not None:
         bindings = no_links(bindings)
         rules = local_json(bindings)
-        if (set(rules) != {'schemaVersion', 'bindings'} or type(rules['schemaVersion']) is not int or rules['schemaVersion'] not in (1, 2) or
+        if (set(rules) != {'schemaVersion', 'bindings'} or type(rules['schemaVersion']) is not int or rules['schemaVersion'] not in (1, 2, 3) or
                 not isinstance(rules['bindings'], list) or not 1 <= len(rules['bindings']) <= 32):
             raise ValueError('Invalid binding allowlist')
         ids, slots = set(), set()
@@ -111,7 +122,7 @@ def build_package(*, catalog, output, runtime_dir=ROOT/'build/runtime',
                   'originalWidth', 'originalHeight', 'ownedTextureId'}
         descriptors = {t['id']: t for t in data['textures']}
         for rule in rules['bindings']:
-            if not isinstance(rule, dict) or set(rule) not in (fields, fields | {'cutout'}):
+            if not isinstance(rule, dict) or set(rule) not in (fields, fields | {'cutout'}, fields | {'grass'}):
                 raise ValueError('Invalid binding fields')
             for key in fields - {'originalWidth', 'originalHeight'}:
                 if not isinstance(rule[key], str) or not rule[key].strip() or len(rule[key]) > 256 or '\0' in rule[key]:
@@ -125,7 +136,7 @@ def build_package(*, catalog, output, runtime_dir=ROOT/'build/runtime',
             if 'cutout' in rule:
                 state = rule['cutout']
                 state_fields = {'mode', 'cutoff', 'cull', 'zWrite', 'srcBlend', 'dstBlend', 'renderQueue', 'alphaTest'}
-                if (rules['schemaVersion'] != 2 or rule['shaderName'] != 'Custom/Piece' or
+                if (rules['schemaVersion'] not in (2, 3) or rule['shaderName'] != 'Custom/Piece' or
                         not isinstance(state, dict) or set(state) != state_fields):
                     raise ValueError('Invalid explicit cutout expectation')
                 if (any(type(state[key]) not in (int, float)
@@ -140,6 +151,33 @@ def build_package(*, catalog, output, runtime_dir=ROOT/'build/runtime',
                 cutoff32 = struct.unpack('<f', struct.pack('<f', state['cutoff']))[0]
                 if not 0 < cutoff32 < 1:
                     raise ValueError('Cutout threshold leaves its supported range at runtime float precision')
+            if rule['shaderName'] == 'Custom/Grass' and 'grass' not in rule:
+                raise ValueError('Grass requires its explicit schema 3 expectation')
+            if 'grass' in rule:
+                state = rule['grass']
+                state_fields = {'fixedPasses', 'cutoff', 'renderQueue', 'terrainTextureName', 'terrainWidth',
+                                'terrainHeight', 'terrainColorScale', 'swayDistance', 'pushDistance'}
+                if (rules['schemaVersion'] != 3 or rule['shaderName'] != 'Custom/Grass' or
+                        not isinstance(state, dict) or set(state) != state_fields):
+                    raise ValueError('Invalid explicit grass expectation')
+                if (state['fixedPasses'] != 'Custom/Grass-v1' or state['terrainTextureName'] != 'grass_terrain_color' or
+                        any(type(state[key]) is not int or state[key] != value
+                            for key, value in [('renderQueue', 2000), ('terrainWidth', 1024), ('terrainHeight', 1024)])):
+                    raise ValueError('Unsupported fixed grass shader or terrain identity')
+                def single(value):
+                    if type(value) not in (int, float):
+                        raise ValueError('Grass values must be JSON numbers')
+                    try:
+                        return struct.unpack('<f', struct.pack('<f', value))[0]
+                    except (OverflowError, struct.error) as error:
+                        raise ValueError('Grass value exceeds runtime float range') from error
+                if (single(state['cutoff']) != single(.46) or single(state['terrainColorScale']) != single(.01)):
+                    raise ValueError('Grass cutoff or terrain scale differs from reviewed state')
+                identity = (rule['materialName'], rule['originalTextureName'], rule['originalWidth'], rule['originalHeight'],
+                            single(state['swayDistance']), single(state['pushDistance']))
+                if identity not in (('grasscross_meadows', 'grass_meadows', 128, 128, single(2.3), single(2)),
+                                    ('grasscross_meadows_short', 'grass_meadows_short', 64, 64, single(1), single(.5))):
+                    raise ValueError('Grass material, texture or variant state differs from reviewed identity')
             ids.add(rule['id']); slots.add(slot)
         entries.append(('assets/bindings.json', bindings))
     payloads = {name: (path, dict(path=name, size=path.stat().st_size, sha256=sha256(path))) for name, path in entries}

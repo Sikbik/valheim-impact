@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2264560222537116440",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Owned head and leaf sources reproduce both 512px and 256px atlases exactly. Their PNGs contain only image chunks, with no original game pixels or masks.",
+      "passed": true
+    },
+    {
+      "name": "Exact UV review covers two heads, five leaves and two stems on the retained 150-vertex mesh, with 42 CPU comparison views across seven consumer transforms.",
+      "passed": true
+    },
+    {
+      "name": "Both Clamp albedo-only candidates pass BC3 mip and native readback checks. No unused normal is generated for a material whose normal binding is empty.",
+      "passed": true
+    },
+    {
+      "name": "All 72 native Standard-material captures pass at 1080p and 4K, across six transforms covering seven consumers. Cleanup passes with zero errors or warnings.",
+      "passed": true
+    },
+    {
+      "name": "These are close orthographic views. Tiny mip head coverage and clamped HDR highlights remain limitations, with world, distance and final art approval still open.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/dandelion-layout.json SHA256 b44d888968ae2db7f7a2b96586555077104565c47345556c719cbdfa1cc057f8",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/dandelion-native-material.json SHA256 3d41490c5279c4f8c4269b0e69ce4da2173b15bc8c40dab62c155d5ad2fef413",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 e9d09edf824c31f12b1f4caeb6a1dfaf637b9b37cc68ebc5ceb4f28b5c2dd271",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/asset-validation.json SHA256 3f4aa28473fc37a17f280e00772523e7047195295103675ae5c6903efd6cf03c",
+      "passed": true
+    },
+    {
+      "name": "assets/meadows/dandelion-recipe.json SHA256 fb35733297f7841cdd2acf84bc86ab317b550d15ee0bce2fe2e4bd0bff54e87e",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/dandelion-atlas-hd-v1.png",
+      "sha256": "17028ec8e889e8306b9a1d0c489be650c190fc6b6e3ab3cec3fade8fd27fa1d4"
+    },
+    {
+      "path": "assets/meadows/dandelion-atlas-balanced-v1.png",
+      "sha256": "639b491a193d2883d324cb4cc01520712759d870c578dee3882537f35d1af31f"
+    },
+    {
+      "path": "assets/meadows/dandelion-head-source-v1.png",
+      "sha256": "c635865c6676eaf48053e3d49f9c99a6b8e9ebcce5ab26cc36de691cf5e0694b"
+    },
+    {
+      "path": "assets/meadows/dandelion-leaf-source-v1.png",
+      "sha256": "0b585efae5dce086cff61acd100a2c46295dd7d81a52bcaa1090a7e5268758ab"
+    }
+  ]
+}

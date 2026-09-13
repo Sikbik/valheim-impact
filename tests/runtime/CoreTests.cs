@@ -42,7 +42,9 @@ internal static class CoreTests
             FrameTimingTests.Run(Check);
             OwnedBundleTests.Run(Check, dir);
             OwnedStreamingTests.Run(Check);
+            OwnedSamplerTests.Run(Check, dir);
             MaterialBindingTests.Run(Check);
+            GrassBindingTests.Run(Check);
             OwnedMaterialRegistryTests.Run(Check, dir);
             string a = Bundle(dir, "main.dat", "shared", 19, true);
             string b = Bundle(dir, "override.dat", "shared", 31, true);

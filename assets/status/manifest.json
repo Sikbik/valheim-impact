@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T23:58:03Z",
+  "snapshot_at": "2026-09-13T01:12:24Z",
   "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
   "evidence": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "authored-sources",
       "path": "assets/provenance.json",
-      "sha256": "1550aab6c0ae993c1bb337e40d57a37d9c319867b07bdf895946586d0d2f39d9",
+      "sha256": "3287d67c61d61f136566fd432631c5a6376e58a5547882378e6cc666583b326b",
       "title": "Original authored surface provenance",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
       "targets": [
@@ -107,7 +107,7 @@
     {
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
-      "sha256": "a11e5bc58a3664b25fab0eab58c29f262d09068ff5aaf6d01c83f9097bfdfa98",
+      "sha256": "e9d09edf824c31f12b1f4caeb6a1dfaf637b9b37cc68ebc5ceb4f28b5c2dd271",
       "title": "Native replacement texture sampling",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
       "targets": [
@@ -274,7 +274,7 @@
     {
       "id": "meadows-beech-materials",
       "path": "docs/evidence/contributions/meadows-beech-materials.json",
-      "sha256": "0c4938894c1f90d24b5aaa12b33decfefd11e31c58cdf41cb9b76c17f5212d8c",
+      "sha256": "cce435f1ffbb821eb7416543256298f36cdfdf5b92a6203ab5627d21c3eb81d9",
       "title": "Beech foliage and near bark material review",
       "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
       "targets": [
@@ -349,7 +349,7 @@
     {
       "id": "meadows-ground-cover",
       "path": "docs/evidence/contributions/meadows-ground-cover.json",
-      "sha256": "e2e7cc57e407e37f32c3e4ecdb8f76849022916aaea48efeb5ffe9b05f5689a5",
+      "sha256": "6227f0f61070350c582296ea852f8a47dc6679955e33ea89746df9ea0c84d3da",
       "title": "Meadows grass and material-specific beech bark",
       "scope": "Tall and short grass plus continuous bark and stump candidates have scoped UV and native texture evidence. HD grass also passes an isolated original-shader instancing fixture. Wind, world integration, distance transitions and final approval remain open.",
       "targets": [
@@ -436,7 +436,7 @@
     {
       "id": "meadows-beech-logs",
       "path": "docs/evidence/contributions/meadows-beech-logs.json",
-      "sha256": "67b70cb3c79fa2655338b8e22175646715428334627abff3225ec15d335ab6a0",
+      "sha256": "c86bc1a5ccee9b2a1eaee31364e90def7ee601457c0e97a0174b43543ac1496c",
       "title": "Full and half beech log candidates",
       "scope": "Owned bark and endgrain fit the exact log material. Both quality candidates have scoped UV, native payload and original-material render evidence. Companion normals, world integration and final approval remain open.",
       "targets": [
@@ -455,6 +455,37 @@
           ]
         }
       ]
+    },
+    {
+      "id": "meadows-dandelion",
+      "path": "docs/evidence/contributions/meadows-dandelion.json",
+      "sha256": "0c28a35805afe3b499378a2d1cdbcb8994b5a7b283c99a0b7b0f6bcad8adac5e",
+      "title": "Dandelion atlas and native material candidates",
+      "scope": "Owned HD and Balanced cutouts fit seven shared consumer uses. Native material comparisons and scoped UV review pass; distant appearance, world binding and final approval remain open.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+          "stages": [
+            "authored",
+            "uv_reviewed",
+            "native_validated"
+          ]
+        },
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2264560222537116440",
+          "stages": [
+            "uv_reviewed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "meadows-grass-ownership",
+      "path": "docs/evidence/contributions/meadows-grass-ownership.json",
+      "sha256": "91f42c66a79ba5ada214fbecda8168a5b2efd4b62feab944dccda44d914b6cc9",
+      "title": "Grass ownership and texture sampler checks",
+      "scope": "Bounded grass material ownership and asynchronous sampler handling pass isolated native fixtures. These runtime checks add no inventory completion stages.",
+      "targets": []
     }
   ],
   "asset_notes": [
@@ -573,6 +604,14 @@
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
       "note": "Retained 52-vertex log geometry reviewed only for the full and half beech-log material. Two end islands and the side retain original UVs, normals and tangents. No authored model or native mesh-streaming claim; 165 other material consumers are outside scope."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+      "note": "Owned 512px and 256px Clamp cutouts with scoped UV, compressed mip and native Standard-material evidence across seven uses. Close views at 1080p and 4K; tiny-mip coverage, world integration and final art remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2264560222537116440",
+      "note": "Retained 150-vertex, 136-triangle geometry. Two heads, five leaves and two stems preserve UVs, normals and tangents across seven uses. UV review only; no authored model or mesh-streaming claim."
     }
   ],
   "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18"

@@ -24,6 +24,13 @@ namespace ValheimImpact.Core
         }
         [DataContract] private sealed class Descriptor
         {
+            private string declaredWrap;
+            internal bool WrapSpecified;
+            [DataMember(EmitDefaultValue = false)] public string wrapMode
+            {
+                get { return declaredWrap; }
+                set { declaredWrap = value; WrapSpecified = true; }
+            }
             [DataMember(IsRequired = true)] public string id;
             [DataMember(IsRequired = true)] public string path;
             [DataMember(IsRequired = true)] public string assetName;
@@ -79,7 +86,7 @@ namespace ValheimImpact.Core
             if (catalog.schemaVersion != 1 || !catalog.nativeReadback || catalog.editorVersion != "6000.0.75f1" ||
                 (catalog.target != "StandaloneLinux64" && catalog.target != "StandaloneWindows64") ||
                 catalog.textures == null || catalog.textures.Length == 0 || catalog.textures.Length > 256 ||
-                (bindings.schemaVersion != 1 && bindings.schemaVersion != 2) || bindings.bindings == null || bindings.bindings.Length == 0 || bindings.bindings.Length > 32)
+                (bindings.schemaVersion != 1 && bindings.schemaVersion != 2 && bindings.schemaVersion != 3) || bindings.bindings == null || bindings.bindings.Length == 0 || bindings.bindings.Length > 32)
                 throw new InvalidDataException("Unsupported owned catalog or binding allowlist");
             result.EditorVersion = catalog.editorVersion; result.Target = catalog.target;
             var all = new Dictionary<string, OwnedTextureRequest>(StringComparer.Ordinal);
@@ -87,7 +94,8 @@ namespace ValheimImpact.Core
             {
                 if (d == null || string.IsNullOrWhiteSpace(d.id) || d.id.Length > 128 || all.ContainsKey(d.id) ||
                     (string.IsNullOrWhiteSpace(d.path) || !d.path.EndsWith(".bundle", StringComparison.Ordinal))) throw new InvalidDataException("Invalid owned catalog alias");
-                var bundle = new OwnedTextureBundle(SafeFile(root, "assets/" + d.path), d.assetName, d.sha256, d.width, d.height, d.isSrgb);
+                if (d.WrapSpecified && d.wrapMode == null) throw new InvalidDataException("Explicit null wrap mode is unsupported");
+                var bundle = new OwnedTextureBundle(SafeFile(root, "assets/" + d.path), d.assetName, d.sha256, d.width, d.height, d.isSrgb, d.wrapMode);
                 if (bundle.MipCount != d.mipCount || bundle.PayloadBytes != d.payloadBytes)
                     throw new InvalidDataException("Owned mip or payload descriptor mismatch");
                 all.Add(d.id, new OwnedTextureRequest(bundle, d.payloadSha256));
@@ -99,8 +107,11 @@ namespace ValheimImpact.Core
                 if (rule == null) throw new InvalidDataException("Null material rule");
                 // Version 2 is required for the explicit cutout opt-in. Older
                 // runtimes reject that version rather than ignoring new fields.
-                if (rule.CutoutSpecified && (rule.cutout == null || bindings.schemaVersion != 2 || rule.shaderName != "Custom/Piece" || !rule.cutout.IsSupported))
+                if (rule.CutoutSpecified && (rule.cutout == null || bindings.schemaVersion < 2 || rule.GrassSpecified || rule.shaderName != "Custom/Piece" || !rule.cutout.IsSupported))
                     throw new InvalidDataException("Unsupported cutout material expectation");
+                if ((rule.GrassSpecified && (rule.grass == null || bindings.schemaVersion != 3 || rule.CutoutSpecified || !rule.grass.MatchesIdentity(rule))) ||
+                    (rule.shaderName == "Custom/Grass" && !rule.GrassSpecified))
+                    throw new InvalidDataException("Unsupported grass material expectation");
                 foreach (string value in new[] { rule.id, rule.materialName, rule.shaderName, rule.textureProperty, rule.originalTextureName, rule.ownedTextureId })
                     if (string.IsNullOrWhiteSpace(value) || value.Length > 256 || value.IndexOf('\0') >= 0)
                         throw new InvalidDataException("Invalid exact material identity");
@@ -125,7 +136,13 @@ namespace ValheimImpact.Core
             {
                 if (stream.Length > 1048576) throw new InvalidDataException("Owned manifest exceeds one MiB");
                 var serializer = new DataContractJsonSerializer(typeof(T), new DataContractJsonSerializerSettings { MaxItemsInObjectGraph = 16384 });
-                return (T)serializer.ReadObject(stream);
+                T value = (T)serializer.ReadObject(stream);
+                if (typeof(T) == typeof(BindingsFile) && ((BindingsFile)(object)value).schemaVersion == 3)
+                {
+                    stream.Position = 0;
+                    BindingJsonContract.Validate(stream);
+                }
+                return value;
             }
         }
         private static string SafeFile(string root, string relative)

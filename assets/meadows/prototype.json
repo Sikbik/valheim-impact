@@ -106,6 +106,7 @@
     },
     {
       "id": "beech_card",
+      "wrap_mode": "clamp",
       "source": "assets/meadows/beech-cutout-v1.png",
       "crop_box": [
         104,
@@ -416,6 +417,32 @@
       ],
       "periodic": false,
       "alpha_policy": "opaque",
+      "generate_normal": false
+    },
+    {
+      "id": "dandelion_hd",
+      "source": "assets/meadows/dandelion-atlas-hd-v1.png",
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "wrap_mode": "clamp",
+      "alpha_policy": "cutout",
+      "alpha_cutoff": 0.14000000059604645,
+      "generate_normal": false
+    },
+    {
+      "id": "dandelion_balanced",
+      "source": "assets/meadows/dandelion-atlas-balanced-v1.png",
+      "size": [
+        256,
+        256
+      ],
+      "periodic": false,
+      "wrap_mode": "clamp",
+      "alpha_policy": "cutout",
+      "alpha_cutoff": 0.14000000059604645,
       "generate_normal": false
     }
   ]

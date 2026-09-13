@@ -10,9 +10,9 @@ using UnityEngine.Rendering;
 // Owned blockout only. No Valheim geometry, shaders, bindings or installation access.
 public static class MeadowsBuild
 {
-    [Serializable] public class Input { public string id, unity_dds, unity_dds_sha256, role; public int[] dimensions; public int mip_count, compressed_payload_bytes; public bool srgb; }
+    [Serializable] public class Input { public string id, unity_dds, unity_dds_sha256, role, wrap_mode; public int[] dimensions; public int mip_count, compressed_payload_bytes; public bool srgb; }
     [Serializable] public class Inputs { public Input[] assets; }
-    [Serializable] public class Descriptor { public string id, path, assetName, sha256, payloadSha256, gpuReadback, gpuReadbackSha256; public int width, height, mipCount, payloadBytes; public bool isSrgb; }
+    [Serializable] public class Descriptor { public string id, path, assetName, sha256, payloadSha256, gpuReadback, gpuReadbackSha256, wrapMode; public int width, height, mipCount, payloadBytes; public bool isSrgb; }
     [Serializable] public class Catalog { public int schemaVersion = 1; public bool nativeReadback; public string editorVersion, graphicsApi, colorSpace, target = "StandaloneLinux64", validation = "Editor native readback and base-mip GPU sampling; game binding and representative performance untested"; public Descriptor[] textures; }
     static string Hash(byte[] bytes) { using (var sha = SHA256.Create()) return BitConverter.ToString(sha.ComputeHash(bytes)).Replace("-", "").ToLowerInvariant(); }
 
@@ -27,6 +27,11 @@ public static class MeadowsBuild
                 throw new InvalidOperationException("Save your open scenes before rebuilding the owned probes");
         string root = Directory.GetParent(Application.dataPath).FullName;
         var inputs = JsonUtility.FromJson<Inputs>(File.ReadAllText(Path.Combine(root, "OwnedInputs/manifest.json")));
+        if (inputs == null || inputs.assets == null || inputs.assets.Length == 0)
+            throw new InvalidDataException("Expected nonempty authored inputs");
+        foreach (var item in inputs.assets)
+            if (item == null || (item.wrap_mode != "repeat" && item.wrap_mode != "clamp"))
+                throw new InvalidDataException("Staged wrap_mode must be repeat or clamp; regenerate the authored inputs");
         Directory.CreateDirectory("Assets/Owned");
         Directory.CreateDirectory("Assets/Probes");
         string output = Path.Combine(root, "Bundles");
@@ -45,9 +50,10 @@ public static class MeadowsBuild
             Buffer.BlockCopy(dds, 128, payload, 0, payload.Length);
             var texture = new Texture2D(item.dimensions[0], item.dimensions[1], TextureFormat.DXT5, true, !item.srgb);
             texture.name = item.id;
-            texture.wrapMode = item.id.StartsWith("beech_card") ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
+            texture.wrapMode = item.wrap_mode == "clamp" ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
             texture.filterMode = FilterMode.Trilinear;
             texture.anisoLevel = 4;
+            texture.mipMapBias = 0;
             texture.LoadRawTextureData(payload);
             texture.Apply(false, true); // Preserve supplied DXT5nm channels and every supplied mip.
             if (texture.mipmapCount != item.mip_count) throw new InvalidDataException("Mip mismatch");
@@ -57,7 +63,7 @@ public static class MeadowsBuild
             string selector = asset.ToLowerInvariant();
             string bundle = item.id + ".bundle";
             builds.Add(new AssetBundleBuild { assetBundleName = bundle, assetNames = new[] { asset }, addressableNames = new[] { selector } });
-            records.Add(new Descriptor { id = item.id, path = bundle, assetName = selector, width = texture.width, height = texture.height, mipCount = texture.mipmapCount, payloadBytes = payload.Length, isSrgb = item.srgb, payloadSha256 = Hash(payload) });
+            records.Add(new Descriptor { id = item.id, path = bundle, assetName = selector, width = texture.width, height = texture.height, mipCount = texture.mipmapCount, payloadBytes = payload.Length, isSrgb = item.srgb, payloadSha256 = Hash(payload), wrapMode = item.wrap_mode });
         }
         AssetDatabase.SaveAssets();
         BuildScene(records.Exists(r => r.id == "granite_hd_albedo"), records.Exists(r => r.id == "timber_hd_albedo"));
@@ -76,6 +82,9 @@ public static class MeadowsBuild
                 var names = bundle.GetAllAssetNames();
                 var texture = bundle.LoadAsset<Texture2D>(record.assetName);
                 if (names.Length != 1 || names[0] != record.assetName || texture == null || texture.width != record.width || texture.height != record.height || texture.format != TextureFormat.DXT5 || texture.mipmapCount != record.mipCount || texture.isReadable || texture.isDataSRGB != record.isSrgb) throw new InvalidDataException("Built texture violates OwnedTextureBundle contract");
+                var expectedWrap = record.wrapMode == "clamp" ? TextureWrapMode.Clamp : TextureWrapMode.Repeat;
+                if (texture.wrapModeU != expectedWrap || texture.wrapModeV != expectedWrap || texture.wrapModeW != expectedWrap || texture.filterMode != FilterMode.Trilinear || texture.anisoLevel != 4 || texture.mipMapBias != 0)
+                    throw new InvalidDataException("Built texture sampler differs from its recipe");
                 record.gpuReadback = "readback/" + record.id + ".png";
                 record.gpuReadbackSha256 = SaveGpuReadback(texture, Path.Combine(output, record.gpuReadback));
             }

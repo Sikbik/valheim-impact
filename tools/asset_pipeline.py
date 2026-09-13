@@ -205,6 +205,8 @@ def build(manifest_path):
         generate_normal = asset.get('generate_normal', True)
         if type(generate_normal) is not bool:
             raise ValueError('generate_normal must be a boolean')
+        if asset.get('wrap_mode', 'repeat') not in ('repeat', 'clamp'):
+            raise ValueError('wrap_mode must be repeat or clamp')
         alpha_cutoff = asset.get('alpha_cutoff')
         if alpha_cutoff is not None:
             from tools.cutout_mips import cutoff_byte
@@ -265,7 +267,8 @@ def build(manifest_path):
                 png=png.name, png_sha256=sha256(png), dds=dds.name, dds_sha256=sha256(dds),
                 unity_dds=unity_dds.name, unity_dds_sha256=sha256(unity_dds),
                 unity_row_order='bottom-up per mip; strip 128-byte DDS header',
-                periodic=asset['periodic'], game_uv_validated=False, engine_validated=False)
+                periodic=asset['periodic'], wrap_mode=asset.get('wrap_mode', 'repeat'),
+                game_uv_validated=False, engine_validated=False)
             if role == 'albedo' and alpha_cutoff is not None:
                 from tools.cutout_mips import report_chain
                 record['alpha_cutoff'] = alpha_cutoff

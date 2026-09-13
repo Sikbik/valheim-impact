@@ -577,6 +577,82 @@
         }
       ],
       "recipe": "assets/meadows/beech-log-recipe.json"
+    },
+    {
+      "key": "dandelion_head_source",
+      "dest": "assets/meadows/dandelion-head-source-v1.png",
+      "status": "authored-cutout-source",
+      "sha256": "c635865c6676eaf48053e3d49f9c99a6b8e9ebcce5ab26cc36de691cf5e0694b",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "dandelion_leaf_source",
+      "dest": "assets/meadows/dandelion-leaf-source-v1.png",
+      "status": "authored-cutout-source",
+      "sha256": "0b585efae5dce086cff61acd100a2c46295dd7d81a52bcaa1090a7e5268758ab",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "dandelion_atlas_hd",
+      "dest": "assets/meadows/dandelion-atlas-hd-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "17028ec8e889e8306b9a1d0c489be650c190fc6b6e3ab3cec3fade8fd27fa1d4",
+      "original_game_pixels": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "dandelion_atlas_balanced",
+      "dest": "assets/meadows/dandelion-atlas-balanced-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "639b491a193d2883d324cb4cc01520712759d870c578dee3882537f35d1af31f",
+      "original_game_pixels": false,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        0,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."
