@@ -14,9 +14,9 @@ import numpy as np
 from PIL import Image
 
 if __package__:
-    from .asset_pipeline import mip_chain, periodic_rgb
+    from .asset_pipeline import periodic_rgb, quantize, resize_float
 else:
-    from asset_pipeline import mip_chain, periodic_rgb
+    from asset_pipeline import periodic_rgb, quantize, resize_float
 
 
 SOURCE = ('assets/meadows/flint-surface-source-v1.png',
@@ -49,6 +49,18 @@ def owned_source(root):
         return Image.frombytes('RGB', image.size, image.tobytes())
 
 
+def fit_balanced(hd):
+    """Opaque linear-light BOX mip with explicit power evaluation precision."""
+    rgb = np.asarray(hd, dtype=np.float64) / 255
+    linear = np.where(rgb <= .04045, rgb / 12.92, ((rgb + .055) / 1.055) ** 2.4)
+    small = resize_float(linear, (hd.width // 2, hd.height // 2))
+    # Keep the reviewed float32 exponent and subsequent float32 operations;
+    # evaluate power in float64 before explicitly rounding it back to float32.
+    powered = (small.astype(np.float64) ** float(np.float32(1 / 2.4))).astype(np.float32)
+    rgb = np.where(small <= .0031308, small * 12.92, 1.055 * powered - .055)
+    return Image.fromarray(quantize(rgb))
+
+
 def fitted_images(source):
     parent = Image.fromarray(periodic_rgb(np.asarray(source)))
     size = parent.width
@@ -59,8 +71,7 @@ def fitted_images(source):
             padded.paste(parent, (x * size, y * size))
     hd = padded.resize((1024, 1024), Image.Resampling.LANCZOS,
                        box=(size, size, size * 2, size * 2))
-    # The first linear-light BOX mip is the exact Balanced source.
-    balanced = mip_chain(hd, 'albedo')[1].convert('RGB')
+    balanced = fit_balanced(hd)
     return hd, balanced
 
 

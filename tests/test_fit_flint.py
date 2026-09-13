@@ -111,6 +111,22 @@ class FlintFitTests(unittest.TestCase):
         self.assertNotEqual(details['expected_rgb_sha256'], details['actual_rgb_sha256'])
         self.assertFalse(self.output.exists())
 
+    def test_balanced_keeps_reviewed_rounding_at_sensitive_blue_values(self):
+        # These owned color samples lie near half-byte rounding boundaries.
+        samples = (
+            ([(164, 156, 150), (158, 150, 144), (175, 170, 164), (171, 166, 159)], 154),
+            ([(210, 205, 197), (189, 184, 176), (194, 187, 183), (187, 182, 177)], 184),
+            ([(195, 189, 178), (198, 190, 174), (170, 168, 158), (179, 175, 163)], 168),
+        )
+        for colors, expected in samples:
+            with self.subTest(expected_blue=expected):
+                patch = Image.new('RGB', (2, 2))
+                patch.putdata(colors)
+                actual = fit_flint.fit_balanced(patch)
+                self.assertEqual(actual.mode, 'RGB')
+                self.assertEqual(actual.size, (1, 1))
+                self.assertEqual(actual.getpixel((0, 0))[2], expected)
+
     def test_exact_input_leaf_and_ancestor_links_are_rejected(self):
         path = self.parents / PARENT
         target = self.directory / PARENT

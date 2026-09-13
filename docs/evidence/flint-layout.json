@@ -139,7 +139,7 @@
   ],
   "recipe": {
     "path": "assets/meadows/flint-recipe.json",
-    "sha256": "2793a41c2c3fa2acfd802a98dd0303095113b469893ec5ee999858f2d1b5bbed"
+    "sha256": "8e466a6702f7c05306462d68558fd9ef478a7b81ff422bcbba2c687d2fc770de"
   },
   "limits": [
     "Direct 1024/512 candidates were selected over a busier five-repeat alternative.",

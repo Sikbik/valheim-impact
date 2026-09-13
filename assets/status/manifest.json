@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-09-13T02:39:31Z",
+  "snapshot_at": "2026-09-13T02:53:34Z",
   "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
   "evidence": [
     {
@@ -513,7 +513,7 @@
     {
       "id": "meadows-flint",
       "path": "docs/evidence/contributions/meadows-flint.json",
-      "sha256": "5748feba927568ccefd435f9064f6164d9eb8574792a83d102529059bb94ccc9",
+      "sha256": "cc898d7f5d8961c449462f7ec33de6997fb33974432c2e1ce43f509d93b3ba29",
       "title": "Flint surface candidates",
       "scope": "Owned 1024px and 512px opaque surfaces for one exact flint material. All five retained mesh layouts have scoped UV and native comparison evidence. Nine texture-sharing emission materials are excluded. World, distance and final art review remain open.",
       "targets": [

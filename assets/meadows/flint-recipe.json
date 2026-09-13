@@ -85,8 +85,11 @@
       512
     ],
     "source": "flint-hd-v1.png",
-    "operation": "First tools.asset_pipeline.mip_chain albedo mip, using linear-light premultiplied-alpha BOX filtering and sRGB encoding; convert to RGB",
-    "encoded_mips_match_hd_suffix": true
+    "operation": "Opaque linear-light BOX mip from the HD image, with float32 filtered channels, float64 power evaluation using the reviewed float32-rounded exponent, then float32 sRGB multiplication/subtraction and ties-to-even byte quantization",
+    "encoded_mips_match_hd_suffix": true,
+    "power_exponent": 0.4166666567325592,
+    "power_result_rounding": "Explicit float32 cast before multiplication by float32 1.055 and subtraction of float32 0.055",
+    "suffix_comparison_scope": "Verified recorded study artifacts; compare regenerated payloads after changing platform or dependencies"
   },
   "staging": {
     "source_images_are_already_fitted": true,
@@ -124,7 +127,7 @@
   },
   "fitting_helper": {
     "path": "tools/fit_flint.py",
-    "sha256": "84a9272d1eb033a91385362ce0fb80cb21f7c680da1e28543405f9589f2939d5",
+    "sha256": "219ae7b419a258ba55b60e882abd9e05667cf4112ab20c7171c8dec17c01d381",
     "dependency_manifest": "requirements-assets.txt",
     "dependency_manifest_sha256": "b484fb6fbc42add5d47850a2e23eb01e71983d44b68fa3d698cbc3b1b8a3f35b",
     "pipeline_helper": "tools/asset_pipeline.py",
@@ -133,7 +136,8 @@
       "assets/meadows/flint-surface-source-v1.png"
     ],
     "geometry_inputs": [],
-    "hash_validation": "Verify the parent before decoding and both decoded RGB and encoded output hashes before creating either output. Report bounded hash and dependency diagnostics on failure. Reject linked paths and existing outputs; create each output exclusively."
+    "hash_validation": "Verify the parent before decoding and both decoded RGB and encoded output hashes before creating either output. Report bounded hash and dependency diagnostics on failure. Reject linked paths and existing outputs; create each output exclusively.",
+    "portability": "Reproduction is hash-checked for decoded RGB and PNG bytes. Explicit power precision preserves the reviewed rounded bytes; universal platform and encoder reproducibility is not established."
   },
   "versions": {
     "numpy": "2.5.3",
