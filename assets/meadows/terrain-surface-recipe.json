@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "scope": "Original cliff and sand layer candidates for terrain_d_array. They are individual source inputs, not runtime Texture2D replacements or a complete authored terrain array.",
+  "target_array_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791",
+  "layers": [
+    {
+      "index": 4,
+      "role": "cliff",
+      "alpha_policy": "Opaque 255 under the reviewed saturated alpha-plus-one rock gain."
+    },
+    {
+      "index": 9,
+      "role": "shore sand",
+      "alpha_policy": "Opaque 255; reviewed surface samples consume RGB only."
+    }
+  ],
+  "helper": {
+    "path": "tools/asset_pipeline.py",
+    "sha256": "39e021f3e98c53a6c77efed24051fab5f61d992b3b7910f8cc59f4d98df3293e",
+    "function": "fit_albedo(image, (size, size), periodic=True)"
+  },
+  "operations": [
+    "Open the complete owned source without cropping, color changes, sharpening or masks.",
+    "Resize RGBA independently to each output size with Pillow LANCZOS.",
+    "Apply the existing periodic_rgb row-then-column 24px edge correction. Center pixels outside the bands remain unchanged.",
+    "Save RGBA PNG with optimize=False, compress_level=9. Keep only image container chunks."
+  ],
+  "environment": {
+    "pillow": "12.3.0",
+    "numpy": "2.5.3",
+    "zlib": "1.3.2"
+  },
+  "native_contract": {
+    "width": 256,
+    "height": 256,
+    "format": "BC7 sRGB",
+    "array_depth": 16,
+    "mip_count": 1,
+    "filter": "Point",
+    "wrap": "Repeat U/V/W",
+    "anisotropy": 1,
+    "mip_bias": 0
+  },
+  "limitations": [
+    "Only the 256px versions have the current same-layout native array study. 512px and 1024px remain preparation inputs for a separate sampling/resolution policy.",
+    "Equal base endpoints do not guarantee equal diagnostic mip endpoints or seamless compressed sampling.",
+    "Original normal channels are retained controls, not authored companions.",
+    "These layer roles are shared across biomes. Meadows material studies do not approve all shared use.",
+    "Current runtime supports Texture2D albedo; terrain-array installation and lifecycle integration remain open."
+  ],
+  "files": [
+    {
+      "dest": "assets/meadows/terrain-cliff-source-v1.png",
+      "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-cliff-256-v1.png",
+      "sha256": "f00b663e7f1e4434d4e01577c3c22c9a9a0942584f50756d157e88b781540629",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-cliff-source-v1.png",
+          "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5"
+        }
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-cliff-512-v1.png",
+      "sha256": "66225f42da71341f1c2dbdb50e6e86e0a15f60dffa6da5ceb0ce7f8a69441011",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-cliff-source-v1.png",
+          "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5"
+        }
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-cliff-1024-v1.png",
+      "sha256": "7441c350b5f3f7ea1d7b24a478536bc1d891d57d5b9144f3b3e77a243ef71ef4",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-cliff-source-v1.png",
+          "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5"
+        }
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-sand-source-v1.png",
+      "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-sand-256-v1.png",
+      "sha256": "2fce628bdbf596045bfe766ec47687f316bf9431f6e07962da3f028a9a5573a1",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-sand-source-v1.png",
+          "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688"
+        }
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-sand-512-v1.png",
+      "sha256": "9e4a870aa669bf60c765810d65caf8e2f1790e52db9724fb934e6054d281e62f",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-sand-source-v1.png",
+          "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688"
+        }
+      ]
+    },
+    {
+      "dest": "assets/meadows/terrain-sand-1024-v1.png",
+      "sha256": "0a2444e68c9297ebc90d7515397fe1357afbc00d89e47ad299d7595b81e5151f",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-sand-source-v1.png",
+          "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688"
+        }
+      ]
+    }
+  ]
+}

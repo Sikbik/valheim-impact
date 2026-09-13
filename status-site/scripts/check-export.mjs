@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {validateLandscape} from './validate-landscape.mjs';
 
 const root=fileURLToPath(new URL('../dist/client/',import.meta.url));
 const prefix=process.env.GITHUB_PAGES==='true'?'/valheim-impact/':'/';
@@ -50,3 +51,13 @@ assert.equal(biomes.biomes.length,9,'All nine inventory biomes must be present')
 const known=new Set(snapshot.assets.map(asset=>asset.id));
 for(const biome of biomes.biomes) assert.ok(biome.asset_ids.every(id=>known.has(id)),'Unknown inventory biome asset');
 console.log(`Verified independent biome browsing for ${biomes.summary.assigned} assigned assets.`);
+
+const galleryRoot=path.join(root,'landscape');
+assert.ok(existsSync(path.join(galleryRoot,'index.html')),'Missing public landscape gallery');
+const galleryManifest=JSON.parse(readFileSync(path.join(galleryRoot,'captures.json'),'utf8'));
+const gallery=validateLandscape(galleryManifest,
+  relative=>readFileSync(path.join(galleryRoot,relative)));
+const galleryImages=new Set(galleryManifest.views.flatMap(view=>view.pairs.flatMap(pair=>[pair.before.slice(7),pair.after.slice(7)])));
+assert.deepEqual(readdirSync(galleryRoot).sort(),['captures.json','images','index.html'],'Unexpected gallery files');
+assert.deepEqual(readdirSync(path.join(galleryRoot,'images')).sort(),[...galleryImages].sort(),'Unexpected gallery image files');
+console.log(`Verified ${gallery.views} landscape views, ${gallery.pairs} resolution pairs and ${gallery.uniqueImages} image files.`);

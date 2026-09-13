@@ -1,8 +1,9 @@
 Attribution 4.0 International
 
-This license applies to project artwork and excludes the game-reference sprite
-sheets in `status-site/public/comparisons/`, which remain subject to their own
-rights and attribution.
+This license applies to project artwork. It excludes the game-reference sprite
+sheets in `status-site/public/comparisons/` and mixed game-content render captures
+in `status-site/public/landscape/images/`. Those remain subject to their own
+rights and attribution, described in `ATTRIBUTION.md`.
 
 =======================================================================
 

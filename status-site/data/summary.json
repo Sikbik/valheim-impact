@@ -5,7 +5,7 @@
       "id": "authored-sources",
       "path": "assets/provenance.json",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
-      "sha256": "d05c406d66bd902a48c0979e9725ffe570f16d52803fe2acdc33b4a66dad4b62",
+      "sha256": "8ec532090ea4a450d05fe5a7f2bfe7e976e405b4cefaf15345d3d2e18576081b",
       "stages": [
         "authored"
       ],
@@ -178,6 +178,18 @@
       "title": "Meadows grass and material-specific beech bark"
     },
     {
+      "id": "meadows-landscape-studies",
+      "path": "docs/evidence/meadows-landscape-native.json",
+      "scope": "24 individual terrain-layer and 12 combined clearing frames. Partial array preparation and composition review earn no full-array or biome completion stage.",
+      "sha256": "f18ce09493542ee986f1c28c3c192679bacaafe88583909b3455fb4234ad72b6",
+      "stages": [],
+      "target_count": 1,
+      "targets": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791"
+      ],
+      "title": "Meadows landscape, cliff and shoreline studies"
+    },
+    {
       "id": "meadows-mushroom",
       "path": "docs/evidence/contributions/meadows-mushroom.json",
       "scope": "Owned 512px and 256px cap, stalk and underside atlases. Five retained rest transforms have scoped UV and native evidence. Shared original normal, distance, world and final art remain open.",
@@ -321,10 +333,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "74bbc1dd307d16185935591abb17cf6394e5a287d5b0eea11b798e78fefd4ac1"
+    "status_manifest_sha256": "7ea04d51a28dd44adfef4828aa5b60bb5f866c9ed23c2c45b4df11e0f248db84"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-13T03:18:38Z",
+  "snapshot_at": "2026-09-13T04:18:38Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",
@@ -359,8 +371,8 @@
         "world_surface": 328
       }
     },
-    "evidence_records": 19,
-    "evidence_target_assets": 41,
+    "evidence_records": 20,
+    "evidence_target_assets": 42,
     "meshes": 10336,
     "stage_counts": {
       "mesh": {

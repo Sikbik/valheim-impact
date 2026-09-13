@@ -38,6 +38,7 @@ EVIDENCE_PATHS = {
     'docs/evidence/roof-menu-source.json', 'docs/evidence/default-roof-layout.json',
     'docs/evidence/straw-fringe-authored.json',
     'docs/evidence/cutout-binding-native.json',
+    'docs/evidence/meadows-landscape-native.json',
 }
 # Legacy documents support only these already reviewed serialized identities and
 # stages. New targets or further completion claims require contributor reviews.
@@ -53,6 +54,7 @@ LEGACY_TARGETS = {
     'docs/evidence/default-roof-layout.json': (None, ('7569662044289518567', '5625371641502064416', '-6155225557725131527', '-7768300691103960695', '4913270748202539969')),
     'docs/evidence/straw-fringe-authored.json': ('authored', ('7569662044289518567',)),
     'docs/evidence/cutout-binding-native.json': (None, ()),
+    'docs/evidence/meadows-landscape-native.json': (None, ('-4418745866935824791',)),
 }
 LEGACY_SUCCESS_FLAGS = {
     'docs/evidence/native-validation.json': 'gpu_base_mip_validation',
@@ -396,10 +398,110 @@ def validate_legacy_claims(path, record, data):
                 raise ValueError('Legacy success flag contradicts the requested stage')
 
 
+def landscape_summary(data):
+    """Summarize only the reviewed six-study shape, without source prose or frames."""
+    def count(value, maximum=10000000):
+        if type(value) is not int or not 0 <= value <= maximum:
+            raise ValueError('Expected bounded integer landscape metadata')
+        return value
+
+    if (type(data['schema_version']) is not int or data['schema_version'] != 1 or
+            data['terrain_array_id'] != LEGACY_CAB + '-4418745866935824791' or
+            data['normal_array_id'] != LEGACY_CAB + '-3717166463683967554' or
+            data['authored_terrain_layers'] != [4, 9] or
+            any(type(value) is not int for value in data['authored_terrain_layers']) or
+            data['awarded_inventory_stages'] != []):
+        raise ValueError('Unsupported landscape evidence scope')
+    composition, clearing = data['composition'], data['clearing']
+    for key, expected in [('independent_layer_runs', 2), ('float_readbacks_per_run', 61),
+                          ('untargeted_diffuse_layers_preserved_per_run', 15),
+                          ('source_diffuse_layers_preserved', 16), ('source_normal_layers_preserved', 6)]:
+        if count(composition[key]) != expected:
+            raise ValueError('Landscape composition scope differs')
+    if composition['format'] != '256px BC7 sRGB, one mip, Point, Repeat':
+        raise ValueError('Landscape array sampling scope differs')
+    for key, expected in [('terrain_extent_meters', 96), ('trees', 7), ('grass_instances', 787),
+                          ('terrain_vertices', 9409), ('ground_layer', 0)]:
+        if count(clearing[key]) != expected:
+            raise ValueError('Landscape clearing scope differs')
+    if (clearing['cliff_and_sand_replacements_included'] is not False or
+            clearing['source_tree_lods'] != [0, 1, 3] or
+            any(type(value) is not int for value in clearing['source_tree_lods'])):
+        raise ValueError('Combined array or different tree scope requires review')
+
+    studies = {'Cliff slope': 8, 'Cliff cross-slope': 8, 'Shoreline sand': 8,
+               'Meadows clearing': 4, 'Ground and grass': 4, 'Beech detail': 4}
+    common = {'passed', 'renderChecksPassed', 'cleanupPassed', 'scenesPreserved', 'sourceMaterialsPreserved'}
+    runs = sequence(data['runs'], 6)
+    seen, frames, validations = set(), [], []
+    s = Summary()
+    for run in runs:
+        name = run['study']
+        if not isinstance(name, str) or name not in studies or name in seen:
+            raise ValueError('Unknown or duplicate landscape study')
+        seen.add(name)
+        terrain = studies[name] == 8
+        extra = ({'globalsRestored', 'bundleSetPreserved', 'fullRequestedCoverage'} if terrain else
+                 {'inputsPreserved', 'globalsPreserved', 'bundlesPreserved', 'ownedObjectsReleased'})
+        checks = run['checks']
+        if (not isinstance(checks, dict) or set(checks) != common | extra or
+                any(type(value) is not bool for value in checks.values())):
+            raise ValueError('Invalid landscape preservation checks')
+        captures = sequence(run['captures'], studies[name])
+        if count(run['capture_count']) != studies[name] or len(captures) != studies[name]:
+            raise ValueError('Landscape capture count differs')
+        pairs = set()
+        for frame in captures:
+            width, height = count(frame['width'], 65536), count(frame['height'], 65536)
+            states = ('before', 'after') if terrain else ('original', 'authored')
+            variant = frame['material_variant'] if terrain else None
+            if ((width, height) not in ((1920, 1080), (3840, 2160)) or
+                    frame['state'] not in states or (terrain and variant not in ('near', 'distant')) or
+                    not isinstance(frame['sha256'], str) or not re.fullmatch('[a-f0-9]{64}', frame['sha256'])):
+                raise ValueError('Invalid landscape capture identity or dimensions')
+            pair = (variant, frame['state'], width, height)
+            if pair in pairs:
+                raise ValueError('Duplicate landscape capture pair')
+            pairs.add(pair)
+            for key in ('occupiedPixels', 'overOnePixels', 'changedFromOriginalPixels'):
+                count(frame[key], width * height)
+            if frame['state'] == states[0] and frame['changedFromOriginalPixels'] != 0:
+                raise ValueError('Original landscape capture has replacement differences')
+            frames.append(frame)
+        validations.append(checks)
+        s.check(name + ': recorded native checks passed', all(checks.values()))
+    if seen != set(studies) or count(data['capture_count']) != len(frames):
+        raise ValueError('Incomplete landscape study coverage')
+
+    s.metric('Native capture frames', len(frames))
+    s.metric('Individual terrain-layer frames', 24)
+    s.metric('Separate synthetic clearing frames', 12)
+    s.metric('Independent single-layer compositions', composition['independent_layer_runs'])
+    s.metric('Untargeted diffuse layers preserved per composition', composition['untargeted_diffuse_layers_preserved_per_run'])
+    s.metric('Original normal layers preserved', composition['source_normal_layers_preserved'])
+    s.metric('Trees in the synthetic clearing', clearing['trees'])
+    s.metric('Grass instances in the synthetic clearing', clearing['grass_instances'])
+    s.metric('Frames with clamped HDR highlights', sum(frame['overOnePixels'] > 0 for frame in frames))
+    s.metric('Largest recorded above-range pixel count', max(frame['overOnePixels'] for frame in frames))
+    s.check('Global state preserved across studies', all(row.get('globalsRestored', row.get('globalsPreserved')) for row in validations))
+    s.check('Original scenes and materials preserved across studies', all(row['scenesPreserved'] and row['sourceMaterialsPreserved'] for row in validations))
+    s.check('Original game pixels excluded from public artwork', data['original_game_pixels_in_public_artwork'], False)
+    s.notes.extend([
+        'Cliff layer 4 and sand layer 9 were tested in separate partial array compositions and 24 native frames. The separate synthetic clearing uses existing ground layer 0, grass and beech candidates in 12 frames. This does not validate a combined ground, cliff and sand array.',
+        'Captures cover 1080p and 4K under dry daylight, frozen wind and wetness, no cast shadows and manually selected tree LODs. Original normal maps and the separate grass terrain-color companion remain controls.',
+        'The diffuse array remains 256px BC7 with one mip and Point sampling. Larger authored source fits do not establish native array-resolution quality. Other biome consumers remain unvalidated.',
+        'Saved images clamp HDR values above the display range. Pale bark, coarse ground detail, bright canopy highlights, repeated cliff features and normal alignment still need coordinated visual review.',
+        'No inventory completion stages are awarded. The installed game and release package are unchanged; runtime terrain-array installation, live-world behavior, performance and final artwork approval remain open.',
+    ])
+    return s
+
+
 def summarize(path, data):
     """Every copied value is selected here, with fixed labels and strict types."""
     s = Summary()
-    if path == 'assets/coverage.json':
+    if path == 'docs/evidence/meadows-landscape-native.json':
+        return landscape_summary(data)
+    elif path == 'assets/coverage.json':
         for key, label in [('bundles_scanned', 'Serialized bundles scanned'), ('serialized_materials', 'Materials'),
                            ('serialized_meshes', 'Meshes'), ('serialized_renderers', 'Renderer records'),
                            ('serialized_shaders', 'Shaders'), ('maintex_linked_textures_total', 'Main-texture linked identities'),
@@ -528,7 +630,7 @@ def table(headers, rows):
     return '<table><thead><tr>' + ''.join('<th scope="col">' + escape(str(v)) + '</th>' for v in headers) + '</tr></thead><tbody>' + ''.join('<tr>' + ''.join('<td>' + escape(str(v)) + '</td>' for v in row) + '</tr>' for row in rows) + '</tbody></table>'
 
 
-def render(title, scope, source_hash, snapshot, target_rows, summary):
+def render(title, scope, source_hash, snapshot, target_rows, summary, *, landscape_gallery=False):
     title, scope = public_text(title), public_text(scope)
     body = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>' + escape(title) + ' | Valheim Impact evidence</title><style>' + STYLE + '</style></head><body><main><nav><a href="../">Back to the project tracker</a></nav><h1>' + escape(title) + '</h1><p>' + escape(scope) + '</p>'
     body += '<p class="meta">Reviewed snapshot: ' + escape(snapshot) + '<br>Source metadata SHA-256: <code>' + escape(source_hash) + '</code></p>'
@@ -538,6 +640,8 @@ def render(title, scope, source_hash, snapshot, target_rows, summary):
     if summary.checks:
         body += '<h2>Recognized validation checks</h2>' + table(('Check', 'Recorded result'), summary.checks)
     body += '<h2>Scope and limits</h2>' + ''.join('<p class="note">' + escape(note) + '</p>' for note in summary.notes)
+    if landscape_gallery:
+        body += '<p>Lossless native capture inputs remain private. See the separately published <a href="../landscape/">reviewed WebP render comparisons</a> with game-content credit. The gallery does not expand the 36-frame evidence scope or award completion stages.</p>'
     body += '<p>Stages are independent and limited to the stated evidence. Retained original geometry is not an authored model. Inventory counts do not measure visible overhaul coverage. This public summary contains no original imagery, geometry or private source documents.</p></main></body></html>\n'
     return body
 
@@ -559,7 +663,8 @@ def evidence_page(root, record, snapshot, *, known_ids=None):
     scope = public_text(record['scope'])
     if path == 'docs/evidence/straw-fringe-authored.json':
         scope = 'Historical initial 512 RGBA candidate for the standard straw-fringe material. No copied game pixels or masks. This record predates the separate UV and native sampling review.'
-    return render(record['title'], scope, record['sha256'], timestamp(snapshot), targets(record), summary)
+    return render(record['title'], scope, record['sha256'], timestamp(snapshot), targets(record), summary,
+                  landscape_gallery=path == 'docs/evidence/meadows-landscape-native.json')
 
 
 def build_pages(root, manifest):

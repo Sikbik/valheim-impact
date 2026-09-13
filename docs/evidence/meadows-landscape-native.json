@@ -1,0 +1,512 @@
+{
+  "schema_version": 1,
+  "status": "Scoped native landscape studies; artwork and world approval remain open",
+  "engine": "Unity 6000.0.75f1, Linux Vulkan, Linear, Built-in Render Pipeline",
+  "scope": "Two individual terrain layer candidates and a separate synthetic clearing with existing ground, grass and full beech candidates. No combined ground/cliff/sand array approval.",
+  "terrain_array_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791",
+  "normal_array_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3717166463683967554",
+  "authored_terrain_layers": [
+    4,
+    9
+  ],
+  "terrain_recipe": "assets/meadows/terrain-surface-recipe.json",
+  "terrain_recipe_sha256": "3d07379da34d32cb779ace9e3776c6ad6d1ad87f888023b944bb6628e7fe74ef",
+  "composition": {
+    "independent_layer_runs": 2,
+    "float_readbacks_per_run": 61,
+    "untargeted_diffuse_layers_preserved_per_run": 15,
+    "source_diffuse_layers_preserved": 16,
+    "source_normal_layers_preserved": 6,
+    "format": "256px BC7 sRGB, one mip, Point, Repeat"
+  },
+  "clearing": {
+    "terrain_extent_meters": 96,
+    "trees": 7,
+    "grass_instances": 787,
+    "terrain_vertices": 9409,
+    "source_tree_lods": [
+      0,
+      1,
+      3
+    ],
+    "geometry": "Retained source tree and grass meshes, synthetic terrain and placement",
+    "ground_layer": 0,
+    "cliff_and_sand_replacements_included": false
+  },
+  "capture_count": 36,
+  "runs": [
+    {
+      "study": "Cliff slope",
+      "private_report_sha256": "1c1f2e00cdde7905368f4fe2ec503e17c7a33d0537bc2ad1880ae1c37a21cfd7",
+      "capture_count": 8,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "scenesPreserved": true,
+        "sourceMaterialsPreserved": true,
+        "globalsRestored": true,
+        "bundleSetPreserved": true,
+        "fullRequestedCoverage": true
+      },
+      "captures": [
+        {
+          "state": "before",
+          "sha256": "b536dad0904dc90488f7ba42b42d868ed6e3b8ec82de0b85d135c7368bd83e83",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 812694,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "near"
+        },
+        {
+          "state": "after",
+          "sha256": "15217a037e2df83aa8752dc353b8fde28093a36238fe8041bd57bbb1e2399a59",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 812694,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 381386,
+          "material_variant": "near"
+        },
+        {
+          "state": "before",
+          "sha256": "c0b00bd2f968d0191a3c2c85a9a32b3cafe245eacd3c5030b7ba46ecab7c2836",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3250791,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "near"
+        },
+        {
+          "state": "after",
+          "sha256": "9acbf5f9c8fa654af22b32402281b4ed07821b6ec7bde92c25059e1420ea8019",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3250791,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1525656,
+          "material_variant": "near"
+        },
+        {
+          "state": "before",
+          "sha256": "b315e1f371fde063cf74ba97250f9ff75fe8e7610c5e0b2cf136b59b26a27bf1",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 823818,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "distant"
+        },
+        {
+          "state": "after",
+          "sha256": "bc68cc714d584d90cf2be83f8c761bac2ad2d1c0bbcb22f90fa35641eb7d2bba",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 823818,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 384738,
+          "material_variant": "distant"
+        },
+        {
+          "state": "before",
+          "sha256": "b49321b4106ef71c424235f44c1fdeb174b4cfd1e436d764b576467723cba7f7",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3295262,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "distant"
+        },
+        {
+          "state": "after",
+          "sha256": "db233ffd9174e2f859b8fe4af1ce921d412b00ead4eeb5cb11d9bc24729a119e",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3295262,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1538666,
+          "material_variant": "distant"
+        }
+      ]
+    },
+    {
+      "study": "Cliff cross-slope",
+      "private_report_sha256": "1f1687ca9881fbd291d76867f2e00293b7590441913b216752cd8aa58397ea21",
+      "capture_count": 8,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "scenesPreserved": true,
+        "sourceMaterialsPreserved": true,
+        "globalsRestored": true,
+        "bundleSetPreserved": true,
+        "fullRequestedCoverage": true
+      },
+      "captures": [
+        {
+          "state": "before",
+          "sha256": "d062fa36581ca869a0c347d1385ef5f3aadb946804a818ec8b4d36ce94fc5e74",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 648144,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "near"
+        },
+        {
+          "state": "after",
+          "sha256": "c502e7e29d4319ceed1b258279d162b1bca5dcd8d74f5397f498b18922ac4cdc",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 648144,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 223706,
+          "material_variant": "near"
+        },
+        {
+          "state": "before",
+          "sha256": "d01d1c04e1733a1d092801046e5fb0917ddae4304132827a56d5c313d7d24764",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 2592653,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "near"
+        },
+        {
+          "state": "after",
+          "sha256": "cb3f1ecf4dad8f937c2c5abff7ec3841fbf686b0c5b8c897863636fba4464502",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 2592653,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 891798,
+          "material_variant": "near"
+        },
+        {
+          "state": "before",
+          "sha256": "9fc014a33da6892f89ccbfc6953ea89ec0b8cfef1455f8dcbb5f2ad48dab3db0",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 659287,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "distant"
+        },
+        {
+          "state": "after",
+          "sha256": "397f84fc90f9a9966439db1b7ba5825e71ecad4cebd59a0aa5d8f52e72010047",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 659287,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 226767,
+          "material_variant": "distant"
+        },
+        {
+          "state": "before",
+          "sha256": "962f1e22a6e2ac49165cee7de7437c859b31077cfe41b5c951db200dcc94953e",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 2637114,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "distant"
+        },
+        {
+          "state": "after",
+          "sha256": "7701dbfbd43dc84faa23de3019e44b6d6a6b7af80ab98a3444a2e5a0ebc7e6d3",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 2637114,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 907138,
+          "material_variant": "distant"
+        }
+      ]
+    },
+    {
+      "study": "Shoreline sand",
+      "private_report_sha256": "712ed42e658513f73d60ca110ddcad8477738fe99f040c3f410859100f67d365",
+      "capture_count": 8,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "scenesPreserved": true,
+        "sourceMaterialsPreserved": true,
+        "globalsRestored": true,
+        "bundleSetPreserved": true,
+        "fullRequestedCoverage": true
+      },
+      "captures": [
+        {
+          "state": "before",
+          "sha256": "9930d71ec159fec3a2365da7a5571189ec505a9a8a76663d3cf732132bad9e80",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 798720,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "near"
+        },
+        {
+          "state": "after",
+          "sha256": "c4005a7e53c9a7d502a3feb3b72e0c83c9d45a7e547d61d3a055aa628460f014",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 798720,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 426998,
+          "material_variant": "near"
+        },
+        {
+          "state": "before",
+          "sha256": "e1dcf741d323d9b3d22ee99b9fd1b072121b6e17368341e885269978a20f4d79",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3191040,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "near"
+        },
+        {
+          "state": "after",
+          "sha256": "2c2d8d848b1b36e5956f3e530232fa32e6b62e0459254c1b7c9219e0ddb8ef4c",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3191040,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1705081,
+          "material_variant": "near"
+        },
+        {
+          "state": "before",
+          "sha256": "59b8c4bd75e0d78bed9b1d2e8c09476ae0271b0ad3745e6e625ba00350ad99bb",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 841920,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "distant"
+        },
+        {
+          "state": "after",
+          "sha256": "2107b5d12a49ebf310872a4c561d59a248ff56b40dfabbccfe7859c2550a9c38",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 841920,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 434805,
+          "material_variant": "distant"
+        },
+        {
+          "state": "before",
+          "sha256": "72b601665c144fe0bc12fc3150d387bd4f34681576f916c37315be0045d36fa8",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3367784,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0,
+          "material_variant": "distant"
+        },
+        {
+          "state": "after",
+          "sha256": "10630ce89007578e11a5757da0e9501a9d0241aafedb076e9136fc4a959cfcfd",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 3367784,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1736534,
+          "material_variant": "distant"
+        }
+      ]
+    },
+    {
+      "study": "Meadows clearing",
+      "private_report_sha256": "b4f8b59d02e22b4ee928cbdaa4e021cebcdd3be86709e01094ba1f590f7c807d",
+      "capture_count": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "scenesPreserved": true,
+        "sourceMaterialsPreserved": true,
+        "inputsPreserved": true,
+        "globalsPreserved": true,
+        "bundlesPreserved": true,
+        "ownedObjectsReleased": true
+      },
+      "captures": [
+        {
+          "state": "original",
+          "sha256": "4665a3b00fd865e6d39e49227738bc1ff3789f2adc75c46005823ba383a65931",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 1224755,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "state": "authored",
+          "sha256": "f54087a1029f3d965e0fb6d4d1662d1f16f6bfffc259b310fc2602468b87e4e8",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 1226299,
+          "overOnePixels": 930,
+          "changedFromOriginalPixels": 1231391
+        },
+        {
+          "state": "original",
+          "sha256": "5b6df3241b6d6c5101bc2766cc8a45d90b48793c3afab388a204a08f853e44fa",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 4895046,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "state": "authored",
+          "sha256": "f86800bf0c9ab0268d1ab4958ebce480d90e6c7f7e0314c4c48d697c0298e7a9",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 4907488,
+          "overOnePixels": 5236,
+          "changedFromOriginalPixels": 4907016
+        }
+      ]
+    },
+    {
+      "study": "Ground and grass",
+      "private_report_sha256": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc",
+      "capture_count": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "scenesPreserved": true,
+        "sourceMaterialsPreserved": true,
+        "inputsPreserved": true,
+        "globalsPreserved": true,
+        "bundlesPreserved": true,
+        "ownedObjectsReleased": true
+      },
+      "captures": [
+        {
+          "state": "original",
+          "sha256": "42541924724470ec4e32280b200c0cd10ed47e080ade8bde02fe9ac34f809226",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 1531990,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "state": "authored",
+          "sha256": "2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 1531463,
+          "overOnePixels": 805,
+          "changedFromOriginalPixels": 1197395
+        },
+        {
+          "state": "original",
+          "sha256": "58aee23b6f248e8c5f82c6285c652afb7771d4d9089f70de910a2ea362b7d64f",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 6126961,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "state": "authored",
+          "sha256": "d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 6134911,
+          "overOnePixels": 4024,
+          "changedFromOriginalPixels": 4783092
+        }
+      ]
+    },
+    {
+      "study": "Beech detail",
+      "private_report_sha256": "5bf19c2d93822443261ee0bb71c683fe358da69e134919c9e378d5fde0964308",
+      "capture_count": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "scenesPreserved": true,
+        "sourceMaterialsPreserved": true,
+        "inputsPreserved": true,
+        "globalsPreserved": true,
+        "bundlesPreserved": true,
+        "ownedObjectsReleased": true
+      },
+      "captures": [
+        {
+          "state": "original",
+          "sha256": "81bbbfae695b6234cc9417c6415433452863d9a5cfb10414804f67c12cf43e42",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 1343786,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "state": "authored",
+          "sha256": "3c95cd8f86c663243341addd16012137fd2a63e4b6e88326ccf72e4958497593",
+          "width": 1920,
+          "height": 1080,
+          "occupiedPixels": 1338890,
+          "overOnePixels": 1811,
+          "changedFromOriginalPixels": 1465002
+        },
+        {
+          "state": "original",
+          "sha256": "d07ac631ddcfb1ca52f71a607fe1cbf01649d00b0512d2527e8a7cb1e0a725e2",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 5373873,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "state": "authored",
+          "sha256": "7f7e1ae5be2bf1441ab883e4c3262b0a8de03a93e78daade16802977291a9ea7",
+          "width": 3840,
+          "height": 2160,
+          "occupiedPixels": 5363477,
+          "overOnePixels": 9718,
+          "changedFromOriginalPixels": 5851862
+        }
+      ]
+    }
+  ],
+  "review": {
+    "terrain_material_report_sha256": "e5a57f4c22d3b9d93cdc9842f2926646dfc2211deaa87c14bf3d18fcb9c1ad4e",
+    "clearing_report_sha256": "dcd49a76dab6c76193aed79beb0672a730584864bba6df54377595c5e09d6e9f"
+  },
+  "findings": [
+    "New cliff and sand color reads through the original terrain shader at 1080p and 4K.",
+    "Repeated cliff landmarks and retained normal detail still need art review.",
+    "The clearing exposes overly pale beech bark, busy coarse ground and bright canopy highlights; coordinated revisions are in progress."
+  ],
+  "limitations": [
+    "Lossless native capture inputs remain private; reviewed WebP render comparisons are published separately with game-content credit.",
+    "Dry daylight, frozen wind and wetness, no cast shadows, manually selected tree LODs.",
+    "The source diffuse array remains 256px Point sampled; 512px and 1024px source fits have no native array-resolution approval.",
+    "Grass retains its separate source terrain-color companion.",
+    "These terrain roles are shared across biomes; other biome behavior is unvalidated.",
+    "Original normal maps remain controls. No companion-map, live-world, performance, full-array or final-art approval.",
+    "The current runtime cannot install terrain-array replacements. The installed game and release package are unchanged."
+  ],
+  "awarded_inventory_stages": [],
+  "original_game_pixels_in_public_artwork": false
+}

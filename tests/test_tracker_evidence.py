@@ -179,6 +179,129 @@ class PublicEvidenceTests(unittest.TestCase):
             self.page()
 
 
+class LandscapeEvidenceTests(unittest.TestCase):
+    def setUp(self):
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.root = Path(temp.name)
+        self.path = 'docs/evidence/meadows-landscape-native.json'
+        self.data = json.loads((Path(__file__).resolve().parents[1] / self.path).read_bytes())
+        self.record = {'id': 'landscape-fixture', 'path': self.path,
+                       'title': 'Meadows landscape studies',
+                       'scope': 'Individual layer studies and a separate synthetic clearing.',
+                       'targets': [{'asset_id': self.data['terrain_array_id'], 'stages': []}]}
+        self.write_source()
+
+    def write_source(self):
+        content = json.dumps(self.data).encode()
+        path = self.root / self.path
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_bytes(content)
+        self.record['sha256'] = hashlib.sha256(content).hexdigest()
+
+    def page(self):
+        return exporter.evidence_page(self.root, self.record, '2026-09-13T06:00:00Z')
+
+    def test_bounded_landscape_summary_keeps_studies_and_claims_separate(self):
+        page = self.page()
+        for text in ('Native capture frames</td><td>36',
+                     'Individual terrain-layer frames</td><td>24',
+                     'Separate synthetic clearing frames</td><td>12',
+                     'Frames with clamped HDR highlights</td><td>6',
+                     'combined ground, cliff and sand array', 'No inventory completion stages',
+                     'installed game', 'final artwork approval', 'Reference only'):
+            self.assertIn(text, page)
+        self.assertNotIn('<td>native_validated</td>', page)
+        self.assertEqual(exporter.output_filename(self.path),
+                         'docs__evidence__meadows-landscape-native.json.html')
+
+    def test_gallery_link_is_fixed_and_separate_from_the_evidence_frame_scope(self):
+        self.data['gallery_url'] = 'https://unreviewed.example/private'
+        self.write_source()
+        page = self.page()
+        self.assertEqual(Links(page).links, ['../', '../landscape/'])
+        self.assertIn('reviewed WebP render comparisons', page)
+        self.assertIn('game-content credit', page)
+        self.assertIn('Lossless native capture inputs remain private', page)
+        self.assertNotIn(self.data['gallery_url'], page)
+        self.assertIn('Native capture frames</td><td>36', page)
+
+    def test_source_prose_paths_coordinates_and_frame_records_are_not_exported(self):
+        marker = 'unreviewed-source-marker'
+        for key in ('status', 'engine', 'scope', 'findings', 'limitations'):
+            self.data[key] = {'local/unpublished.png': marker}
+        self.data['clearing']['geometry'] = {'source_coordinates': [123.45, 6.7]}
+        self.data['runs'][0]['private_path'] = 'local/unpublished.png'
+        self.data['runs'][0]['captures'][0]['source_coordinates'] = marker
+        self.write_source()
+        page = self.page()
+        for value in (marker, 'local/unpublished.png', 'source_coordinates',
+                      self.data['runs'][0]['private_report_sha256'],
+                      self.data['runs'][0]['captures'][0]['sha256']):
+            self.assertNotIn(value, page)
+        self.assertEqual(Links(page).links, ['../', '../landscape/'])
+
+    def test_selected_nested_values_require_bounded_scalar_types(self):
+        original = copy.deepcopy(self.data)
+        for value in (True, -1, 1.5, 'local/unpublished.png', {'private': [1, 2]}, float('nan')):
+            with self.subTest(value=value):
+                self.data = copy.deepcopy(original)
+                self.data['runs'][0]['captures'][0]['occupiedPixels'] = value
+                self.write_source()
+                with self.assertRaises(ValueError):
+                    self.page()
+
+    def test_malformed_counts_cases_and_capture_pairs_are_rejected(self):
+        original = copy.deepcopy(self.data)
+        mutations = [
+            lambda d: d.update(schema_version=True),
+            lambda d: d.update(authored_terrain_layers=[4.0, 9.0]),
+            lambda d: d.update(capture_count=35),
+            lambda d: d.update(runs={}),
+            lambda d: d['runs'].append(copy.deepcopy(d['runs'][0])),
+            lambda d: d['runs'][0].update(study='local/unpublished.png'),
+            lambda d: d['runs'][0].update(capture_count=7),
+            lambda d: d['runs'][0]['captures'].__setitem__(1, copy.deepcopy(d['runs'][0]['captures'][0])),
+            lambda d: d['runs'][0]['captures'][0].update(width=512),
+            lambda d: d['runs'][0]['captures'][0].update(overOnePixels=1920 * 1080 + 1),
+            lambda d: d['runs'][0]['captures'][0].update(sha256={'private': 'path'}),
+            lambda d: d['composition'].update(source_normal_layers_preserved={'private': 'path'}),
+            lambda d: d['runs'][0]['checks'].update(cleanupPassed='true'),
+        ]
+        for index, mutate in enumerate(mutations):
+            with self.subTest(index=index):
+                self.data = copy.deepcopy(original)
+                mutate(self.data)
+                self.write_source()
+                with self.assertRaises(ValueError):
+                    self.page()
+
+    def test_false_preservation_check_is_shown_as_failure(self):
+        self.data['runs'][4]['checks']['globalsPreserved'] = False
+        self.write_source()
+        self.assertIn('Global state preserved across studies</td><td>FAIL', self.page())
+
+    def test_combined_array_and_new_completion_claims_require_another_review(self):
+        for field, value in [('awarded_inventory_stages', ['native_validated']),
+                             ('original_game_pixels_in_public_artwork', 'false')]:
+            with self.subTest(field=field):
+                original = self.data[field]
+                self.data[field] = value
+                self.write_source()
+                with self.assertRaises(ValueError):
+                    self.page()
+                self.data[field] = original
+        self.data['clearing']['cliff_and_sand_replacements_included'] = True
+        self.write_source()
+        with self.assertRaises(ValueError):
+            self.page()
+        self.data['clearing']['cliff_and_sand_replacements_included'] = False
+        self.write_source()
+        self.record['targets'][0]['stages'] = ['native_validated']
+        with self.assertRaises(ValueError):
+            self.page()
+
+
 class CompleteExportTests(unittest.TestCase):
     """Run the real exporter against a copied, pinned metadata snapshot."""
     def setUp(self):
@@ -226,7 +349,10 @@ class CompleteExportTests(unittest.TestCase):
         self.assertEqual(set(contents), expected)
         for name, data in contents.items():
             page = data.decode()
-            self.assertEqual(Links(page).links, ['../'], name)
+            links = ['../']
+            if name == 'docs__evidence__meadows-landscape-native.json.html':
+                links.append('../landscape/')
+            self.assertEqual(Links(page).links, links, name)
             self.assertIsNone(re.search(r'(?i)/home/|local/|steamapps|valheim_Data|\.resS|src/|tools/|source_hashes|renderPath|[\w.+-]+@[\w.-]+', page), name)
         for evidence in self.manifest['evidence']:
             page = contents[evidence['path'].replace('/', '__') + '.html'].decode()
@@ -244,6 +370,22 @@ class CompleteExportTests(unittest.TestCase):
         source = self.root / self.manifest['evidence'][-1]['path']
         source.write_bytes(source.read_bytes() + b' ')
         with self.assertRaisesRegex(ValueError, 'hash'):
+            self.export()
+        self.assertEqual({p.name: p.read_bytes() for p in self.output.iterdir()}, previous)
+
+    def test_malformed_rehashed_landscape_preserves_previous_export(self):
+        self.export()
+        previous = {p.name: p.read_bytes() for p in self.output.iterdir()}
+        record = next(row for row in self.manifest['evidence']
+                      if row['path'] == 'docs/evidence/meadows-landscape-native.json')
+        path = self.root / record['path']
+        data = json.loads(path.read_bytes())
+        data['runs'][0]['captures'] = {'unsafe': 'local/unpublished.png'}
+        content = json.dumps(data).encode()
+        path.write_bytes(content)
+        record['sha256'] = hashlib.sha256(content).hexdigest()
+        self.write_manifest()
+        with self.assertRaises(ValueError):
             self.export()
         self.assertEqual({p.name: p.read_bytes() for p in self.output.iterdir()}, previous)
 
@@ -293,7 +435,7 @@ class CompleteExportTests(unittest.TestCase):
             exporter.export_pages(self.root, self.manifest_path, self.output, check=True)
         self.assertEqual(changed.read_bytes(), b'stale page')
 
-    def test_next_contribution_copies_required_inputs_and_exports_fourteenth_page(self):
+    def test_next_contribution_copies_required_inputs_and_exports_one_more_page(self):
         # Build a real source fixture containing one new authored review, then
         # copy it through the same setup path used by future repository tests.
         repository = Path(__file__).resolve().parents[1]
@@ -324,6 +466,7 @@ class CompleteExportTests(unittest.TestCase):
         # additional contributor records are added to the real repository.
         self.manifest['evidence'] = [record for record in self.manifest['evidence']
                                      if not exporter.contribution_path(record['path'])]
+        expected_pages = len(self.manifest['evidence']) + len(exporter.DOCUMENTS) + 1
         self.manifest['evidence'].append({'id': 'contributor-fixture', 'path': review_path,
                                          'sha256': hashlib.sha256(source.read_bytes()).hexdigest(),
                                          'title': 'Contributor fixture', 'scope': 'One exact authored target.',
@@ -336,13 +479,13 @@ class CompleteExportTests(unittest.TestCase):
         self.write_manifest()
         self.output = self.root / 'local/tracker-public-evidence'
         result = self.export()
-        self.assertEqual(result['pages'], 14)
+        self.assertEqual(result['pages'], expected_pages)
         page = self.output / 'docs__evidence__contributions__contributor-fixture.json.html'
         self.assertTrue(page.is_file())
         self.assertIn(exact_id, page.read_text())
         self.assertEqual((self.root / artifact_path).read_bytes(), b'owned artwork fixture content')
         self.assertEqual(exporter.export_pages(self.root, self.manifest_path, self.output, check=True),
-                         {'pages': 14, 'current': True})
+                         {'pages': expected_pages, 'current': True})
 
 
 class ContributionEvidenceTests(unittest.TestCase):
