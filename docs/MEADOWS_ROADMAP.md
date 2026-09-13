@@ -54,9 +54,11 @@ materials using the same texture for emission are excluded. Its brighter
 surface, retained gloss, world visibility and shared gameplay contexts remain
 under review.
 
-Ordinary mushroom inspection resolves its separate cap, underside and stalk
-regions. It shares a normal with other mushroom colors and has configured uses
-beyond the Meadows. Original artwork and exact seam fitting are in progress;
-no mushroom inventory stage is checked yet.
+[Ordinary mushrooms](MUSHROOM.md) now have owned 512px and 256px opaque cap,
+underside and stalk atlases. All 120 native frames pass across five retained
+rest transforms, including top and underside views at 1080p and 4K. The shared
+original normal remains a control. Brighter cream, rim seams, coarse mip color
+mixing, picking and distance review remain open. Configured use also includes
+the Black Forest and Swamp.
 
 These batches advance material coverage without claiming a playable biome. Placed-world scope, companion channels, actual shaders, weather, streaming, measured performance, and final art review remain separate acceptance work.

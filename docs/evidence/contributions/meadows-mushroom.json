@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3959143803454952172",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7556872827288687829",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Owned russet cap and cream stalk ancestry produces opaque 512px and 256px atlases. The portable helper reproduces both bases from the owned master.",
+      "passed": true
+    },
+    {
+      "name": "Exact UV and rest-transform review covers five consumers of the retained 37-vertex, 45-triangle mesh, including one inactive item node.",
+      "passed": true
+    },
+    {
+      "name": "All 19 compressed BC3 mips pass decoded and exact payload checks. Both base mips pass native GPU sampling and sampler checks.",
+      "passed": true
+    },
+    {
+      "name": "The native candidates use Repeat, Trilinear, anisotropy 4 and mip bias 0, with complete mip chains and no readable CPU copy.",
+      "passed": true
+    },
+    {
+      "name": "120 original Standard-material frames cover five transforms, front/rear/top/underside at 1080p and 4K. Source state and cleanup pass with zero errors or warnings.",
+      "passed": true
+    },
+    {
+      "name": "Original normal, zero emission and other material controls remain intact. Brighter cream, rim seams, coarse mips and companion shading require further review.",
+      "passed": true
+    },
+    {
+      "name": "Rest draws do not validate picking, distance transitions, world integration, final art or representative hardware performance.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/mushroom-layout.json SHA256 e4cc6f9cc6d363cefae4748af0f17d82d0927bdaa61facff243ad460ba6e8d0a",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/mushroom-native-material.json SHA256 7402f7e19947541efa3d00a6b848142653ce9d0ef081fd3c31c979314a089bc1",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 029868a280a3a2a3e5f90fd7abe3cb7b6c0c76e31ed59d58e010d7952dd54050",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/asset-validation.json SHA256 680972e2a0a95de2286de0896582a7d1727be24a5de91c42a1455be41d2b3e04",
+      "passed": true
+    },
+    {
+      "name": "assets/meadows/mushroom-recipe.json SHA256 b1f52236f5893235482fda464f27d8141fb74f829b3fe4f9cb243c95e9be3f01",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/mushroom-cap-source-v1.png",
+      "sha256": "a7488bf771384e3fe063fb41fb7e4a5f9b5dc4b5a08f862361b0edf91933c5bc"
+    },
+    {
+      "path": "assets/meadows/mushroom-stalk-source-v1.png",
+      "sha256": "2ff4874897f13c0fb4c12279e02322921718a4ec515477960eed14163fe11d04"
+    },
+    {
+      "path": "assets/meadows/mushroom-atlas-source-v1.png",
+      "sha256": "dff9af0a61c0e6da9f28ab66b3695f15c04d3fff10cd4acaab11bbbe8dadad34"
+    },
+    {
+      "path": "assets/meadows/mushroom-atlas-hd-v1.png",
+      "sha256": "94bc997a44d0a5de8fa7e38c37f8d7f87952c6d21c42d2c2b4fd2d64ac6ec58d"
+    },
+    {
+      "path": "assets/meadows/mushroom-atlas-balanced-v1.png",
+      "sha256": "9c40bc014fbeeda426b8fcc25dcdd06afdd63f58650bc31bcb2c2434b3c77a94"
+    }
+  ]
+}

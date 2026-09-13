@@ -767,6 +767,147 @@
       "credit": "Valheim Impact contributors",
       "license": "CC-BY-4.0",
       "source": "project-authored artwork"
+    },
+    {
+      "key": "mushroom_cap_source",
+      "dest": "assets/meadows/mushroom-cap-source-v1.png",
+      "status": "authored-surface-source",
+      "sha256": "a7488bf771384e3fe063fb41fb7e4a5f9b5dc4b5a08f862361b0edf91933c5bc",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "mushroom_stalk_source",
+      "dest": "assets/meadows/mushroom-stalk-source-v1.png",
+      "status": "authored-surface-source",
+      "sha256": "2ff4874897f13c0fb4c12279e02322921718a4ec515477960eed14163fe11d04",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "mushroom_atlas_source",
+      "dest": "assets/meadows/mushroom-atlas-source-v1.png",
+      "status": "fitted-owned-atlas-source",
+      "sha256": "dff9af0a61c0e6da9f28ab66b3695f15c04d3fff10cd4acaab11bbbe8dadad34",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/mushroom-cap-source-v1.png",
+          "sha256": "a7488bf771384e3fe063fb41fb7e4a5f9b5dc4b5a08f862361b0edf91933c5bc",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGB"
+        },
+        {
+          "path": "assets/meadows/mushroom-stalk-source-v1.png",
+          "sha256": "2ff4874897f13c0fb4c12279e02322921718a4ec515477960eed14163fe11d04",
+          "dimensions": [
+            1254,
+            1254
+          ],
+          "mode": "RGB"
+        }
+      ],
+      "layout_informed_by_retained_uv_review": true,
+      "ancestry_scope": "The owned cap and stalk surfaces were fitted into the opaque atlas. Original geometry and mask payloads are excluded."
+    },
+    {
+      "key": "mushroom_atlas_hd",
+      "dest": "assets/meadows/mushroom-atlas-hd-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "94bc997a44d0a5de8fa7e38c37f8d7f87952c6d21c42d2c2b4fd2d64ac6ec58d",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/mushroom-atlas-source-v1.png",
+          "sha256": "dff9af0a61c0e6da9f28ab66b3695f15c04d3fff10cd4acaab11bbbe8dadad34"
+        }
+      ],
+      "recipe": "assets/meadows/mushroom-recipe.json"
+    },
+    {
+      "key": "mushroom_atlas_balanced",
+      "dest": "assets/meadows/mushroom-atlas-balanced-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "9c40bc014fbeeda426b8fcc25dcdd06afdd63f58650bc31bcb2c2434b3c77a94",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/mushroom-atlas-source-v1.png",
+          "sha256": "dff9af0a61c0e6da9f28ab66b3695f15c04d3fff10cd4acaab11bbbe8dadad34"
+        }
+      ],
+      "recipe": "assets/meadows/mushroom-recipe.json"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."

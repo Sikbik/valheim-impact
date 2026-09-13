@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3959143803454952172",
+  "retained_normal_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2362882054155494049",
+  "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8680085326074669664",
+  "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7556872827288687829",
+  "scope": "Owned cap, stalk and underside colors fitted to one retained opaque mesh. Original pixels, masks and geometry payloads are excluded from distributed artwork.",
+  "vertices": 37,
+  "triangles": 45,
+  "original_albedo_dimensions": [
+    32,
+    32
+  ],
+  "original_albedo_mips": 6,
+  "original_albedo_alpha": [
+    255,
+    255
+  ],
+  "material": {
+    "shader": "Standard",
+    "mode": "opaque",
+    "glossiness": 0.2199999988079071,
+    "normal_scale": 1,
+    "tint": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "emission_color": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "keywords": [
+      "_EMISSION",
+      "_NORMALMAP"
+    ],
+    "original_normal_is_comparison_control": true
+  },
+  "shared_scope": {
+    "serialized_consumers": 5,
+    "cases": [
+      "item",
+      "inactive-item",
+      "pickable",
+      "temple-one",
+      "temple-two"
+    ],
+    "inactive_nodes": 1,
+    "configured_biomes": [
+      "Meadows",
+      "Black Forest",
+      "Swamp"
+    ],
+    "normal_sharing_excludes_other_mushroom_colors": true
+  },
+  "recipe": {
+    "path": "assets/meadows/mushroom-recipe.json",
+    "sha256": "b1f52236f5893235482fda464f27d8141fb74f829b3fe4f9cb243c95e9be3f01"
+  },
+  "base_edge_samples": {
+    "scope": "Bilinear samples at paired retained UV edges, encoded RGB code differences; not all-mip seamless approval",
+    "hd": {
+      "mean": 1.089,
+      "maximum": 16.107
+    },
+    "balanced": {
+      "mean": 1.15,
+      "maximum": 13.827
+    }
+  },
+  "limits": [
+    "The portable helper reproduces final bases from an owned arranged atlas source, not the upstream arrangement.",
+    "Cap and cream colors mix strongly in coarse mips; separate distance review is required.",
+    "Retained geometry and rest transforms do not establish picking, gameplay, companion-normal or final-art approval."
+  ]
+}

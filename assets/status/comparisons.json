@@ -128,6 +128,14 @@
       "source_sha256": "87bb36cb4fd07085d5dad411d2371a02366452631da52caaebe4325f82e94dc3",
       "label": "Flint surface candidates",
       "scope": "Owned 1024px and 512px opaque surfaces for one exact flint material. All five retained mesh layouts have scoped UV and native comparison evidence. Nine texture-sharing emission materials are excluded. World, distance and final art review remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3959143803454952172",
+      "file": "after-mushroom.webp",
+      "source": "assets/meadows/mushroom-atlas-hd-v1.png",
+      "source_sha256": "94bc997a44d0a5de8fa7e38c37f8d7f87952c6d21c42d2c2b4fd2d64ac6ec58d",
+      "label": "Mushroom material candidates",
+      "scope": "Owned 512px and 256px cap, stalk and underside atlases. Five retained rest transforms have scoped UV and native evidence. Shared original normal, distance, world and final art remain open."
     }
   ]
 }

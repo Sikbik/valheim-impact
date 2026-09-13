@@ -1765,6 +1765,22 @@
       "alpha_mean_absolute_error": 0.0,
       "coverage_at_128": 1.0,
       "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "mushroom_hd_albedo",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 2.4312591552734375,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "mushroom_balanced_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 2.43035888671875,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
     }
   ]
 }
