@@ -1,0 +1,321 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "scope": "Albedo-only original Standard-material comparison on exact retained geometry and two representative rest transforms. Other placements have offline scope only.",
+  "unity_version": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "frame_count": 24,
+  "source_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5156263323322596695",
+  "source_albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4336459423859995684",
+  "retained_normal_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-930578383931095846",
+  "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5184478007217032880",
+  "source_bundle_sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+  "source_shader_bundle_sha256": "c4d130a0b3ec61c4b5800a3c3bb15672d66efcc24cff58e3b78799b8f730b88f",
+  "private_geometry_sha256": "18a866beba83ec335f05bb1615a77b48b53fc8a42debc5995fbaae48a9270f28",
+  "private_fixture_source_sha256": "651006740a11d3f26cb13f23c7ccfb7b61a02ac2c4603a6339ab2ee302ee4d56",
+  "source_association": "The source snapshot hash is verified during execution. Orchestration records identify the file supplied for compilation; the module ID identifies the loaded assembly.",
+  "native_catalog_sha256": "37845bf826374a8f2b7679f658fc0bd4acba44ed7ac16f4cedfaf18e510e2a08",
+  "owned_textures": [
+    {
+      "id": "raspberry_hd_albedo",
+      "sha256": "5b9a016f229568515b04aa29721e74d65c298ba6653b2e3feb08914bb38cb35f",
+      "payloadSha256": "4603958ec1df63fcc4f81c81c5b736026430f6905c9544880d9a31d4bf551746",
+      "width": 512,
+      "height": 512,
+      "mipCount": 10,
+      "payloadBytes": 349552,
+      "isSrgb": true,
+      "wrapMode": "repeat"
+    },
+    {
+      "id": "raspberry_balanced_albedo",
+      "sha256": "ffbb02c5fb4af031d3f48fb75493d369ba1259c8ed751db33ec75c3d2899f247",
+      "payloadSha256": "bb6efc818af2acd2c7c6abfcdd25046169e2abe257a3f1ff218ab8b0356ce45a",
+      "width": 256,
+      "height": 256,
+      "mipCount": 9,
+      "payloadBytes": 87408,
+      "isSrgb": true,
+      "wrapMode": "repeat"
+    }
+  ],
+  "sampler": "BC3 sRGB, Repeat U/V/W, Trilinear, anisotropy 4, mip bias 0, CPU unreadable",
+  "orthographic_vertical_span": 0.5,
+  "encoding": "Native linear HDR values are checked, clamped to [0,1] and sRGB-encoded for PNG; no tone mapping.",
+  "runs": [
+    {
+      "case": "bush-fruit",
+      "private_report_sha256": "9faf48e6e2f95b01944e7f486e0d47efe056d93b07578b13e102065257203288",
+      "execution_module_version_id": "98f18303-d8fb-419e-ad5a-0a0b350b75f5",
+      "captures": [
+        {
+          "variant": "bush-fruit-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "5729fd840324d5132009f88132934e6269efa5642c7dc5e5ea4e6768518ba5e3",
+          "occupiedPixels": 117703,
+          "overOnePixels": 659,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "bush-fruit-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "d04ca34527a59c468de3b551a54b6ea21e5ea9a6516e6d892964d9133627d985",
+          "occupiedPixels": 117703,
+          "overOnePixels": 1018,
+          "changedFromOriginalPixels": 117701
+        },
+        {
+          "variant": "bush-fruit-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "ce0543fd14a9e9d3f7954b29a7dbe2338ecc26631214d905f19cbe39199b2cda",
+          "occupiedPixels": 117703,
+          "overOnePixels": 881,
+          "changedFromOriginalPixels": 117703
+        },
+        {
+          "variant": "bush-fruit-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "eb061d311875fd9a29cdc91e4705074cd435cd444f7b2d6a203ee8e6f8d9dc87",
+          "occupiedPixels": 470837,
+          "overOnePixels": 2659,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "bush-fruit-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "bdb79e4a09d436a171cb9b27162b4980469ba8a29f255e25a6e8cd00817cd375",
+          "occupiedPixels": 470837,
+          "overOnePixels": 4024,
+          "changedFromOriginalPixels": 470833
+        },
+        {
+          "variant": "bush-fruit-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "1215cb09caea25815c2d11a077e63c04fad1c32ff15c64ac02fc4887ed5d04cf",
+          "occupiedPixels": 470837,
+          "overOnePixels": 3515,
+          "changedFromOriginalPixels": 470836
+        },
+        {
+          "variant": "bush-fruit-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "a2e5254c9b5a1e7e38a76c08024fac608a04eae9cbbc91531669bde332f5cbe3",
+          "occupiedPixels": 110456,
+          "overOnePixels": 282,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "bush-fruit-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "c5d3a3a4dbb8e0dbd2688d5732dfe47553e756227cb7ee59a8eaefafe1e50e52",
+          "occupiedPixels": 110456,
+          "overOnePixels": 351,
+          "changedFromOriginalPixels": 110450
+        },
+        {
+          "variant": "bush-fruit-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "a48a9f2c015777c92a318137809b075bea41764775181c998b681af4e098d72b",
+          "occupiedPixels": 110456,
+          "overOnePixels": 350,
+          "changedFromOriginalPixels": 110441
+        },
+        {
+          "variant": "bush-fruit-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "9231ca50ca41a312bcb2bd6479e4a3746bc805c3b2216ed28264532179e4b2b9",
+          "occupiedPixels": 441862,
+          "overOnePixels": 1139,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "bush-fruit-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "b4bd067212c6f0a13a7bc045e478b4b4c8983f3247a2e09b5a82730e211ec025",
+          "occupiedPixels": 441862,
+          "overOnePixels": 1450,
+          "changedFromOriginalPixels": 441830
+        },
+        {
+          "variant": "bush-fruit-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "2aaa9346f9adf32699d180c7da87ade2134797a64b45b40f85f56d186fb214b9",
+          "occupiedPixels": 441862,
+          "overOnePixels": 1447,
+          "changedFromOriginalPixels": 441802
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "case": "item",
+      "private_report_sha256": "56cb0b090b07175a33d80ad8c7dc5edd87fc909fcee037b05b456d4cf02e8fa7",
+      "execution_module_version_id": "bba6330e-60b8-4eb6-98c2-d41b902f23e0",
+      "captures": [
+        {
+          "variant": "item-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "b1d327cd06989fe5e7b30ed311fed72a79e2a668d3c77a628642fc8f79addea0",
+          "occupiedPixels": 164834,
+          "overOnePixels": 1009,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "2fbbc825fa6718ccb60e1c6648e15c4c95eda09eb4613b223df841f110f75936",
+          "occupiedPixels": 164834,
+          "overOnePixels": 1129,
+          "changedFromOriginalPixels": 164834
+        },
+        {
+          "variant": "item-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "4049203a736d28e2e567456e248f6986287b3307481dab8a75b97a6ea7e74f4b",
+          "occupiedPixels": 164834,
+          "overOnePixels": 1298,
+          "changedFromOriginalPixels": 164834
+        },
+        {
+          "variant": "item-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "16891546a615298597efd1583820d1a5124bda0ee2b8ae98b9c43325fd354911",
+          "occupiedPixels": 659340,
+          "overOnePixels": 4043,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "bead4840480f621238c53573a274aca291cdf20e3a3b84c27664fae1d7de3573",
+          "occupiedPixels": 659340,
+          "overOnePixels": 4518,
+          "changedFromOriginalPixels": 659340
+        },
+        {
+          "variant": "item-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "a908c107764fd5f3f2f8fa6adaeb2abd5601136336ba961ced41b5fd1397fd0f",
+          "occupiedPixels": 659340,
+          "overOnePixels": 5124,
+          "changedFromOriginalPixels": 659340
+        },
+        {
+          "variant": "item-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "e9f83215eb634a20cff2ddd5217a254e74c84d83da9b8d47bbf7893ed7a98dfc",
+          "occupiedPixels": 164837,
+          "overOnePixels": 2032,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "67cb6413909b2b29da0913980459f807ddf5216fac107dd8959314a1bbd5c72e",
+          "occupiedPixels": 164837,
+          "overOnePixels": 2285,
+          "changedFromOriginalPixels": 164829
+        },
+        {
+          "variant": "item-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "44079536503cdbffb43454ed06719bf84fc84f97a88ec9d7a304e0a2e004ae18",
+          "occupiedPixels": 164837,
+          "overOnePixels": 2262,
+          "changedFromOriginalPixels": 164806
+        },
+        {
+          "variant": "item-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "fe10f66d3f008e6be1ba9de2e79b6a906aa22e453e00d9ceaf20217f26c6125d",
+          "occupiedPixels": 659346,
+          "overOnePixels": 8118,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "f603d5a74e725c9f734eedf2858cf89b60a1bdfbe7239121d4c4f1f0d12ba262",
+          "occupiedPixels": 659346,
+          "overOnePixels": 9150,
+          "changedFromOriginalPixels": 659288
+        },
+        {
+          "variant": "item-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "81cf477f0e9ecb173610db41ee73e18ca6ccc681e990dbfdcd00a74cb412486c",
+          "occupiedPixels": 659346,
+          "overOnePixels": 9055,
+          "changedFromOriginalPixels": 659211
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "limits": [
+    "The retained 32px original normal causes visible blocky highlights and is not approved as a companion to the new artwork.",
+    "The complete bush and its foliage are not rendered; these are isolated fruit draws.",
+    "No live LOD transitions, world integration, runtime binding, representative performance or final art approval."
+  ],
+  "art_approved": false,
+  "world_validated": false,
+  "companion_normal_approved": false,
+  "performance_validated": false
+}

@@ -444,6 +444,54 @@
       "alpha_policy": "cutout",
       "alpha_cutoff": 0.14000000059604645,
       "generate_normal": false
+    },
+    {
+      "id": "raspberry_hd",
+      "source": "assets/meadows/raspberry-atlas-hd-v1.png",
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "wrap_mode": "repeat",
+      "alpha_policy": "opaque",
+      "generate_normal": false
+    },
+    {
+      "id": "raspberry_balanced",
+      "source": "assets/meadows/raspberry-atlas-balanced-v1.png",
+      "size": [
+        256,
+        256
+      ],
+      "periodic": false,
+      "wrap_mode": "repeat",
+      "alpha_policy": "opaque",
+      "generate_normal": false
+    },
+    {
+      "id": "flint_hd",
+      "source": "assets/meadows/flint-hd-v1.png",
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": false,
+      "wrap_mode": "repeat",
+      "alpha_policy": "opaque",
+      "generate_normal": false
+    },
+    {
+      "id": "flint_balanced",
+      "source": "assets/meadows/flint-balanced-v1.png",
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "wrap_mode": "repeat",
+      "alpha_policy": "opaque",
+      "generate_normal": false
     }
   ]
 }

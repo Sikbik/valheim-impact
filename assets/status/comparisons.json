@@ -112,6 +112,22 @@
       "source_sha256": "17028ec8e889e8306b9a1d0c489be650c190fc6b6e3ab3cec3fade8fd27fa1d4",
       "label": "Dandelion atlas candidate",
       "scope": "Owned head, leaf and stem atlas. HD/Balanced native and scoped UV checks cover seven uses; world binding, distance transitions and final approval remain open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4336459423859995684",
+      "file": "after-raspberry.webp",
+      "source": "assets/meadows/raspberry-atlas-hd-v1.png",
+      "source_sha256": "d97655a5ff683f41c6b740343444b8abb92066f78d91495f451c4c680a9f4805",
+      "label": "Raspberry fruit candidates",
+      "scope": "Owned 512px and 256px opaque atlases fit the retained fruit, stem and calyx. Native material evidence covers two representative transforms. Original normal remains an unapproved comparison control; world, distance and final art review are open."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2536012081126669073",
+      "file": "after-flint.webp",
+      "source": "assets/meadows/flint-hd-v1.png",
+      "source_sha256": "87bb36cb4fd07085d5dad411d2371a02366452631da52caaebe4325f82e94dc3",
+      "label": "Flint surface candidates",
+      "scope": "Owned 1024px and 512px opaque surfaces for one exact flint material. All five retained mesh layouts have scoped UV and native comparison evidence. Nine texture-sharing emission materials are excluded. World, distance and final art review remain open."
     }
   ]
 }

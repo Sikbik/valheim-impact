@@ -590,10 +590,66 @@
         "mean_error": 0.09617030877548424,
         "max_error": 2.5904656294674453
       }
+    },
+    {
+      "id": "raspberry_hd_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
+      "gpu_sampling": {
+        "mean_error": 0.2907030309208668,
+        "max_error": 2.2190252151793004
+      }
+    },
+    {
+      "id": "raspberry_balanced_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
+      "gpu_sampling": {
+        "mean_error": 0.2935825236653472,
+        "max_error": 2.2190252151793004
+      }
+    },
+    {
+      "id": "flint_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "payload_bytes": 1398128,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
+      "gpu_sampling": {
+        "mean_error": 0.43066611472950844,
+        "max_error": 2.2190252151793004
+      }
+    },
+    {
+      "id": "flint_balanced_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
+      "gpu_sampling": {
+        "mean_error": 0.4212367372457572,
+        "max_error": 2.1703650881262035
+      }
     }
   ],
-  "compressed_payload_bytes": 26149984,
-  "native_bundles_bytes": 8808229,
+  "compressed_payload_bytes": 28334624,
+  "native_bundles_bytes": 9850386,
   "gpu_base_mip_validation": true,
   "game_validation": false,
   "note": "Native layout and GPU sampling evidence, not a VRAM or frame-time benchmark."

@@ -653,6 +653,120 @@
       "credit": "Valheim Impact contributors",
       "license": "CC-BY-4.0",
       "source": "project-authored artwork"
+    },
+    {
+      "key": "raspberry_surface_source",
+      "dest": "assets/meadows/raspberry-surface-source-v1.png",
+      "status": "authored-surface-source",
+      "sha256": "fc77fa48534dcdc3dde50e23524e6fd7b0444e663df273c5bda5e4655d43a43d",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "raspberry_atlas_hd",
+      "dest": "assets/meadows/raspberry-atlas-hd-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "d97655a5ff683f41c6b740343444b8abb92066f78d91495f451c4c680a9f4805",
+      "original_game_pixels": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "raspberry_atlas_balanced",
+      "dest": "assets/meadows/raspberry-atlas-balanced-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "43cd1cb387fba4c0734afa276a5ce918f95e6f84b598a0c87a0eb8b0173b39cd",
+      "original_game_pixels": false,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "flint_surface_source",
+      "dest": "assets/meadows/flint-surface-source-v1.png",
+      "status": "authored-surface-source",
+      "sha256": "e442822a1195d25266b0a1b34f2a3c8c604630c7454eb18729088a986725a7f5",
+      "original_game_pixels": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "flint_hd",
+      "dest": "assets/meadows/flint-hd-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "87bb36cb4fd07085d5dad411d2371a02366452631da52caaebe4325f82e94dc3",
+      "original_game_pixels": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
+    },
+    {
+      "key": "flint_balanced",
+      "dest": "assets/meadows/flint-balanced-v1.png",
+      "status": "fitted-albedo-candidate",
+      "sha256": "ba062c317bfd97e5a4d32a18bf3518fb8cc78692bdbf300087dfb016075f7a47",
+      "original_game_pixels": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."

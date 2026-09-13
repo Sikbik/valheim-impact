@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "status": "Owned source and exact-UV CPU fit reviewed for a native albedo study; native gloss, lighting, coarse mips and final material review remain open",
+  "credit": "Valheim Impact contributors",
+  "artwork_license": "CC-BY-4.0",
+  "sources": {
+    "red": {
+      "source": "assets/meadows/raspberry-surface-source-v1.png",
+      "source_sha256": "fc77fa48534dcdc3dde50e23524e6fd7b0444e663df273c5bda5e4655d43a43d",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB"
+    },
+    "leaf": {
+      "source": "assets/meadows/dandelion-leaf-source-v1.png",
+      "source_sha256": "0b585efae5dce086cff61acd100a2c46295dd7d81a52bcaa1090a7e5268758ab",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGBA"
+    }
+  },
+  "owned_only_fitting": true,
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "original_geometry_included": false,
+  "layout_informed_by_retained_uv_review": true,
+  "fitting_helper_reads_original_geometry": false,
+  "coordinate_convention": "Master pixel centers: u=(column+0.5)/2048, v=1-(row+0.5)/2048. Source image coordinates use top-left origin with integer sample centers. All interpolation and blending before quantization use float64.",
+  "master_dimensions": [
+    2048,
+    2048
+  ],
+  "functions": {
+    "C(x)": "clip(x,0,1)",
+    "S(x)": "t=C(x); return t*t*(3-2*t)",
+    "reflect(x,L)": "q=x modulo (2*(L-1)); return q when q<=L-1, otherwise 2*(L-1)-q",
+    "sample_rgb": "scipy.ndimage.map_coordinates per RGB channel, float64 input and coordinates, order=1, mode=nearest, prefilter=false. Coordinates are [source_y,source_x]; returned channels remain encoded RGB.",
+    "interpolate": "numpy.interp with constant endpoint extension"
+  },
+  "red_surface": {
+    "uniform_source_pixels_per_uv_unit": 1567.5,
+    "source_x": "reflect(627+(u-0.193187)*1567.5,1254)",
+    "source_y": "reflect((0.792281-v)*1567.5,1254)",
+    "placement": "Sample the owned square with equal scaling on both axes. The fruit region takes a central horizontal crop, preserving source cell proportions before the retained surface mapping.",
+    "edge_blend": {
+      "stage": "Before adding green regions",
+      "width_master_pixels": 41,
+      "axis_order": [
+        "columns",
+        "rows"
+      ],
+      "formula": "For d=0..40, read opposite rows or columns d and -1-d, compute mean=(low+high)/2 and weight=(1-d/41)^2. Replace each side with side*(1-weight)+mean*weight. Use copies of both sides before assignment."
+    }
+  },
+  "leaf_interiors": {
+    "rectangles_xy_exclusive": [
+      [
+        616,
+        256,
+        635,
+        1121
+      ],
+      [
+        626,
+        350,
+        671,
+        851
+      ]
+    ],
+    "minimum_allowed_source_alpha": 250,
+    "source_alpha_use": "Check that all sampled interior pixels are sufficiently opaque. Sample RGB directly, discard source alpha, and write opaque output alpha. No leaf silhouette is transferred."
+  },
+  "stem": {
+    "neck_interpolation_u": [
+      0.1686979979276657,
+      0.1859789937734604,
+      0.2022390067577362
+    ],
+    "neck_interpolation_v": [
+      0.791949987411499,
+      0.7842710018157959,
+      0.7922809720039368
+    ],
+    "horizontal_weight": "S((u-0.130)/0.020)*S((0.242-u)/0.020)",
+    "weight": "maximum(horizontal_weight*S((v-neck+0.002)/0.004),horizontal_weight*S((0.010-v)/0.010))",
+    "source_x": "616+C((u-0.1686979979276657)/(0.2022390067577362-0.1686979979276657))*18",
+    "source_y": "q=v+1 when v<0.010, otherwise v; 1120-C((q-0.7842710018157959)/(0.9868990182876587-0.7842710018157959))*864",
+    "composite": "rgb=rgb*(1-weight)+sample_rgb(leaf,source_x,source_y)*weight",
+    "padding": "The bottom 0.010 V interval continues the stem tip across the Repeat boundary. Horizontal windows extend compatible stem color beyond the used strip."
+  },
+  "calyx": {
+    "wrapped_v": "q=v-1 when v>0.9, otherwise v",
+    "weight": "S((u-0.355)/0.020)*S((0.645-u)/0.030)*S((0.145-q)/0.030)*S((q+0.030)/0.020)",
+    "band0_spine_u": [
+      0.39947399497032166,
+      0.40104201436042786,
+      0.48827099800109863,
+      0.5643010139465332
+    ],
+    "band0_spine_v": [
+      0.090324,
+      0.090324,
+      0.0921740010380745,
+      0.0921740010380745
+    ],
+    "band1_spine_u": [
+      0.39947399497032166,
+      0.5049660205841064,
+      0.579276978969574
+    ],
+    "band1_spine_v": [
+      0.04447700083255768,
+      0.04030199907720089,
+      0.04447700083255768
+    ],
+    "first_band": "q>=0.05757800117135048",
+    "along0": "C((u-0.39947399497032166)/(0.5643010139465332-0.39947399497032166))",
+    "along1": "C((0.5818300247192383-u)/(0.5818300247192383-0.39947399497032166))",
+    "source_y": "850-along*500, selecting along0 for first_band and along1 otherwise",
+    "source_x": "626+44*C((spine-q)/0.032), selecting the interpolated band0 spine for first_band and band1 otherwise",
+    "composite": "rgb=rgb*(1-weight)+sample_rgb(leaf,source_x,source_y)*weight, after the stem composite",
+    "orientation": "Each band samples one side of the owned leaf midrib. The two bands run in opposite root-to-tip directions. Retained blade mapping mirrors this half-strip across each spine.",
+    "padding": "Green windows cover both calyx bands and surrounding unused texels, including Repeat continuation at the top and bottom boundary."
+  },
+  "quantization": {
+    "rgb": "numpy.rint(rgb).clip(0,255).astype(uint8), ties to even",
+    "alpha": 255,
+    "master_mode": "RGBA"
+  },
+  "final_base_resampling": "Each output is independently resized from the quantized 2048 master using Pillow RGBA LANCZOS. The 256 output is not resized from the 512 output. Alpha remains 255.",
+  "outputs": {
+    "raspberry-atlas-hd-v1.png": {
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "sha256": "d97655a5ff683f41c6b740343444b8abb92066f78d91495f451c4c680a9f4805",
+      "rgba_sha256": "c3d904991d12a84d4008b63fe02baaa1e85a2a6ceb728b3584ae85bd0488f8fc",
+      "alpha_min": 255,
+      "alpha_max": 255
+    },
+    "raspberry-atlas-balanced-v1.png": {
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "sha256": "43cd1cb387fba4c0734afa276a5ce918f95e6f84b598a0c87a0eb8b0173b39cd",
+      "rgba_sha256": "9d57733eba20dae4dc9d3219c9ded6afbff64dea76369bf713aacfe94921465d",
+      "alpha_min": 255,
+      "alpha_max": 255
+    }
+  },
+  "wrap_mode": "repeat",
+  "generate_normal": false,
+  "material_scope": {
+    "target_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4336459423859995684",
+    "target_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5156263323322596695",
+    "target_property": "_MainTex",
+    "shader": "Standard",
+    "retained_original_normal_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-930578383931095846",
+    "alpha_semantics": "Opaque modeled fruit, stem and calyx. No alpha-cutout silhouette.",
+    "shared_scope": "One retained mesh and material across 24 serialized renderers: 21 near-bush fruit placements, one active item attachment and two inactive item nodes. This albedo does not replace bush foliage or its distant LOD."
+  },
+  "limitations": [
+    "Resolution candidates are fitting choices, not measured performance or gameplay approval.",
+    "The retained mapping repeats the source region around four fruit quadrants. Uniform image scaling avoids atlas squeeze but does not remove surface UV distortion or repeated painted features.",
+    "The pale midrib and bright fruit cells need review with the original normal and native material gloss.",
+    "Finite padding cannot isolate narrow green regions in coarse mip levels. Offline mip diagnostics show stem color mixing earlier than the calyx and eventual red mixing throughout the 4x4/2x2/1x1 tail.",
+    "Repeat padding and base edge treatment do not establish seamless appearance at every mip. Native filtering, compression, lighting and LOD behavior remain separate validation."
+  ],
+  "fitting_helper": {
+    "path": "tools/fit_raspberry.py",
+    "sha256": "0480c44ea4e9c814baf5744a57a414ed38504b53e9d6bf5cf821375eb93ecefe",
+    "dependency_manifest": "requirements-assets.txt",
+    "dependency_manifest_sha256": "b484fb6fbc42add5d47850a2e23eb01e71983d44b68fa3d698cbc3b1b8a3f35b",
+    "image_inputs": [
+      "assets/meadows/raspberry-surface-source-v1.png",
+      "assets/meadows/dandelion-leaf-source-v1.png"
+    ],
+    "geometry_inputs": [],
+    "hash_validation": "Verify both parent byte hashes before decoding and both final PNG byte hashes before creating either output. Reject linked inputs, linked output paths, existing output files and dangling output leaf symlinks. Create output files exclusively.",
+    "command": "python tools/fit_raspberry.py --root . --output-dir build/raspberry-fit"
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "scipy": "1.18.1",
+    "zlib_runtime": "1.3.2"
+  },
+  "png_encoding": {
+    "mode": "RGBA",
+    "bit_depth": 8,
+    "color_type": 6,
+    "interlace": false,
+    "optimize": false,
+    "compress_level": 6,
+    "chunks": [
+      "IHDR",
+      "IDAT",
+      "IEND"
+    ],
+    "inherited_metadata": false,
+    "color_interpretation": "Albedo RGB is staged as sRGB; alpha is uniformly opaque. PNGs have no embedded profile or text metadata."
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2536012081126669073",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-1001117759672557436",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3157006381488833980",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3738864932515717983",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1458816030085136971",
+      "stages": [
+        "uv_reviewed"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2799889797145375631",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "The owned surface reproduces both direct fitted outputs exactly. All mip alpha remains opaque, with no original pixels or masks in the authored artwork.",
+      "passed": true
+    },
+    {
+      "name": "Exact material scope covers 71 serialized renderers and five mesh layouts. Nine other materials using the texture as emission are excluded.",
+      "passed": true
+    },
+    {
+      "name": "Original MainTex scale 0.2, Repeat, opaque Standard controls and null normal binding remain intact. The spearhead study excludes its shaft material slot.",
+      "passed": true
+    },
+    {
+      "name": "Both candidates pass full BC3 mip, native payload, GPU sampling and sampler checks.",
+      "passed": true
+    },
+    {
+      "name": "Sixty original-material frames cover five representative transforms, front/rear at 1080p and 4K, with cleanup and zero errors or warnings.",
+      "passed": true
+    },
+    {
+      "name": "The brighter surface and retained gloss require scene review. Enlarged orthographic frames do not establish all shared contexts, live transitions, world binding, final art or performance approval.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/flint-layout.json SHA256 3c8b5dc3a5818d9daf60e3348f6bd1de343a064249b684ee83d4280908f9d9ad",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/flint-native-material.json SHA256 769238b63ec07e2234691022796fdbc91ec5227b0809ef859125c90f22723164",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 ec7660b2f55f95b8f77e63c8c867f8c30519a6eefae35ffcb4cc63766b36261d",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/asset-validation.json SHA256 7743aac9f387573c49cdd7f6c0015e9dc7b3f22b7bec49651b07ab5a1df28fe7",
+      "passed": true
+    },
+    {
+      "name": "assets/meadows/flint-recipe.json SHA256 8e466a6702f7c05306462d68558fd9ef478a7b81ff422bcbba2c687d2fc770de",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/flint-surface-source-v1.png",
+      "sha256": "e442822a1195d25266b0a1b34f2a3c8c604630c7454eb18729088a986725a7f5"
+    },
+    {
+      "path": "assets/meadows/flint-hd-v1.png",
+      "sha256": "87bb36cb4fd07085d5dad411d2371a02366452631da52caaebe4325f82e94dc3"
+    },
+    {
+      "path": "assets/meadows/flint-balanced-v1.png",
+      "sha256": "ba062c317bfd97e5a4d32a18bf3518fb8cc78692bdbf300087dfb016075f7a47"
+    }
+  ]
+}
