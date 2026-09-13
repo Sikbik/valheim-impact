@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Hash-verified owned bark and endgrain reproduce the opaque 1024px atlas exactly; no original pixels or masks enter the artwork.",
+      "passed": true
+    },
+    {
+      "name": "The exact 52-vertex, 64-triangle log geometry retains UVs, normals and tangents. Both log scales have scoped side and end-island review; 165 other mesh consumers remain excluded.",
+      "passed": true
+    },
+    {
+      "name": "HD 1024px and Balanced 512px albedo-only payloads pass native metadata and readback checks within the expanded 40-texture catalog.",
+      "passed": true
+    },
+    {
+      "name": "Twelve Standard-material frames cover both log scales and candidates at 1080p/4K. Checks pass without shader errors or warnings; scene and global state are restored.",
+      "passed": true
+    },
+    {
+      "name": "The exact original normal and tint are retained comparison controls. Coarse normal shading and clamped HDR highlights remain visible limitations, not companion-map or lighting approval.",
+      "passed": true
+    },
+    {
+      "name": "No runtime binding, world, physics, representative-performance, authored-model or final-art stage is claimed.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech-log-layout.json SHA256 cb89822cb93b587399d9f075bae33dc9bee452cc3237113adebd456bb44e8cbe",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/beech-log-native-material.json SHA256 e54a5a8cee09eaadfc731a98b9149fb48fa4a4fa458111d9ee408d1c91045da8",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 a11e5bc58a3664b25fab0eab58c29f262d09068ff5aaf6d01c83f9097bfdfa98",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/asset-validation.json SHA256 df961baea188ca736c6b0b492bc9f0473f1a261233363d072f065ec2ee60292a",
+      "passed": true
+    },
+    {
+      "name": "assets/meadows/beech-log-recipe.json SHA256 0b29084d749e12031e712e6c99f7e00536775a882612b6a9b640b5a11887cfee",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/beech-log-atlas-v1.png",
+      "sha256": "6b93f1e013aea0d18436af08f91b382cd5f040500892f3953686dde971718599"
+    }
+  ]
+}

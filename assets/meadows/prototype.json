@@ -383,6 +383,40 @@
       "periodic": false,
       "alpha_policy": "opaque",
       "generate_normal": false
+    },
+    {
+      "id": "beech_log_hd",
+      "source": "assets/meadows/beech-log-atlas-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "size": [
+        1024,
+        1024
+      ],
+      "periodic": false,
+      "alpha_policy": "opaque",
+      "generate_normal": false
+    },
+    {
+      "id": "beech_log_balanced",
+      "source": "assets/meadows/beech-log-atlas-v1.png",
+      "crop_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "alpha_policy": "opaque",
+      "generate_normal": false
     }
   ]
 }

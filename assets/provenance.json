@@ -546,6 +546,37 @@
         }
       ],
       "recipe": "assets/meadows/beech-stump-recipe.json"
+    },
+    {
+      "key": "beech_log_atlas",
+      "dest": "assets/meadows/beech-log-atlas-v1.png",
+      "status": "authored material-specific log atlas candidate",
+      "sha256": "6b93f1e013aea0d18436af08f91b382cd5f040500892f3953686dde971718599",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "fitted from project-authored bark and endgrain",
+      "parents": [
+        {
+          "path": "assets/meadows/beech-bark-surface-v1.png",
+          "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4"
+        },
+        {
+          "path": "assets/meadows/beech-endgrain-source-v1.png",
+          "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735"
+        }
+      ],
+      "recipe": "assets/meadows/beech-log-recipe.json"
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."

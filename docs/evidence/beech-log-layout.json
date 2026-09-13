@@ -1,0 +1,841 @@
+{
+  "schema_version": 1,
+  "scope": "Exact beech-log material consumer and atlas layout measurements, plus reproducible owned fitting and offline payload checks. No native/game/final-art approval.",
+  "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
+  "input_bundles": [
+    {
+      "name": "2c2cce25",
+      "sha256": "c4d130a0b3ec61c4b5800a3c3bb15672d66efcc24cff58e3b78799b8f730b88f",
+      "matched_inventory": true
+    },
+    {
+      "name": "c4210710",
+      "sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+      "matched_inventory": true
+    }
+  ],
+  "approvals": {
+    "art": false,
+    "native_material": false,
+    "game": false,
+    "runtime_binding": false,
+    "normal_companion": false,
+    "global_mesh_replacement": false
+  },
+  "method": {
+    "material_joins": "Actual serialized material arrays and texture transforms were compared to the exact inventory records.",
+    "triangles": "Read the exact submesh firstByte/indexCount/baseVertex descriptor. Affine UV triangles retain their full span, with only whole-triangle repeat shifts.",
+    "units": "Distinct texture-space texel centers, not projected visibility or world-surface coverage.",
+    "excluded": "Original pixels, original masks, geometry arrays, full UV arrays, shader programs and workstation locations are excluded."
+  },
+  "albedo": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407",
+    "name": "beech_log",
+    "width": 256,
+    "height": 256,
+    "format": "BC1",
+    "color_space": "gamma",
+    "mip_count": 9,
+    "compressed_payload_bytes": 43704,
+    "alpha_min": 255,
+    "alpha_max": 255,
+    "all_nine_original_mips_fully_opaque": true,
+    "filter": "point",
+    "wrap": "repeat"
+  },
+  "normal": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:8289421623877127654",
+    "name": "beech_log_n",
+    "width": 256,
+    "height": 256,
+    "format": "BC7",
+    "color_space": "linear",
+    "mip_count": 9,
+    "compressed_payload_bytes": 87408,
+    "alpha_min": 28,
+    "alpha_max": 227,
+    "alpha_semantics": "Directional normal data, not transparency.",
+    "desktop_unpack_reference": "The desktop RG-or-AG convention multiplies R by A, decodes that value and G as signed X/Y, then reconstructs positive Z. The compiled game variant still requires native verification.",
+    "diagnostic_xy_outside_unit_disc": 0,
+    "companion_status": "Original normal detail is not transferred to the owned atlas; an authored companion remains open."
+  },
+  "material": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:2002271956048927406",
+    "name": "beech_log",
+    "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+    "shader_name": "Standard",
+    "main_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407",
+    "normal_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:8289421623877127654",
+    "main_texture_scale": {
+      "x": 1,
+      "y": 1
+    },
+    "main_texture_offset": {
+      "x": 0,
+      "y": 0
+    },
+    "normal_texture_scale": {
+      "x": 1,
+      "y": 1
+    },
+    "normal_texture_offset": {
+      "x": 0,
+      "y": 0
+    },
+    "saved_values": {
+      "_Mode": 0.0,
+      "_SrcBlend": 1.0,
+      "_DstBlend": 0.0,
+      "_ZWrite": 1.0,
+      "_Cutoff": 0.5,
+      "_BumpScale": 1.0,
+      "_Glossiness": 0.0,
+      "_Metallic": 0.0,
+      "_SmoothnessTextureChannel": 0.0
+    },
+    "color_tint": {
+      "a": 1.0,
+      "b": 0.9632353186607361,
+      "g": 0.9632353186607361,
+      "r": 0.9632353186607361
+    },
+    "valid_keywords": [
+      "_NORMALMAP"
+    ],
+    "interpretation": "Saved opaque mode and parsed Standard pass state are consistent. Cutoff alone does not enable alpha testing. Native rendering was not executed."
+  },
+  "consumer_counts": {
+    "materials": 1,
+    "renderers": 2,
+    "meshes": 1,
+    "material_slot_associations": 2,
+    "other_renderers_sharing_only_the_mesh": 165
+  },
+  "consumers": [
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3946440429219332066",
+      "hierarchy": "beech_log/log",
+      "kind": "gameplay-prefab",
+      "material_slot": 0,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2002271956048927406",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+      "child_local_scale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 8.0
+      },
+      "child_local_rotation": {
+        "x": 0.7071068286895752,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.7071068286895752
+      },
+      "child_local_translation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      }
+    },
+    {
+      "renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8351220921150202249",
+      "hierarchy": "beech_log_half/PineTree_log (1)",
+      "kind": "gameplay-prefab",
+      "material_slot": 0,
+      "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2002271956048927406",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+      "child_local_scale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 3.5999999046325684
+      },
+      "child_local_rotation": {
+        "x": 0.7071068286895752,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.7071068286895752
+      },
+      "child_local_translation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": -0.0
+      }
+    }
+  ],
+  "mesh": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+    "name": "VerticalLog",
+    "material_slot": 0,
+    "submesh_count": 1,
+    "triangles": 64,
+    "vertices": 52,
+    "submesh_descriptor": {
+      "firstByte": 0,
+      "indexCount": 192,
+      "topology": "triangles",
+      "baseVertex": 0,
+      "firstVertex": 0,
+      "vertexCount": 52
+    },
+    "normals_present": true,
+    "tangents_present": true,
+    "tangent_w_min": -1,
+    "tangent_w_max": -1,
+    "islands": [
+      {
+        "name": "negative-Z convex end",
+        "triangles": 24,
+        "uv_bounds": {
+          "u_min": 0.623341977596283,
+          "u_max": 0.7303799986839294,
+          "v_min": 0.8477169871330261,
+          "v_max": 0.9591649770736694
+        },
+        "local_z_min": -1.0537220239639282,
+        "local_z_max": -0.9801350235939026,
+        "alpha_at_source_texel_centers": {
+          "pixels": 628,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        },
+        "alpha_with_one_source_texel_repeat_margin": {
+          "pixels": 744,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        }
+      },
+      {
+        "name": "positive-Z convex end",
+        "triangles": 24,
+        "uv_bounds": {
+          "u_min": 0.623341977596283,
+          "u_max": 0.7367860078811646,
+          "v_min": 0.6563730239868164,
+          "v_max": 0.765438973903656
+        },
+        "local_z_min": 0.9801759719848633,
+        "local_z_max": 1.05098295211792,
+        "alpha_at_source_texel_centers": {
+          "pixels": 638,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        },
+        "alpha_with_one_source_texel_repeat_margin": {
+          "pixels": 756,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        }
+      },
+      {
+        "name": "cylindrical bark side",
+        "triangles": 16,
+        "uv_bounds": {
+          "u_min": 0.008963000029325485,
+          "u_max": 0.5556619763374329,
+          "v_min": 0.01092700008302927,
+          "v_max": 0.9265729784965515
+        },
+        "local_z_min": -0.9801350235939026,
+        "local_z_max": 0.9801759719848633,
+        "alpha_at_source_texel_centers": {
+          "pixels": 32760,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        },
+        "alpha_with_one_source_texel_repeat_margin": {
+          "pixels": 33512,
+          "min": 255,
+          "max": 255,
+          "mean": 255.0,
+          "zero": 0,
+          "under_128": 0,
+          "under_250": 0,
+          "coverage_0_5": 1.0
+        }
+      }
+    ],
+    "end_geometry": "Each end has a 16-triangle bevel ring and an 8-triangle center fan. The center protrudes, so neither end is a planar disc. The fitting preserves this geometry.",
+    "shared_scope_limit": "Another 165 renderer records share this geometry with different materials. They are outside the beech-log texture family."
+  },
+  "owned_source": {
+    "path": "assets/meadows/beech-log-atlas-v1.png",
+    "sha256": "6b93f1e013aea0d18436af08f91b382cd5f040500892f3953686dde971718599",
+    "recipe": "assets/meadows/beech-log-recipe.json",
+    "parents": [
+      {
+        "path": "assets/meadows/beech-bark-surface-v1.png",
+        "sha256": "6fabc3e0c779f0ecbb43ce163d6378ae9a75b368ea4de1f6b8dbdd4e2b74acc4",
+        "dimensions": {
+          "width": 1024,
+          "height": 1024
+        },
+        "decode": "RGB bytes without rescaling or color transformation"
+      },
+      {
+        "path": "assets/meadows/beech-endgrain-source-v1.png",
+        "sha256": "d35e2f68f795bf3d60e8c9393ce5866dc109be57a0251e81d0d12dcc10b54735",
+        "dimensions": {
+          "width": 1254,
+          "height": 1254
+        },
+        "decode": "RGB bytes without rescaling or color transformation"
+      }
+    ],
+    "original_game_pixels": false,
+    "original_masks_used": false
+  },
+  "fitting_checks": {
+    "negative_end_centers_1024": 10147,
+    "negative_end_patch_coverage_1024": 10147,
+    "positive_end_centers_1024": 10273,
+    "positive_end_patch_coverage_1024": 10273,
+    "side_centers_1024": 525280,
+    "side_patch_overlap_1024": 0,
+    "side_patch_overlap_with_one_texel_margin_1024": 0,
+    "ends_have_separate_one_texel_margins": true,
+    "side_seam_sampling": "1024 bilinear samples along the exact two side U boundaries, spanning their complete V domain.",
+    "full_and_half_scale_limit": "Both scales retain the same UVs. The full-log and half-log source Z scales are 8 and 3.6, changing longitudinal texture density."
+  },
+  "offline_payload_validation": {
+    "method": "Prepare both full-atlas sizes using Lanczos, generate the linear-light albedo mip chain, encode BC3 and independently decode every mip. Compare both file-row and native-row storage. This does not execute an engine or game shader.",
+    "pipeline_source": "tools/asset_pipeline.py",
+    "pipeline_sha256": "6c8384a6511b61491d429c17b626182aefafb47074fb6c7ac9ad8ba8c220996c",
+    "candidates": [
+      {
+        "id": "beech_log_hd_albedo",
+        "base_width": 1024,
+        "base_height": 1024,
+        "source_sha256": "6b93f1e013aea0d18436af08f91b382cd5f040500892f3953686dde971718599",
+        "prepared_rgba_sha256": "71c4d83a2c4505fddb6d78245ddeb6abefe43da09abd450d23cee199683e6f00",
+        "prepared_png_sha256": "70db5e6bc7359d93c259af7f0d8baf17d663897eec15c06a5c5224c6b1165381",
+        "dds_sha256": "12850ded6c321589dc606924100f7e9822ab5852e4cac39aa1313fbc816943d0",
+        "unity_dds_sha256": "ba6fd3134fc311a68647c2cd6c78abe82a3e024771242c63814abbe6b21c3f91",
+        "compressed_payload_bytes": 1398128,
+        "mip_count": 11,
+        "side_seam_bilinear_samples": 1024,
+        "side_seam_rgb_mean_absolute_difference_bytes": 0.09176568614474623,
+        "side_seam_rgb_max_absolute_difference_bytes": 0.7606466970136125,
+        "decoded_bc3_side_seam_rgb_mean_absolute_difference_bytes": 0.2125391567416364,
+        "decoded_bc3_side_seam_rgb_max_absolute_difference_bytes": 8.625600562779397,
+        "island_alpha": [
+          {
+            "island": 0,
+            "texel_centers": 10147,
+            "alpha_min": 255,
+            "alpha_max": 255
+          },
+          {
+            "island": 1,
+            "texel_centers": 10273,
+            "alpha_min": 255,
+            "alpha_max": 255
+          },
+          {
+            "island": 2,
+            "texel_centers": 525280,
+            "alpha_min": 255,
+            "alpha_max": 255
+          }
+        ],
+        "mips": [
+          {
+            "level": 0,
+            "width": 1024,
+            "height": 1024,
+            "compressed_bytes": 1048576,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.231832186381022,
+            "rgb_max_absolute_error_bytes": 67.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 1,
+            "width": 512,
+            "height": 512,
+            "compressed_bytes": 262144,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.3805643717447915,
+            "rgb_max_absolute_error_bytes": 57.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 2,
+            "width": 256,
+            "height": 256,
+            "compressed_bytes": 65536,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.547337849934896,
+            "rgb_max_absolute_error_bytes": 55.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 3,
+            "width": 128,
+            "height": 128,
+            "compressed_bytes": 16384,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.7462565104166665,
+            "rgb_max_absolute_error_bytes": 55.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 4,
+            "width": 64,
+            "height": 64,
+            "compressed_bytes": 4096,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.912353515625,
+            "rgb_max_absolute_error_bytes": 39.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 5,
+            "width": 32,
+            "height": 32,
+            "compressed_bytes": 1024,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.9169921875,
+            "rgb_max_absolute_error_bytes": 34.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 6,
+            "width": 16,
+            "height": 16,
+            "compressed_bytes": 256,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.39453125,
+            "rgb_max_absolute_error_bytes": 22.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 6
+          },
+          {
+            "level": 7,
+            "width": 8,
+            "height": 8,
+            "compressed_bytes": 64,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.109375,
+            "rgb_max_absolute_error_bytes": 12.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 3
+          },
+          {
+            "level": 8,
+            "width": 4,
+            "height": 4,
+            "compressed_bytes": 16,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.0625,
+            "rgb_max_absolute_error_bytes": 5.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 4
+          },
+          {
+            "level": 9,
+            "width": 2,
+            "height": 2,
+            "compressed_bytes": 16,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 1.75,
+            "rgb_max_absolute_error_bytes": 4.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 1
+          },
+          {
+            "level": 10,
+            "width": 1,
+            "height": 1,
+            "compressed_bytes": 16,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.0,
+            "rgb_max_absolute_error_bytes": 5.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 1,
+            "side_one_texel_margin_with_endgrain_footprint": 1
+          }
+        ]
+      },
+      {
+        "id": "beech_log_balanced_albedo",
+        "base_width": 512,
+        "base_height": 512,
+        "source_sha256": "6b93f1e013aea0d18436af08f91b382cd5f040500892f3953686dde971718599",
+        "prepared_rgba_sha256": "83ac9cd2acc5653279dd404d56714cff9cf5f587dae59f5b4953fc513c11eafa",
+        "prepared_png_sha256": "b76463ecde7f6fe199625bda037503f64d4f5a327311e6f10205c15004e8b67f",
+        "dds_sha256": "4e1683110fdc003b7f45b18db16d9601eb970dd19cb2fe35fa912f82694577bd",
+        "unity_dds_sha256": "f9289074992b6809ad5b0e1fad83c1e370013feb22a092712a1e4f243f33cac8",
+        "compressed_payload_bytes": 349552,
+        "mip_count": 10,
+        "side_seam_bilinear_samples": 1024,
+        "side_seam_rgb_mean_absolute_difference_bytes": 0.1379477360817054,
+        "side_seam_rgb_max_absolute_difference_bytes": 1.2325077799823987,
+        "decoded_bc3_side_seam_rgb_mean_absolute_difference_bytes": 0.28518809448108656,
+        "decoded_bc3_side_seam_rgb_max_absolute_difference_bytes": 10.441829127649953,
+        "island_alpha": [
+          {
+            "island": 0,
+            "texel_centers": 2536,
+            "alpha_min": 255,
+            "alpha_max": 255
+          },
+          {
+            "island": 1,
+            "texel_centers": 2571,
+            "alpha_min": 255,
+            "alpha_max": 255
+          },
+          {
+            "island": 2,
+            "texel_centers": 130572,
+            "alpha_min": 255,
+            "alpha_max": 255
+          }
+        ],
+        "mips": [
+          {
+            "level": 0,
+            "width": 512,
+            "height": 512,
+            "compressed_bytes": 262144,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.411036173502604,
+            "rgb_max_absolute_error_bytes": 60.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 1,
+            "width": 256,
+            "height": 256,
+            "compressed_bytes": 65536,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.6039632161458335,
+            "rgb_max_absolute_error_bytes": 54.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 2,
+            "width": 128,
+            "height": 128,
+            "compressed_bytes": 16384,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.7878824869791665,
+            "rgb_max_absolute_error_bytes": 55.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 3,
+            "width": 64,
+            "height": 64,
+            "compressed_bytes": 4096,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.9424641927083335,
+            "rgb_max_absolute_error_bytes": 39.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 4,
+            "width": 32,
+            "height": 32,
+            "compressed_bytes": 1024,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.8740234375,
+            "rgb_max_absolute_error_bytes": 34.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 0
+          },
+          {
+            "level": 5,
+            "width": 16,
+            "height": 16,
+            "compressed_bytes": 256,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.3684895833333335,
+            "rgb_max_absolute_error_bytes": 22.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 6
+          },
+          {
+            "level": 6,
+            "width": 8,
+            "height": 8,
+            "compressed_bytes": 64,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.0416666666666665,
+            "rgb_max_absolute_error_bytes": 12.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 3
+          },
+          {
+            "level": 7,
+            "width": 4,
+            "height": 4,
+            "compressed_bytes": 16,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.0625,
+            "rgb_max_absolute_error_bytes": 8.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 4
+          },
+          {
+            "level": 8,
+            "width": 2,
+            "height": 2,
+            "compressed_bytes": 16,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 1.9166666666666667,
+            "rgb_max_absolute_error_bytes": 4.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 0,
+            "side_one_texel_margin_with_endgrain_footprint": 1
+          },
+          {
+            "level": 9,
+            "width": 1,
+            "height": 1,
+            "compressed_bytes": 16,
+            "alpha_min": 255,
+            "alpha_max": 255,
+            "decoded_alpha_min": 255,
+            "decoded_alpha_max": 255,
+            "rgb_mean_absolute_error_bytes": 2.3333333333333335,
+            "rgb_max_absolute_error_bytes": 5.0,
+            "native_row_order_max_difference_bytes": 0.0,
+            "side_centers_with_endgrain_footprint": 1,
+            "side_one_texel_margin_with_endgrain_footprint": 1
+          }
+        ]
+      }
+    ],
+    "payload_budget_limit": "Byte totals describe compressed albedo mip payloads only, not whole-scene memory, engine residency or measured hardware performance."
+  },
+  "coarse_mip_limit": {
+    "method": "Finite BOX-filter influence diagnostic for owned endgrain rectangles. One-texel repeat margin is conservative; not native compressed mip or screen-space validation.",
+    "footprint": [
+      {
+        "mip": 0,
+        "size": 1024,
+        "side_centers": 525280,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 0,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 1,
+        "size": 512,
+        "side_centers": 130572,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 0,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 2,
+        "size": 256,
+        "side_centers": 32760,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 0,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 3,
+        "size": 128,
+        "side_centers": 8260,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 0,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 4,
+        "size": 64,
+        "side_centers": 2030,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 0,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 5,
+        "size": 32,
+        "side_centers": 540,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 0,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 6,
+        "size": 16,
+        "side_centers": 135,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 6,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 7,
+        "size": 8,
+        "side_centers": 28,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 3,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 8,
+        "size": 4,
+        "side_centers": 8,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 4,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 9,
+        "size": 2,
+        "side_centers": 2,
+        "side_centers_with_endgrain_contribution": 0,
+        "side_one_texel_margin_with_endgrain_contribution": 1,
+        "max_endgrain_contribution_at_side_centers": 0.0
+      },
+      {
+        "mip": 10,
+        "size": 1,
+        "side_centers": 1,
+        "side_centers_with_endgrain_contribution": 1,
+        "side_one_texel_margin_with_endgrain_contribution": 1,
+        "max_endgrain_contribution_at_side_centers": 0.041778564453125
+      }
+    ],
+    "interpretation": "No direct bark-side center contribution from endgrain rectangles through 2px in this finite footprint model. The conservative one-texel margin reaches endgrain at 16px, and the 1px tail has 4.177856 percent patch contribution. Native filtering and screen-space visibility remain untested."
+  },
+  "recommended_candidates": {
+    "HD": {
+      "id": "beech_log_hd_albedo",
+      "width": 1024,
+      "height": 1024,
+      "compressed_payload_bytes": 1398128
+    },
+    "Balanced": {
+      "id": "beech_log_balanced_albedo",
+      "width": 512,
+      "height": 512,
+      "compressed_payload_bytes": 349552
+    },
+    "scope": "Albedo-only material studies for beech_log; neither size assigns a game quality preset or approves a runtime binding.",
+    "remaining": [
+      "Review both original prefab scales, convex ends and the cylindrical side seam.",
+      "Author and validate a compatible normal without original normal-data transfer.",
+      "Review Standard material tint, roughness, lighting, shadows and ground contact.",
+      "Validate native BC sampling, fractional LOD and coarse mip behavior.",
+      "Review falling/rolling logs and representative in-game distances before gameplay approval."
+    ]
+  }
+}
