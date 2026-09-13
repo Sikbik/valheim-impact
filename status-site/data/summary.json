@@ -5,7 +5,7 @@
       "id": "authored-sources",
       "path": "assets/provenance.json",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
-      "sha256": "5f09ce5dc720758c7ec28670f049ec9616fcb0a73d746f1cb9a1c495693137d6",
+      "sha256": "d05c406d66bd902a48c0979e9725ffe570f16d52803fe2acdc33b4a66dad4b62",
       "stages": [
         "authored"
       ],
@@ -64,7 +64,7 @@
       "id": "meadows-beech-logs",
       "path": "docs/evidence/contributions/meadows-beech-logs.json",
       "scope": "Owned bark and endgrain fit the exact log material. Both quality candidates have scoped UV, native payload and original-material render evidence. Companion normals, world integration and final approval remain open.",
-      "sha256": "af736a23080be625041cb46e9167f5d0758bebeebe67067de9f494251ff2f2bb",
+      "sha256": "7bbb0a752d1cb037e1893d0b8eabc39f82748220b3401a561b5503d2b88c76f5",
       "stages": [
         "authored",
         "native_validated",
@@ -81,7 +81,7 @@
       "id": "meadows-beech-materials",
       "path": "docs/evidence/contributions/meadows-beech-materials.json",
       "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
-      "sha256": "6ce9bfb5a6c2c37cf9d309db22cf30fbd9c869e85da4d013aa3eb243465a03f6",
+      "sha256": "1ab341387e997f664c3bfd1e29b91f4e1365f4b67858a38bfd660f2ea52296b0",
       "stages": [
         "authored",
         "native_validated",
@@ -106,7 +106,7 @@
       "id": "meadows-dandelion",
       "path": "docs/evidence/contributions/meadows-dandelion.json",
       "scope": "Owned HD and Balanced cutouts fit seven shared consumer uses. Native material comparisons and scoped UV review pass; distant appearance, world binding and final approval remain open.",
-      "sha256": "0dd6edfa9c9789e597d3d95a97cfee9b14b3e55d3f7bf8438eeaf6c9c603c3ce",
+      "sha256": "5a631fda2f46c147c65605d298fb32efbb5acd637b307757d15b8d3c823f3cb8",
       "stages": [
         "authored",
         "native_validated",
@@ -123,7 +123,7 @@
       "id": "meadows-flint",
       "path": "docs/evidence/contributions/meadows-flint.json",
       "scope": "Owned 1024px and 512px opaque surfaces for one exact flint material. All five retained mesh layouts have scoped UV and native comparison evidence. Nine texture-sharing emission materials are excluded. World, distance and final art review remain open.",
-      "sha256": "cc898d7f5d8961c449462f7ec33de6997fb33974432c2e1ce43f509d93b3ba29",
+      "sha256": "1512e6185dd618536415c7819d347a9ac04f25257a94a9e2d15493f34e43f0b6",
       "stages": [
         "authored",
         "native_validated",
@@ -154,7 +154,7 @@
       "id": "meadows-ground-cover",
       "path": "docs/evidence/contributions/meadows-ground-cover.json",
       "scope": "Tall and short grass plus continuous bark and stump candidates have scoped UV and native texture evidence. HD grass also passes an isolated original-shader instancing fixture. Wind, world integration, distance transitions and final approval remain open.",
-      "sha256": "720b35b2d7ec4bd25f450ef5dd388b9e628a2933206f7c1fee26b03f65c0e2c9",
+      "sha256": "0b9dc7c79e631e1f9c3695a05297a9e8f7e4e5ec66ab57f5701de859b3361620",
       "stages": [
         "authored",
         "native_validated",
@@ -178,10 +178,27 @@
       "title": "Meadows grass and material-specific beech bark"
     },
     {
+      "id": "meadows-mushroom",
+      "path": "docs/evidence/contributions/meadows-mushroom.json",
+      "scope": "Owned 512px and 256px cap, stalk and underside atlases. Five retained rest transforms have scoped UV and native evidence. Shared original normal, distance, world and final art remain open.",
+      "sha256": "bccf5cb2ff021433908350387a9f5cbe26732cc2aa0af556ca78ae37071e5ab4",
+      "stages": [
+        "authored",
+        "native_validated",
+        "uv_reviewed"
+      ],
+      "target_count": 2,
+      "targets": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-3959143803454952172",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:7556872827288687829"
+      ],
+      "title": "Mushroom material candidates"
+    },
+    {
       "id": "meadows-raspberry",
       "path": "docs/evidence/contributions/meadows-raspberry.json",
       "scope": "Owned 512px and 256px opaque atlases fit the retained fruit, stem and calyx. Native material evidence covers two representative transforms. Original normal remains an unapproved comparison control; world, distance and final art review are open.",
-      "sha256": "f70322791c43e727028a758ba1503181ac1fadbb43a223ec95c0274501135ef5",
+      "sha256": "27109d5a31d42f05e818991c327b025c5a1c13d97c53184667a1080bb5e8acdf",
       "stages": [
         "authored",
         "native_validated",
@@ -218,7 +235,7 @@
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
-      "sha256": "ec7660b2f55f95b8f77e63c8c867f8c30519a6eefae35ffcb4cc63766b36261d",
+      "sha256": "029868a280a3a2a3e5f90fd7abe3cb7b6c0c76e31ed59d58e010d7952dd54050",
       "stages": [
         "native_validated"
       ],
@@ -304,10 +321,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "a9357f4ed4aa625d003520b9e8d3f2b0daef81af2090708106869d888ac5080a"
+    "status_manifest_sha256": "74bbc1dd307d16185935591abb17cf6394e5a287d5b0eea11b798e78fefd4ac1"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-13T02:53:34Z",
+  "snapshot_at": "2026-09-13T03:18:38Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",
@@ -342,8 +359,8 @@
         "world_surface": 328
       }
     },
-    "evidence_records": 18,
-    "evidence_target_assets": 39,
+    "evidence_records": 19,
+    "evidence_target_assets": 41,
     "meshes": 10336,
     "stage_counts": {
       "mesh": {
@@ -352,15 +369,15 @@
         "game_fixture_validated": 1,
         "inventoried": 10336,
         "native_validated": 0,
-        "uv_reviewed": 25
+        "uv_reviewed": 26
       },
       "texture": {
         "approved": 0,
-        "authored": 14,
+        "authored": 15,
         "game_fixture_validated": 3,
         "inventoried": 3187,
-        "native_validated": 14,
-        "uv_reviewed": 14
+        "native_validated": 15,
+        "uv_reviewed": 15
       }
     },
     "textures": 3187

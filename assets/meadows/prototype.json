@@ -492,6 +492,30 @@
       "wrap_mode": "repeat",
       "alpha_policy": "opaque",
       "generate_normal": false
+    },
+    {
+      "id": "mushroom_hd",
+      "source": "assets/meadows/mushroom-atlas-hd-v1.png",
+      "size": [
+        512,
+        512
+      ],
+      "periodic": false,
+      "wrap_mode": "repeat",
+      "alpha_policy": "opaque",
+      "generate_normal": false
+    },
+    {
+      "id": "mushroom_balanced",
+      "source": "assets/meadows/mushroom-atlas-balanced-v1.png",
+      "size": [
+        256,
+        256
+      ],
+      "periodic": false,
+      "wrap_mode": "repeat",
+      "alpha_policy": "opaque",
+      "generate_normal": false
     }
   ]
 }

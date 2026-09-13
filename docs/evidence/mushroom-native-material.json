@@ -1,0 +1,1318 @@
+{
+  "schema_version": 1,
+  "passed": true,
+  "albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3959143803454952172",
+  "retained_normal_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2362882054155494049",
+  "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8680085326074669664",
+  "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7556872827288687829",
+  "scope": "Albedo-only original Standard-material comparison on pinned retained geometry and all five inspected rest transforms, with separate front, rear, top and underside views.",
+  "unity_version": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "frame_count": 120,
+  "source_bundle_sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+  "source_shader_bundle_sha256": "c4d130a0b3ec61c4b5800a3c3bb15672d66efcc24cff58e3b78799b8f730b88f",
+  "private_geometry_sha256": "5698ca6b89cde5131e6c7b30cde7116d839afd685947905b0c9b16c113713e0f",
+  "private_fixture_source_sha256": "77f6985785959d38042ef3eeab81c1704c77d36c1d2111a1472cd39a6622b51e",
+  "private_config_sha256": "a43ff8145fc3d0adecca9ffb3df9e73974ec6c99485db2f54303e304cf1f0b72",
+  "native_catalog_sha256": "d0938f4d425e18f6bed3d92175e7710584f0e29a498c0e601015489e90f60b25",
+  "source_association": "The fixture verifies source file and geometry hashes during execution. The native mesh descriptor and bounds are checked; original full vertex arrays are not read back from the GPU.",
+  "owned_textures": [
+    {
+      "id": "mushroom_hd_albedo",
+      "sha256": "237da93a6f12db55777e42041f41b82c11c2354eaa54176d9cf22a04b16b3f22",
+      "payloadSha256": "1be7ebc75a617993329388e81d4da4c1dc6ecfbf4bb8cfc47758856d56ed82e1",
+      "width": 512,
+      "height": 512,
+      "mipCount": 10,
+      "payloadBytes": 349552,
+      "isSrgb": true,
+      "wrapMode": "repeat"
+    },
+    {
+      "id": "mushroom_balanced_albedo",
+      "sha256": "9d99ea6f92ffa2c9288b9d443a74e681f5e55ccb8207c90316676df5cf7d6e96",
+      "payloadSha256": "ed32e38c051d0f77ee0343f762acd1b0e018d78b130866d9691a3c7ca34a0b2f",
+      "width": 256,
+      "height": 256,
+      "mipCount": 9,
+      "payloadBytes": 87408,
+      "isSrgb": true,
+      "wrapMode": "repeat"
+    }
+  ],
+  "sampler": "BC3 sRGB, Repeat U/V/W, Trilinear, anisotropy 4, mip bias 0, CPU unreadable",
+  "orthographic_vertical_span": 0.5,
+  "encoding": "Native linear HDR values are checked, clamped to [0,1] and sRGB-encoded for PNG, without tone mapping.",
+  "runs": [
+    {
+      "case": "item",
+      "private_report_sha256": "bba031d802cb46e1d1864edc6b58c994a9afd617b93e42216172c03c8c6e3f12",
+      "execution_module_version_id": "16c9ba43-a24c-4648-b09c-5d5e1316d519",
+      "captures": [
+        {
+          "variant": "item-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "86d203b20d16643afcd7090eec876afb5191b9e896e8052082eb0cb8c78120d6",
+          "occupiedPixels": 349389,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "a4be59872b27f9ca61028042b7bf0eb03534f70540afc34187365b0819b2faf4",
+          "occupiedPixels": 349389,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 348666
+        },
+        {
+          "variant": "item-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "67c0cfbc9f30bc0d52e7b3dfc6c6ba329253148cf2ec6d0626f3ab68a40dc587",
+          "occupiedPixels": 349389,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 348445
+        },
+        {
+          "variant": "item-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "cbf9eef4f84ef552f51b760c5ea97e48453fd17119da6ffb0464a5ba0af6a3fc",
+          "occupiedPixels": 1397574,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "395a1fba3e03da2f32d89de6a79e9ab9ce71fd0146815626652b7c835addec77",
+          "occupiedPixels": 1397574,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1394729
+        },
+        {
+          "variant": "item-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "61f39b54b21dccbff8091f7700742a3ab76af1fd6f3728553f0d5b3b6c6bb74e",
+          "occupiedPixels": 1397574,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1393761
+        },
+        {
+          "variant": "item-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "99b30cbb1a268937af056007ec8f1029fcd75694812a979df1ead23895280432",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "b0e071c6e86de23f62814467dc2cbf53667336c86b8c9f26558c75fd9d0a2ff8",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 355616
+        },
+        {
+          "variant": "item-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f7408c899b10205692edcfa37050783f4e27d777d80191bf31fca1e152793e02",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 356708
+        },
+        {
+          "variant": "item-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "8ee6a5726db86beb010c261eb38d0637bd56fe751fe68dbbb15ef3fafb4a3a93",
+          "occupiedPixels": 1474252,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "740e83eed3bc2ad518f9675185fbbc4ca796eb9359951167923c45adc2ed1f5b",
+          "occupiedPixels": 1474252,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1422545
+        },
+        {
+          "variant": "item-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "e9ba60e939b4d66e057c4f38589c6450efbc61c0366c8837d4c2e35d54158c3e",
+          "occupiedPixels": 1474252,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1426719
+        },
+        {
+          "variant": "item-top",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "09130b0e52a3b5e3d19207261efe9d734d57c53ed1358300f45425be1dfdd004",
+          "occupiedPixels": 396828,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-top",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "9555ca5c8a166a35a457300be72796fa98dd8684b99a16dd3896105279244d79",
+          "occupiedPixels": 396828,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 393908
+        },
+        {
+          "variant": "item-top",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "193f599696e9e2a6dbd7c68d745aa36b45d6cb8f3e42eb2860698bd5e42d4bb2",
+          "occupiedPixels": 396828,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 394141
+        },
+        {
+          "variant": "item-top",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "c402fd09e6fd8d66615d82a0ba1a15d021037a247a6c4f9e5bce0877e41338e5",
+          "occupiedPixels": 1587315,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-top",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "b54808b7fdcdbe2927c61f6c52404a9b830b0faf2dadb011dab19579aa66a9a9",
+          "occupiedPixels": 1587315,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1575497
+        },
+        {
+          "variant": "item-top",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "ac6b3159667e4ddcb1ea54f3dba9bda64aa9cb11468d17fb955b23960ede6a05",
+          "occupiedPixels": 1587315,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1576592
+        },
+        {
+          "variant": "item-underside",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "5bbc7e5a5f01fa02437632a6c653f4b163209f8da1184f67d00e1eeb724b4d30",
+          "occupiedPixels": 362850,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-underside",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "d17bb0b0ac848d8061b1363c34c2138d909b870351d44794894f095306deb448",
+          "occupiedPixels": 362850,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 362850
+        },
+        {
+          "variant": "item-underside",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "59bb4d632fec3ba9acf0dc824ce2b5d1e749c1abd8b7322ad9f9826945e15f63",
+          "occupiedPixels": 362850,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 362850
+        },
+        {
+          "variant": "item-underside",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "8d268a8ca139e3c3f52b82323adb291e9e2a2be0e4bf1e591d1cb7c4e6ddc5d8",
+          "occupiedPixels": 1451394,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "item-underside",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "4c5f96ef75bbd7f590f85b49e8fc1e6a28258d7dc00ab8942e81e43591db6661",
+          "occupiedPixels": 1451394,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1451394
+        },
+        {
+          "variant": "item-underside",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "17bb8b3dfedf098b90aff73f9d5c2f537c94164ee563f324f9792cbcfb5a1f78",
+          "occupiedPixels": 1451394,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1451394
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "case": "inactive-item",
+      "private_report_sha256": "e094685a14f090db1e13eadb1866bc55ef46ea690f037a8563cbdb7f0b9539e1",
+      "execution_module_version_id": "bd8c0c25-93e1-4248-b581-bb9d2bf98b5f",
+      "captures": [
+        {
+          "variant": "inactive-item-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "e08706169e43e962f1d47cf5fc21e4a14c6379bb4a093d37dfeabb340f3e1183",
+          "occupiedPixels": 242636,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "db622ed6342c0e54169463f69a76a9a72305ba230a68d8a2be547427cd2b73f5",
+          "occupiedPixels": 242636,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 242144
+        },
+        {
+          "variant": "inactive-item-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "a909bb4d3707a0cacd9a5524875b8a7d62d65abb0c9f12a2bab1ca0bc8e99371",
+          "occupiedPixels": 242636,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 241968
+        },
+        {
+          "variant": "inactive-item-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "d50b73d985bcdf823cf5215c07451881020bbdf48a9ffc253dc6bd868bd84dfc",
+          "occupiedPixels": 970533,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "042efd57c5f051d5280bcb06d89c98f8a256205cfa023c6bab4efa6e28c6d932",
+          "occupiedPixels": 970533,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 968559
+        },
+        {
+          "variant": "inactive-item-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "ff67aa573aaa36cb006c7e9bc3bb7b7a557d131e779d0a782f01ecfb08c216be",
+          "occupiedPixels": 970533,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 967864
+        },
+        {
+          "variant": "inactive-item-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "59f3559845a24fc128abc32ec5bbe0a5427c1ef0df3d175eddb0ea007939e669",
+          "occupiedPixels": 255947,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f7467fa564fbf66c47f4524062f99d5eefc079586f8f182a3d5832f0ae63e7bf",
+          "occupiedPixels": 255947,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 246966
+        },
+        {
+          "variant": "inactive-item-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "662ea07775cfd6b16dfe9353b66742b1f2d6f3a1146bb29392cc7d02119e7d4c",
+          "occupiedPixels": 255947,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 247689
+        },
+        {
+          "variant": "inactive-item-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "cd46c83b57efed1420a3526bda130a295844e22635c8d99ac087f4a17570764e",
+          "occupiedPixels": 1023792,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "f8c77ec4ec183e4f73182d69dacf14d58c0f9025af3f091387fc928b1a1e33d5",
+          "occupiedPixels": 1023792,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 987777
+        },
+        {
+          "variant": "inactive-item-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "e1505dd229c6cc415661b25c3c72801522b806afb317d0c494fa63915f40a78e",
+          "occupiedPixels": 1023792,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 990752
+        },
+        {
+          "variant": "inactive-item-top",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "b0234dafaa765930a3dbe3cd1fb14570704cf925b5d86396be962d1f07afd94f",
+          "occupiedPixels": 275582,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-top",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "575bb7611099354c803dc3c251014ce066a4fbaf5900d5cc8a011f84c2661857",
+          "occupiedPixels": 275582,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 273548
+        },
+        {
+          "variant": "inactive-item-top",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "e1b61c604e047054d4efb10f4ee10c921fdd133b68e76ae1dfcce4743c30c2cd",
+          "occupiedPixels": 275582,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 273728
+        },
+        {
+          "variant": "inactive-item-top",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "7fc1032897f12fc5f4fc333faa9325829bfe4883060fb79c01c8a9520eb99470",
+          "occupiedPixels": 1102323,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-top",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "7197fb32cf9c582e53d979e1a3ec6b42baef412f2348439611f1270f399cead6",
+          "occupiedPixels": 1102323,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1094114
+        },
+        {
+          "variant": "inactive-item-top",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "ce96a5a7353d186981d59c65949d259f9160c684d86c6fc52464f2bb72ece827",
+          "occupiedPixels": 1102323,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1094878
+        },
+        {
+          "variant": "inactive-item-underside",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "98f8e3e07eed5854769b2ce13958381abf571fac7c03b0419a3a1bf0b55e35ce",
+          "occupiedPixels": 251977,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-underside",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "3aeb653fceaf7802bbb08b1d1b16d38e7bee7c050870f5d46a8bc3bda2f5a2fd",
+          "occupiedPixels": 251977,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 251977
+        },
+        {
+          "variant": "inactive-item-underside",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "66f474f7d8458ab34e324f4f18a94f99cb9ce9f5eeda8db8c58c05a774722027",
+          "occupiedPixels": 251977,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 251977
+        },
+        {
+          "variant": "inactive-item-underside",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "a28bc57da966ce1a28bee3a9c6dbecb670dfa9941c74f1a9df1e1820a4d4394f",
+          "occupiedPixels": 1007910,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "inactive-item-underside",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "ca42a1a7441cbc0b94a551d83c5a8b7042f38ae7603ce6c74ffac51bd9a4a7d6",
+          "occupiedPixels": 1007910,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1007910
+        },
+        {
+          "variant": "inactive-item-underside",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "e5fce227281bd82cddee64c0f3abe0b3fa54b31469ab0e2816d2b4d9f5176e42",
+          "occupiedPixels": 1007910,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1007910
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "case": "pickable",
+      "private_report_sha256": "1e0111a48805d98876e534003954d63443397f6929e9f236332eaeba604ced09",
+      "execution_module_version_id": "d0e42d53-d954-49bf-844e-b0d043477a96",
+      "captures": [
+        {
+          "variant": "pickable-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "9b8dc0eb887a4ea287d867a0089d80cea3300ec6830c61682cccb25618191b8a",
+          "occupiedPixels": 349390,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f0eb0135bb0628d9eb5370519115ff76b1bf523eadc948b9fa75ba486e3ad670",
+          "occupiedPixels": 349390,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 348668
+        },
+        {
+          "variant": "pickable-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "e70e4f68b1a0899874b5a729e3651c54d44cc928f42d257dfd7646be84e8bdac",
+          "occupiedPixels": 349390,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 348442
+        },
+        {
+          "variant": "pickable-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "293d34a6ad3e516f741fa054f18bc5bae5ad4080b00320703177de12501b53fe",
+          "occupiedPixels": 1397574,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "1af78ce7307fc5aa76bf99efd4adab8b5e7b1022660ecb7009170f0cf47eb17a",
+          "occupiedPixels": 1397574,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1394727
+        },
+        {
+          "variant": "pickable-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "9e1e8622c9b2c6514958ec53521969e0639a01be23eafdad1ea72a4a91140777",
+          "occupiedPixels": 1397574,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1393759
+        },
+        {
+          "variant": "pickable-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f4577a05624a8309b9972bc668b4d1350a714159253c1d9064f197c76fddae54",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "3ccdb073ef49cb8214417465fcee68c175ea845e0a4269a01b97b9315bee15bf",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 355621
+        },
+        {
+          "variant": "pickable-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "42354ea06b06e300d283623bd8fcfc01f102f3c1e2fab6b278be7631972e875f",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 356706
+        },
+        {
+          "variant": "pickable-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "38d7a3c4e9151c457bfa2377af39fde774db692794614758876f70ae6206b1d5",
+          "occupiedPixels": 1474251,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "823fb8a647ad255290f03925674a0d18a53b37c28472f5f67de4bb6214e664a2",
+          "occupiedPixels": 1474251,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1422550
+        },
+        {
+          "variant": "pickable-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "72ae989944bde781e882199db0a912549d8c5126c865d516c1ec9e365dbc8574",
+          "occupiedPixels": 1474251,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1426716
+        },
+        {
+          "variant": "pickable-top",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "89fcca3bee852b1629cfbcfe073a9fe49faedf5bd76036e282d388d8a180d523",
+          "occupiedPixels": 396829,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-top",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "da9b7a25d11605305ff73fb6e5d060d66716ffc87f842ce142fd8184d643c1ae",
+          "occupiedPixels": 396829,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 393909
+        },
+        {
+          "variant": "pickable-top",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "b7dac0d61bf657da72c279e0cf2c1f75ef7c93347343c104e31b30a900f8bfa9",
+          "occupiedPixels": 396829,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 394143
+        },
+        {
+          "variant": "pickable-top",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "f928820e1f92e51dd463c8250bde7c96eac0655cd4ab498a60b8709d29d3d25f",
+          "occupiedPixels": 1587320,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-top",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "7d2a0db3397efe0abc2336217c68c45cc36b826faa1fb22476c60f6d2f7285d6",
+          "occupiedPixels": 1587320,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1575504
+        },
+        {
+          "variant": "pickable-top",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "3ca06dbe6011f53b07fbe34c762c64525565e3f5de79b89f4eb08bbf6038c29e",
+          "occupiedPixels": 1587320,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1576594
+        },
+        {
+          "variant": "pickable-underside",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "33cc1c67e44d00ed2c1338d882b4eee953b26e8c8c84618b4feb2f796a8d85e3",
+          "occupiedPixels": 362848,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-underside",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "2caa0d82441804824f6ce600ef8b333a5bc1e735831fd7a7cd6bf1ff764892f8",
+          "occupiedPixels": 362848,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 362848
+        },
+        {
+          "variant": "pickable-underside",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "db8ec946338f8461ed81a3c444d507e27a8f4b176413c3781da4d3bd2ee7a1a0",
+          "occupiedPixels": 362848,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 362848
+        },
+        {
+          "variant": "pickable-underside",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "f29a195d908f4b4a4931d17d7e425ef53cf5b00751e2bce4ddd4421a4f1974aa",
+          "occupiedPixels": 1451388,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "pickable-underside",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "2be06e38c4852444e6ce7f8eb124d84a7b2af9b8974132c2cc9f9e28b6b2b4c0",
+          "occupiedPixels": 1451388,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1451388
+        },
+        {
+          "variant": "pickable-underside",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "3e2ddae1336d6d97c209d7565a504ba19658331bdae16c832d137df16356057e",
+          "occupiedPixels": 1451388,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1451388
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "case": "temple-one",
+      "private_report_sha256": "d83a4e716aff2d0aa079d94ed82ba92a67e6c6441d530073953bb0b26afab3c1",
+      "execution_module_version_id": "075a1ab8-bd79-4eb7-937d-0c293ea427f5",
+      "captures": [
+        {
+          "variant": "temple-one-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f470bc45d2e2e51b9f934f1155377e3b43cc2d2922ab295df745d6f0eeee1f7c",
+          "occupiedPixels": 334871,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "3664ae54d6ca66890448d7f157ba5eb14a4c1257940f5b1eb0942ecedd53d5a7",
+          "occupiedPixels": 334871,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 334669
+        },
+        {
+          "variant": "temple-one-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f86a224aed0521692930e2f01e61541c520406bfc1e511f4cada34caa340cc3c",
+          "occupiedPixels": 334871,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 334387
+        },
+        {
+          "variant": "temple-one-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "435d8e599a6444454736d81eacc988a3b78d6116fbeb944841a924e1794db15f",
+          "occupiedPixels": 1339482,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "fb40d9b6c89250ec5e23ec416ba99478beeaf81d18eb8770f1f6bebcf1f6a9ea",
+          "occupiedPixels": 1339482,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1338733
+        },
+        {
+          "variant": "temple-one-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "011075964467422cfe252364b0ba7ab67ad6bc0dafd22dfa0d3a153f622df1c7",
+          "occupiedPixels": 1339482,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1337537
+        },
+        {
+          "variant": "temple-one-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "243cf7d8aee12464e6f23714b6d00671771b41b03b2fa0b3cfb3dbbe5c0f0ff2",
+          "occupiedPixels": 370442,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "cb108fc877334377f1eef841480c0fa3012179a5552b94add0db37eb26e5b8dc",
+          "occupiedPixels": 370442,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 360630
+        },
+        {
+          "variant": "temple-one-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "845fe3ee95b063155a46675d37302982a22a45e62f92753f56dab92c17f331e1",
+          "occupiedPixels": 370442,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 358551
+        },
+        {
+          "variant": "temple-one-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "eb0467448ca14e3563a0045bee437052d242a890142f07547c87efb83b803572",
+          "occupiedPixels": 1481755,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "d59634078982fc538eb63f351e0d9014f0caac76f7dddaeb090da49ae308684d",
+          "occupiedPixels": 1481755,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1442659
+        },
+        {
+          "variant": "temple-one-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "7f1260894a0a063b17d95a5a561b6dd747be286e7a24e3bc7335076a88a117fe",
+          "occupiedPixels": 1481755,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1434198
+        },
+        {
+          "variant": "temple-one-top",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "a142001039a85b0c9464338f7757dea7e90b8fb3278fbe3e2b7c73888a25aaaa",
+          "occupiedPixels": 396286,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-top",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "cc4a7a2bb668240032a7af5727593cbaee91ee11ca80d08e193d296a5790455b",
+          "occupiedPixels": 396286,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 391707
+        },
+        {
+          "variant": "temple-one-top",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "dc8c7726174ab4e5d8223952132cd4e7b11bc30a4e5d319737d04647524914df",
+          "occupiedPixels": 396286,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 391017
+        },
+        {
+          "variant": "temple-one-top",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "5dc9d13a38a64170904f53f39e9c337231af0795bb4cd05404766a0530ddb04e",
+          "occupiedPixels": 1585111,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-top",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "76bb3f26a4cfbccbb283ff06a52fa10fe2e4f553b501edfb17433eb888416007",
+          "occupiedPixels": 1585111,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1566793
+        },
+        {
+          "variant": "temple-one-top",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "8d834af9c74b1e61e889ec04803ed8ac6c5b73cba34c01deef25dbcefd999aa4",
+          "occupiedPixels": 1585111,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1564019
+        },
+        {
+          "variant": "temple-one-underside",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "80c21afa5b442ecddc7a244f8d50d293710b9f4cfeabd859c5b44a983ad18c8d",
+          "occupiedPixels": 360871,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-underside",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "4b0e0eab27e4c3e287e3dfa5db6ac4a007654babc32fbc9a6ec971422178cf2c",
+          "occupiedPixels": 360871,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 360871
+        },
+        {
+          "variant": "temple-one-underside",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "2053064508d09b316102274b951c7795e688e3ba9ff47eb621bedeb62f0e8e7a",
+          "occupiedPixels": 360871,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 360871
+        },
+        {
+          "variant": "temple-one-underside",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "704b7423c024b02bd5706e29a6274eb3e50355615e30778f72d467fa406f335a",
+          "occupiedPixels": 1443477,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-one-underside",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "3261027b380e92495bec833ac56d2b0f35356461611a2d133dd5166aca911fe0",
+          "occupiedPixels": 1443477,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1443477
+        },
+        {
+          "variant": "temple-one-underside",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "f0c6394a0b6c8290f241fcee322ca02dc73a032f7d93d412ef81f8eeff978f6e",
+          "occupiedPixels": 1443477,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1443477
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    },
+    {
+      "case": "temple-two",
+      "private_report_sha256": "fbd0f12a7748f7e3f72ed0fe9c877fa0ad0a2beaf9eacb7d793206c14918b7fd",
+      "execution_module_version_id": "2be76a79-bdcc-485b-9fea-ac4c45fe2fe9",
+      "captures": [
+        {
+          "variant": "temple-two-front",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "c2d8dd0b730ca2f23b060597cad309843e50ebad7f33dec5813ec34699e4b24d",
+          "occupiedPixels": 349394,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-front",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "156e17c4c3ab159e67eb6978d7114b086957dd11da4fc2366d22a2a9b14c65b0",
+          "occupiedPixels": 349394,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 348676
+        },
+        {
+          "variant": "temple-two-front",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "f2b37fb3f6004f728ddc3c6cc32e8236e3c77e3942edb43ed57e41ef16001a86",
+          "occupiedPixels": 349394,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 348439
+        },
+        {
+          "variant": "temple-two-front",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "40ca9df23247db3e1c393b061d6a04c895f9fcd522e95aaa45d75f94971843cb",
+          "occupiedPixels": 1397587,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-front",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "67ca1ad69e74c20681ca8b198a8c5e44a17babd1cb533c30a6ad0c81f453ac5c",
+          "occupiedPixels": 1397587,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1394740
+        },
+        {
+          "variant": "temple-two-front",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "aabeeaf766492f590ea0c1464692d756899847e66807555f6e052ecca93b6d87",
+          "occupiedPixels": 1397587,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1393773
+        },
+        {
+          "variant": "temple-two-rear",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "a643fb948d9798e837acd6ee39fa1d40bf5835ee87c66829e5dc634a4b0d3785",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-rear",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "2a3a72d71a7e161d4164d368d8d694114befcab244b847cad85b1ece207d9f96",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 355617
+        },
+        {
+          "variant": "temple-two-rear",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "2c887f3cfb4c2f66984c5db3f003586d580ce6a6e60627443bc59f29582c4ba1",
+          "occupiedPixels": 368561,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 356717
+        },
+        {
+          "variant": "temple-two-rear",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "4efc453210d410a2b5379788a744e1765fc1e5dbbceb47778e423f5f6efb76a9",
+          "occupiedPixels": 1474244,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-rear",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "e05a2d68aedb512461a6bf7df74f2512d624e589a3eee880387b0a2c06e6ed2e",
+          "occupiedPixels": 1474244,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1422531
+        },
+        {
+          "variant": "temple-two-rear",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "c30c9d6afedcb2cb9752484bae3adb4130f150504f942310df619a569f35c43d",
+          "occupiedPixels": 1474244,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1426707
+        },
+        {
+          "variant": "temple-two-top",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "d5ded09fc40c892885fc09ccfe99abf6325705b391c467745ab4e88d1300b87f",
+          "occupiedPixels": 396831,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-top",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "7101b77017c5c7b6411895c3fe97af7292cccc2409047c181c60e74af5e6980f",
+          "occupiedPixels": 396831,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 393904
+        },
+        {
+          "variant": "temple-two-top",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "4a17e5cc81c774e7c91523d9195e76b59dc178c45c25049d5289c04038428fe3",
+          "occupiedPixels": 396831,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 394144
+        },
+        {
+          "variant": "temple-two-top",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "989ce67ba117f48090f36ea6c31da6e910b25a253461ab0c85d320302c2de938",
+          "occupiedPixels": 1587317,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-top",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "32bde50d565c5c61706529cdc1d4418997cf188e1893dc0fa7b3b775647b634a",
+          "occupiedPixels": 1587317,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1575488
+        },
+        {
+          "variant": "temple-two-top",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "7623b2e4fe31afa5aaf777edc8acf6a9ec13dc76ef381a1f076dbd0bf71d7bb2",
+          "occupiedPixels": 1587317,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1576568
+        },
+        {
+          "variant": "temple-two-underside",
+          "state": "before",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "10e4e78ff0395a0070e2c665f805129df41a131546b70bf10447962221e76c9f",
+          "occupiedPixels": 362846,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-underside",
+          "state": "hd",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "addb7ddc9aa197cc135f0119444ea88ae56418ad9623a8a13ba05bcc98e9cb1a",
+          "occupiedPixels": 362846,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 362846
+        },
+        {
+          "variant": "temple-two-underside",
+          "state": "balanced",
+          "width": 1920,
+          "height": 1080,
+          "sha256": "0e7fcb72445d9eac1c5329760fb216b0eccb9eeb0cbc4e40fba3eac93b592100",
+          "occupiedPixels": 362846,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 362846
+        },
+        {
+          "variant": "temple-two-underside",
+          "state": "before",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "5d83637e92897f65cb872b49179b7d7eb1d37153eb4083766eac333b39fa48a4",
+          "occupiedPixels": 1451405,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 0
+        },
+        {
+          "variant": "temple-two-underside",
+          "state": "hd",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "621e5da4e5acca53043650b7739f4313d3d06ce8759afcf9a179254dd04d41e0",
+          "occupiedPixels": 1451405,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1451405
+        },
+        {
+          "variant": "temple-two-underside",
+          "state": "balanced",
+          "width": 3840,
+          "height": 2160,
+          "sha256": "bc979649b24528b2bef423a100ea38c9f2056fef3423d8357d69d13f20b81208",
+          "occupiedPixels": 1451405,
+          "overOnePixels": 0,
+          "changedFromOriginalPixels": 1451405
+        }
+      ],
+      "render_checks_passed": true,
+      "source_material_preserved": true,
+      "cleanup_passed": true,
+      "errors": 0,
+      "warnings": 0
+    }
+  ],
+  "limits": [
+    "Isolated enlarged rest draws, not a complete scene or live picking/LOD test.",
+    "Original 32px normal, brighter cream, rim seams and coarse-mip mixing remain material and distance review concerns.",
+    "No runtime binding, world, representative performance or final art approval."
+  ],
+  "art_approved": false,
+  "world_validated": false,
+  "companion_normal_approved": false,
+  "performance_validated": false
+}

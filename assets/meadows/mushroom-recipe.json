@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "status": "Owned albedo candidate with scoped UV and native material evidence; companion, world and final artwork approval remain open",
+  "credit": "Valheim Impact contributors",
+  "artwork_license": "CC-BY-4.0",
+  "reproduction_scope": "Final base reproduction from the owned opaque atlas source. This helper does not recreate the upstream cap/stalk arrangement.",
+  "source": {
+    "path": "assets/meadows/mushroom-atlas-source-v1.png",
+    "sha256": "dff9af0a61c0e6da9f28ab66b3695f15c04d3fff10cd4acaab11bbbe8dadad34",
+    "dimensions": [
+      2048,
+      2048
+    ],
+    "mode": "RGBA",
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "owned_color_ancestry": [
+      {
+        "path": "assets/meadows/mushroom-cap-source-v1.png",
+        "sha256": "a7488bf771384e3fe063fb41fb7e4a5f9b5dc4b5a08f862361b0edf91933c5bc",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGB"
+      },
+      {
+        "path": "assets/meadows/mushroom-stalk-source-v1.png",
+        "sha256": "2ff4874897f13c0fb4c12279e02322921718a4ec515477960eed14163fe11d04",
+        "dimensions": [
+          1254,
+          1254
+        ],
+        "mode": "RGB"
+      }
+    ]
+  },
+  "upstream_arrangement": {
+    "description": "Owned russet cap and cream stalk colors fitted to the retained cap, stalk and underside layout, with an irregular rim transition, seam reconciliation and compatible unused-texel padding.",
+    "layout_informed_by_retained_uv_review": true,
+    "original_game_pixels": false,
+    "original_masks_used": false,
+    "original_geometry_distributed": false,
+    "geometry_or_mask_inputs_in_portable_helper": [],
+    "arrangement_reproduction_scope": "The published atlas source is the fixed input. Its ancestry is recorded, but the delivery helper does not claim to reconstruct the earlier placement process."
+  },
+  "final_base_resampling": {
+    "algorithm": "Pillow Image.Resampling.LANCZOS in RGBA mode",
+    "sizes": [
+      [
+        512,
+        512
+      ],
+      [
+        256,
+        256
+      ]
+    ],
+    "independent_from_same_source": true,
+    "balanced_resized_from_hd": false,
+    "color_math": "Pillow filters the encoded RGBA values of the already quantized opaque source. No new color grading or geometry operation.",
+    "alpha": 255
+  },
+  "outputs": {
+    "mushroom-atlas-hd-v1.png": {
+      "path": "assets/meadows/mushroom-atlas-hd-v1.png",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "sha256": "94bc997a44d0a5de8fa7e38c37f8d7f87952c6d21c42d2c2b4fd2d64ac6ec58d",
+      "rgba_sha256": "b93c8512a0f6077e3ea9ed1a38b5d2f7e224977a5a8f5b5b57ebb78f92cb20c0",
+      "alpha_min": 255,
+      "alpha_max": 255
+    },
+    "mushroom-atlas-balanced-v1.png": {
+      "path": "assets/meadows/mushroom-atlas-balanced-v1.png",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "sha256": "9c40bc014fbeeda426b8fcc25dcdd06afdd63f58650bc31bcb2c2434b3c77a94",
+      "rgba_sha256": "3fd8df04a2e4b96252489ec6f63d4d72b852d884c94f7c479e4686004ecb9b37",
+      "alpha_min": 255,
+      "alpha_max": 255
+    }
+  },
+  "png_encoding": {
+    "format": "PNG",
+    "bit_depth": 8,
+    "color_type": 6,
+    "interlace": false,
+    "optimize": false,
+    "compress_level": 6,
+    "chunk_types": [
+      "IHDR",
+      "IDAT",
+      "IEND"
+    ],
+    "inherited_metadata": false
+  },
+  "wrap_mode": "repeat",
+  "generate_normal": false,
+  "material_scope": {
+    "target_albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3959143803454952172",
+    "target_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8680085326074669664",
+    "target_property": "_MainTex",
+    "shader": "Standard",
+    "alpha_semantics": "Opaque modeled cap, stalk and underside; no alpha-cutout silhouette.",
+    "retained_original_normal_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2362882054155494049",
+    "normal_scope": "The existing normal is shared with other mushroom colors. Retain it for the first ordinary-red albedo study; this recipe does not approve or generate a replacement normal."
+  },
+  "limits": [
+    "These are texture candidates, not final material, world, LOD, picking, performance or artwork approval.",
+    "The source atlas records the upstream owned-color arrangement; this helper reproduces only its final 512px and 256px bases.",
+    "Rasterized and filtered seam samples have finite differences. Padding does not establish seamless behavior at every mip.",
+    "Cap and cream regions mix at coarse mip levels. Native bundle and close material checks are separate from distance transitions and final appearance."
+  ],
+  "fitting_helper": {
+    "path": "tools/fit_mushroom.py",
+    "sha256": "ee94f1dc54708d44751611bcf45f29f9d4935c011fc28c116c3fa4464fde0f1d",
+    "dependency_manifest": "requirements-assets.txt",
+    "dependency_manifest_sha256": "b484fb6fbc42add5d47850a2e23eb01e71983d44b68fa3d698cbc3b1b8a3f35b",
+    "image_inputs": [
+      "assets/meadows/mushroom-atlas-source-v1.png"
+    ],
+    "geometry_inputs": [],
+    "mask_inputs": [],
+    "hash_validation": "Verify source bytes before decoding and both encoded output hashes before writing either file. Reject linked paths, existing output files and dangling output leaf links; create outputs exclusively.",
+    "command": "python tools/fit_mushroom.py --root . --output-dir build/mushroom-fit"
+  },
+  "versions": {
+    "Pillow": "12.3.0",
+    "zlib_runtime": "1.3.2"
+  }
+}

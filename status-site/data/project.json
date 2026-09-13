@@ -58,11 +58,11 @@
     }
   ],
   "staged_native_binding_checks": 35,
-  "staged_evidence": "docs/evidence/contributions/meadows-flint.json",
-  "staged_detail": "Straw, beech foliage, bark and logs, grass, dandelions, raspberry and flint have scoped UV and native evidence. Companion channels, world integration and final art remain open.",
+  "staged_evidence": "docs/evidence/contributions/meadows-mushroom.json",
+  "staged_detail": "Straw, beech, grass, dandelions, raspberry, flint and ordinary mushrooms have scoped UV and native evidence. Companion channels, world integration and final art remain open.",
   "public_repository": "https://github.com/Sikbik/valheim-impact",
   "public_url": "https://sikbik.github.io/valheim-impact/",
-  "staged_native_texture_count": 46,
-  "staged_mip_levels": 458,
-  "staged_texture_payload_bytes": 28334624
+  "staged_native_texture_count": 48,
+  "staged_mip_levels": 477,
+  "staged_texture_payload_bytes": 28771584
 }
