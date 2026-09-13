@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "verified": true,
+  "verificationScope": "Selected source PNG hashes, successful native capture records, exported dimensions and metadata. This is not final artwork or live-world approval.",
+  "defaultWidth": 1920,
+  "materialSummary": "256px BC7 terrain array with its original Point sampler.",
+  "export": {
+    "format": "WebP",
+    "quality": 90,
+    "method": 6,
+    "resized": false,
+    "nativeSourceResolutions": [
+      [
+        1920,
+        1080
+      ],
+      [
+        3840,
+        2160
+      ]
+    ],
+    "metadataRemoved": true
+  },
+  "rights": {
+    "originalGameContent": "Valheim \u00a9 Iron Gate AB",
+    "originalGameContentPresent": true,
+    "authoredContributions": "Valheim Impact original artwork, CC BY 4.0",
+    "mixedRenderedComparisonsExcludedFromArtworkLicense": true
+  },
+  "views": [
+    {
+      "id": "clearing",
+      "label": "Meadows clearing",
+      "description": "Synthetic clearing: ground slice 0, tall/short grass and full beech canopy/bark candidates. Original normal maps remain controls; manually selected source tree LODs.",
+      "materialSummary": "Terrain retains its 256px Point sampler; vegetation uses the existing HD candidates.",
+      "beforeLabel": "Original",
+      "afterLabel": "Current candidate",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 930
+          },
+          "sourceReportSha256": {
+            "before": "b4f8b59d02e22b4ee928cbdaa4e021cebcdd3be86709e01094ba1f590f7c807d",
+            "after": "b4f8b59d02e22b4ee928cbdaa4e021cebcdd3be86709e01094ba1f590f7c807d"
+          },
+          "before": "images/4665a3b00fd865e6d39e49227738bc1ff3789f2adc75c46005823ba383a65931.webp",
+          "beforeSha256": "5eed31a73171c3d947cb8ffb34f829dedbd06e9b12b47efcbbbd1b48cc7df4c4",
+          "beforeBytes": 394330,
+          "beforeSourcePngSha256": "4665a3b00fd865e6d39e49227738bc1ff3789f2adc75c46005823ba383a65931",
+          "after": "images/f54087a1029f3d965e0fb6d4d1662d1f16f6bfffc259b310fc2602468b87e4e8.webp",
+          "afterSha256": "070aad649bb188016ddc398e0e56b8cc39aeffbe2a4db8d1633bf1614dc05dec",
+          "afterBytes": 622278,
+          "afterSourcePngSha256": "f54087a1029f3d965e0fb6d4d1662d1f16f6bfffc259b310fc2602468b87e4e8"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 5236
+          },
+          "sourceReportSha256": {
+            "before": "b4f8b59d02e22b4ee928cbdaa4e021cebcdd3be86709e01094ba1f590f7c807d",
+            "after": "b4f8b59d02e22b4ee928cbdaa4e021cebcdd3be86709e01094ba1f590f7c807d"
+          },
+          "before": "images/5b6df3241b6d6c5101bc2766cc8a45d90b48793c3afab388a204a08f853e44fa.webp",
+          "beforeSha256": "ce8f3ce43761d305a115411b3b9d9cd0724c68706585881a4bcbc8fddc097e11",
+          "beforeBytes": 1347634,
+          "beforeSourcePngSha256": "5b6df3241b6d6c5101bc2766cc8a45d90b48793c3afab388a204a08f853e44fa",
+          "after": "images/f86800bf0c9ab0268d1ab4958ebce480d90e6c7f7e0314c4c48d697c0298e7a9.webp",
+          "afterSha256": "11af9f647444cc02566470d2c8f3d7c9a1db9d45fd0b06e6d84fdea3110014e6",
+          "afterBytes": 2289052,
+          "afterSourcePngSha256": "f86800bf0c9ab0268d1ab4958ebce480d90e6c7f7e0314c4c48d697c0298e7a9"
+        }
+      ]
+    },
+    {
+      "id": "ground",
+      "label": "Ground and grass",
+      "description": "Synthetic clearing: ground slice 0, tall/short grass and full beech canopy/bark candidates. Original normal maps remain controls; manually selected source tree LODs.",
+      "materialSummary": "Terrain retains its 256px Point sampler; vegetation uses the existing HD candidates.",
+      "beforeLabel": "Original",
+      "afterLabel": "Current candidate",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 805
+          },
+          "sourceReportSha256": {
+            "before": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc",
+            "after": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc"
+          },
+          "before": "images/42541924724470ec4e32280b200c0cd10ed47e080ade8bde02fe9ac34f809226.webp",
+          "beforeSha256": "87b20fbc6c9157d7ec4d69ab8b56bd63c5d7ea8b5b3d170962dbc3f7301102ba",
+          "beforeBytes": 381072,
+          "beforeSourcePngSha256": "42541924724470ec4e32280b200c0cd10ed47e080ade8bde02fe9ac34f809226",
+          "after": "images/2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90.webp",
+          "afterSha256": "f2ecbd5aeca9deb841029c771ec2d7d71613fda4bc3a909a5e9f6ccf0292b067",
+          "afterBytes": 511022,
+          "afterSourcePngSha256": "2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 4024
+          },
+          "sourceReportSha256": {
+            "before": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc",
+            "after": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc"
+          },
+          "before": "images/58aee23b6f248e8c5f82c6285c652afb7771d4d9089f70de910a2ea362b7d64f.webp",
+          "beforeSha256": "5467d7df1d7b8b50ec49e9c6295489492dfb1d020257363324a9da908cc10d4a",
+          "beforeBytes": 1097454,
+          "beforeSourcePngSha256": "58aee23b6f248e8c5f82c6285c652afb7771d4d9089f70de910a2ea362b7d64f",
+          "after": "images/d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488.webp",
+          "afterSha256": "7a09d94c6d75e2b547c23cfd2e1fc10185d3120b7259dd66e0c036bd71bd63fc",
+          "afterBytes": 1648914,
+          "afterSourcePngSha256": "d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488"
+        }
+      ]
+    },
+    {
+      "id": "tree",
+      "label": "Beech detail",
+      "description": "Synthetic clearing: ground slice 0, tall/short grass and full beech canopy/bark candidates. Original normal maps remain controls; manually selected source tree LODs.",
+      "materialSummary": "Terrain retains its 256px Point sampler; vegetation uses the existing HD candidates.",
+      "beforeLabel": "Original",
+      "afterLabel": "Current candidate",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 1811
+          },
+          "sourceReportSha256": {
+            "before": "5bf19c2d93822443261ee0bb71c683fe358da69e134919c9e378d5fde0964308",
+            "after": "5bf19c2d93822443261ee0bb71c683fe358da69e134919c9e378d5fde0964308"
+          },
+          "before": "images/81bbbfae695b6234cc9417c6415433452863d9a5cfb10414804f67c12cf43e42.webp",
+          "beforeSha256": "05b6c782868e7cb2a5f40e3340b29575371212d0bf976ac025c4e5937b06f940",
+          "beforeBytes": 584358,
+          "beforeSourcePngSha256": "81bbbfae695b6234cc9417c6415433452863d9a5cfb10414804f67c12cf43e42",
+          "after": "images/3c95cd8f86c663243341addd16012137fd2a63e4b6e88326ccf72e4958497593.webp",
+          "afterSha256": "be11d51a85d20381e430a260d4244fbb854bb776f187c0eba1c484ef5543e4f9",
+          "afterBytes": 721770,
+          "afterSourcePngSha256": "3c95cd8f86c663243341addd16012137fd2a63e4b6e88326ccf72e4958497593"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 9718
+          },
+          "sourceReportSha256": {
+            "before": "5bf19c2d93822443261ee0bb71c683fe358da69e134919c9e378d5fde0964308",
+            "after": "5bf19c2d93822443261ee0bb71c683fe358da69e134919c9e378d5fde0964308"
+          },
+          "before": "images/d07ac631ddcfb1ca52f71a607fe1cbf01649d00b0512d2527e8a7cb1e0a725e2.webp",
+          "beforeSha256": "0104d7ed01b74b76dc0308c2f4de738f5f1d6ddddddcd8b2547e050e51906b9d",
+          "beforeBytes": 1777566,
+          "beforeSourcePngSha256": "d07ac631ddcfb1ca52f71a607fe1cbf01649d00b0512d2527e8a7cb1e0a725e2",
+          "after": "images/7f7e1ae5be2bf1441ab883e4c3262b0a8de03a93e78daade16802977291a9ea7.webp",
+          "afterSha256": "be388dfc6e1bf3f003e147a6eb1b1407721dd3c1a6e6a78e82d12ba670e395dd",
+          "afterBytes": 2414552,
+          "afterSourcePngSha256": "7f7e1ae5be2bf1441ab883e4c3262b0a8de03a93e78daade16802977291a9ea7"
+        }
+      ]
+    },
+    {
+      "id": "slope",
+      "label": "Cliff slope",
+      "description": "Single-layer study: cliff slice 4. Near terrain shader, all other ground layers and original normals retained.",
+      "beforeLabel": "Original",
+      "afterLabel": "Current candidate",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 0
+          },
+          "sourceReportSha256": {
+            "before": "1c1f2e00cdde7905368f4fe2ec503e17c7a33d0537bc2ad1880ae1c37a21cfd7",
+            "after": "1c1f2e00cdde7905368f4fe2ec503e17c7a33d0537bc2ad1880ae1c37a21cfd7"
+          },
+          "before": "images/b536dad0904dc90488f7ba42b42d868ed6e3b8ec82de0b85d135c7368bd83e83.webp",
+          "beforeSha256": "5edd63ddb3efdb1fb84032f173ac9e4c22e0a88cc3dbd08fa7b91cb4c0e5de5a",
+          "beforeBytes": 137456,
+          "beforeSourcePngSha256": "b536dad0904dc90488f7ba42b42d868ed6e3b8ec82de0b85d135c7368bd83e83",
+          "after": "images/15217a037e2df83aa8752dc353b8fde28093a36238fe8041bd57bbb1e2399a59.webp",
+          "afterSha256": "0b3d82b63ec4f56a92164a46590b91bc620a91854757cfa133923ee04b833f44",
+          "afterBytes": 148284,
+          "afterSourcePngSha256": "15217a037e2df83aa8752dc353b8fde28093a36238fe8041bd57bbb1e2399a59"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 0
+          },
+          "sourceReportSha256": {
+            "before": "1c1f2e00cdde7905368f4fe2ec503e17c7a33d0537bc2ad1880ae1c37a21cfd7",
+            "after": "1c1f2e00cdde7905368f4fe2ec503e17c7a33d0537bc2ad1880ae1c37a21cfd7"
+          },
+          "before": "images/c0b00bd2f968d0191a3c2c85a9a32b3cafe245eacd3c5030b7ba46ecab7c2836.webp",
+          "beforeSha256": "c3fe729b6ba32ae254e3bc8c2ea21f6cabab54aa13631238c6a73a4c9e175dea",
+          "beforeBytes": 423262,
+          "beforeSourcePngSha256": "c0b00bd2f968d0191a3c2c85a9a32b3cafe245eacd3c5030b7ba46ecab7c2836",
+          "after": "images/9acbf5f9c8fa654af22b32402281b4ed07821b6ec7bde92c25059e1420ea8019.webp",
+          "afterSha256": "bf76ef64edf9ff48d25012fd8f0f03ce4dbc5dcbe3edbcba7a2e293e1857f467",
+          "afterBytes": 451860,
+          "afterSourcePngSha256": "9acbf5f9c8fa654af22b32402281b4ed07821b6ec7bde92c25059e1420ea8019"
+        }
+      ]
+    },
+    {
+      "id": "slope-x",
+      "label": "Cliff cross-slope",
+      "description": "Single-layer study: cliff slice 4. Near terrain shader, all other ground layers and original normals retained.",
+      "beforeLabel": "Original",
+      "afterLabel": "Current candidate",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 0
+          },
+          "sourceReportSha256": {
+            "before": "1f1687ca9881fbd291d76867f2e00293b7590441913b216752cd8aa58397ea21",
+            "after": "1f1687ca9881fbd291d76867f2e00293b7590441913b216752cd8aa58397ea21"
+          },
+          "before": "images/d062fa36581ca869a0c347d1385ef5f3aadb946804a818ec8b4d36ce94fc5e74.webp",
+          "beforeSha256": "8ee48704200c115f5f8c3ee0143a2c659e54e0f5475936611e7529ff055c14ab",
+          "beforeBytes": 102260,
+          "beforeSourcePngSha256": "d062fa36581ca869a0c347d1385ef5f3aadb946804a818ec8b4d36ce94fc5e74",
+          "after": "images/c502e7e29d4319ceed1b258279d162b1bca5dcd8d74f5397f498b18922ac4cdc.webp",
+          "afterSha256": "d17a7542be03d8149ac99c3f1cc0ed884a91b544e6f2b727c51118f40b902c02",
+          "afterBytes": 107524,
+          "afterSourcePngSha256": "c502e7e29d4319ceed1b258279d162b1bca5dcd8d74f5397f498b18922ac4cdc"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 0
+          },
+          "sourceReportSha256": {
+            "before": "1f1687ca9881fbd291d76867f2e00293b7590441913b216752cd8aa58397ea21",
+            "after": "1f1687ca9881fbd291d76867f2e00293b7590441913b216752cd8aa58397ea21"
+          },
+          "before": "images/d01d1c04e1733a1d092801046e5fb0917ddae4304132827a56d5c313d7d24764.webp",
+          "beforeSha256": "3f4b54eb3129ec3d7c95132a71cf143ede66f77752203a4a732126efd4c2684b",
+          "beforeBytes": 349060,
+          "beforeSourcePngSha256": "d01d1c04e1733a1d092801046e5fb0917ddae4304132827a56d5c313d7d24764",
+          "after": "images/cb3f1ecf4dad8f937c2c5abff7ec3841fbf686b0c5b8c897863636fba4464502.webp",
+          "afterSha256": "c9b94203d2546cacdd66e14b9332f5c7ecf4524ce32ea5b3906d27dcf60ef826",
+          "afterBytes": 374864,
+          "afterSourcePngSha256": "cb3f1ecf4dad8f937c2c5abff7ec3841fbf686b0c5b8c897863636fba4464502"
+        }
+      ]
+    },
+    {
+      "id": "coast",
+      "label": "Shoreline sand",
+      "description": "Single-layer study: sand slice 9. Near terrain shader, all other ground layers and original normals retained.",
+      "beforeLabel": "Original",
+      "afterLabel": "Current candidate",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 0
+          },
+          "sourceReportSha256": {
+            "before": "712ed42e658513f73d60ca110ddcad8477738fe99f040c3f410859100f67d365",
+            "after": "712ed42e658513f73d60ca110ddcad8477738fe99f040c3f410859100f67d365"
+          },
+          "before": "images/9930d71ec159fec3a2365da7a5571189ec505a9a8a76663d3cf732132bad9e80.webp",
+          "beforeSha256": "bc2e4b48010063f692915cc6d6fb6e0fca736747ca30104260dc4bee5dcb3d5d",
+          "beforeBytes": 140420,
+          "beforeSourcePngSha256": "9930d71ec159fec3a2365da7a5571189ec505a9a8a76663d3cf732132bad9e80",
+          "after": "images/c4005a7e53c9a7d502a3feb3b72e0c83c9d45a7e547d61d3a055aa628460f014.webp",
+          "afterSha256": "6e3544b97868ae3ecf9d680aba9602fe7e08576fceabd190fbd1d3e49daeeef8",
+          "afterBytes": 140768,
+          "afterSourcePngSha256": "c4005a7e53c9a7d502a3feb3b72e0c83c9d45a7e547d61d3a055aa628460f014"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 0,
+            "after": 0
+          },
+          "sourceReportSha256": {
+            "before": "712ed42e658513f73d60ca110ddcad8477738fe99f040c3f410859100f67d365",
+            "after": "712ed42e658513f73d60ca110ddcad8477738fe99f040c3f410859100f67d365"
+          },
+          "before": "images/e1dcf741d323d9b3d22ee99b9fd1b072121b6e17368341e885269978a20f4d79.webp",
+          "beforeSha256": "c6b30d4813ac6298a514c387b39a8d2a25d8389ce0793370b35b294897f13448",
+          "beforeBytes": 428676,
+          "beforeSourcePngSha256": "e1dcf741d323d9b3d22ee99b9fd1b072121b6e17368341e885269978a20f4d79",
+          "after": "images/2c2d8d848b1b36e5956f3e530232fa32e6b62e0459254c1b7c9219e0ddb8ef4c.webp",
+          "afterSha256": "beb0ff704215583a17f255f480317bdeddc449627f15e097472dab1e80e75af0",
+          "afterBytes": 446366,
+          "afterSourcePngSha256": "2c2d8d848b1b36e5956f3e530232fa32e6b62e0459254c1b7c9219e0ddb8ef4c"
+        }
+      ]
+    },
+    {
+      "id": "ground-revision",
+      "label": "Turf revision",
+      "description": "Only the ground tile differs between these authored scenes. The original control captures match exactly across runs.",
+      "materialSummary": "Same 256px Point array and original normal control. Quieter turf study; not final art.",
+      "beforeLabel": "Ground v2",
+      "afterLabel": "Ground v3",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 805,
+            "after": 805
+          },
+          "sourceReportSha256": {
+            "before": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc",
+            "after": "103253e34c14ff8a682fa772d3c4d91ec5006a61d2a084a65a3e9e923b8c0532"
+          },
+          "before": "images/2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90.webp",
+          "beforeSha256": "f2ecbd5aeca9deb841029c771ec2d7d71613fda4bc3a909a5e9f6ccf0292b067",
+          "beforeBytes": 511022,
+          "beforeSourcePngSha256": "2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90",
+          "after": "images/21be1bc50038e3f3162dea885a46434c64b9a1cc8e01c831ac1429d7a56b18d0.webp",
+          "afterSha256": "016eb7aa6806f4f4c5a0181e33ba2cfc7b4d558eb421d7c7ea4d545357c92d2a",
+          "afterBytes": 463124,
+          "afterSourcePngSha256": "21be1bc50038e3f3162dea885a46434c64b9a1cc8e01c831ac1429d7a56b18d0"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 4024,
+            "after": 4024
+          },
+          "sourceReportSha256": {
+            "before": "a7849d27e4b14a317e860677ffd66f7738cae350ae1a47b2ed52944dba3e1ddc",
+            "after": "103253e34c14ff8a682fa772d3c4d91ec5006a61d2a084a65a3e9e923b8c0532"
+          },
+          "before": "images/d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488.webp",
+          "beforeSha256": "7a09d94c6d75e2b547c23cfd2e1fc10185d3120b7259dd66e0c036bd71bd63fc",
+          "beforeBytes": 1648914,
+          "beforeSourcePngSha256": "d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488",
+          "after": "images/3be9db1c0256042d8a4f94b701c1dbf33b3d969ef10521a53778f850c956bea9.webp",
+          "afterSha256": "c409a1f6a527f1119f6b6d57f91dabeb05c784ed393599bc39c46afa0cb43593",
+          "afterBytes": 1495408,
+          "afterSourcePngSha256": "3be9db1c0256042d8a4f94b701c1dbf33b3d969ef10521a53778f850c956bea9"
+        }
+      ]
+    },
+    {
+      "id": "filter-study",
+      "label": "Ground filtering",
+      "description": "The same ground v2 array and authored scene are rendered with two diffuse filters. No image content, dimensions or lighting change.",
+      "materialSummary": "Filter change affects the entire 16-layer diffuse array. The original normal array remains Point. Other biomes and performance remain unvalidated.",
+      "beforeLabel": "Point filter",
+      "afterLabel": "Bilinear filter",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true,
+        "diffuseFilterBefore": "Point",
+        "diffuseFilterAfter": "Bilinear",
+        "normalFilter": "Point",
+        "filterAppliesToAll16DiffuseLayers": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 805,
+            "after": 805
+          },
+          "sourceReportSha256": {
+            "before": "f730b31df603175b377ea5ff8a6ccf97cecb8cd314849bf6d519ab10a9dc2059",
+            "after": "f730b31df603175b377ea5ff8a6ccf97cecb8cd314849bf6d519ab10a9dc2059"
+          },
+          "before": "images/2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90.webp",
+          "beforeSha256": "f2ecbd5aeca9deb841029c771ec2d7d71613fda4bc3a909a5e9f6ccf0292b067",
+          "beforeBytes": 511022,
+          "beforeSourcePngSha256": "2de43f08d6786045dd33937a6a013d8f636f94395623f00eb21e8467f3bd8c90",
+          "after": "images/d0d65db2b486b7ce19f061ed8f93c1e9df985f8c508f4071f97e08b0686a4de6.webp",
+          "afterSha256": "269ee8faff6f5c28de3abcd9b6735ff4ee46eb6bb64031c123ad15a9d5251d1c",
+          "afterBytes": 460210,
+          "afterSourcePngSha256": "d0d65db2b486b7ce19f061ed8f93c1e9df985f8c508f4071f97e08b0686a4de6"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 4024,
+            "after": 4024
+          },
+          "sourceReportSha256": {
+            "before": "f730b31df603175b377ea5ff8a6ccf97cecb8cd314849bf6d519ab10a9dc2059",
+            "after": "f730b31df603175b377ea5ff8a6ccf97cecb8cd314849bf6d519ab10a9dc2059"
+          },
+          "before": "images/d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488.webp",
+          "beforeSha256": "7a09d94c6d75e2b547c23cfd2e1fc10185d3120b7259dd66e0c036bd71bd63fc",
+          "beforeBytes": 1648914,
+          "beforeSourcePngSha256": "d31bd82d8dbff2ed49facb48cd50821d55488e9231fd85eb5a0909a8a31f9488",
+          "after": "images/346cc9e3036cd906d919e0a05851bbbab0b99e9881e378f516d2e0a72bb4c5ed.webp",
+          "afterSha256": "51d62f45641ab211c8525fdabb9889bc5414d5fcaa50d9ab825431510c398525",
+          "afterBytes": 1461192,
+          "afterSourcePngSha256": "346cc9e3036cd906d919e0a05851bbbab0b99e9881e378f516d2e0a72bb4c5ed"
+        }
+      ]
+    },
+    {
+      "id": "bark-tree",
+      "label": "Warmer bark",
+      "description": "Only the standing-beech bark albedo changes. Ground, grass, canopy, original normals, moss, camera and lighting remain fixed.",
+      "materialSummary": "1024px opaque DXT5 with eleven mips. Original normal pixelation remains visible; companion and final material review are open.",
+      "beforeLabel": "Bark v1",
+      "afterLabel": "Bark v2",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 1811,
+            "after": 1788
+          },
+          "sourceReportSha256": {
+            "before": "68b484c0a7c04fe75d51d4397c48268fe6fce720e2e1942d0c85f16091c0bb8a",
+            "after": "68b484c0a7c04fe75d51d4397c48268fe6fce720e2e1942d0c85f16091c0bb8a"
+          },
+          "before": "images/3c95cd8f86c663243341addd16012137fd2a63e4b6e88326ccf72e4958497593.webp",
+          "beforeSha256": "be11d51a85d20381e430a260d4244fbb854bb776f187c0eba1c484ef5543e4f9",
+          "beforeBytes": 721770,
+          "beforeSourcePngSha256": "3c95cd8f86c663243341addd16012137fd2a63e4b6e88326ccf72e4958497593",
+          "after": "images/ae78ea545db5c3db21665b02499241b8187eae2f58ae62182e128dc33f78469b.webp",
+          "afterSha256": "d52801815d3ea768d2e4db9ada7ee30b2eaa3ec024fb402472c0ba044bc27cb8",
+          "afterBytes": 718544,
+          "afterSourcePngSha256": "ae78ea545db5c3db21665b02499241b8187eae2f58ae62182e128dc33f78469b"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 9718,
+            "after": 9632
+          },
+          "sourceReportSha256": {
+            "before": "68b484c0a7c04fe75d51d4397c48268fe6fce720e2e1942d0c85f16091c0bb8a",
+            "after": "68b484c0a7c04fe75d51d4397c48268fe6fce720e2e1942d0c85f16091c0bb8a"
+          },
+          "before": "images/7f7e1ae5be2bf1441ab883e4c3262b0a8de03a93e78daade16802977291a9ea7.webp",
+          "beforeSha256": "be388dfc6e1bf3f003e147a6eb1b1407721dd3c1a6e6a78e82d12ba670e395dd",
+          "beforeBytes": 2414552,
+          "beforeSourcePngSha256": "7f7e1ae5be2bf1441ab883e4c3262b0a8de03a93e78daade16802977291a9ea7",
+          "after": "images/dec43ba9afb6f8511e682d8569d692de513d06f09889fb7a3f7c7e4984c3001d.webp",
+          "afterSha256": "9cc3ecfd178733eeb1300a3e929bba9e5433c391ad3aa4dc2b0cc173cdf2905d",
+          "afterBytes": 2409270,
+          "afterSourcePngSha256": "dec43ba9afb6f8511e682d8569d692de513d06f09889fb7a3f7c7e4984c3001d"
+        }
+      ]
+    },
+    {
+      "id": "bark-clearing",
+      "label": "Bark in clearing",
+      "description": "Only the standing-beech bark albedo changes. Ground, grass, canopy, original normals, moss, camera and lighting remain fixed.",
+      "materialSummary": "1024px opaque DXT5 with eleven mips. Original normal pixelation remains visible; companion and final material review are open.",
+      "beforeLabel": "Bark v1",
+      "afterLabel": "Bark v2",
+      "conditions": {
+        "syntheticScene": true,
+        "matchedCameraGeometryAndLighting": true,
+        "originalNormalControlsRetained": true,
+        "dryDaylight": true,
+        "castShadows": false,
+        "liveWorldValidated": false,
+        "finalMaterialApproved": false,
+        "performanceValidated": false,
+        "frozenWind": true,
+        "manuallySelectedTreeLods": true
+      },
+      "pairs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "clippedHdrPixels": {
+            "before": 930,
+            "after": 930
+          },
+          "sourceReportSha256": {
+            "before": "7befecbbfa4620f1f4ef67d393248e8ca3426267e3c16afbd27547c1b1adc82c",
+            "after": "7befecbbfa4620f1f4ef67d393248e8ca3426267e3c16afbd27547c1b1adc82c"
+          },
+          "before": "images/f54087a1029f3d965e0fb6d4d1662d1f16f6bfffc259b310fc2602468b87e4e8.webp",
+          "beforeSha256": "070aad649bb188016ddc398e0e56b8cc39aeffbe2a4db8d1633bf1614dc05dec",
+          "beforeBytes": 622278,
+          "beforeSourcePngSha256": "f54087a1029f3d965e0fb6d4d1662d1f16f6bfffc259b310fc2602468b87e4e8",
+          "after": "images/55e3620d068c9f51f08dddf17e684c2e8f2bed404af6b028acff741673cad8b4.webp",
+          "afterSha256": "c5f9b8de621c9741fec97298584d7fb4dd7f2d68e95a6d1dc46b0f1b5b3ea74e",
+          "afterBytes": 620888,
+          "afterSourcePngSha256": "55e3620d068c9f51f08dddf17e684c2e8f2bed404af6b028acff741673cad8b4"
+        },
+        {
+          "width": 3840,
+          "height": 2160,
+          "clippedHdrPixels": {
+            "before": 5236,
+            "after": 5225
+          },
+          "sourceReportSha256": {
+            "before": "7befecbbfa4620f1f4ef67d393248e8ca3426267e3c16afbd27547c1b1adc82c",
+            "after": "7befecbbfa4620f1f4ef67d393248e8ca3426267e3c16afbd27547c1b1adc82c"
+          },
+          "before": "images/f86800bf0c9ab0268d1ab4958ebce480d90e6c7f7e0314c4c48d697c0298e7a9.webp",
+          "beforeSha256": "11af9f647444cc02566470d2c8f3d7c9a1db9d45fd0b06e6d84fdea3110014e6",
+          "beforeBytes": 2289052,
+          "beforeSourcePngSha256": "f86800bf0c9ab0268d1ab4958ebce480d90e6c7f7e0314c4c48d697c0298e7a9",
+          "after": "images/9d9a9822ac7fcd76932013ac59a06ff702f42fa32659c0341e127726a6593094.webp",
+          "afterSha256": "68278e5e8f478a11382114a883a22d98855eaef07d79e5db5d91ae670b842fb7",
+          "afterBytes": 2284228,
+          "afterSourcePngSha256": "9d9a9822ac7fcd76932013ac59a06ff702f42fa32659c0341e127726a6593094"
+        }
+      ]
+    }
+  ]
+}

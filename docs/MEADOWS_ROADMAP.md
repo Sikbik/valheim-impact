@@ -2,6 +2,12 @@
 
 Meadows work is organized into six bounded batches, with current progress and remaining gates below. Exact serialized identities define each starting scope. A matching name or directory does not establish placed Meadows use or approval.
 
+Current priority is the visible landscape: ground, grass, standing trees, cliffs
+and shoreline. A combined clearing has twelve native comparison frames; separate
+cliff and sand studies have twenty-four. The composition exposed pale bark,
+coarse ground and bright foliage, so coordinated art and sampling revisions come
+before additional small props. See [landscape studies](MEADOWS_LANDSCAPE.md).
+
 ## 1. Beech bark family
 
 Start from material `CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260`. It binds albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-7789706379099817400`, normal `CAB-8923bd833c4171316cf3c761b642c1c8:-3552050549463384350`, and shared moss `CAB-8923bd833c4171316cf3c761b642c1c8:-3043036005615678986`.
@@ -32,6 +38,9 @@ Remaining gates are companion normals, the unhealthy sapling cutoff 0.26 and tin
 The live diffuse target is Texture2DArray `CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791`; its companion normal array is `CAB-8923bd833c4171316cf3c761b642c1c8:-3717166463683967554`. Current runtime replacement handles Texture2D albedo, so it cannot bind these arrays correctly. Inspection resolves the Meadows grass to diffuse slice 0, with the original normal slice retained. A private one-slice composition study preserves the remaining layers and renders through the original near/distant shader contract. A revised grass tile reduces broad repetition; the original 256px Point sampler remains visibly coarse in enlarged comparisons. Explicit array loading, sampling quality, residency, restoration and full array validation remain open. Individual terrain source tiles are array-generation inputs, not substitutes for the serialized arrays.
 
 ## 5. Shoreline water discovery
+
+Shoreline sand is now a separate original layer-9 candidate with native terrain
+comparison evidence. Sand does not replace or validate the water material.
 
 Resolve the active water material and property roles before authoring or binding. Candidate exact textures are `CAB-8923bd833c4171316cf3c761b642c1c8:-189505297896212411`, `CAB-8923bd833c4171316cf3c761b642c1c8:-3900716686149641043`, `CAB-8923bd833c4171316cf3c761b642c1c8:-5943394016187327904`, `CAB-8923bd833c4171316cf3c761b642c1c8:-7324807522022545953`, `CAB-8923bd833c4171316cf3c761b642c1c8:-4427533950003945355`, `CAB-8923bd833c4171316cf3c761b642c1c8:-305452523777261620`, `CAB-8923bd833c4171316cf3c761b642c1c8:6475928566198691941`, and `CAB-8923bd833c4171316cf3c761b642c1c8:-1916312239383379176`. Record transforms, animation, foam roles, reflections, refraction, and shared global scope.
 

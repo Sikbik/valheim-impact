@@ -6,6 +6,7 @@ that preserves Valheim's silhouettes, Nordic identity, weather, and gameplay
 readability.
 
 [Project tracker](https://sikbik.github.io/valheim-impact/) ·
+[Landscape comparisons](https://sikbik.github.io/valheim-impact/landscape/) ·
 [Source and pull requests](https://github.com/Sikbik/valheim-impact) ·
 [Contributing](CONTRIBUTING.md)
 
@@ -35,6 +36,11 @@ stump and log candidates extend the staged material library. Grass, logs,
 original-shader comparisons at 1080p and 4K. Companion maps, world integration
 and visual approval remain open; these candidates are separate from the
 installed fixture.
+
+[Landscape studies](docs/MEADOWS_LANDSCAPE.md) now bring ground, grass and full
+beech trees together in a native clearing comparison. Original cliff and sand
+surface candidates have separate terrain-layer evidence. Bark color, ground
+sampling and companion maps are the current visual priorities.
 
 Current engine validation covers native Linux with Vulkan. Windows support and
 other graphics APIs require their own tests. The Balanced target is **6 GB VRAM,
@@ -85,7 +91,8 @@ under [CC BY 4.0](assets/LICENSE), with credits and scope recorded in
 applicable notices and attribution when redistributing or modifying it.
 
 Valheim Impact is an independent community project. Full game textures, extracted geometry, game assemblies and downloaded packs
-are excluded. The tracker includes bounded comparative reference thumbnails,
+are excluded. The tracker includes bounded reference thumbnails and reviewed
+landscape render comparisons,
 credited separately to Iron Gate and excluded from the project artwork license.
 See [comparison preview scope](docs/TRACKER_PREVIEWS.md). Contributors must have the rights to share every
 file they submit under its stated license.

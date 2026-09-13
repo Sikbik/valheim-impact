@@ -11,14 +11,14 @@
     {
       "title": "Art direction and material library",
       "state": "active",
-      "detail": "Stone, timber, roofs, grass, beech foliage, dandelions, raspberry and flint have scoped candidate evidence. Companion channels, distance and consistency across a playable scene still need review.",
+      "detail": "Grass, beech, stone, timber, roofs and forage have scoped candidates. New cliff and shoreline sand studies broaden the landscape palette. Bark, ground and companion maps need coordinated scene review.",
       "evidence": "assets/provenance.json"
     },
     {
       "title": "A complete playable Meadows scene",
       "state": "active",
-      "detail": "Three material fixtures pass in the game menu. Terrain, foliage, water, complete buildings and a played scene still need review.",
-      "evidence": "docs/evidence/game-menu-binding.json"
+      "detail": "A synthetic clearing now combines seven beech trees, both grass types and revised ground in 1080p/4K comparisons. Bark color, ground sampling, shadows, weather, water, buildings and played-world integration remain open.",
+      "evidence": "docs/evidence/meadows-landscape-native.json"
     },
     {
       "title": "Every biome, one coherent world",

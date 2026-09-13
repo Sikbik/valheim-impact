@@ -13,12 +13,37 @@ The `before` sprite sheets contain small comparative excerpts from Valheim.
 Valheim artwork belongs to Iron Gate. These reference excerpts are identified as
 game reference material and are excluded from the project's CC BY 4.0 artwork
 license. They are published only for identification and comparison in the
-tracker. Full textures, resource streams, extracted geometry, and raw captures
-remain outside the public repository and release archives.
+tracker. Full textures, resource streams, extracted geometry, and raw capture
+inputs remain outside the public repository and release archives. The separate
+landscape gallery publishes reviewed rendered comparisons as described below.
 
-The `after` images come from project-authored sources registered in
+## Landscape comparison gallery
+
+The [landscape gallery](https://sikbik.github.io/valheim-impact/landscape/) presents
+matching rendered views at 1080p and 4K. It includes original versus candidate
+materials and controlled revision comparisons. These are native test-scene
+captures, not screenshots of a played world. Each view states its fixed controls
+and the changes being compared.
+
+Only the reviewed image outputs are published as metadata-clean WebP files.
+The gallery records their hashes, dimensions and source PNG hashes. Full source
+textures, meshes, shader resources, local paths, logs and raw capture reports
+remain private. Both resolutions preserve the native pixel dimensions; WebP
+encoding is a lossy web presentation copy rather than the lossless validation
+artifact. The gallery initially loads one 1080p pair and loads other views or
+4K only when selected.
+
+Both sides can contain original Valheim geometry, shaders or companion imagery.
+Credit for that game content belongs to Iron Gate. The mixed rendered captures
+in `status-site/public/landscape/images/` are excluded from the project's CC BY
+4.0 artwork license. The separate, original authored texture files retain their
+own registered artwork license. Publication of a comparison does not advance
+any inventory, biome, performance or final-art stage.
+
+The inventory tracker's authored `after` tiles come from sources registered in
 `assets/provenance.json` with `original_game_pixels: false`. The project artwork
-license applies to those authored images. A side-by-side display does not grant
+license applies to those standalone authored tiles, not mixed landscape render
+captures. A side-by-side display does not grant
 project rights in the game reference, and it does not establish UV fit, native
 loading, scene coverage, biome completion, or final approval.
 

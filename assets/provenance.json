@@ -908,6 +908,218 @@
         }
       ],
       "recipe": "assets/meadows/mushroom-recipe.json"
+    },
+    {
+      "key": "terrain_cliff_source",
+      "dest": "assets/meadows/terrain-cliff-source-v1.png",
+      "status": "authored-source",
+      "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json"
+    },
+    {
+      "key": "terrain_cliff_256",
+      "dest": "assets/meadows/terrain-cliff-256-v1.png",
+      "status": "fitted-terrain-layer-candidate",
+      "sha256": "f00b663e7f1e4434d4e01577c3c22c9a9a0942584f50756d157e88b781540629",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-cliff-source-v1.png",
+          "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5"
+        }
+      ]
+    },
+    {
+      "key": "terrain_cliff_512",
+      "dest": "assets/meadows/terrain-cliff-512-v1.png",
+      "status": "fitted-terrain-layer-candidate",
+      "sha256": "66225f42da71341f1c2dbdb50e6e86e0a15f60dffa6da5ceb0ce7f8a69441011",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-cliff-source-v1.png",
+          "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5"
+        }
+      ]
+    },
+    {
+      "key": "terrain_cliff_1024",
+      "dest": "assets/meadows/terrain-cliff-1024-v1.png",
+      "status": "fitted-terrain-layer-candidate",
+      "sha256": "7441c350b5f3f7ea1d7b24a478536bc1d891d57d5b9144f3b3e77a243ef71ef4",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-cliff-source-v1.png",
+          "sha256": "90e11d55259fce2c666701761cbad62fd9e3043cd871dfbdeda1faec6da8aed5"
+        }
+      ]
+    },
+    {
+      "key": "terrain_sand_source",
+      "dest": "assets/meadows/terrain-sand-source-v1.png",
+      "status": "authored-source",
+      "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json"
+    },
+    {
+      "key": "terrain_sand_256",
+      "dest": "assets/meadows/terrain-sand-256-v1.png",
+      "status": "fitted-terrain-layer-candidate",
+      "sha256": "2fce628bdbf596045bfe766ec47687f316bf9431f6e07962da3f028a9a5573a1",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-sand-source-v1.png",
+          "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688"
+        }
+      ]
+    },
+    {
+      "key": "terrain_sand_512",
+      "dest": "assets/meadows/terrain-sand-512-v1.png",
+      "status": "fitted-terrain-layer-candidate",
+      "sha256": "9e4a870aa669bf60c765810d65caf8e2f1790e52db9724fb934e6054d281e62f",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-sand-source-v1.png",
+          "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688"
+        }
+      ]
+    },
+    {
+      "key": "terrain_sand_1024",
+      "dest": "assets/meadows/terrain-sand-1024-v1.png",
+      "status": "fitted-terrain-layer-candidate",
+      "sha256": "0a2444e68c9297ebc90d7515397fe1357afbc00d89e47ad299d7595b81e5151f",
+      "original_game_pixels": false,
+      "original_masks_used": false,
+      "original_geometry": false,
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGBA",
+      "alpha_extrema": [
+        255,
+        255
+      ],
+      "credit": "Valheim Impact contributors",
+      "license": "CC-BY-4.0",
+      "source": "project-authored artwork",
+      "recipe": "assets/meadows/terrain-surface-recipe.json",
+      "owned_sources": [
+        {
+          "path": "assets/meadows/terrain-sand-source-v1.png",
+          "sha256": "619182e491a43d616fa550d5585211778a17df404ce697b200ce3f7fa3868688"
+        }
+      ]
     }
   ],
   "publication_notes": "File-level metadata normalization is documented in docs/evidence/artwork-file-normalization.json. Historical validation input hashes remain unchanged."

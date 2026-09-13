@@ -122,8 +122,8 @@ and routes are required before claiming that target is met.
 
 Inspect only a legally obtained local game installation. Keep original pixels,
 UV and geometry exports, game assemblies, third-party packs, saves, and private
-logs outside public source and packages. The narrow exception is the authorized
-192px tracker reference format in
+logs outside public source and packages. Scoped display exceptions cover the
+authorized 192px tracker references and reviewed landscape render comparisons in
 [tracker comparison previews](TRACKER_PREVIEWS.md), which never permits full
 sources, resource streams, or extracted geometry. Sanitize other public evidence
 instead of copying raw inspection output. Do not follow resource-file symlinks

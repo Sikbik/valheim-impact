@@ -107,6 +107,7 @@ export default function Home() {
       <nav aria-label="Project sections">
         <a className="nav-item" href="#overview"><Layers3 size={18}/> Overview</a>
         <a className="nav-item" href="#inventory"><Box size={18}/> Asset inventory</a>
+        <a className="nav-item" href="./landscape/"><Mountain size={18}/> Landscape comparisons</a>
         <a className="nav-item" href="#milestones"><ShieldCheck size={18}/> Milestones</a>
         <a className="nav-item" href="#validation"><FileCheck2 size={18}/> Validation</a>
       </nav>
@@ -118,7 +119,7 @@ export default function Home() {
       <section className="stats-grid" aria-label="Project inventory">
         {[[snapshot.summary.textures,'Textures inventoried','Albedo, normal and supporting maps'],[snapshot.summary.meshes,'Mesh objects inventoried','Original geometry currently retained'],[project.material_fixtures,'Game material fixtures','Passed in the isolated menu fixture'],[snapshot.summary.stage_counts.texture.approved + snapshot.summary.stage_counts.mesh.approved,'Assets art-approved','Complete scene review still ahead']].map(([value,label,note])=><div className="stat" key={label}><p>{label}</p><strong>{typeof value === 'number' ? num(value) : value}</strong><small>{note}</small></div>)}
       </section>
-      <div className="work-notice"><span className="next-label">IN FOCUS</span><div><strong>One coherent Meadows scene.</strong><span> Vegetation, forage and flint candidates have scoped evidence. Companion materials, world integration and complete scene review are next.</span></div><a href="#milestones" aria-label="View current milestones"><ArrowUpRight size={20}/></a></div>
+      <div className="work-notice"><span className="next-label">IN FOCUS</span><div><strong>See the Meadows take shape.</strong><span> Compare ground, trees, cliffs and shoreline in matching test scenes. Explore the latest bark, turf and filtering revisions.</span></div><a href="./landscape/" aria-label="Open landscape comparisons"><ArrowUpRight size={20}/></a></div>
       <section className="world-journey panel" aria-labelledby="journey-title">
         <div className="journey-heading"><div><p className="eyebrow">FROM THE MEADOWS TO THE EDGE OF THE WORLD</p><h2 id="journey-title">The journey so far</h2><p>Overall inventory progress</p></div><div className="journey-percent"><strong>{overall.percent.toFixed(2)}<span>%</span></strong><span>{num(overall.completed)} / {num(overall.possible)} steps evidenced</span></div></div>
         <Progress className="world-progress" value={overall.percent} aria-label="Overall inventory progress" aria-valuetext={`${overall.percent.toFixed(2)} percent, ${overall.completed} of ${overall.possible} art and validation steps evidenced`}/>

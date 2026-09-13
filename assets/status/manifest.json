@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_at": "2026-09-13T03:18:38Z",
+  "snapshot_at": "2026-09-13T04:18:38Z",
   "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
   "evidence": [
     {
@@ -14,7 +14,7 @@
     {
       "id": "authored-sources",
       "path": "assets/provenance.json",
-      "sha256": "d05c406d66bd902a48c0979e9725ffe570f16d52803fe2acdc33b4a66dad4b62",
+      "sha256": "8ec532090ea4a450d05fe5a7f2bfe7e976e405b4cefaf15345d3d2e18576081b",
       "title": "Original authored surface provenance",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
       "targets": [
@@ -579,6 +579,19 @@
           ]
         }
       ]
+    },
+    {
+      "id": "meadows-landscape-studies",
+      "path": "docs/evidence/meadows-landscape-native.json",
+      "sha256": "f18ce09493542ee986f1c28c3c192679bacaafe88583909b3455fb4234ad72b6",
+      "title": "Meadows landscape, cliff and shoreline studies",
+      "scope": "24 individual terrain-layer and 12 combined clearing frames. Partial array preparation and composition review earn no full-array or biome completion stage.",
+      "targets": [
+        {
+          "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791",
+          "stages": []
+        }
+      ]
     }
   ],
   "asset_notes": [
@@ -745,6 +758,10 @@
     {
       "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:7556872827288687829",
       "note": "Retained ordinary mushroom geometry reviewed for the exact material scope and five rest transforms. No authored model, mesh streaming, picking, world or final approval."
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791",
+      "note": "Terrain preparation covers individual grass, cliff and shoreline sand layers. 24 cliff/sand and 12 synthetic clearing frames passed native checks. Current 256px Point ground is coarse; bark and ground revisions are underway. Full array, companions, installation, world and final approval remain open."
     }
   ],
   "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18"

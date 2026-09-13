@@ -38,12 +38,13 @@ compression. Review both faces where the game material is double-sided.
 
 Keep private inspection inputs separate from distributable artwork. Original
 game textures, masks, extracted geometry, and third-party packs must not enter
-a pull request or release. The tracker may include only the authorized 192px
-game-reference comparison excerpts described in
-[tracker comparison previews](TRACKER_PREVIEWS.md). Those excerpts are excluded
-from the project artwork license and do not permit publication of their full
-sources. Other public evidence can record exact identities, hashes, dimensions,
-and measured outcomes without redistributing inspection inputs.
+a pull request or release. The tracker may include the authorized 192px
+game-reference excerpts and reviewed landscape render comparisons described in
+[tracker comparison previews](TRACKER_PREVIEWS.md). These game references and
+mixed-content captures are excluded from the project artwork license and do not
+permit publication of their full sources. Other public evidence can record
+exact identities, hashes, dimensions and measured outcomes without
+redistributing inspection inputs.
 
 ## Lighting and atmosphere
 

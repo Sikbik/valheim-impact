@@ -88,8 +88,9 @@ establish rights. Flag uncertain rights for review before adding the file.
 
 Do not submit original game textures, masks, extracted geometry, game DLLs,
 resource payloads, downloaded third-party packs, saves, or private exports.
-Do not include symlinks to those inputs. The only original-pixel exception is
-the authorized, bounded 192px game-reference comparison format documented in
+Do not include symlinks to those inputs. The scoped display exceptions are
+authorized 192px game-reference previews and reviewed landscape render
+comparisons documented in
 [tracker comparison previews](docs/TRACKER_PREVIEWS.md). Local reference
 inspection can inform original artwork without otherwise placing its source
 files in the repository or release.
