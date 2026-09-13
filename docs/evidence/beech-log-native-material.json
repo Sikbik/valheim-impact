@@ -1,0 +1,693 @@
+{
+  "schema_version": 1,
+  "measured_on": "2026-09-12",
+  "scope": "Finite native Vulkan comparison of the original beech-log material with HD and Balanced albedo replacements, retaining the exact inspected mesh, original normal and tint. Three rigid views per frame cover the side and both convex ends at the full and half prefab scales.",
+  "technical_checks_passed": true,
+  "native_payload_validated": true,
+  "retained_mesh_uv_reviewed": true,
+  "artwork_approved": false,
+  "normal_companion_approved": false,
+  "world_validated": false,
+  "runtime_binding_validated": false,
+  "model_streaming_validated": false,
+  "performance_validated": false,
+  "game_deployment_performed": false,
+  "engine": {
+    "editor_version": "6000.0.75f1",
+    "graphics_api": "Vulkan",
+    "color_space": "Linear",
+    "render_pipeline": "Built-in",
+    "render_path": "Forward"
+  },
+  "source_albedo": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407",
+    "name": "beech_log",
+    "width": 256,
+    "height": 256,
+    "format": "BC1",
+    "mip_count": 9,
+    "compressed_payload_bytes": 43704,
+    "alpha_min": 255,
+    "alpha_max": 255,
+    "all_nine_original_mips_fully_opaque": true,
+    "srgb": true
+  },
+  "source_normal_control": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:8289421623877127654",
+    "name": "beech_log_n",
+    "width": 256,
+    "height": 256,
+    "format": "BC7",
+    "mip_count": 9,
+    "compressed_payload_bytes": 87408,
+    "alpha_min": 28,
+    "alpha_max": 227,
+    "alpha_semantics": "Directional normal data, not transparency.",
+    "srgb": false,
+    "role": "Unchanged original comparison control. No authored normal is generated or approved by this study."
+  },
+  "original_texture_sampler": {
+    "filter": "Point",
+    "wrap_u": "Repeat",
+    "wrap_v": "Repeat",
+    "anisotropy": 1,
+    "mip_bias": 0
+  },
+  "material": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:2002271956048927406",
+    "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+    "shader_name": "Standard",
+    "shader_supported": true,
+    "pass_count": 4,
+    "raw_render_queue": -1,
+    "valid_keywords": [
+      "_NORMALMAP"
+    ],
+    "serialized_instancing_enabled": true,
+    "double_sided_gi": false,
+    "global_illumination_flags": 4,
+    "clone_state_preserved": true,
+    "only_replaced_property": "_MainTex",
+    "tint": {
+      "r": 0.9632353,
+      "g": 0.9632353,
+      "b": 0.9632353,
+      "a": 1.0
+    },
+    "original_normal_retained": true,
+    "normal_scale": 1.0,
+    "companion_normal_approved": false,
+    "main_texture_scale": {
+      "x": 1,
+      "y": 1
+    },
+    "main_texture_offset": {
+      "x": 0,
+      "y": 0
+    },
+    "normal_texture_scale": {
+      "x": 1,
+      "y": 1
+    },
+    "normal_texture_offset": {
+      "x": 0,
+      "y": 0
+    },
+    "other_texture_slots_null": true,
+    "emission_color": {
+      "r": 0,
+      "g": 0,
+      "b": 0,
+      "a": 0
+    },
+    "saved_values": {
+      "_Mode": 0.0,
+      "_SrcBlend": 1.0,
+      "_DstBlend": 0.0,
+      "_ZWrite": 1.0,
+      "_Cutoff": 0.5,
+      "_BumpScale": 1.0,
+      "_Glossiness": 0.0,
+      "_Metallic": 0.0,
+      "_SmoothnessTextureChannel": 0.0,
+      "_GlossMapScale": 1,
+      "_DetailNormalMapScale": 1,
+      "_OcclusionStrength": 1,
+      "_Parallax": 0.02,
+      "_UVSec": 0,
+      "_SpecularHighlights": 1,
+      "_GlossyReflections": 1
+    }
+  },
+  "geometry": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+    "name": "VerticalLog",
+    "material_slot": 0,
+    "submesh_count": 1,
+    "triangles": 64,
+    "vertices": 52,
+    "submesh_descriptor": {
+      "firstByte": 0,
+      "indexCount": 192,
+      "topology": "triangles",
+      "baseVertex": 0,
+      "firstVertex": 0,
+      "vertexCount": 52
+    },
+    "tangent_w_min": -1,
+    "tangent_w_max": -1,
+    "original_positions_uv_normals_tangents_retained": true,
+    "recalculated_normals_or_tangents": false,
+    "private_geometry_json_sha256": "25b018808eb5d6c0f1f576aed10e93ccbda0c7e7c3415be69659e20ed282630b",
+    "private_source_geometry_archive_sha256": "31e7707cf2045414956937c50d06fae65e77da327f8ab5a9675a4905f006aa43",
+    "uv_island_counts": [
+      {
+        "name": "negative-Z convex end",
+        "triangles": 24,
+        "source_256_texel_centers": 628
+      },
+      {
+        "name": "positive-Z convex end",
+        "triangles": 24,
+        "source_256_texel_centers": 638
+      },
+      {
+        "name": "cylindrical bark side",
+        "triangles": 16,
+        "source_256_texel_centers": 32760
+      }
+    ],
+    "end_geometry": "Each end has a 16-triangle bevel ring and an 8-triangle center fan. The center protrudes, so neither end is a planar disc. The fitting preserves this geometry.",
+    "excluded_other_mesh_consumers": 165
+  },
+  "owned_source": {
+    "path": "assets/meadows/beech-log-atlas-v1.png",
+    "sha256": "6b93f1e013aea0d18436af08f91b382cd5f040500892f3953686dde971718599",
+    "recipe": "assets/meadows/beech-log-recipe.json",
+    "recipe_sha256": "0b29084d749e12031e712e6c99f7e00536775a882612b6a9b640b5a11887cfee",
+    "original_game_pixels": false,
+    "original_masks_used": false
+  },
+  "native_catalog_witness": {
+    "sha256": "d54ec235117f786d482a5d2d26b3b593ae47424e0374d5dce24eb95076ede857",
+    "record_count": 40,
+    "native_readback": true,
+    "target": "StandaloneLinux64",
+    "validation_scope": "Editor native readback and base-mip GPU sampling; game binding and representative performance untested",
+    "selected_record_count": 2
+  },
+  "native_payloads": {
+    "beech_log_hd_albedo": {
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "compressed_payload_bytes": 1398128,
+      "bundle_sha256": "7e581441c81d72fb71b23123af7117c7ffcce44057b843d96eb0812ba550455b",
+      "compressed_payload_sha256": "53f0208732527a3e6f0aea8e0dcfb66b5b0ee6b50e7b9b85292141fa60e8e613",
+      "native_base_mip_readback_sha256": "d5ce43935edfb93c6d8b0cc704cd8c4a99210c648e8cacdb9627eab0e0e0e811",
+      "rendered_with_original_material_here": true
+    },
+    "beech_log_balanced_albedo": {
+      "width": 512,
+      "height": 512,
+      "mip_count": 10,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "compressed_payload_bytes": 349552,
+      "bundle_sha256": "d59d5a5c6eee28ae4fe516e8fbdd22a5b23d04f72f60063f58e8954b4c99aeac",
+      "compressed_payload_sha256": "cbc1121313388a5365e98436402e358d75f307f142e45fc5e06d356938771837",
+      "native_base_mip_readback_sha256": "79af388e844d2d08bec42c0061fe008c078c5632c34ca85cf3d8810c98e7966a",
+      "rendered_with_original_material_here": true
+    }
+  },
+  "variants": [
+    {
+      "name": "full",
+      "rendererId": "CAB-8923bd833c4171316cf3c761b642c1c8:-3946440429219332066",
+      "hierarchy": "beech_log/log",
+      "prefabPath": "Assets/world/Props/Beech/logs/beech_log.prefab",
+      "scale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 8.0
+      },
+      "rootTranslationExcluded": {
+        "x": -1.14,
+        "y": 59.26,
+        "z": 0.11
+      },
+      "rotation": {
+        "x": 0.7071068,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.7071068
+      }
+    },
+    {
+      "name": "half",
+      "rendererId": "CAB-8923bd833c4171316cf3c761b642c1c8:-8351220921150202249",
+      "hierarchy": "beech_log_half/PineTree_log (1)",
+      "prefabPath": "Assets/world/Props/Beech/logs/beech_log_half.prefab",
+      "scale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 3.6
+      },
+      "rootTranslationExcluded": {
+        "x": -2.3,
+        "y": 55.09,
+        "z": 0.11
+      },
+      "rotation": {
+        "x": 0.7071068,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.7071068
+      }
+    }
+  ],
+  "draws": [
+    {
+      "view": "full/side",
+      "translation": {
+        "x": 40.0,
+        "y": 1.65,
+        "z": -25.0
+      },
+      "diagnosticEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 90.0
+      },
+      "rotation": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5,
+        "w": 0.5
+      },
+      "prefabScale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 8.0
+      }
+    },
+    {
+      "view": "full/negative-z-end",
+      "translation": {
+        "x": 36.2,
+        "y": -1.65,
+        "z": -25.0
+      },
+      "diagnosticEuler": {
+        "x": -90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+      },
+      "prefabScale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 8.0
+      }
+    },
+    {
+      "view": "full/positive-z-end",
+      "translation": {
+        "x": 43.8,
+        "y": -1.65,
+        "z": -25.0
+      },
+      "diagnosticEuler": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "prefabScale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 8.0
+      }
+    },
+    {
+      "view": "half/side",
+      "translation": {
+        "x": 40.0,
+        "y": 1.65,
+        "z": -25.0
+      },
+      "diagnosticEuler": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 90.0
+      },
+      "rotation": {
+        "x": 0.5,
+        "y": 0.5,
+        "z": 0.5,
+        "w": 0.5
+      },
+      "prefabScale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 3.6
+      }
+    },
+    {
+      "view": "half/negative-z-end",
+      "translation": {
+        "x": 36.2,
+        "y": -1.65,
+        "z": -25.0
+      },
+      "diagnosticEuler": {
+        "x": -90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 1.0
+      },
+      "prefabScale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 3.6
+      }
+    },
+    {
+      "view": "half/positive-z-end",
+      "translation": {
+        "x": 43.8,
+        "y": -1.65,
+        "z": -25.0
+      },
+      "diagnosticEuler": {
+        "x": 90.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "rotation": {
+        "x": 1.0,
+        "y": 0.0,
+        "z": 0.0,
+        "w": 0.0
+      },
+      "prefabScale": {
+        "x": 4.0,
+        "y": 4.0,
+        "z": 3.6
+      }
+    }
+  ],
+  "fixture": {
+    "draw_method": "Graphics.DrawMesh",
+    "draws_per_frame": 3,
+    "camera_targeted_draws": true,
+    "fresh_preview_per_capture": true,
+    "isolated_preview_scene": true,
+    "light_probe_usage": "Off",
+    "shadow_casting": "Off",
+    "receive_shadows": true,
+    "game_prefabs_instantiated": false,
+    "physics_exercised": false,
+    "only_material_texture_changed": "_MainTex",
+    "transform_method": "Each diagnostic rotation is multiplied by the retained prefab rotation. Retained nonuniform prefab scales are applied without geometry edits. Authored patch translations replace the original prefab root translations.",
+    "patch_origin": {
+      "x": 40.0,
+      "y": 0.0,
+      "z": -25.0
+    },
+    "camera": {
+      "position": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -55.0
+      },
+      "target": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "orthographic": true,
+      "orthographic_size": 5.2,
+      "near_clip": 0.05,
+      "far_clip": 60,
+      "aspect_ratio": "16:9",
+      "hdr": true,
+      "msaa": false,
+      "dynamic_resolution": false,
+      "clear_color_rgb": [
+        0.025,
+        0.035,
+        0.05
+      ],
+      "vertex_framing_check": "Every transformed retained vertex lies strictly within viewport X/Y 0.01 to 0.99 and between the camera clip planes."
+    },
+    "lighting": {
+      "ambient_rgb": [
+        0.32,
+        0.38,
+        0.46
+      ],
+      "directional_lights": [
+        {
+          "color_rgb": [
+            1,
+            0.94,
+            0.83
+          ],
+          "intensity": 1.1,
+          "rotation_euler_degrees": [
+            45,
+            -35,
+            0
+          ]
+        },
+        {
+          "color_rgb": [
+            0.52,
+            0.66,
+            0.82
+          ],
+          "intensity": 0.32,
+          "rotation_euler_degrees": [
+            35,
+            150,
+            0
+          ]
+        }
+      ],
+      "light_shadows": "None",
+      "light_render_mode": "ForcePixel"
+    },
+    "color_output": "Linear HDR readback, clamped to [0,1], sRGB encoded PNG. No tone mapping."
+  },
+  "captures": {
+    "full-before-1920x1080": {
+      "variant": "full",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 179755,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "8e881e7ac6f0fa336d6318965c9270a24beee6d350ce1281788046f08728a67b"
+    },
+    "full-hd-1920x1080": {
+      "variant": "full",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 179755,
+      "overOnePixels": 2367,
+      "changedFromOriginalPixels": 179750,
+      "private_image_sha256": "1daaa549219f42d34f01f67ff2f30f3f5ab4a8bb8fd0176328ace8a7634b06fb"
+    },
+    "full-balanced-1920x1080": {
+      "variant": "full",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 179755,
+      "overOnePixels": 2319,
+      "changedFromOriginalPixels": 179755,
+      "private_image_sha256": "1b9bd2fcfae84c31fc8109b6c70f0686d670bfc61a86caebbfe41cc176222e49"
+    },
+    "full-before-3840x2160": {
+      "variant": "full",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 719005,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "a8b75094939cef742396ba7a46ecd7b9f315867bc52d856576fcd00ec1391cde"
+    },
+    "full-hd-3840x2160": {
+      "variant": "full",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 719005,
+      "overOnePixels": 9469,
+      "changedFromOriginalPixels": 718978,
+      "private_image_sha256": "a6ad57136d1d4cf8f71d510ca9a81347e9ecea3f2cfb028242cb23646d7355b2"
+    },
+    "full-balanced-3840x2160": {
+      "variant": "full",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 719005,
+      "overOnePixels": 9443,
+      "changedFromOriginalPixels": 719002,
+      "private_image_sha256": "70d0b807bda4ca3f4072cf626a50b595f5dc4877054258b04418b75cf607dc03"
+    },
+    "half-before-1920x1080": {
+      "variant": "half",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 87605,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "afa0cd161eef23a5a8c1fc65f3251408d38057057d8532a31b669042d7bd498b"
+    },
+    "half-hd-1920x1080": {
+      "variant": "half",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 87605,
+      "overOnePixels": 1068,
+      "changedFromOriginalPixels": 87604,
+      "private_image_sha256": "3a49e35983dc155d83b7ecbf186ef534e265599a9313884326e66bee1b4bf322"
+    },
+    "half-balanced-1920x1080": {
+      "variant": "half",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 87605,
+      "overOnePixels": 1028,
+      "changedFromOriginalPixels": 87604,
+      "private_image_sha256": "58722b67be50954215c4ab3947ab7d52975a1f6ec4b2c5cb4fe39cc365f65ae8"
+    },
+    "half-before-3840x2160": {
+      "variant": "half",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 350384,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "d8148e80956f3cc880f1d2b81474f13c77d4c0d6acd126b97af5462d06a6ecc9"
+    },
+    "half-hd-3840x2160": {
+      "variant": "half",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 350384,
+      "overOnePixels": 4271,
+      "changedFromOriginalPixels": 350373,
+      "private_image_sha256": "5bcfe5263f62e4b8ce35bb3ccb2893e3ab046f6015b85e8fba703d9bafd50037"
+    },
+    "half-balanced-3840x2160": {
+      "variant": "half",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 350384,
+      "overOnePixels": 4224,
+      "changedFromOriginalPixels": 350382,
+      "private_image_sha256": "4418dbc996b142e53d65ebd6217921bac6cdb51e1d85d076f165fe09867bc323"
+    }
+  },
+  "measurement_definitions": {
+    "source": "Native linear RGBA float readback before PNG encoding. Frame hashes and PNG dimensions were independently checked against the saved files.",
+    "nonfinitePixels": "Count of pixels with any nonfinite RGBA component.",
+    "magentaPixels": "Count of pixels with R > 0.8, B > 0.8 and G < 0.12. This is a bounded error-color diagnostic.",
+    "occupiedPixels": "Count with summed absolute RGB difference > 0.003 from the matched background-only render.",
+    "overOnePixels": "Count with any RGB component > 1.0 before encoding. These values are clamped in the PNG, and the count cannot be reconstructed from its encoded bytes.",
+    "changedFromOriginalPixels": "Count with summed absolute RGB difference > 0.003 from the matched original-material render.",
+    "capture_pass": "No nonfinite pixels, fewer than 64 magenta pixels and at least 64 occupied pixels. Replacement frames must also differ from the matched original in at least one pixel. Values above one are recorded but do not fail this technical check."
+  },
+  "checks": {
+    "comparison_capture_count": 12,
+    "background_render_count": 4,
+    "error_count": 0,
+    "warning_count": 0,
+    "cleanup_passed": true,
+    "scenes_preserved": true,
+    "render_globals_restored": true,
+    "frame_hashes_and_dimensions_verified": true,
+    "source_bundle_hashes_verified": true,
+    "native_catalog_hash_verified": true,
+    "native_bundle_hashes_verified": true,
+    "native_base_mip_readback_hashes_verified": true,
+    "compressed_payload_hashes_and_sizes_verified": true,
+    "authored_source_and_geometry_hashes_verified": true
+  },
+  "uv_review": {
+    "layout_evidence": "docs/evidence/beech-log-layout.json",
+    "layout_evidence_sha256": "cb89822cb93b587399d9f075bae33dc9bee452cc3237113adebd456bb44e8cbe",
+    "visually_reviewed_frames": [
+      "full-before-1920x1080",
+      "full-hd-3840x2160",
+      "half-balanced-3840x2160"
+    ],
+    "findings": "The reviewed frames place bark on the cylindrical side and endgrain on both retained convex ends at both prefab scales. The original low-resolution normal remains conspicuous. Some replacement highlights are clamped in the encoded captures.",
+    "scope": "This is a bounded mapping review of three saved frames, supported by automatic checks across all twelve. It does not approve the overall material appearance or demonstrate every mip and fractional LOD."
+  },
+  "evidence_hashes": {
+    "private_report_sha256": "80184ad5db39f1995fe7707a80cb0010cd055ba6316ba37017e6b94baf91d108",
+    "fixture_source_sha256": "11f41d6e0f45fe0e6965aa07886382e4033b930fec058347e1b070f18a04f396",
+    "fixture_assembly_sha256": "f5b0bfe2424a723e5eac6c1fc91d5abc71224e8faa8908a6ee429f4b2b18230b",
+    "private_source_descriptors_sha256": "10cab8f4614b5edc0823cf2fdf982098b3051119f045e5b5274a87d62448a7f2",
+    "source_bundle_sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+    "shader_bundle_sha256": "c4d130a0b3ec61c4b5800a3c3bb15672d66efcc24cff58e3b78799b8f730b88f"
+  },
+  "limitations": {
+    "original_normal": "The original 256-pixel BC7 normal and material tint are comparison controls. This albedo-only fixture grants no authored companion-normal approval.",
+    "highlight_clamp": "All eight replacement frames contain RGB values above one, while the four original frames do not. PNG encoding clamps those highlights without tone mapping. The recorded counts establish clipping, not visual or material approval.",
+    "world": "No active game, weather, ground contact, shadows, falling or rolling logs, gameplay distances, runtime binding or representative hardware performance are exercised.",
+    "mips": "Native payload validation checks complete compressed mip identities and base-mip GPU sampling. The finite material views do not establish every mip, fractional LOD or distant atlas behavior.",
+    "mesh": "Original positions, UVs, normals and tangents remain private and unchanged. This is no model replacement or model streaming test. Other materials sharing the mesh are outside scope.",
+    "capture_rights": "Original game pixels, full captures and geometry remain private. This public record contains measurements, identities and hashes only.",
+    "approval": "Native payload success, retained-mesh UV review and finite material rendering remain separate from world validation and final artwork approval."
+  }
+}

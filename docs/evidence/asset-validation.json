@@ -1431,6 +1431,22 @@
       "alpha_mean_absolute_error": 0.0,
       "coverage_at_128": 1.0,
       "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "beech_log_hd_albedo",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 2.231832186381022,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "beech_log_balanced_albedo",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 2.411036173502604,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
     }
   ]
 }

@@ -5,7 +5,7 @@
       "id": "authored-sources",
       "path": "assets/provenance.json",
       "scope": "Three original albedo identities have explicitly mapped authored replacement sources. Other art studies remain unmapped.",
-      "sha256": "4bf1c5a131e6395ab1089496ca5c508f6bda8828afab0c63f0dbf4a242d8520f",
+      "sha256": "1550aab6c0ae993c1bb337e40d57a37d9c319867b07bdf895946586d0d2f39d9",
       "stages": [
         "authored"
       ],
@@ -61,10 +61,27 @@
       "title": "Complete serialized inventory"
     },
     {
+      "id": "meadows-beech-logs",
+      "path": "docs/evidence/contributions/meadows-beech-logs.json",
+      "scope": "Owned bark and endgrain fit the exact log material. Both quality candidates have scoped UV, native payload and original-material render evidence. Companion normals, world integration and final approval remain open.",
+      "sha256": "67b70cb3c79fa2655338b8e22175646715428334627abff3225ec15d335ab6a0",
+      "stages": [
+        "authored",
+        "native_validated",
+        "uv_reviewed"
+      ],
+      "target_count": 2,
+      "targets": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-2626186852244817445",
+        "CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407"
+      ],
+      "title": "Full and half beech log candidates"
+    },
+    {
       "id": "meadows-beech-materials",
       "path": "docs/evidence/contributions/meadows-beech-materials.json",
       "scope": "Three authored albedos have scoped UV and native texture evidence across seven retained meshes. Distant bark conflict, unhealthy sapling state, companion normals, actual shader, wind and LOD transitions remain open. No beech game or final approval.",
-      "sha256": "681f97cb76391ff9c52c675527506916e4fc492181c2f8fad996351621e03ee9",
+      "sha256": "0c4938894c1f90d24b5aaa12b33decfefd11e31c58cdf41cb9b76c17f5212d8c",
       "stages": [
         "authored",
         "native_validated",
@@ -89,7 +106,7 @@
       "id": "meadows-ground-cover",
       "path": "docs/evidence/contributions/meadows-ground-cover.json",
       "scope": "Tall and short grass plus continuous bark and stump candidates have scoped UV and native texture evidence. HD grass also passes an isolated original-shader instancing fixture. Wind, world integration, distance transitions and final approval remain open.",
-      "sha256": "82498dcd8e762db1917b9b6b63985332b65cf1ecceb3e34b61c6fde7dca4b4ea",
+      "sha256": "e2e7cc57e407e37f32c3e4ecdb8f76849022916aaea48efeb5ffe9b05f5689a5",
       "stages": [
         "authored",
         "native_validated",
@@ -136,7 +153,7 @@
       "id": "native-textures",
       "path": "docs/evidence/native-validation.json",
       "scope": "The exact granite_hd_albedo, timber_hd_albedo and roof_atlas_hd_albedo replacements passed native texture sampling. No mesh streaming claim.",
-      "sha256": "a855a5d79c9e3e91c953eb1ff5fb38b99aca86c0bb5ee10665d85cae3fb9da5a",
+      "sha256": "a11e5bc58a3664b25fab0eab58c29f262d09068ff5aaf6d01c83f9097bfdfa98",
       "stages": [
         "native_validated"
       ],
@@ -222,10 +239,10 @@
   "inputs": {
     "catalog_sha256": "aa1e27f22f7a0a153362dd0daaa18fdc86e4af9f5cd48670fc957d9157999f18",
     "inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
-    "status_manifest_sha256": "0676278e6c346025a1fc98232055401da237746f3491a82c67ddff3451278331"
+    "status_manifest_sha256": "93578a096be51295838849fb678601284543a30d847e5a532cb52b1a7c8b3c0a"
   },
   "schema_version": 1,
-  "snapshot_at": "2026-09-12T23:29:29Z",
+  "snapshot_at": "2026-09-12T23:58:03Z",
   "stage_definitions": {
     "approved": "Explicit final approval recorded for the stated scope.",
     "authored": "An authored replacement is explicitly mapped to this original asset.",
@@ -260,8 +277,8 @@
         "world_surface": 328
       }
     },
-    "evidence_records": 13,
-    "evidence_target_assets": 27,
+    "evidence_records": 14,
+    "evidence_target_assets": 29,
     "meshes": 10336,
     "stage_counts": {
       "mesh": {
@@ -270,15 +287,15 @@
         "game_fixture_validated": 1,
         "inventoried": 10336,
         "native_validated": 0,
-        "uv_reviewed": 17
+        "uv_reviewed": 18
       },
       "texture": {
         "approved": 0,
-        "authored": 10,
+        "authored": 11,
         "game_fixture_validated": 3,
         "inventoried": 3187,
-        "native_validated": 10,
-        "uv_reviewed": 10
+        "native_validated": 11,
+        "uv_reviewed": 11
       }
     },
     "textures": 3187

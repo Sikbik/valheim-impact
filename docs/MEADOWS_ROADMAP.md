@@ -8,6 +8,15 @@ Start from material `CAB-8923bd833c4171316cf3c761b642c1c8:3590192218068893260`. 
 
 Follow-up inspection resolves 20 consumers across ten meshes. The earlier patch sits on a downward root cap; the exposed stump top occupies a different island. New 1024px studies separate continuous standing-tree bark from a fitted stump atlas, avoiding a shared cut patch that bleeds into distant trunk mips. Logs use their own albedo and material and form a separate work batch. Original alpha, moss, companion normals and material-specific runtime binding remain open. The standalone imported beech model has different material assignments and is not the gameplay tree. See [beech material candidates](BEECH_MATERIALS.md).
 
+The separate log batch now has a fitted 1024px source and 1024/512px candidates
+for albedo `CAB-8923bd833c4171316cf3c761b642c1c8:410654931012585407`. Both log
+variants share one material and one retained mesh. Their side seam and two end
+islands are mapped explicitly. Twelve original-material frames cover both
+scales and quality candidates at 1080p and 4K. The original normal remains a
+comparison control, with an authored companion and world review still pending.
+The other 165 users of the mesh remain outside scope. See
+[beech logs](BEECH_LOGS.md) for fitting and remaining acceptance work.
+
 ## 2. Meadows grass cards
 
 Resolved materials `CAB-8923bd833c4171316cf3c761b642c1c8:1669900682560515117` and `CAB-8923bd833c4171316cf3c761b642c1c8:2753016777081159198` use albedos `CAB-8923bd833c4171316cf3c761b642c1c8:-6685763419340257079` and `CAB-8923bd833c4171316cf3c761b642c1c8:8723292681815040943`. Authored neutral-white cutouts now fit their six-card mesh, with tall 512/256px and short 256/128px candidates. Both use terrain color texture `CAB-8923bd833c4171316cf3c761b642c1c8:5952445177512870087`, cutoff 0.46 and an instanced drawing path. Review instanced integration, compressed alpha, both faces under the actual shader, wind, tint modulation and distance transitions. See [Meadows grass](MEADOWS_GRASS.md).

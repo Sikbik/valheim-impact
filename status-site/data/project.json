@@ -11,7 +11,7 @@
     {
       "title": "Art direction and material library",
       "state": "active",
-      "detail": "Original stone, timber, roof and straw candidates are recorded, with a beech bark study. Production material standards and broader visual consistency still need review.",
+      "detail": "Stone, timber, roof, straw, grass and beech foliage, bark and log candidates have scoped evidence. Companion material channels and consistency across a playable scene still need review.",
       "evidence": "assets/provenance.json"
     },
     {
@@ -58,10 +58,11 @@
     }
   ],
   "staged_native_binding_checks": 35,
-  "staged_evidence": "docs/evidence/contributions/meadows-straw-materials.json",
+  "staged_evidence": "docs/evidence/contributions/meadows-beech-logs.json",
+  "staged_detail": "Straw, beech foliage and bark, grass and both log sizes have scoped UV and native evidence. World review and companion material channels remain open.",
   "public_repository": "https://github.com/Sikbik/valheim-impact",
   "public_url": "https://sikbik.github.io/valheim-impact/",
-  "staged_native_texture_count": 26,
-  "staged_mip_levels": 256,
-  "staged_texture_payload_bytes": 14331232
+  "staged_native_texture_count": 40,
+  "staged_mip_levels": 399,
+  "staged_texture_payload_bytes": 25713024
 }

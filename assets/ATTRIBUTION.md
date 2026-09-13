@@ -32,3 +32,8 @@ No original game masks or pixels were used to construct these candidates.
 The tall and short grass masks and fitted white cutouts, continuous beech bark,
 and separate stump atlas use the same artwork license. Their source masks and
 fitting recipes are included for reproducible edits and contribution review.
+
+The fitted beech-log atlas derives from the project's owned bark and endgrain.
+Its two quality candidates share the same source; the recipe records their
+exact fitting operations. Original game normals remain private comparison
+controls and are not part of that artwork.
