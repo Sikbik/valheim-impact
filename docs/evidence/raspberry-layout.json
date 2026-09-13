@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "scope": "Owned opaque albedo fitting to retained fruit, stem and calyx UV regions. No authored geometry or original pixels/masks in artwork.",
+  "albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4336459423859995684",
+  "normal_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-930578383931095846",
+  "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5156263323322596695",
+  "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5184478007217032880",
+  "vertices": 144,
+  "triangles": 152,
+  "original_albedo_dimensions": [
+    32,
+    32
+  ],
+  "original_albedo_mips": 6,
+  "original_albedo_alpha": [
+    255,
+    255
+  ],
+  "material": {
+    "shader": "Standard",
+    "mode": "opaque",
+    "glossiness": 0.7699999809265137,
+    "normal_scale": 1,
+    "normal_is_original_comparison_control": true,
+    "albedo_scale": [
+      1,
+      1
+    ],
+    "albedo_offset": [
+      0,
+      0
+    ],
+    "original_sampler": "Point/Repeat"
+  },
+  "shared_scope": {
+    "serialized_consumers": 24,
+    "bush_lod0_renderers": 21,
+    "active_item_renderers": 1,
+    "inactive_item_nodes": 2,
+    "meadows_bush_configuration_verified": true,
+    "mistlands_bush_entry_disabled": true
+  },
+  "uv_parts": {
+    "uv_island_0": {
+      "triangle_count": 12,
+      "uv_min": [
+        0.39947399497032166,
+        0.07067900151014328
+      ],
+      "uv_max": [
+        0.5643010139465332,
+        0.0921740010380745
+      ],
+      "pixel_span_at_sizes": {
+        "32": [
+          5.2744646072387695,
+          0.6878399848937988
+        ],
+        "256": [
+          42.195716857910156,
+          5.502719879150391
+        ],
+        "512": [
+          84.39143371582031,
+          11.005439758300781
+        ]
+      }
+    },
+    "uv_island_1": {
+      "triangle_count": 12,
+      "uv_min": [
+        0.39947399497032166,
+        0.013101000338792801
+      ],
+      "uv_max": [
+        0.5818300247192383,
+        0.04447700083255768
+      ],
+      "pixel_span_at_sizes": {
+        "32": [
+          5.835392951965332,
+          1.004032015800476
+        ],
+        "256": [
+          46.683143615722656,
+          8.032256126403809
+        ],
+        "512": [
+          93.36628723144531,
+          16.064512252807617
+        ]
+      }
+    },
+    "central_stem_above_neck": {
+      "triangle_count": 24,
+      "uv_min": [
+        0.1686979979276657,
+        0.7842710018157959
+      ],
+      "uv_max": [
+        0.2022390067577362,
+        0.9868990182876587
+      ],
+      "pixel_span_at_sizes": {
+        "32": [
+          1.0733122825622559,
+          6.484096527099609
+        ],
+        "256": [
+          8.586498260498047,
+          51.872772216796875
+        ],
+        "512": [
+          17.172996520996094,
+          103.74554443359375
+        ]
+      }
+    },
+    "fruit_body_and_upper_shoulder_to_neck": {
+      "triangle_count": 104,
+      "uv_min": [
+        0.013101000338792801,
+        0.013101000338792801
+      ],
+      "uv_max": [
+        0.37327298521995544,
+        0.7922809720039368
+      ],
+      "pixel_span_at_sizes": {
+        "32": [
+          11.525503516197205,
+          24.933759093284607
+        ],
+        "256": [
+          92.20402812957764,
+          199.47007274627686
+        ],
+        "512": [
+          184.40805625915527,
+          398.9401454925537
+        ]
+      }
+    }
+  },
+  "owned_sources": [
+    "assets/meadows/raspberry-surface-source-v1.png",
+    "assets/meadows/dandelion-leaf-source-v1.png"
+  ],
+  "recipe": {
+    "path": "assets/meadows/raspberry-recipe.json",
+    "sha256": "c363c2bc74f1a9975895c4cf7236d254c323de9ce7c2b0874d348c4013069e12"
+  },
+  "limits": [
+    "CPU comparisons use approximate diffuse lighting and do not execute the original normal or Standard shader.",
+    "512 and 256 are independent fitted candidates. Stem and calyx color mix at coarse atlas mips.",
+    "Retained original normal alpha packs tangent X; it is not transparency.",
+    "All placed-world, LOD transition, companion-normal and final-art approval remains open."
+  ]
+}

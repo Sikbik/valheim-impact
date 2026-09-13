@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "status": "Authored opaque albedo candidate accepted for finite native study; native appearance, distance, world and final art review remain pending",
+  "source": {
+    "path": "assets/meadows/flint-surface-source-v1.png",
+    "sha256": "e442822a1195d25266b0a1b34f2a3c8c604630c7454eb18729088a986725a7f5",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "mode": "RGB"
+  },
+  "owned_only_fitting": true,
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "fitting_helper_reads_original_geometry": false,
+  "layout_informed_by_retained_uv_review": true,
+  "target_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2536012081126669073",
+  "target_material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6656279515724779218",
+  "texture_property": "_MainTex",
+  "scope": {
+    "selected_materials": 1,
+    "serialized_renderers": 71,
+    "selected_mesh_slots": 5,
+    "excluded_texture_sharing_materials": 9,
+    "excluded_texture_role": "_EmissionMap",
+    "global_texture_binding_authorized": false
+  },
+  "material_controls": {
+    "shader_name": "Standard",
+    "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+    "uv_scale": [
+      0.20000000298023224,
+      0.20000000298023224
+    ],
+    "uv_offset": [
+      0,
+      0
+    ],
+    "mode": 0,
+    "tint_rgba": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "glossiness": 0.7020000219345093,
+    "metallic": 0,
+    "normal_texture_bound": false,
+    "vertex_normals_and_tangents": "Retained source controls, not generated artwork"
+  },
+  "wrap_mode": "repeat",
+  "generate_normal": false,
+  "seam_fit": {
+    "operation": "tools.asset_pipeline.periodic_rgb on the owned RGB source before resizing",
+    "axes": [
+      0,
+      1
+    ],
+    "band_pixels": 24,
+    "target": "mean of each pair of opposite edges",
+    "weight_formula": "(1 - i / 24) ** 2 for i in range(24)",
+    "quantization": "float64, numpy.rint, clip to 0..255, uint8",
+    "last_edge_equals_first": true
+  },
+  "hd_fit": {
+    "periods_per_axis": 1,
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "padding": "3 by 3 copies of the owned periodic parent",
+    "sample_box_xy_exclusive": [
+      1254,
+      1254,
+      2508,
+      2508
+    ],
+    "filter": "Pillow RGB LANCZOS with the sample box and default reducing_gap=None",
+    "material_uv_transform_changed": false
+  },
+  "balanced_fit": {
+    "dimensions": [
+      512,
+      512
+    ],
+    "source": "flint-hd-v1.png",
+    "operation": "First tools.asset_pipeline.mip_chain albedo mip, using linear-light premultiplied-alpha BOX filtering and sRGB encoding; convert to RGB",
+    "encoded_mips_match_hd_suffix": true
+  },
+  "staging": {
+    "source_images_are_already_fitted": true,
+    "repeat_seam_correction_again": false,
+    "filter_mode": "Trilinear",
+    "anisotropy": 4,
+    "mip_bias": 0,
+    "compression": "BC3",
+    "srgb": true,
+    "complete_mips": true
+  },
+  "outputs": {
+    "flint-hd-v1.png": {
+      "sha256": "87bb36cb4fd07085d5dad411d2371a02366452631da52caaebe4325f82e94dc3",
+      "dimensions": [
+        1024,
+        1024
+      ],
+      "mode": "RGB",
+      "rgb_sha256": "81279f252e904a3e098453af86df0bc437cf43378fa43ba41a9a8a51908c0867",
+      "alpha_min": 255,
+      "alpha_max": 255
+    },
+    "flint-balanced-v1.png": {
+      "sha256": "ba062c317bfd97e5a4d32a18bf3518fb8cc78692bdbf300087dfb016075f7a47",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGB",
+      "rgb_sha256": "0c182c96ed300198ddf85795ba0a929fec03e6bec4590bf82c38a16fc30e6aac",
+      "alpha_min": 255,
+      "alpha_max": 255
+    }
+  },
+  "fitting_helper": {
+    "path": "tools/fit_flint.py",
+    "sha256": "c92c8b83e77ac53a75c20678dbb6e3e9a040d5bf0895faf55e35b2d08f2f5dac",
+    "dependency_manifest": "requirements-assets.txt",
+    "dependency_manifest_sha256": "b484fb6fbc42add5d47850a2e23eb01e71983d44b68fa3d698cbc3b1b8a3f35b",
+    "pipeline_helper": "tools/asset_pipeline.py",
+    "pipeline_helper_sha256": "39e021f3e98c53a6c77efed24051fab5f61d992b3b7910f8cc59f4d98df3293e",
+    "image_inputs": [
+      "assets/meadows/flint-surface-source-v1.png"
+    ],
+    "geometry_inputs": [],
+    "hash_validation": "Verify the parent before decoding and both encoded output hashes before creating either output. Reject linked paths and existing outputs; create each output exclusively."
+  },
+  "versions": {
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "zlib_runtime": "1.3.2"
+  },
+  "png_encoding": {
+    "encoder": "Pillow PNG",
+    "mode": "RGB",
+    "bit_depth": 8,
+    "color_type": 2,
+    "interlace": false,
+    "optimize": false,
+    "compress_level": 6,
+    "chunks": [
+      "IHDR",
+      "IDAT",
+      "IEND"
+    ],
+    "inherited_metadata": false,
+    "color_interpretation": "Opaque albedo RGB, staged as sRGB. No embedded profile or text metadata."
+  },
+  "limitations": [
+    "CPU comparisons use Point sampling and simple shading. They do not establish native Standard gloss, lighting or mip selection.",
+    "The albedo is brighter than the original reference. Gloss and possible highlight clipping require native review.",
+    "Complete opaque mip chains preserve geometry coverage, while fine color detail diminishes at coarse levels.",
+    "The exact material is shared by shoreline flint, pile states, player equipment, enemy variants, physical projectiles and vendor props. Other materials sharing the texture remain excluded.",
+    "Final art and representative hardware performance are not approved."
+  ]
+}

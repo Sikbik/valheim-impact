@@ -28,9 +28,11 @@ transitions, weather, broader biome coverage, coordinated lighting, and model
 or shader streaming still need validation. See the tracker for exact asset IDs,
 evidence, and unchecked stages.
 
-Meadows grass, dandelions and beech foliage, bark, stump and log candidates
-extend the staged material library. Grass, logs and [dandelions](docs/DANDELION.md)
-also have isolated original-shader comparisons at 1080p and 4K. Companion maps,
+Meadows grass, dandelions, raspberry, flint and beech foliage, bark, stump and log
+candidates extend the staged material library. Grass, logs,
+[dandelions](docs/DANDELION.md), [raspberries](docs/RASPBERRY.md) and
+[flint](docs/FLINT.md) also have isolated original-shader comparisons at 1080p
+and 4K. Companion maps,
 world integration and visual approval remain open; these candidates are separate
 from the installed fixture.
 

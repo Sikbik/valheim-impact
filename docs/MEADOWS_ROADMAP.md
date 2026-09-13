@@ -29,7 +29,7 @@ Remaining gates are companion normals, the unhealthy sapling cutoff 0.26 and tin
 
 ## 4. Terrain arrays
 
-The live diffuse target is Texture2DArray `CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791`; its companion normal array is `CAB-8923bd833c4171316cf3c761b642c1c8:-3717166463683967554`. Current runtime replacement handles Texture2D albedo, so it cannot bind these arrays correctly. Inspection resolves the Meadows grass to diffuse slice 0, with the original normal slice retained. A private one-slice composition study preserves the remaining layers and now renders through the original near/distant shader contract. Visible repetition requires further artwork work. Explicit array loading, residency, restoration and full array validation remain open. Individual terrain source tiles are array-generation inputs, not substitutes for the serialized arrays.
+The live diffuse target is Texture2DArray `CAB-8923bd833c4171316cf3c761b642c1c8:-4418745866935824791`; its companion normal array is `CAB-8923bd833c4171316cf3c761b642c1c8:-3717166463683967554`. Current runtime replacement handles Texture2D albedo, so it cannot bind these arrays correctly. Inspection resolves the Meadows grass to diffuse slice 0, with the original normal slice retained. A private one-slice composition study preserves the remaining layers and renders through the original near/distant shader contract. A revised grass tile reduces broad repetition; the original 256px Point sampler remains visibly coarse in enlarged comparisons. Explicit array loading, sampling quality, residency, restoration and full array validation remain open. Individual terrain source tiles are array-generation inputs, not substitutes for the serialized arrays.
 
 ## 5. Shoreline water discovery
 
@@ -39,6 +39,24 @@ Resolve the active water material and property roles before authoring or binding
 
 Dandelion albedo `CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638` now has owned 512px and 256px cutout candidates. Exact UV fitting covers two heads, five leaves and two stems on the retained 150-vertex mesh. Seventy-two original-material frames cover six distinct transforms across seven pickable, item, mounted trophy and creature/menu uses at 1080p and 4K. This shared scope includes uses outside the Meadows.
 
-The original material has no normal map. Its cutoff and companion state remain intact. Final tiny mips lose flower-head coverage, and bright highlights clip in the comparison encoding. Native distance transitions, world binding, lighting review and final art approval remain open. See [dandelion candidates](DANDELION.md). Raspberry and shoreline flint are the next discovery candidates; each requires its own exact material, UV and shared-consumer inspection.
+The original material has no normal map. Its cutoff and companion state remain intact. Final tiny mips lose flower-head coverage, and bright highlights clip in the comparison encoding. Native distance transitions, world binding, lighting review and final art approval remain open. See [dandelion candidates](DANDELION.md).
+
+[Raspberry](RASPBERRY.md) now has fitted 512px and 256px opaque albedo candidates.
+Twenty-four native frames cover the fruit and item at 1080p and 4K. The material
+has 24 serialized consumers; bush fruit appears only at LOD0. The original 32px
+normal causes blocky highlights and remains an unapproved comparison control.
+An aligned companion study and coarse-mip color review are the next gates.
+
+[Flint](FLINT.md) now has 1024px and 512px opaque surface candidates for its
+exact Standard material. Sixty native frames cover loose flint, spear and arrow
+heads, and new/worn piles. The 0.2 texture scale is preserved. Nine other
+materials using the same texture for emission are excluded. Its brighter
+surface, retained gloss, world visibility and shared gameplay contexts remain
+under review.
+
+Ordinary mushroom inspection resolves its separate cap, underside and stalk
+regions. It shares a normal with other mushroom colors and has configured uses
+beyond the Meadows. Original artwork and exact seam fitting are in progress;
+no mushroom inventory stage is checked yet.
 
 These batches advance material coverage without claiming a playable biome. Placed-world scope, companion channels, actual shaders, weather, streaming, measured performance, and final art review remain separate acceptance work.

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "scope": "Original authored opaque surface fitted for one exact flint material. Retained geometry is an inspection guide, not authored or distributed mesh content.",
+  "albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2536012081126669073",
+  "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:6656279515724779218",
+  "normal_id": null,
+  "shared_scope": {
+    "selected_materials": 1,
+    "serialized_renderers": 71,
+    "selected_mesh_slots": 5,
+    "excluded_emission_materials": 9,
+    "excluded_emission_renderers": 41,
+    "texture_identity_replacement_allowed": false
+  },
+  "material": {
+    "shader": "Standard",
+    "mode": "opaque",
+    "glossiness": 0.7020000219345093,
+    "metallic": 0,
+    "tint": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "main_texture_scale": [
+      0.20000000298023224,
+      0.20000000298023224
+    ],
+    "main_texture_offset": [
+      0,
+      0
+    ],
+    "original_sampler": "Point/Repeat",
+    "original_albedo_dimensions": [
+      64,
+      64
+    ],
+    "original_albedo_mips": 7,
+    "original_alpha": [
+      255,
+      255
+    ]
+  },
+  "meshes": [
+    {
+      "case": "pickable-flint",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1458816030085136971",
+      "material_slot": 0,
+      "selected_vertices": 34,
+      "selected_triangles": 48,
+      "representative_renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:3206439010320469160"
+    },
+    {
+      "case": "spear-flint",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-1001117759672557436",
+      "material_slot": 0,
+      "selected_vertices": 84,
+      "selected_triangles": 32,
+      "representative_renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1903021471792244734"
+    },
+    {
+      "case": "arrow-flint",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3157006381488833980",
+      "material_slot": 0,
+      "selected_vertices": 49,
+      "selected_triangles": 38,
+      "representative_renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6711417975089910666"
+    },
+    {
+      "case": "pile-new",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2799889797145375631",
+      "material_slot": 0,
+      "selected_vertices": 612,
+      "selected_triangles": 864,
+      "representative_renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-6123881275406682576"
+    },
+    {
+      "case": "pile-worn",
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3738864932515717983",
+      "material_slot": 0,
+      "selected_vertices": 612,
+      "selected_triangles": 864,
+      "representative_renderer_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2137463281869588944"
+    }
+  ],
+  "sampled_uv_scope": "The material scale confines sampling mostly to the lower-left fifth. A small negative V excursion requires Repeat. Atlas resolution is not the number of texels spanning the object.",
+  "sampled_texel_centers": [
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-1001117759672557436",
+      "triangles": 32,
+      "repeat_texel_center_union": {
+        "64": 19,
+        "256": 297,
+        "512": 1184,
+        "1024": 4743
+      }
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3157006381488833980",
+      "triangles": 38,
+      "repeat_texel_center_union": {
+        "64": 44,
+        "256": 745,
+        "512": 2940,
+        "1024": 11813
+      }
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-3738864932515717983",
+      "triangles": 864,
+      "repeat_texel_center_union": {
+        "64": 118,
+        "256": 1857,
+        "512": 7433,
+        "1024": 29724
+      }
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:1458816030085136971",
+      "triangles": 48,
+      "repeat_texel_center_union": {
+        "64": 118,
+        "256": 1857,
+        "512": 7433,
+        "1024": 29724
+      }
+    },
+    {
+      "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:2799889797145375631",
+      "triangles": 864,
+      "repeat_texel_center_union": {
+        "64": 118,
+        "256": 1857,
+        "512": 7433,
+        "1024": 29724
+      }
+    }
+  ],
+  "recipe": {
+    "path": "assets/meadows/flint-recipe.json",
+    "sha256": "79addb3ec409c526dc43f3e16dff2b48320da243b8d7232cf25185bb58fb79a5"
+  },
+  "limits": [
+    "Direct 1024/512 candidates were selected over a busier five-repeat alternative.",
+    "The spear study includes only its flint head material slot; shaft and other material users are excluded.",
+    "The worn pile is an intentional inactive-state study; native frames do not exercise construction-state changes.",
+    "Offline comparisons and finite native draws do not establish all 71 runtime contexts, world visibility, distance or final art approval."
+  ]
+}

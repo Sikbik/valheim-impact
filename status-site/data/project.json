@@ -11,7 +11,7 @@
     {
       "title": "Art direction and material library",
       "state": "active",
-      "detail": "Stone, timber, roofs, grass, beech foliage and dandelions have scoped candidate evidence. Companion channels, distant coverage and consistency across a playable scene still need review.",
+      "detail": "Stone, timber, roofs, grass, beech foliage, dandelions, raspberry and flint have scoped candidate evidence. Companion channels, distance and consistency across a playable scene still need review.",
       "evidence": "assets/provenance.json"
     },
     {
@@ -58,11 +58,11 @@
     }
   ],
   "staged_native_binding_checks": 35,
-  "staged_evidence": "docs/evidence/contributions/meadows-dandelion.json",
-  "staged_detail": "Straw, beech foliage, bark and logs, grass and dandelions have scoped UV and native evidence. Grass ownership and sampler checks also pass isolated fixtures. World integration and final art remain open.",
+  "staged_evidence": "docs/evidence/contributions/meadows-flint.json",
+  "staged_detail": "Straw, beech foliage, bark and logs, grass, dandelions, raspberry and flint have scoped UV and native evidence. Companion channels, world integration and final art remain open.",
   "public_repository": "https://github.com/Sikbik/valheim-impact",
   "public_url": "https://sikbik.github.io/valheim-impact/",
-  "staged_native_texture_count": 42,
-  "staged_mip_levels": 418,
-  "staged_texture_payload_bytes": 26149984
+  "staged_native_texture_count": 46,
+  "staged_mip_levels": 458,
+  "staged_texture_payload_bytes": 28334624
 }

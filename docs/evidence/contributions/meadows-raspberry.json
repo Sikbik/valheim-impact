@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "kind": "asset-review",
+  "targets": [
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:4336459423859995684",
+      "stages": [
+        "authored",
+        "uv_reviewed",
+        "native_validated"
+      ]
+    },
+    {
+      "asset_id": "CAB-8923bd833c4171316cf3c761b642c1c8:5184478007217032880",
+      "stages": [
+        "uv_reviewed"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "name": "Owned red and leaf parents reproduce both opaque atlas hashes exactly without original game pixels or masks.",
+      "passed": true
+    },
+    {
+      "name": "Exact UV review covers the retained 144-vertex, 152-triangle mesh. Shared scope is 24 consumers; the 21 bush fruit renderers are LOD0.",
+      "passed": true
+    },
+    {
+      "name": "Both albedo candidates pass complete BC3 mip, native payload, GPU sampling and Repeat sampler checks.",
+      "passed": true
+    },
+    {
+      "name": "Twenty-four original Standard-material frames cover bush fruit and item transforms from front and rear at 1080p and 4K. Cleanup and material preservation pass with zero errors or warnings.",
+      "passed": true
+    },
+    {
+      "name": "Original 32px normal highlights disagree with the new surface. Coarse green-region mip mixing and clamped HDR remain limitations; companion, world, LOD, final art and performance approval are open.",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/raspberry-layout.json SHA256 153f5cd11f87f28d6ae568c4641ca0bf4ad859d1c0752048e67d20274b89ccc1",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/raspberry-native-material.json SHA256 8613bb3b6fcf86bf28a6574c580773087f966207f2a0c9815877a0012056678a",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/native-validation.json SHA256 ec7660b2f55f95b8f77e63c8c867f8c30519a6eefae35ffcb4cc63766b36261d",
+      "passed": true
+    },
+    {
+      "name": "docs/evidence/asset-validation.json SHA256 7743aac9f387573c49cdd7f6c0015e9dc7b3f22b7bec49651b07ab5a1df28fe7",
+      "passed": true
+    },
+    {
+      "name": "assets/meadows/raspberry-recipe.json SHA256 c363c2bc74f1a9975895c4cf7236d254c323de9ce7c2b0874d348c4013069e12",
+      "passed": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "assets/meadows/raspberry-surface-source-v1.png",
+      "sha256": "fc77fa48534dcdc3dde50e23524e6fd7b0444e663df273c5bda5e4655d43a43d"
+    },
+    {
+      "path": "assets/meadows/raspberry-atlas-hd-v1.png",
+      "sha256": "d97655a5ff683f41c6b740343444b8abb92066f78d91495f451c4c680a9f4805"
+    },
+    {
+      "path": "assets/meadows/raspberry-atlas-balanced-v1.png",
+      "sha256": "43cd1cb387fba4c0734afa276a5ce918f95e6f84b598a0c87a0eb8b0173b39cd"
+    },
+    {
+      "path": "assets/meadows/dandelion-leaf-source-v1.png",
+      "sha256": "0b585efae5dce086cff61acd100a2c46295dd7d81a52bcaa1090a7e5268758ab"
+    }
+  ]
+}

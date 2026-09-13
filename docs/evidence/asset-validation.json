@@ -1733,6 +1733,38 @@
           "allowed_coverage_delta": 1.01
         }
       ]
+    },
+    {
+      "id": "raspberry_hd_albedo",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 3.1355158487955728,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "raspberry_balanced_albedo",
+      "decoded_mips": 9,
+      "rgb_mean_absolute_error": 4.101694742838542,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "flint_hd_albedo",
+      "decoded_mips": 11,
+      "rgb_mean_absolute_error": 2.4839744567871094,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
+    },
+    {
+      "id": "flint_balanced_albedo",
+      "decoded_mips": 10,
+      "rgb_mean_absolute_error": 2.7305335998535156,
+      "alpha_mean_absolute_error": 0.0,
+      "coverage_at_128": 1.0,
+      "decoded_coverage_at_128": 1.0
     }
   ]
 }
