@@ -43,6 +43,59 @@ class PackageBuildTests(unittest.TestCase):
         return build_package(catalog=self.root/'bundles/catalog.json', output=self.root/'package.zip',
             runtime_dir=self.root, staging_manifest=self.root/'stage/manifest.json', provenance=self.root/'provenance.json', source_root=self.root, version='0.1.0', **options)
 
+    def test_declared_native_wrap_must_match_staging_without_rewriting_catalog(self):
+        for mode in ('repeat', 'clamp'):
+            with self.subTest(mode=mode):
+                (self.root / 'package.zip').unlink(missing_ok=True)
+                self.asset['wrap_mode'] = mode
+                (self.root / 'stage/manifest.json').write_text(json.dumps(dict(assets=[self.asset])))
+                self.catalog['textures'][0]['wrapMode'] = mode
+                payload = json.dumps(self.catalog, indent=2).encode()
+                (self.root / 'bundles/catalog.json').write_bytes(payload)
+                self.build()
+                with zipfile.ZipFile(self.root / 'package.zip') as archive:
+                    self.assertEqual(archive.read('payload/assets/catalog.json'), payload)
+                (self.root / 'package.zip').unlink()
+                self.catalog['textures'][0]['wrapMode'] = 'clamp' if mode == 'repeat' else 'repeat'
+                (self.root / 'bundles/catalog.json').write_text(json.dumps(self.catalog))
+                with self.assertRaises(ValueError):
+                    self.build()
+                self.assertFalse((self.root / 'package.zip').exists())
+
+    def test_legacy_native_sampler_stays_absent_and_staged_default_is_repeat(self):
+        # Historical sampling was Repeat even for nonperiodic image processing.
+        self.asset['periodic'] = False
+        (self.root / 'stage/manifest.json').write_text(json.dumps(dict(assets=[self.asset])))
+        original = (self.root / 'bundles/catalog.json').read_bytes()
+        self.build()
+        with zipfile.ZipFile(self.root / 'package.zip') as archive:
+            self.assertEqual(archive.read('payload/assets/catalog.json'), original)
+        (self.root / 'package.zip').unlink()
+        self.catalog['textures'][0]['wrapMode'] = 'repeat'
+        (self.root / 'bundles/catalog.json').write_text(json.dumps(self.catalog))
+        self.build()
+        (self.root / 'package.zip').unlink()
+        self.catalog['textures'][0]['wrapMode'] = 'clamp'
+        (self.root / 'bundles/catalog.json').write_text(json.dumps(self.catalog))
+        with self.assertRaises(ValueError):
+            self.build()
+
+    def test_invalid_explicit_sampler_metadata_is_rejected_before_packaging(self):
+        for location in ('native', 'staged'):
+            for value in (None, True, False, 0, 1, 1.0, {}, [], '', 'Repeat', 'mirror', 'clamp '):
+                with self.subTest(location=location, value=value):
+                    (self.root / 'package.zip').unlink(missing_ok=True)
+                    asset, catalog = copy.deepcopy(self.asset), copy.deepcopy(self.catalog)
+                    if location == 'native':
+                        catalog['textures'][0]['wrapMode'] = value
+                    else:
+                        asset['wrap_mode'] = value
+                    (self.root / 'stage/manifest.json').write_text(json.dumps(dict(assets=[asset])))
+                    (self.root / 'bundles/catalog.json').write_text(json.dumps(catalog))
+                    with self.assertRaises(ValueError):
+                        self.build()
+                    self.assertFalse((self.root / 'package.zip').exists())
+
     def test_binding_allowlist_is_packaged_and_unknown_texture_is_rejected(self):
         binding = dict(id='stone', materialName='stone_huge', shaderName='Custom/StaticRock',
                        textureProperty='_MainTex', originalTextureName='rock_256',
@@ -137,6 +190,79 @@ class PackageBuildTests(unittest.TestCase):
                     self.assertFalse((self.root / 'package.zip').exists())
                 finally:
                     (self.root / 'package.zip').unlink(missing_ok=True)
+
+    def grass_manifest(self):
+        return dict(schemaVersion=3, bindings=[dict(id='grass-tall', materialName='grasscross_meadows', shaderName='Custom/Grass',
+            textureProperty='_MainTex', originalTextureName='grass_meadows', originalWidth=128, originalHeight=128, ownedTextureId='stone',
+            grass=dict(fixedPasses='Custom/Grass-v1', cutoff=.46, renderQueue=2000, terrainTextureName='grass_terrain_color',
+                terrainWidth=1024, terrainHeight=1024, terrainColorScale=.01, swayDistance=2.3, pushDistance=2))])
+
+    def test_grass_v3_mixes_piece_and_opaque_rules_without_rewriting_metadata(self):
+        manifest = self.grass_manifest()
+        manifest['bindings'] += self.cutout_manifest()['bindings']
+        short = copy.deepcopy(manifest['bindings'][0])
+        short.update(id='grass-short', materialName='grasscross_meadows_short', originalTextureName='grass_meadows_short',
+                     originalWidth=64, originalHeight=64)
+        short['grass'].update(swayDistance=1, pushDistance=.5)
+        manifest['bindings'].append(short)
+        opaque = copy.deepcopy(manifest['bindings'][1])
+        opaque.update(id='solid', materialName='straw_roof')
+        del opaque['cutout']
+        manifest['bindings'].append(opaque)
+        path = self.root / 'bindings.json'
+        payload = json.dumps(manifest).encode()
+        path.write_bytes(payload)
+        self.build(bindings=path)
+        with zipfile.ZipFile(self.root / 'package.zip') as archive:
+            self.assertEqual(archive.read('payload/assets/bindings.json'), payload)
+
+    def test_grass_requires_explicit_v3_contract_and_exact_original_tuple(self):
+        variants = []
+        for version in (1, 2):
+            manifest = self.grass_manifest()
+            manifest['schemaVersion'] = version
+            variants.append(manifest)
+        for version in (1, 2, 3):
+            manifest = self.grass_manifest()
+            manifest['schemaVersion'] = version
+            del manifest['bindings'][0]['grass']
+            variants.append(manifest)
+        for key, value in [('grass', None), ('shaderName', 'Custom/Piece'), ('materialName', 'grasscross_meadows (Instance)'),
+                           ('originalTextureName', 'grass_meadows_short'), ('originalWidth', 64), ('originalHeight', 64)]:
+            manifest = self.grass_manifest()
+            manifest['bindings'][0][key] = value
+            variants.append(manifest)
+        both = self.grass_manifest()
+        both['bindings'][0]['cutout'] = self.cutout_manifest()['bindings'][0]['cutout']
+        variants.append(both)
+        for key in self.grass_manifest()['bindings'][0]['grass']:
+            manifest = self.grass_manifest()
+            del manifest['bindings'][0]['grass'][key]
+            variants.append(manifest)
+        for key, value in [('fixedPasses', 'guessed-cull-zero'), ('cutoff', .5), ('cutoff', float('nan')),
+                           ('cutoff', '.46'), ('cutoff', True), ('renderQueue', 2000.0), ('renderQueue', 2450),
+                           ('terrainTextureName', 'other'), ('terrainWidth', 512), ('terrainHeight', 1024.0),
+                           ('terrainColorScale', .02), ('swayDistance', 1), ('pushDistance', .5), ('extra', False)]:
+            manifest = self.grass_manifest()
+            manifest['bindings'][0]['grass'][key] = value
+            variants.append(manifest)
+        for index, manifest in enumerate(variants):
+            with self.subTest(case=index):
+                path = self.root / 'bindings.json'
+                path.write_text(json.dumps(manifest))
+                try:
+                    with self.assertRaises(ValueError):
+                        self.build(bindings=path)
+                    self.assertFalse((self.root / 'package.zip').exists())
+                finally:
+                    (self.root / 'package.zip').unlink(missing_ok=True)
+
+    def test_grass_uses_single_precision_for_the_native_cutoff_contract(self):
+        manifest = self.grass_manifest()
+        manifest['bindings'][0]['grass']['cutoff'] = 0.46000000834465027
+        path = self.root / 'bindings.json'
+        path.write_text(json.dumps(manifest))
+        self.build(bindings=path)
 
     def test_tampered_dds_and_non_authored_provenance_block_package(self):
         (self.root / 'stage/stone-unity.dds').write_bytes(b'changed')

@@ -47,6 +47,17 @@ a JSON boolean. Preparation and bundle building copy only the roles listed in
 the resulting staging manifest, so a stale unlisted normal file is not packaged.
 This option does not establish that an original material's normal needs replacing.
 
+Set `wrap_mode` to `clamp` for an atlas whose edge pixels must extend beyond its
+UV bounds, or `repeat` for repeating surfaces. Omission defaults to `repeat` in
+the prototype recipe. Each emitted role records the resolved setting explicitly;
+preparation rejects missing or unsupported staged values before copying files.
+Regenerate older staging manifests with `tools/asset_pipeline.py`. The native
+builder uses this metadata, then checks all three wrap axes, Trilinear filtering
+and anisotropy 4 after loading each bundle. `tools/validate_native.py` independently
+compares the serialized sampler with its staging recipe and native catalog.
+Wrapping is separate from periodic edge fitting and does not alter pixel or mip
+payloads.
+
 To build that separate project with an explicitly selected Editor:
 
 ```sh

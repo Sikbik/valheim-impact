@@ -11,7 +11,7 @@
     {
       "title": "Art direction and material library",
       "state": "active",
-      "detail": "Stone, timber, roof, straw, grass and beech foliage, bark and log candidates have scoped evidence. Companion material channels and consistency across a playable scene still need review.",
+      "detail": "Stone, timber, roofs, grass, beech foliage and dandelions have scoped candidate evidence. Companion channels, distant coverage and consistency across a playable scene still need review.",
       "evidence": "assets/provenance.json"
     },
     {
@@ -41,7 +41,7 @@
     {
       "title": "Streaming and measured performance",
       "state": "active",
-      "detail": "Bounded texture ownership is tested. Representative 6 GB hardware, exploration frame times, full-world residency and model or shader streaming remain unverified.",
+      "detail": "Bounded grass ownership and sampler-safe asynchronous texture loading pass isolated native checks. Representative 6 GB hardware, exploration frame times and world residency remain unverified.",
       "evidence": "docs/evidence/cutout-binding-native.json"
     },
     {
@@ -58,11 +58,11 @@
     }
   ],
   "staged_native_binding_checks": 35,
-  "staged_evidence": "docs/evidence/contributions/meadows-beech-logs.json",
-  "staged_detail": "Straw, beech foliage and bark, grass and both log sizes have scoped UV and native evidence. World review and companion material channels remain open.",
+  "staged_evidence": "docs/evidence/contributions/meadows-dandelion.json",
+  "staged_detail": "Straw, beech foliage, bark and logs, grass and dandelions have scoped UV and native evidence. Grass ownership and sampler checks also pass isolated fixtures. World integration and final art remain open.",
   "public_repository": "https://github.com/Sikbik/valheim-impact",
   "public_url": "https://sikbik.github.io/valheim-impact/",
-  "staged_native_texture_count": 40,
-  "staged_mip_levels": 399,
-  "staged_texture_payload_bytes": 25713024
+  "staged_native_texture_count": 42,
+  "staged_mip_levels": 418,
+  "staged_texture_payload_bytes": 26149984
 }

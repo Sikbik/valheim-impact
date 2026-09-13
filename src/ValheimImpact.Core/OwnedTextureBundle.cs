@@ -17,8 +17,13 @@ namespace ValheimImpact.Core
         public bool IsSrgb { get; private set; }
         public int MipCount { get; private set; }
         public long PayloadBytes { get; private set; }
+        // Null means undeclared legacy state, never an assumed Repeat sampler.
+        public string WrapMode { get; private set; }
 
         public OwnedTextureBundle(string path, string assetName, string sha256, int width, int height, bool isSrgb)
+            : this(path, assetName, sha256, width, height, isSrgb, null) { }
+
+        public OwnedTextureBundle(string path, string assetName, string sha256, int width, int height, bool isSrgb, string wrapMode)
         {
             if (string.IsNullOrWhiteSpace(path) || string.IsNullOrWhiteSpace(assetName))
                 throw new ArgumentException("A bundle path and exact asset selector are required");
@@ -27,8 +32,10 @@ namespace ValheimImpact.Core
                 if (!Uri.IsHexDigit(c)) throw new ArgumentException("Expected hexadecimal SHA256 digest");
             if (!TextureIndex.IsPowerOfTwo(width) || !TextureIndex.IsPowerOfTwo(height) || width > 16384 || height > 16384)
                 throw new ArgumentException("Expected power-of-two dimensions up to 16384");
+            if (wrapMode != null && wrapMode != "repeat" && wrapMode != "clamp")
+                throw new ArgumentException("Declared wrap mode must be repeat or clamp");
             Path = System.IO.Path.GetFullPath(path); AssetName = assetName; Sha256 = sha256.ToLowerInvariant();
-            Width = width; Height = height; IsSrgb = isSrgb;
+            Width = width; Height = height; IsSrgb = isSrgb; WrapMode = wrapMode;
             int dimension = Math.Max(width, height); MipCount = 1;
             while (dimension > 1) { dimension >>= 1; MipCount++; }
             PayloadBytes = TextureIndex.Dxt5Bytes(width, height);

@@ -33,6 +33,8 @@ def validate_inputs(source):
         raise ValueError('Unsupported or empty staging manifest')
     seen, inputs = set(), []
     for record in manifest['assets']:
+        if record.get('wrap_mode') not in ('repeat', 'clamp'):
+            raise ValueError('Staged wrap_mode must be repeat or clamp; regenerate the authored inputs')
         identifier = record['id']
         if not re.fullmatch('[a-z][a-z0-9_]*', identifier) or identifier in seen:
             raise ValueError('Invalid or duplicate identifier')

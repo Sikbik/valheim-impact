@@ -13,6 +13,18 @@ from tools.prepare_unity import safe_path
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def validate_sampler(texture, record, wrap_mode):
+    if wrap_mode not in ('repeat', 'clamp'):
+        raise ValueError('Staged wrap_mode must be repeat or clamp')
+    expected = 0 if wrap_mode == 'repeat' else 1
+    settings = texture.m_TextureSettings
+    if (record.get('wrapMode') != wrap_mode
+            or (settings.m_WrapU, settings.m_WrapV, settings.m_WrapW) != (expected,) * 3
+            or settings.m_FilterMode != 2 or settings.m_Aniso != 4 or settings.m_MipBias != 0):
+        raise ValueError('Owned texture sampler differs from its recipe: ' + record['id'])
+    return wrap_mode
+
+
 def compare_readback(reference, actual, srgb):
     if reference.shape != actual.shape or reference.ndim != 3 or reference.shape[2] != 4:
         raise ValueError('GPU readback dimensions differ')
@@ -33,6 +45,10 @@ def main():
     import UnityPy  # Only bundle inspection needs the inspection dependency set.
     root, stage = ROOT / 'unity/Bundles', ROOT / 'build/staging/meadows'
     catalog = json.loads(safe_path(root, 'catalog.json').read_text())
+    staging = json.loads(safe_path(stage, 'manifest.json').read_text())
+    staged = {record['id']: record for record in staging['assets']}
+    if len(staged) != len(staging['assets']) or set(staged) != {record['id'] for record in catalog['textures']}:
+        raise ValueError('Native catalog and staged texture identities differ')
     if catalog.get('graphicsApi') != 'Vulkan' or catalog.get('colorSpace') != 'Linear':
         raise ValueError('This evidence requires the Vulkan, Linear authoring configuration')
     reports = []
@@ -44,6 +60,7 @@ def main():
         if len(textures) != 1:
             raise ValueError('Expected exactly one owned texture')
         texture = textures[0]
+        wrap_mode = validate_sampler(texture, record, staged[record['id']].get('wrap_mode'))
         payload = texture.get_image_data()
         if (len(payload) != record['payloadBytes'] or texture.m_IsReadable
                 or texture.m_StreamData.size != record['payloadBytes'] or len(texture.image_data) != 0
@@ -59,7 +76,8 @@ def main():
         errors = compare_readback(reference, actual, record['isSrgb'])
         reports.append({'id': record['id'], 'width': record['width'], 'height': record['height'],
                         'payload_bytes': len(payload), 'stream_payload_verified': True,
-                        'cpu_readable': False, 'gpu_sampling': errors})
+                        'cpu_readable': False, 'wrap_mode': wrap_mode,
+                        'sampler_verified': True, 'gpu_sampling': errors})
     report = {'editor': catalog['editorVersion'], 'graphics_api': catalog['graphicsApi'],
               'color_space': catalog['colorSpace'], 'textures': reports,
               'compressed_payload_bytes': sum(t['payload_bytes'] for t in reports),

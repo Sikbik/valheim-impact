@@ -1,0 +1,1878 @@
+{
+  "schema_version": 1,
+  "measured_on_utc": "2026-09-13",
+  "scope": "Finite native Vulkan original Standard-material comparison at six retained consumer rest transforms. Close orthographic views only. Original pixels and mesh arrays remain private.",
+  "complete_shared_scope": true,
+  "technical_checks_passed": true,
+  "completed_case_count": 6,
+  "expected_case_count": 6,
+  "consumer_count": 7,
+  "expected_consumer_count": 7,
+  "native_payload_validated": true,
+  "retained_mesh_cpu_uv_reviewed": true,
+  "artwork_approved": false,
+  "world_validated": false,
+  "runtime_binding_validated": false,
+  "distance_transitions_validated": false,
+  "animation_validated": false,
+  "model_streaming_validated": false,
+  "performance_validated": false,
+  "game_deployment_performed": false,
+  "engine": {
+    "editor_version": "6000.0.75f1",
+    "graphics_api": "Vulkan",
+    "color_space": "Linear",
+    "render_pipeline": "Built-in",
+    "render_path": "Forward"
+  },
+  "source": {
+    "albedo_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+    "albedo_size": 32,
+    "albedo_format": "BC3",
+    "albedo_mip_count": 6,
+    "alpha_semantics": "Cutout coverage at the retained Standard cutoff, not blended translucency.",
+    "cutoff": 0.14000000059604645,
+    "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8929892379601486267",
+    "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+    "normal_texture_bound": false,
+    "source_bundle_sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+    "shader_dependency_sha256": "c4d130a0b3ec61c4b5800a3c3bb15672d66efcc24cff58e3b78799b8f730b88f",
+    "sampler": {
+      "filter": "Point",
+      "wrap_u": "Clamp",
+      "wrap_v": "Clamp",
+      "anisotropy": 1,
+      "mip_bias": 0
+    }
+  },
+  "material": {
+    "sourceId": "CAB-8923bd833c4171316cf3c761b642c1c8:-8929892379601486267",
+    "shaderId": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+    "shaderName": "Standard",
+    "albedoId": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+    "normalId": null,
+    "normalName": null,
+    "hdId": "dandelion_hd_albedo",
+    "balancedId": "dandelion_balanced_albedo",
+    "hdBundleSha256": "909f760b4b3862fe618da8ed4e98de4d15d2fb0e28b2a68e5e1bc456372255e1",
+    "balancedBundleSha256": "cb1da83560b19e521653a0af6bd9d6ca5d4d883756b53a53d00f0b5549ef4249",
+    "passCount": 4,
+    "rawRenderQueue": 2450,
+    "normalScale": 1.0,
+    "tint": {
+      "r": 1.0,
+      "g": 1.0,
+      "b": 1.0,
+      "a": 1.0
+    },
+    "shaderSupported": true,
+    "cloneStatePreserved": true,
+    "originalNormalRetained": false,
+    "companionNormalApproved": false,
+    "cutout_mode": 1,
+    "alpha_cutoff": 0.14000000059604645,
+    "enabled_keywords": [
+      "_ALPHATEST_ON"
+    ],
+    "serialized_instancing_enabled": true,
+    "double_sided_gi": false,
+    "global_illumination_flags": 4,
+    "normal_texture_binding_preserved_null": true
+  },
+  "geometry": {
+    "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2264560222537116440",
+    "vertices": 150,
+    "triangles": 136,
+    "indices": 408,
+    "submeshes": 1,
+    "explicit_backface_triangle_pairs": 56,
+    "head_instances": 2,
+    "leaf_instances": 5,
+    "stem_instances": 2,
+    "original_positions_uv_normals_tangents_retained": true,
+    "recalculated_normals_or_tangents": false,
+    "private_geometry_json_sha256": "fef581aeaf6ca8d9166a5aa827b83cda2dbc4cef515e25802ce07fe3e8c00529",
+    "private_geometry_archive_sha256": "ef0af6246102d34343505f86dc7eef49c7419c3007a2cf04469954b8df04b178",
+    "tangent_w_counts": {
+      "negative": 87,
+      "positive": 63
+    },
+    "region_triangle_counts": {
+      "head": 32,
+      "leaf": 80,
+      "stem": 24
+    }
+  },
+  "cases": [
+    {
+      "name": "pickable",
+      "consumer_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-1609649451563510355"
+      ],
+      "hierarchies": [
+        "Pickable_Dandelion/visual"
+      ],
+      "completed": true
+    },
+    {
+      "name": "trophy-prop",
+      "consumer_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-5506783192631730660"
+      ],
+      "hierarchies": [
+        "prop_TrophyGreydwarfBrute/attach/model/Dandelion02"
+      ],
+      "completed": true
+    },
+    {
+      "name": "itemstand-trophy",
+      "consumer_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-8476077252483070286"
+      ],
+      "hierarchies": [
+        "prop_itemstand_TrophyGreydwarfBrute/attach_other/prop_TrophyGreydwarfBrute/attach/model/Dandelion02"
+      ],
+      "completed": true
+    },
+    {
+      "name": "trophy-item",
+      "consumer_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-8527725231628343457"
+      ],
+      "hierarchies": [
+        "TrophyGreydwarfBrute/attach/model/Dandelion02"
+      ],
+      "completed": true
+    },
+    {
+      "name": "dandelion-item",
+      "consumer_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:-9168994393916003178"
+      ],
+      "hierarchies": [
+        "Dandelion/attach/attachobj/Visual"
+      ],
+      "completed": true
+    },
+    {
+      "name": "elite",
+      "consumer_ids": [
+        "CAB-8923bd833c4171316cf3c761b642c1c8:8070440610014702370",
+        "CAB-ce3ef22e661e6601117ebe9cc6da6256:-8911618029534636003"
+      ],
+      "hierarchies": [
+        "Greydwarf_Elite/Visual/Armature.001/root/spine1/spine2/spine3/Dandelion02",
+        "Menu_Greydwarf_Elite/Visual/Armature.001/root/spine1/spine2/spine3/Dandelion02"
+      ],
+      "completed": true
+    }
+  ],
+  "draws": [
+    {
+      "view": "pickable/front",
+      "retainedMatrix": [
+        1.2,
+        2.01166867e-23,
+        -5.329071e-16,
+        0.0,
+        -4.34107979e-23,
+        1.2,
+        -5.24536681e-08,
+        0.0,
+        5.329071e-16,
+        5.24536681e-08,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 41.2226944,
+        "y": 1.08621383,
+        "z": -26.7823639
+      },
+      "cameraTarget": {
+        "x": 40.0226936,
+        "y": 0.186213866,
+        "z": -24.9823647
+      }
+    },
+    {
+      "view": "pickable/rear",
+      "retainedMatrix": [
+        1.2,
+        2.01166867e-23,
+        -5.329071e-16,
+        0.0,
+        -4.34107979e-23,
+        1.2,
+        -5.24536681e-08,
+        0.0,
+        5.329071e-16,
+        5.24536681e-08,
+        1.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 38.8226929,
+        "y": 1.08621383,
+        "z": -23.1823654
+      },
+      "cameraTarget": {
+        "x": 40.0226936,
+        "y": 0.186213866,
+        "z": -24.9823647
+      }
+    },
+    {
+      "view": "trophy-prop/front",
+      "retainedMatrix": [
+        0.6021394,
+        9.87969e-10,
+        -0.6621787,
+        -0.008716106,
+        -0.6595292,
+        0.0799834,
+        -0.599730253,
+        0.007962163,
+        0.05917585,
+        0.8914344,
+        0.05381043,
+        0.426811844,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 41.1728554,
+        "y": 0.8671579,
+        "z": -26.2342968
+      },
+      "cameraTarget": {
+        "x": 39.9728546,
+        "y": -0.0328420848,
+        "z": -24.4342976
+      }
+    },
+    {
+      "view": "trophy-prop/rear",
+      "retainedMatrix": [
+        0.6021394,
+        9.87969e-10,
+        -0.6621787,
+        -0.008716106,
+        -0.6595292,
+        0.0799834,
+        -0.599730253,
+        0.007962163,
+        0.05917585,
+        0.8914344,
+        0.05381043,
+        0.426811844,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 38.7728539,
+        "y": 0.8671579,
+        "z": -22.6342983
+      },
+      "cameraTarget": {
+        "x": 39.9728546,
+        "y": -0.0328420848,
+        "z": -24.4342976
+      }
+    },
+    {
+      "view": "itemstand-trophy/front",
+      "retainedMatrix": [
+        -0.602139533,
+        -9.879692e-10,
+        0.662178755,
+        0.008716107,
+        0.059175875,
+        0.8914348,
+        0.0538104549,
+        0.426812053,
+        -0.6595295,
+        0.0799834356,
+        -0.599730551,
+        0.154962167,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 41.2271461,
+        "y": 1.46570194,
+        "z": -26.68584
+      },
+      "cameraTarget": {
+        "x": 40.0271454,
+        "y": 0.565701962,
+        "z": -24.8858414
+      }
+    },
+    {
+      "view": "itemstand-trophy/rear",
+      "retainedMatrix": [
+        -0.602139533,
+        -9.879692e-10,
+        0.662178755,
+        0.008716107,
+        0.059175875,
+        0.8914348,
+        0.0538104549,
+        0.426812053,
+        -0.6595295,
+        0.0799834356,
+        -0.599730551,
+        0.154962167,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 38.8271446,
+        "y": 1.46570194,
+        "z": -23.0858421
+      },
+      "cameraTarget": {
+        "x": 40.0271454,
+        "y": 0.565701962,
+        "z": -24.8858414
+      }
+    },
+    {
+      "view": "trophy-item/front",
+      "retainedMatrix": [
+        0.602139533,
+        3.159631e-07,
+        -0.662178636,
+        -0.008715959,
+        -0.622244358,
+        0.306113422,
+        -0.565826,
+        0.06683553,
+        0.226478308,
+        0.84103936,
+        0.20594418,
+        0.391988248,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 41.1728554,
+        "y": 0.9516667,
+        "z": -26.2690773
+      },
+      "cameraTarget": {
+        "x": 39.9728546,
+        "y": 0.05166672,
+        "z": -24.4690781
+      }
+    },
+    {
+      "view": "trophy-item/rear",
+      "retainedMatrix": [
+        0.602139533,
+        3.159631e-07,
+        -0.662178636,
+        -0.008715959,
+        -0.622244358,
+        0.306113422,
+        -0.565826,
+        0.06683553,
+        0.226478308,
+        0.84103936,
+        0.20594418,
+        0.391988248,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 38.7728539,
+        "y": 0.9516667,
+        "z": -22.6690788
+      },
+      "cameraTarget": {
+        "x": 39.9728546,
+        "y": 0.05166672,
+        "z": -24.4690781
+      }
+    },
+    {
+      "view": "dandelion-item/front",
+      "retainedMatrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.173648208,
+        0.9848077,
+        -1.29378e-09,
+        0.0,
+        -0.9848077,
+        -0.173648208,
+        0.0499999933,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 41.218914,
+        "y": 0.8862693,
+        "z": -26.9067421
+      },
+      "cameraTarget": {
+        "x": 40.0189133,
+        "y": -0.01373069,
+        "z": -25.1067429
+      }
+    },
+    {
+      "view": "dandelion-item/rear",
+      "retainedMatrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.173648208,
+        0.9848077,
+        -1.29378e-09,
+        0.0,
+        -0.9848077,
+        -0.173648208,
+        0.0499999933,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 38.8189125,
+        "y": 0.8862693,
+        "z": -23.3067436
+      },
+      "cameraTarget": {
+        "x": 40.0189133,
+        "y": -0.01373069,
+        "z": -25.1067429
+      }
+    },
+    {
+      "view": "elite/front",
+      "retainedMatrix": [
+        1.0000006,
+        1.64077152e-09,
+        -4.42377068e-09,
+        0.008716106,
+        -1.6407683e-09,
+        1.00000226,
+        1.9865233e-08,
+        2.68757939,
+        4.42378756e-09,
+        3.504046e-08,
+        1.00000179,
+        0.218608916,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 41.2276268,
+        "y": 3.7427578,
+        "z": -26.5666943
+      },
+      "cameraTarget": {
+        "x": 40.027626,
+        "y": 2.8427577,
+        "z": -24.766695
+      }
+    },
+    {
+      "view": "elite/rear",
+      "retainedMatrix": [
+        1.0000006,
+        1.64077152e-09,
+        -4.42377068e-09,
+        0.008716106,
+        -1.6407683e-09,
+        1.00000226,
+        1.9865233e-08,
+        2.68757939,
+        4.42378756e-09,
+        3.504046e-08,
+        1.00000179,
+        0.218608916,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "patchOrigin": {
+        "x": 40.0,
+        "y": 0.0,
+        "z": -25.0
+      },
+      "cameraPosition": {
+        "x": 38.8276253,
+        "y": 3.7427578,
+        "z": -22.9666958
+      },
+      "cameraTarget": {
+        "x": 40.027626,
+        "y": 2.8427577,
+        "z": -24.766695
+      }
+    }
+  ],
+  "native_catalog_witness": {
+    "sha256": "e7ceb1dd3742e0e6ad665ba5d3a073991fa6b9a1b21324bf2594aba0e99d0553",
+    "record_count": 42,
+    "selected_record_count": 2,
+    "native_readback": true
+  },
+  "native_payloads": {
+    "dandelion_hd_albedo": {
+      "width": 512,
+      "height": 512,
+      "mip_count": 10,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "wrap_u": "Clamp",
+      "wrap_v": "Clamp",
+      "compressed_payload_bytes": 349552,
+      "compressed_payload_sha256": "430bd9cdc0be08ad6ddd8a0d523557521c0fdacd2e31b579904aa149ce737ff4",
+      "bundle_sha256": "909f760b4b3862fe618da8ed4e98de4d15d2fb0e28b2a68e5e1bc456372255e1",
+      "native_base_mip_readback_sha256": "d6ad4b8dc997b6af276084f57a88479bdfecfaee69ad17cd6de89a3df56b7cfc",
+      "owned_source": "assets/meadows/dandelion-atlas-hd-v1.png",
+      "owned_source_sha256": "17028ec8e889e8306b9a1d0c489be650c190fc6b6e3ab3cec3fade8fd27fa1d4"
+    },
+    "dandelion_balanced_albedo": {
+      "width": 256,
+      "height": 256,
+      "mip_count": 9,
+      "format": "DXT5",
+      "srgb": true,
+      "cpu_readable": false,
+      "wrap_u": "Clamp",
+      "wrap_v": "Clamp",
+      "compressed_payload_bytes": 87408,
+      "compressed_payload_sha256": "372fe5ff1d18ee29966bfa068fc1a480cc3be348904e1d27f78dfe9e3c5ecf89",
+      "bundle_sha256": "cb1da83560b19e521653a0af6bd9d6ca5d4d883756b53a53d00f0b5549ef4249",
+      "native_base_mip_readback_sha256": "1c6426ffa10b767c9092d73228d8e8a0d9f136072ac80a2e91c20be65a6c8d6a",
+      "owned_source": "assets/meadows/dandelion-atlas-balanced-v1.png",
+      "owned_source_sha256": "639b491a193d2883d324cb4cc01520712759d870c578dee3882537f35d1af31f"
+    }
+  },
+  "runs": {
+    "pickable": {
+      "private_report_sha256": "92b73dbab7c09a9fd62a8d4dd6b912fbb1950e1fea2e92a33a09d75ffdc660ed",
+      "private_checkpoints_sha256": "521457203424f27e7dc8cc75a9f4bfeb7cd3968a585bb280ab84d6b269c69209",
+      "captures": 12,
+      "background_renders": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "nativeVulkan": true,
+        "linear": true,
+        "scenesPreserved": true,
+        "globalsRestored": true
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    "trophy-prop": {
+      "private_report_sha256": "361a9e40fe0cb1c311580fe16cae6dc6e2e2b2a9205b531ad4052cd2fa31c93f",
+      "private_checkpoints_sha256": "6354252ddea68c7a3c88b836166d555d6e91abb99ad7d13c8d3e2051f467ea2e",
+      "captures": 12,
+      "background_renders": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "nativeVulkan": true,
+        "linear": true,
+        "scenesPreserved": true,
+        "globalsRestored": true
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    "itemstand-trophy": {
+      "private_report_sha256": "c5d98907bfa9844681e6cd530690d61f1b30b247da207599d76e2f6dce8b7402",
+      "private_checkpoints_sha256": "a47462760087ecf8734bd4538bd34ce8f816702a557209bbbfbce6f915620346",
+      "captures": 12,
+      "background_renders": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "nativeVulkan": true,
+        "linear": true,
+        "scenesPreserved": true,
+        "globalsRestored": true
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    "trophy-item": {
+      "private_report_sha256": "c10bb1538529a24c0770fcc837d9314dcaf519d3466314cfdcb309e8791cb7a1",
+      "private_checkpoints_sha256": "807abe655260adb3514904497a26e8d5cd567a8a43b5eb8f9d4b0bed88c1e282",
+      "captures": 12,
+      "background_renders": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "nativeVulkan": true,
+        "linear": true,
+        "scenesPreserved": true,
+        "globalsRestored": true
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    "dandelion-item": {
+      "private_report_sha256": "fde6031e351b39b0347e47ffb5c773c6091d0c3fd3ed006c80c48a12d13db2f3",
+      "private_checkpoints_sha256": "610fc1976ad147aa61b0e28b1c2916cc1401438b033f410558fb6ee6e9b74a5f",
+      "captures": 12,
+      "background_renders": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "nativeVulkan": true,
+        "linear": true,
+        "scenesPreserved": true,
+        "globalsRestored": true
+      },
+      "errors": 0,
+      "warnings": 0
+    },
+    "elite": {
+      "private_report_sha256": "38dc19ed4633408a83a033cde282c801ea4adcda6e1eb4ba6697e60d4e6097df",
+      "private_checkpoints_sha256": "789a50b0e2a51fb69dd653b993304ecc2b775aaa17708d7934ec5d269c4d5c6e",
+      "captures": 12,
+      "background_renders": 4,
+      "checks": {
+        "passed": true,
+        "renderChecksPassed": true,
+        "cleanupPassed": true,
+        "nativeVulkan": true,
+        "linear": true,
+        "scenesPreserved": true,
+        "globalsRestored": true
+      },
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "captures": {
+    "pickable-front-before-1920x1080": {
+      "variant": "pickable-front",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 51139,
+      "overOnePixels": 11638,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "f4b2b4ca61e66a0ac98697408a1e3f88f59286f93c7583a2490133cffe023525",
+      "private_metrics_sha256": "9182362600cfe9f8fbdfe35ab3507d30fc573de950a07d531ef45e428be16dd3"
+    },
+    "pickable-front-hd-1920x1080": {
+      "variant": "pickable-front",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 51817,
+      "overOnePixels": 10167,
+      "changedFromOriginalPixels": 59195,
+      "private_image_sha256": "a06ac786bb34330b226e227b7edcaf99d4f646ffedf6245f245512430d17d1c3",
+      "private_metrics_sha256": "c093de700a8a05a73aec89fce2f202d3dcedfed7fbde478974b4d85ad8e5e315"
+    },
+    "pickable-front-balanced-1920x1080": {
+      "variant": "pickable-front",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 52908,
+      "overOnePixels": 10188,
+      "changedFromOriginalPixels": 59820,
+      "private_image_sha256": "003932dcb0dad737817dabb163cc158b2704f2847f9e0659474465bcbc757a47",
+      "private_metrics_sha256": "c972303c30fcec6d29196afcc5b6a1237d8f0480b601e43076834955ee528cd4"
+    },
+    "pickable-front-before-3840x2160": {
+      "variant": "pickable-front",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 204428,
+      "overOnePixels": 46459,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "bced99116fe6e68dbc51a7fc0d007255d72ff7f11116508b1d8f56efefcee02f",
+      "private_metrics_sha256": "14fffddb487e959f18bcffe61d9d47fc201028ee8210cf882c9f4a26c0eb8648"
+    },
+    "pickable-front-hd-3840x2160": {
+      "variant": "pickable-front",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 206561,
+      "overOnePixels": 40287,
+      "changedFromOriginalPixels": 236265,
+      "private_image_sha256": "7e40f18cdf39c66b23fb13d6dfd079a09a5915065eae1f8619e416d457b34a77",
+      "private_metrics_sha256": "46998f8b7aa810b98da06f481aef43c0a31caf1d07b8f1f79bd9916f8a0e3521"
+    },
+    "pickable-front-balanced-3840x2160": {
+      "variant": "pickable-front",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 211153,
+      "overOnePixels": 40701,
+      "changedFromOriginalPixels": 238847,
+      "private_image_sha256": "e32b46bb97eb8367d90ef098a538e7d2dd5386362275d2c910049b4fc5e68169",
+      "private_metrics_sha256": "3574ebc1698d88f9c4bd124b53bfb4916fb4ca4c9697283ea33ac1f5275d8238"
+    },
+    "pickable-rear-before-1920x1080": {
+      "variant": "pickable-rear",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 56366,
+      "overOnePixels": 963,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "fbb67f1efd9d0b10e88e26fe93372a299c35e47dfeaf1c65016df4c5374da532",
+      "private_metrics_sha256": "3cd00f43e5dade1e9d01cec694bd8a45f8c0529069e34bda1bcd79c590589ee5"
+    },
+    "pickable-rear-hd-1920x1080": {
+      "variant": "pickable-rear",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 56438,
+      "overOnePixels": 896,
+      "changedFromOriginalPixels": 64712,
+      "private_image_sha256": "0aae0b28a5174e39dc7697ee4a51ee1557b71cbeb481e2b1e8c6b4b39ae479c6",
+      "private_metrics_sha256": "873e7b4e65806825dae80aca7d74d587961764fdb9cb0d2ff095b480e191fb3a"
+    },
+    "pickable-rear-balanced-1920x1080": {
+      "variant": "pickable-rear",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 57616,
+      "overOnePixels": 857,
+      "changedFromOriginalPixels": 65365,
+      "private_image_sha256": "e617746d117b8479a88a052a066bbcd013b91686d4369e5653d34c418df56362",
+      "private_metrics_sha256": "8b6003033159de48f9b3eb4b72f05c1f055c22acc2bb36de6e4b442c1c5b54aa"
+    },
+    "pickable-rear-before-3840x2160": {
+      "variant": "pickable-rear",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 225453,
+      "overOnePixels": 3861,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "e41768f6df866c7a17c619e38ab217d7aa04b9ab636b51a5495d6745968a5fb9",
+      "private_metrics_sha256": "3b5933fb060973a2497e7264c067e8662dc127a48f4cbea1cbe1b9d1754a8210"
+    },
+    "pickable-rear-hd-3840x2160": {
+      "variant": "pickable-rear",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 224797,
+      "overOnePixels": 3440,
+      "changedFromOriginalPixels": 258409,
+      "private_image_sha256": "bdf10b234af1f20fb5adeaac6c508a02cc8e469f57a047566afd32e9ecb7803b",
+      "private_metrics_sha256": "b241833ae9ab404f68f4d40a46e9bb2b2d94dc3825413dd426a35735e47ea20a"
+    },
+    "pickable-rear-balanced-3840x2160": {
+      "variant": "pickable-rear",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 229794,
+      "overOnePixels": 3402,
+      "changedFromOriginalPixels": 261036,
+      "private_image_sha256": "a88b60a26e55cefc80d26f0f8ea5bb19e29112142eae03a40857234c82b59b79",
+      "private_metrics_sha256": "d5e49e8701ab8397a50aa751690f06c22d94cba083125e869a615efeebf60f02"
+    },
+    "trophy-prop-front-before-1920x1080": {
+      "variant": "trophy-prop-front",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 37569,
+      "overOnePixels": 2175,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "4469aac9f16cd2887cdb61c53b75087ff24b0d537b14b2b0270355eb2405a983",
+      "private_metrics_sha256": "df54b086939a6d51ec6b4e37ab876f8c2d22217381a1f03153571b08f054c99e"
+    },
+    "trophy-prop-front-hd-1920x1080": {
+      "variant": "trophy-prop-front",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 38022,
+      "overOnePixels": 2098,
+      "changedFromOriginalPixels": 43527,
+      "private_image_sha256": "baf36b8ec5a253d40925fffea2e99f81ba64825d9b81acbe1b8351c152c0d0f8",
+      "private_metrics_sha256": "1cddb25434b6b86cf6fa57256fe0a91ab97c651d8bd52f4c7ba0fb3666a840c9"
+    },
+    "trophy-prop-front-balanced-1920x1080": {
+      "variant": "trophy-prop-front",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 38883,
+      "overOnePixels": 1930,
+      "changedFromOriginalPixels": 44008,
+      "private_image_sha256": "c602045193d698990c997acf81354436cfb8fcee544d51d8a0cc5d2d9cd145e1",
+      "private_metrics_sha256": "47dba907ecf836fffc51de3dae3d2529bfd76d46c5a29590b89210e2d37b2fb8"
+    },
+    "trophy-prop-front-before-3840x2160": {
+      "variant": "trophy-prop-front",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 150287,
+      "overOnePixels": 8699,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "f4888849fe1eef80d39072d9dcce0623073a0f43bb7efbafe6de3bc0de3eab03",
+      "private_metrics_sha256": "243d0ca633943fde690b84b474cf9bf282dc687bf0ba42ad84e93761eab0be80"
+    },
+    "trophy-prop-front-hd-3840x2160": {
+      "variant": "trophy-prop-front",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 151881,
+      "overOnePixels": 8773,
+      "changedFromOriginalPixels": 174027,
+      "private_image_sha256": "2f3824bf1e2d4de6c49f82b8e24e6b4fa41da5b753bff42db9133ab4c23a8fd1",
+      "private_metrics_sha256": "720b44c10ba167b31857c87ec85edd55b79d470ad4c0d2f51349a08fab5f3f94"
+    },
+    "trophy-prop-front-balanced-3840x2160": {
+      "variant": "trophy-prop-front",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 155117,
+      "overOnePixels": 7731,
+      "changedFromOriginalPixels": 175890,
+      "private_image_sha256": "606d27e141f0490e7255cf1f9f86025ad206b83faf6db91aeeecc5cac5390d59",
+      "private_metrics_sha256": "c4a869fde84af0839fe043b0f6537facb2d87f484b48c0e34c4d4e2f30ff9146"
+    },
+    "trophy-prop-rear-before-1920x1080": {
+      "variant": "trophy-prop-rear",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 39322,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "2b633c656e6c0f22882cabef34c0abd542f9bd94899673c87d5f29c050605048",
+      "private_metrics_sha256": "5601e33a2ae3627e01363e7f527bdfd3853e99475853cb39167e75f4e1a63d87"
+    },
+    "trophy-prop-rear-hd-1920x1080": {
+      "variant": "trophy-prop-rear",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 39668,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 45846,
+      "private_image_sha256": "e395a5c7eb39fdc675891b54e78c8048eefe474ce6dbe3c66c53eece29afa8f2",
+      "private_metrics_sha256": "dfdf2e95d4de44fa2f6472b49b16d5cb0bd0e9db8d5208f07552e851121e5666"
+    },
+    "trophy-prop-rear-balanced-1920x1080": {
+      "variant": "trophy-prop-rear",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 40700,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 46438,
+      "private_image_sha256": "1480cdec2841cf701e06c3df7701d7fb13b33144b29ee216f20952b9ba3fa2cd",
+      "private_metrics_sha256": "e0ea36ec26d0fcabe01f77878f21dcd99491cc00d73016cf857266ad6104ddc7"
+    },
+    "trophy-prop-rear-before-3840x2160": {
+      "variant": "trophy-prop-rear",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 157271,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "ec36060ada6bef6f570e63475763b0f4cea976545d1df6c93958e4a5747345fc",
+      "private_metrics_sha256": "841b5f826653e1bc6d1cac1d3fb6f714868a767e8a8d5da77cc9e1d68b66497a"
+    },
+    "trophy-prop-rear-hd-3840x2160": {
+      "variant": "trophy-prop-rear",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 158754,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 183434,
+      "private_image_sha256": "4b5e9935c5338a87057197440b9dc31c9583d1ae1e5b73ed9b5aaaa574fc43aa",
+      "private_metrics_sha256": "14160935eb32736d702e67f6302c65999d0f3401ecfac98a9117251e4a4c2340"
+    },
+    "trophy-prop-rear-balanced-3840x2160": {
+      "variant": "trophy-prop-rear",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 162355,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 185460,
+      "private_image_sha256": "05ef9cc984b6ccac124cd5f71b989bd5989e2347ecfbf7793ac5a6ac8acb4a42",
+      "private_metrics_sha256": "398df44c38fedc640f92e89d658bcec4d978af8f6e540bddf9f5f80c88060ca8"
+    },
+    "itemstand-trophy-front-before-1920x1080": {
+      "variant": "itemstand-trophy-front",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 29900,
+      "overOnePixels": 6166,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "806c420b6970a9df9f8c15e102cfa105223f3a3fcaa342b98353ca36362e744a",
+      "private_metrics_sha256": "53f3950356c799455c82047c15d48e28f7e0b6328ebd52a9560c8804738ee74d"
+    },
+    "itemstand-trophy-front-hd-1920x1080": {
+      "variant": "itemstand-trophy-front",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 30638,
+      "overOnePixels": 5009,
+      "changedFromOriginalPixels": 34607,
+      "private_image_sha256": "a3f52d4a77d42a24fb89dbf1c6198e19f1a48764813b84601c4fa4398d9e128c",
+      "private_metrics_sha256": "e1ce059191d702795e06681f9527915901d278a865c7e4e24a15410cf3b5f484"
+    },
+    "itemstand-trophy-front-balanced-1920x1080": {
+      "variant": "itemstand-trophy-front",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 31336,
+      "overOnePixels": 5032,
+      "changedFromOriginalPixels": 34996,
+      "private_image_sha256": "f15ec20ba8d60f8ea611d03b978ccda428f361793a4bf81788978b3457ea24b1",
+      "private_metrics_sha256": "0ac890e912bbfb5b8b95031532e223643464b1ce747635301bfcb96cf7a9fe7d"
+    },
+    "itemstand-trophy-front-before-3840x2160": {
+      "variant": "itemstand-trophy-front",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 119188,
+      "overOnePixels": 24751,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "b1f0889978abdf8e48cba1b2ee96deef32ceffc1c962ac1894c963417a127414",
+      "private_metrics_sha256": "e9ac84921a523687530bfb4cd7d3b95a83bc9aa609c6066414347e8923e4db0c"
+    },
+    "itemstand-trophy-front-hd-3840x2160": {
+      "variant": "itemstand-trophy-front",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 122196,
+      "overOnePixels": 19706,
+      "changedFromOriginalPixels": 137802,
+      "private_image_sha256": "c646da336ffdab4bcb3b4505ec5c915e9784424a85664dbb828a8d4fd7761ed7",
+      "private_metrics_sha256": "6554f746e867ab6a7ade3b9f20deb1eacab467b64fb5fbb3d27b99adc20c9ac3"
+    },
+    "itemstand-trophy-front-balanced-3840x2160": {
+      "variant": "itemstand-trophy-front",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 124774,
+      "overOnePixels": 20101,
+      "changedFromOriginalPixels": 139300,
+      "private_image_sha256": "cc51645c7402b40ad8f1546f8cb047367ee71d11eb9fc8792b7849380d6cd184",
+      "private_metrics_sha256": "bf6f3315cd7358292a1ca1822f8919dab83951862dcdbd72108bcbd476c473be"
+    },
+    "itemstand-trophy-rear-before-1920x1080": {
+      "variant": "itemstand-trophy-rear",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 33348,
+      "overOnePixels": 1249,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "2d4a30ad7f1a4d5f2a46791609fdf85a38c7320738dee1ebbf65e8253ca5ffa1",
+      "private_metrics_sha256": "80fa1c3134ae58db56018d8762b582a86d8a617608854e21d056957ab96b3a83"
+    },
+    "itemstand-trophy-rear-hd-1920x1080": {
+      "variant": "itemstand-trophy-rear",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 33868,
+      "overOnePixels": 1146,
+      "changedFromOriginalPixels": 38329,
+      "private_image_sha256": "5c914ef47dfefc40260ac923707f23de6c23716d0b895cd7c6ae1e212471eeb8",
+      "private_metrics_sha256": "efcfbf6c3701aa7236284a17e115222108cae0ce59c6fd9d87fe3f596711e21b"
+    },
+    "itemstand-trophy-rear-balanced-1920x1080": {
+      "variant": "itemstand-trophy-rear",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 34554,
+      "overOnePixels": 1110,
+      "changedFromOriginalPixels": 38727,
+      "private_image_sha256": "93c4564c6ab3478da39d8d113f4ab292715f96766eed21806eb199da9f788c85",
+      "private_metrics_sha256": "1abfc070609106fb263bfb1a723bcd4ea71caf4847f082812c5d16d9d6e9c743"
+    },
+    "itemstand-trophy-rear-before-3840x2160": {
+      "variant": "itemstand-trophy-rear",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 133234,
+      "overOnePixels": 5001,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "00dc92327ecd03c464324a235aae7b3b35eedde16e284d36e92c7382f4b33b8d",
+      "private_metrics_sha256": "32da7846364d7a06d39b8e1c31b413f9ea59eecbf83f27ec5767d7de169f9f80"
+    },
+    "itemstand-trophy-rear-hd-3840x2160": {
+      "variant": "itemstand-trophy-rear",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 135105,
+      "overOnePixels": 4487,
+      "changedFromOriginalPixels": 153000,
+      "private_image_sha256": "524f731d9889c69b20974ec17f7d7b30fa97c80b43d917911078f2341d7bf1af",
+      "private_metrics_sha256": "4e44b360912cfc57d32b14af1bb598674d70b3538faf6dcae56d0a7185069530"
+    },
+    "itemstand-trophy-rear-balanced-3840x2160": {
+      "variant": "itemstand-trophy-rear",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 137933,
+      "overOnePixels": 4442,
+      "changedFromOriginalPixels": 154658,
+      "private_image_sha256": "59cfffdf9ef04ba806e7f6280ae6b619e9a089307a67879367ec77d312e21173",
+      "private_metrics_sha256": "1fd5147ad901da9e2f7fd6fec1638ce4e37c4034c2b25d836673c3e13aa8c8f3"
+    },
+    "trophy-item-front-before-1920x1080": {
+      "variant": "trophy-item-front",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 34448,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "ed208403046c8ee895d69b8738a538f71365c38af379b1b6ac3ad21dce163d9b",
+      "private_metrics_sha256": "b0825d945e2d56a296910761efb6db9d9c6d638237dbb8e7a5a8c5de4934d348"
+    },
+    "trophy-item-front-hd-1920x1080": {
+      "variant": "trophy-item-front",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 35213,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 40160,
+      "private_image_sha256": "5b4505f279647a5467614bb2660fb78742282504c366daa40395dadb6fc53ec6",
+      "private_metrics_sha256": "41dc157951243c842ddacc0a24a7433a322ff39bfe1d9bd6c9287ca67dfa4e5b"
+    },
+    "trophy-item-front-balanced-1920x1080": {
+      "variant": "trophy-item-front",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 36070,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 40672,
+      "private_image_sha256": "ce71aecfd900de209987f005450885533c4a118df562b1bbbd0354d123128ad6",
+      "private_metrics_sha256": "b16e4fc21673e23d60ec235d79fb017c6c796c790c5bf22a21b5dd2992740754"
+    },
+    "trophy-item-front-before-3840x2160": {
+      "variant": "trophy-item-front",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 137420,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "5faf50cdcb05b05aa2aa14ae28de209f3a4722865a99baefae5fe2cb27455993",
+      "private_metrics_sha256": "082025cacec003c6ed6a1c79f3ed06a49ee0201b1b4cd49899cd3e5be542165f"
+    },
+    "trophy-item-front-hd-3840x2160": {
+      "variant": "trophy-item-front",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 140645,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 160329,
+      "private_image_sha256": "c708defe1bcce37ac714cbf6a0d9298fd650b6904011f5ec22db65ad5841af22",
+      "private_metrics_sha256": "acabda8e065cbc274507bc77efea2c9bc574069ad33ca442d2421076a9fec9ef"
+    },
+    "trophy-item-front-balanced-3840x2160": {
+      "variant": "trophy-item-front",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 143810,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 162164,
+      "private_image_sha256": "832b948e6ded8301bddc4c581241947f7662cf5a068686535cba80b51c5272db",
+      "private_metrics_sha256": "fcec6625fc187e3a767043b61002fee817bda87e2f9840f1a48c4a2045a13992"
+    },
+    "trophy-item-rear-before-1920x1080": {
+      "variant": "trophy-item-rear",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 38015,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "16d1434be807c8d6c924636df9925e5399dc51476ba620b564ba60a33655a21b",
+      "private_metrics_sha256": "6f245fa5243d3e0598eccad8cbf01457b832d9f2b2aedef3769bc13532d1a5de"
+    },
+    "trophy-item-rear-hd-1920x1080": {
+      "variant": "trophy-item-rear",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 38598,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 44601,
+      "private_image_sha256": "237fed5204f9a8a79269fbc8efce22a9a8ab6913f7e361855a4b39f6c3d1c42e",
+      "private_metrics_sha256": "33f9ad33c996253f161630d4ce233d40174c9763e0d61ab5898b152187c48d6b"
+    },
+    "trophy-item-rear-balanced-1920x1080": {
+      "variant": "trophy-item-rear",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 39689,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 45244,
+      "private_image_sha256": "d8342ba03d369e223ce9c2578993c59f2ef65a22e840c8ee40bad5e0246a0830",
+      "private_metrics_sha256": "4781857415539bc7530c5d3c123465d1f26d45ce90e27879616ec3fde64e0b51"
+    },
+    "trophy-item-rear-before-3840x2160": {
+      "variant": "trophy-item-rear",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 152055,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "8862777eb8eeac6082ee6f9cc92bfaa18af55cd732bf7a1b65e66b176643ca05",
+      "private_metrics_sha256": "ed281c656e17e5f0db7c02b87efea70bcf446ce8086f0d270bfb715af7dbda97"
+    },
+    "trophy-item-rear-hd-3840x2160": {
+      "variant": "trophy-item-rear",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 154474,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 178488,
+      "private_image_sha256": "add5fa04342fb59e4a0c898a2f56c061755f268f6ccd35a42c81c9b5dfcccc69",
+      "private_metrics_sha256": "cc354321b62aac9dbfe30558de02c1bbdecd7a41e4dfa460899c90e2283ecbf3"
+    },
+    "trophy-item-rear-balanced-3840x2160": {
+      "variant": "trophy-item-rear",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 158225,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 180614,
+      "private_image_sha256": "617852127851f11568aa247fc24e43d78e1313eea5bc1ffc7d66d5f8eba4d7db",
+      "private_metrics_sha256": "37d3e7d1f068f9d96125b26fa6f9650f556c6e6e637c014b1862ad868c64790a"
+    },
+    "dandelion-item-front-before-1920x1080": {
+      "variant": "dandelion-item-front",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 45066,
+      "overOnePixels": 422,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "c3c6159eaf48286696ef237ca39563c59748bf9fa2af918af835371fdf5edd95",
+      "private_metrics_sha256": "b0cd1c618b671d2615dcebfc3961b9b02dd3505bbed82dfea455d2e73e085bde"
+    },
+    "dandelion-item-front-hd-1920x1080": {
+      "variant": "dandelion-item-front",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 46030,
+      "overOnePixels": 1164,
+      "changedFromOriginalPixels": 52011,
+      "private_image_sha256": "594c16a0a920263f2483f80ad4d832815f4465c912abffc82ba94648b6f9e770",
+      "private_metrics_sha256": "7dd87d7bc88e6c7b858909ddf9c274016ed150716c7ac0173bb2302ca58c7735"
+    },
+    "dandelion-item-front-balanced-1920x1080": {
+      "variant": "dandelion-item-front",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 47063,
+      "overOnePixels": 932,
+      "changedFromOriginalPixels": 52593,
+      "private_image_sha256": "7711a065e51f7f494a02448369df084f2d1bf620302eb47ffbd1b1003dcad9ed",
+      "private_metrics_sha256": "86e03068e1749a32a70f76f9b2c396bdf1d35aaf57a2153de1e2141fd1debbd1"
+    },
+    "dandelion-item-front-before-3840x2160": {
+      "variant": "dandelion-item-front",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 180287,
+      "overOnePixels": 1668,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "b66ba5dad8622b6222adffde599449847f08ec42ba15b5f0d786a5f3fe4391bc",
+      "private_metrics_sha256": "7affb78dd402a208fabf55a0759c819090cc169efaa4ede4708560788ab3face"
+    },
+    "dandelion-item-front-hd-3840x2160": {
+      "variant": "dandelion-item-front",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 183369,
+      "overOnePixels": 4793,
+      "changedFromOriginalPixels": 207753,
+      "private_image_sha256": "db5cf4f827a57442f630171fa4b4a9103ae891744fe769bb9d6c6d08cda7480f",
+      "private_metrics_sha256": "e74139ac89a89a6eac0756c6bf6afb76aede08e7b482e8944d2ddfd45864cf16"
+    },
+    "dandelion-item-front-balanced-3840x2160": {
+      "variant": "dandelion-item-front",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 187504,
+      "overOnePixels": 3681,
+      "changedFromOriginalPixels": 210039,
+      "private_image_sha256": "a2d25865650bd5206e20ce3d2b165081761b7f6d6064118d2da82c81149b1045",
+      "private_metrics_sha256": "fd6223666912b3dc6d2a303b8e175daecf1d0ce2fbd49a3833b2aa595d7db74d"
+    },
+    "dandelion-item-rear-before-1920x1080": {
+      "variant": "dandelion-item-rear",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 48703,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "f5cf91966932d3311a9debba73bc260ba2532ce6353cc7ea8aebf9da6d6700c5",
+      "private_metrics_sha256": "d4128e64cc3e043b13fc0ca87f82d9d8572c49004be5476ff2bba4cd5673e078"
+    },
+    "dandelion-item-rear-hd-1920x1080": {
+      "variant": "dandelion-item-rear",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 50852,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 57293,
+      "private_image_sha256": "9212fe3854b87e79fba62adeba23cd1cd3224eb2b659aa3a0ccb2c7609cb873b",
+      "private_metrics_sha256": "cf5ab9fdb1920a4140d9ebb4f35073d8a5eb71b11b388cc66c458d1a7f2f307d"
+    },
+    "dandelion-item-rear-balanced-1920x1080": {
+      "variant": "dandelion-item-rear",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 52075,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 58006,
+      "private_image_sha256": "ae4669296f9c307fef15809bd9a64c093166ce0790fb51f45d620b576953df6b",
+      "private_metrics_sha256": "7d5cf672d6f6f873981bdbdc53ab7041ca2b42b4082513b60d07860b55c7f8de"
+    },
+    "dandelion-item-rear-before-3840x2160": {
+      "variant": "dandelion-item-rear",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 194813,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "dff5a88cef000e232615d7ffcd74b3c1599675decc29050bcb22b0f2f7fc10e9",
+      "private_metrics_sha256": "43a5128096b9a09e6f29a56d6af86df5260178190dc4682f004897a9d9029357"
+    },
+    "dandelion-item-rear-hd-3840x2160": {
+      "variant": "dandelion-item-rear",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 203173,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 229043,
+      "private_image_sha256": "b2f116177885dfe98e9365fda4c07943c8aec5af9b1ef269482e364d5f2f8bb5",
+      "private_metrics_sha256": "b5728d17535e714e167aa568c9ac6500c9005646fba9727300b3fe1ae4cfa33a"
+    },
+    "dandelion-item-rear-balanced-3840x2160": {
+      "variant": "dandelion-item-rear",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 207744,
+      "overOnePixels": 0,
+      "changedFromOriginalPixels": 231758,
+      "private_image_sha256": "929a1c9987953a7bf8357a16b1bcfadaced30b672807c6c937e648e9c2272e1e",
+      "private_metrics_sha256": "390a0b23bec77034afaadea43d0a4d68864bb4838ecb52bfabbba677dcf15dcf"
+    },
+    "elite-front-before-1920x1080": {
+      "variant": "elite-front",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 35519,
+      "overOnePixels": 8155,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "94d4e6fcc8bafd1ff67a42d010a173a6068fd6da1c78169800a4a5168c8e6cae",
+      "private_metrics_sha256": "73c5492c3491ab49a5637ded0d23cfcfeca7d7e5df74106de7f0f3cc83a513e8"
+    },
+    "elite-front-hd-1920x1080": {
+      "variant": "elite-front",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 35976,
+      "overOnePixels": 7167,
+      "changedFromOriginalPixels": 41082,
+      "private_image_sha256": "5cf7abd352668d32a2611dfb3cff0f67c60f22b7b37eea94b524b74ae700dd31",
+      "private_metrics_sha256": "1cf3774385acd3169d5ad14edf3657dd3e0b0b23024f8f5d41c2ee713e099492"
+    },
+    "elite-front-balanced-1920x1080": {
+      "variant": "elite-front",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 36783,
+      "overOnePixels": 7149,
+      "changedFromOriginalPixels": 41551,
+      "private_image_sha256": "411e56d9386e5897717e6680cdd3287128c6ee8eb9d4e8d2ee1fb019f0c676ac",
+      "private_metrics_sha256": "8babde7c62ef1ee90165d1c7eddbdaad736e428fd0852abac4e9f1e84d162dbf"
+    },
+    "elite-front-before-3840x2160": {
+      "variant": "elite-front",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 141997,
+      "overOnePixels": 32682,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "2062b029ae41322af3529eab817d2a942621db54f9bfa0faa7c1cc880bd1ebd9",
+      "private_metrics_sha256": "525281c2926fabf1e9f97698e4fae1b19ac313c18b3be9e7fd948df9c639a763"
+    },
+    "elite-front-hd-3840x2160": {
+      "variant": "elite-front",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 143552,
+      "overOnePixels": 28319,
+      "changedFromOriginalPixels": 164209,
+      "private_image_sha256": "5e3ecd668454dd09bb8fbc7b5b752b321dd6657a684de93c6bd782fe7e2f13f1",
+      "private_metrics_sha256": "b01a639191bcdf15ca25bab5c7c4ee2e9a01f9f2bf7908138b9d4e5d0dfa8588"
+    },
+    "elite-front-balanced-3840x2160": {
+      "variant": "elite-front",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 146669,
+      "overOnePixels": 28556,
+      "changedFromOriginalPixels": 165937,
+      "private_image_sha256": "d9b60319220eae1a43e4441b76964b81780b6aa04c06bbe4df3cd3d789d994cc",
+      "private_metrics_sha256": "ea880f5951c0d02e73b5042d44304b14ed65e9d9aada17674f28da996ac312b0"
+    },
+    "elite-rear-before-1920x1080": {
+      "variant": "elite-rear",
+      "state": "before",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 39140,
+      "overOnePixels": 669,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "276a7014502fddeec04c6c91aefbe901c6ec6e0d3eeb20bf5131e63d34f6ef3b",
+      "private_metrics_sha256": "750e6a42d627a29dbdad103214f35bd840a15bc90e13e16d00d9b1a4cb81d141"
+    },
+    "elite-rear-hd-1920x1080": {
+      "variant": "elite-rear",
+      "state": "hd",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 39154,
+      "overOnePixels": 624,
+      "changedFromOriginalPixels": 44906,
+      "private_image_sha256": "0ad7738bfe13510cfc0b64188100f1f7e95bf624e37d921cf183044c27fef003",
+      "private_metrics_sha256": "30b2d58f474c78519dc08a74f2b19e805b9481736d741cd55cfedf14f086725e"
+    },
+    "elite-rear-balanced-1920x1080": {
+      "variant": "elite-rear",
+      "state": "balanced",
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 40077,
+      "overOnePixels": 598,
+      "changedFromOriginalPixels": 45414,
+      "private_image_sha256": "04e9da995b7b5b253818f15c8216aeb105df73e03e078e66fba42739f2ee50f6",
+      "private_metrics_sha256": "ca498a8073cbe9007d1d3a9fc1111470cd7c3d29df7d9a28188d6749f361ed33"
+    },
+    "elite-rear-before-3840x2160": {
+      "variant": "elite-rear",
+      "state": "before",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 156578,
+      "overOnePixels": 2679,
+      "changedFromOriginalPixels": 0,
+      "private_image_sha256": "0f71aa4135298cf5880e555b2f9358eaa703d88d4bf30ef1b7fdf409f1a186cd",
+      "private_metrics_sha256": "1729f3aa74170d67203829fa155dd99a26bc21ecc3f9c69c7cb98c0589e92610"
+    },
+    "elite-rear-hd-3840x2160": {
+      "variant": "elite-rear",
+      "state": "hd",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 156225,
+      "overOnePixels": 2409,
+      "changedFromOriginalPixels": 179518,
+      "private_image_sha256": "c52082413fb352b6259a88e00abd7432f5d2c82ac0c0dfddad0dc5c10142b6e4",
+      "private_metrics_sha256": "f4870ff864d24e987d907ccc1f6cdf608c5daf2abd170a4f8f9a3ed4ebc3019a"
+    },
+    "elite-rear-balanced-3840x2160": {
+      "variant": "elite-rear",
+      "state": "balanced",
+      "width": 3840,
+      "height": 2160,
+      "passed": true,
+      "nonfinitePixels": 0,
+      "magentaPixels": 0,
+      "occupiedPixels": 159632,
+      "overOnePixels": 2385,
+      "changedFromOriginalPixels": 181306,
+      "private_image_sha256": "96e5f8b915e63518229a58bd9a2abb9870fba5995ea6e5cf7ac326018db8e524",
+      "private_metrics_sha256": "1cd840b3edec6bf35cf690a794ee57118de98595ce4e079ab90c4917be91fd0e"
+    }
+  },
+  "fixture": {
+    "source_sha256": "baf9cf51ff003fc666f55d7bb3fce1b614e3d738cff83cf4af93bab876d68a13",
+    "assembly_sha256": "44afd675543760657865ecd869f8914ecdaa529800a738f11184053e1c3a9cac",
+    "draws_per_frame": 1,
+    "fresh_preview_per_capture": true,
+    "camera_targeted_draw": true,
+    "game_prefabs_instantiated": false,
+    "original_scripts_instantiated": false,
+    "original_shader_dependency_loaded_first": true,
+    "reverse_owned_bundle_cleanup": true,
+    "only_changed_material_property": "_MainTex",
+    "camera": {
+      "orthographic": true,
+      "orthographic_size": 0.5,
+      "near_clip": 0.05,
+      "far_clip": 60,
+      "aspect": "16:9",
+      "hdr": true,
+      "msaa": false,
+      "dynamic_resolution": false
+    },
+    "lighting": {
+      "ambient_rgb": [
+        0.32,
+        0.38,
+        0.46
+      ],
+      "directional_lights": [
+        {
+          "rgb": [
+            1,
+            0.94,
+            0.83
+          ],
+          "intensity": 1.1,
+          "euler": [
+            45,
+            -35,
+            0
+          ]
+        },
+        {
+          "rgb": [
+            0.52,
+            0.66,
+            0.82
+          ],
+          "intensity": 0.32,
+          "euler": [
+            35,
+            150,
+            0
+          ]
+        }
+      ],
+      "shadows": "None"
+    },
+    "png_encoding": "Linear HDR readback, RGB clamped to [0,1], then sRGB encoded. No tone mapping."
+  },
+  "measurement_definitions": {
+    "verification": "PNG hashes, dimensions and persistent per-frame metrics independently match each final report. Linear measurements are retained from native readback; they cannot be recomputed from the clamped PNG.",
+    "nonfinitePixels": "Any nonfinite RGBA component.",
+    "magentaPixels": "R > 0.8, B > 0.8 and G < 0.12.",
+    "occupiedPixels": "Summed absolute RGB difference > 0.003 from the matched background-only capture.",
+    "overOnePixels": "Any linear RGB component > 1 before PNG encoding. These samples are clamped in PNG.",
+    "changedFromOriginalPixels": "Summed absolute RGB difference > 0.003 from matched original material.",
+    "capture_pass": "No nonfinite pixels, fewer than 64 magenta pixels and at least 64 occupied pixels; replacements must change at least one pixel. Highlight clipping is measured but does not fail this technical check."
+  },
+  "dependencies": {
+    "recipe": "assets/meadows/dandelion-recipe.json",
+    "recipe_sha256": "fb35733297f7841cdd2acf84bc86ab317b550d15ee0bce2fe2e4bd0bff54e87e",
+    "fitting_helper": "tools/fit_dandelion.py",
+    "fitting_helper_sha256": "e0a92197ef4c64ad1a3e7168b1da567d500297c746e419c57b9b6ea6cbad0fd1",
+    "layout_evidence": "docs/evidence/dandelion-layout.json",
+    "layout_evidence_sha256": "b44d888968ae2db7f7a2b96586555077104565c47345556c719cbdfa1cc057f8"
+  },
+  "native_visual_review": {
+    "case": "pickable",
+    "scaled_contact_frames": [
+      "pickable-front-before-1920x1080",
+      "pickable-front-hd-1920x1080",
+      "pickable-front-balanced-1920x1080",
+      "pickable-front-before-3840x2160",
+      "pickable-front-hd-3840x2160",
+      "pickable-front-balanced-3840x2160",
+      "pickable-rear-before-1920x1080",
+      "pickable-rear-hd-1920x1080",
+      "pickable-rear-balanced-1920x1080",
+      "pickable-rear-before-3840x2160",
+      "pickable-rear-hd-3840x2160",
+      "pickable-rear-balanced-3840x2160"
+    ],
+    "full_frame_reviews": [
+      "pickable-front-before-1920x1080",
+      "pickable-front-hd-3840x2160",
+      "pickable-rear-balanced-3840x2160"
+    ],
+    "findings": "Both heads, all five serrated leaf surfaces and both stems retain their intended atlas regions. The owned leaf veins and lobes remain continuous in front and rear views. The upper head keeps the original planar card tilt and appears flat when nearly edge-on. Yellow petal groups, green leaf values and continuous stems remain recognizable; the rear is darker under the fixed light arrangement. HD and Balanced retain the same layout. Front petal highlights clip during PNG encoding, limiting final color interpretation. No native distance or fractional-LOD conclusion follows from these close orthographic views.",
+    "all_six_cases_visually_reviewed": false
+  },
+  "limitations": {
+    "close_view": "Orthographic size 0.5 gives a one-unit vertical span. Camera distance does not establish distant appearance. All frames show a close view of one isolated retained mesh.",
+    "mips": "Passing head-region texel centers remain through 8px. The 4px and 2px diagnostics lose head coverage; the 1px tail is transparent. No fractional LOD or native distance transition is established here.",
+    "highlight_clamp": "Native linear RGB above one is recorded for each frame. Encoded PNG clamps those highlights without tone mapping, limiting final color and material interpretation.",
+    "world": "No ground contact, placed-world integration, weather, animation, gameplay readability, runtime deployment or representative hardware performance is established.",
+    "ownership": "Original geometry, UVs, normals, tangents and all native captures remain private. Albedo-only comparisons preserve the original null normal binding.",
+    "approval": "CPU layout review, native payload validation and finite native material checks are separate from world validation and final art approval."
+  },
+  "checks": {
+    "comparison_capture_count": 72,
+    "background_render_count": 24,
+    "error_count": 0,
+    "warning_count": 0,
+    "all_completed_cases_cleanup_passed": true,
+    "png_hashes_dimensions_and_persistent_metrics_verified": true,
+    "source_bundle_and_geometry_hashes_verified": true,
+    "catalog_and_native_bundle_readback_hashes_verified": true,
+    "native_compressed_payload_hashes_and_sizes_verified": true,
+    "frames_with_hdr_values_above_one": 48
+  }
+}

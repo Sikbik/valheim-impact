@@ -73,6 +73,13 @@ namespace ValheimImpact.Unity
                             value.mipmapCount != spec.MipCount || value.format != TextureFormat.DXT5 ||
                             value.isDataSRGB != spec.IsSrgb || value.isReadable)
                             throw new InvalidOperationException("Authored texture does not match its build contract");
+                        if (spec.WrapMode != null)
+                        {
+                            TextureWrapMode wrap = spec.WrapMode == "repeat" ? TextureWrapMode.Repeat : TextureWrapMode.Clamp;
+                            if (value.wrapModeU != wrap || value.wrapModeV != wrap || value.wrapModeW != wrap ||
+                                value.filterMode != FilterMode.Trilinear || value.anisoLevel != 4 || value.mipMapBias != 0)
+                                throw new InvalidOperationException("Authored texture sampler does not match its declared contract");
+                        }
                     }
                     done = true;
                 }

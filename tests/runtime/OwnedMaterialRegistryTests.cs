@@ -52,6 +52,43 @@ internal static class OwnedMaterialRegistryTests
         }
         File.WriteAllText(Path.Combine(root, "assets/bindings.json"), mappings.Replace("\"schemaVersion\":1", "\"schemaVersion\":2"));
         check(!Reject(root), "schema 2 retains ordinary opaque rules when the cutout opt-in is absent");
+        string grassState = "\"grass\":{\"fixedPasses\":\"Custom/Grass-v1\",\"cutoff\":0.46,\"renderQueue\":2000,\"terrainTextureName\":\"grass_terrain_color\",\"terrainWidth\":1024,\"terrainHeight\":1024,\"terrainColorScale\":0.01,\"swayDistance\":2.3,\"pushDistance\":2}";
+        string grassBinding = "{\"id\":\"grass-tall\",\"materialName\":\"grasscross_meadows\",\"shaderName\":\"Custom/Grass\",\"textureProperty\":\"_MainTex\",\"originalTextureName\":\"grass_meadows\",\"originalWidth\":128,\"originalHeight\":128,\"ownedTextureId\":\"stone\"," + grassState + "}";
+        string grassMappings = "{\"schemaVersion\":3,\"bindings\":[" + grassBinding + "]}";
+        File.WriteAllText(Path.Combine(root, "assets/bindings.json"), "{\"schemaVersion\":3,\"bindings\":[" + grassBinding + "," + cutoutBinding + "," + binding.Replace("stone-slot", "solid") + "]}");
+        check(!Reject(root), "schema 3 accepts exact grass together with existing Piece and opaque rules");
+        File.WriteAllText(Path.Combine(root, "assets/bindings.json"), grassMappings.Replace("grasscross_meadows", "grasscross_meadows_short").Replace("grass_meadows\"", "grass_meadows_short\"").Replace(":128", ":64").Replace("\"swayDistance\":2.3", "\"swayDistance\":1").Replace("\"pushDistance\":2", "\"pushDistance\":0.5"));
+        check(!Reject(root), "schema 3 accepts the distinct exact short grass tuple");
+        int invalidGrass = 0;
+        foreach (string invalid in new[] {
+            grassMappings.Replace("\"schemaVersion\":3", "\"schemaVersion\":2"),
+            grassMappings.Replace("\"schemaVersion\":3", "\"schemaVersion\":1"),
+            grassMappings.Replace("," + grassState, ""),
+            grassMappings.Replace(grassState, "\"grass\":null"),
+            grassMappings.Replace(grassState, grassState + "," + cutoutState),
+            grassMappings.Replace("\"cutoff\":0.46", "\"cutoff\":0.5"),
+            grassMappings.Replace("\"cutoff\":0.46,", ""),
+            grassMappings.Replace("\"terrainColorScale\":0.01", "\"terrainColorScale\":0.02"),
+            grassMappings.Replace("\"originalWidth\":128", "\"originalWidth\":64"),
+            grassMappings.Replace("\"pushDistance\":2", "\"pushDistance\":0.5"),
+            grassMappings.Replace("grasscross_meadows\"", "grasscross_meadows (Instance)\""),
+            grassMappings.Replace("\"shaderName\":\"Custom/Grass\"", "\"shaderName\":\"Custom/Piece\""),
+            grassMappings.Replace("\"fixedPasses\":\"Custom/Grass-v1\"", "\"fixedPasses\":\"guess\""),
+            grassMappings.Replace("\"pushDistance\":2", "\"pushDistance\":2,\"unknown\":false"),
+            grassMappings.Replace("\"cutoff\":0.46", "\"cutoff\":\"0.46\""),
+            grassMappings.Replace("\"renderQueue\":2000", "\"renderQueue\":2000.0"),
+            grassMappings.Replace("\"schemaVersion\":3", "\"schemaVersion\":3.0"),
+            grassMappings.Replace("\"originalWidth\":128", "\"originalWidth\":128.0"),
+            grassMappings.Replace("\"ownedTextureId\":\"stone\"", "\"ownedTextureId\":\"stone\",\"extra\":true"),
+            grassMappings.Replace("\"bindings\":[", "\"extra\":0,\"bindings\":[") })
+        {
+            File.WriteAllText(Path.Combine(root, "assets/bindings.json"), invalid);
+            check(Reject(root), "grass contract rejects implicit or mismatched state case " + (++invalidGrass));
+        }
+        foreach (int version in new[] {1, 2}) {
+            File.WriteAllText(Path.Combine(root, "assets/bindings.json"), grassMappings.Replace("," + grassState, "").Replace("\"schemaVersion\":3", "\"schemaVersion\":" + version));
+            check(Reject(root), "legacy opaque default cannot admit grass without explicit support");
+        }
         File.WriteAllText(Path.Combine(root, "assets/bindings.json"), mappings.Replace("\"ownedTextureId\":\"stone\"", "\"ownedTextureId\":\"absent\""));
         check(Reject(root), "registry rejects unknown owned alias before replacement can activate");
         File.WriteAllText(Path.Combine(root, "assets/bindings.json"), "{\"schemaVersion\":1,\"bindings\":[" + binding + "," + binding.Replace("stone-slot", "duplicate-slot") + "]}");

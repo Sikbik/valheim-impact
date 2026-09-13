@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-13T01:08:56Z",
+  "scope": "Native material-slot ownership with original grass material clones and injected inert components. Diagnostic texture provider; no production bundle load, draw, game, world or art approval.",
+  "passed": true,
+  "unity_version": "6000.0.75f1",
+  "graphics_api": "Vulkan",
+  "color_space": "Linear",
+  "original_bundle_sha256": "b18650b25088aeeffda57f11b8b29e3021856d27377574626d06e1b5d3e150c3",
+  "raw_report_sha256": "90b6c1de1beef140ee1e2cd0546bf1fff97892d38a19a8cf61428b9c65766d6b",
+  "source_files": [
+    {
+      "path": "src/ValheimImpact.Core/Legacy/TextureIndex.cs",
+      "sha256": "106001adf7f9d13406e8b7efa875145a1e17a3d5654c87973094716302df007c"
+    },
+    {
+      "path": "src/ValheimImpact.Core/StreamingPolicy.cs",
+      "sha256": "ca7d1f7fea802983e9e9f4d0e5685040a9280e75d0acd57b2de432bd54c60bdb"
+    },
+    {
+      "path": "src/ValheimImpact.Core/OwnedTextureBundle.cs",
+      "sha256": "20ad439068742aa6cced73bcc4cdc68e67439d1d5d924dcd0207b4d431e16269"
+    },
+    {
+      "path": "src/ValheimImpact.Core/OwnedTextureScheduler.cs",
+      "sha256": "524dd3f41b1dd1f2af4dc9d5d4694d08d7ee89891eba8d4fee2c9e15df32077d"
+    },
+    {
+      "path": "src/ValheimImpact.Core/MaterialBindingRule.cs",
+      "sha256": "d00e7534c7013e8aa7b2fac8f0eaf9a3766548a13e50e96b9264f6063b9e1517"
+    },
+    {
+      "path": "src/ValheimImpact.Core/GrassBindingState.cs",
+      "sha256": "f71eb03d533216b0935a469f22eb24aef0d47f54730bc385bb2db306d1b5eeb9"
+    },
+    {
+      "path": "src/ValheimImpact.Core/BindingJsonContract.cs",
+      "sha256": "f360dbb59f343b5fc74ba0ea8fa36de8387db7399a7220132092171b29be302b"
+    },
+    {
+      "path": "src/ValheimImpact.Core/OwnedMaterialRegistry.cs",
+      "sha256": "f14bffe65878238a3477bf193649e67f0a7f23bf46312726f04b83b17d61ecd8"
+    },
+    {
+      "path": "src/ValheimImpact.Unity/OwnedBundleLoad.cs",
+      "sha256": "d5fd17107539e7c3f5c84458f31ac0573ab65acd8625a2836f947710333cace6"
+    },
+    {
+      "path": "src/ValheimImpact.Unity/OwnedMaterialBinder.cs",
+      "sha256": "4ff9aeef587b46be09e6b04cc4da0f86a7a9684b3fb5eb159ce9717dc2bc23f8"
+    },
+    {
+      "path": "src/ValheimImpact.Unity/GrassMaterialGuard.cs",
+      "sha256": "5123dded74d1620b3338e967ac7e8cdcc6af831ab4d71134591ccca3083957e2"
+    },
+    {
+      "path": "src/ValheimImpact.Unity/InstanceMaterialObserver.cs",
+      "sha256": "732b4e4c9cda5323e25b50aa73dde6ad0530a2d18715919ddda062f8455d1a05"
+    },
+    {
+      "path": "tools/unity/GrassBindingProbe.cs",
+      "sha256": "d47c13469b937221eac42d2106aaf03537e7f2b598a580b8a0e1706ed3f15793"
+    }
+  ],
+  "source_identities": {
+    "tallPath": "Assets/world/Props/ground_clutter/models/materials/grasscross_meadows.mat",
+    "shortPath": "Assets/world/Props/ground_clutter/models/materials/grasscross_meadows_short.mat",
+    "meshPath": "Assets/world/Props/ground_clutter/models/grasscross_even.obj",
+    "tall": {
+      "name": "grasscross_meadows",
+      "shader": "Custom/Grass",
+      "shaderSupported": true,
+      "passes": 4,
+      "queue": 2000,
+      "instancing": true
+    },
+    "short": {
+      "name": "grasscross_meadows_short",
+      "shader": "Custom/Grass",
+      "shaderSupported": true,
+      "passes": 4,
+      "queue": 2000,
+      "instancing": true
+    },
+    "sameShader": true,
+    "meshes": [
+      {
+        "name": "default",
+        "vertices": 48,
+        "submeshes": 1
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "duplicate inert components admit both exact grass materials without a Renderer",
+      "passed": true
+    },
+    {
+      "name": "shared owned payload uses one resident request",
+      "passed": true
+    },
+    {
+      "name": "ordinary Renderer keeps the shared material demanded after instancer disable",
+      "passed": true
+    },
+    {
+      "name": "last complete consumer census restores exact original slots",
+      "passed": true
+    },
+    {
+      "name": "an oversized instancer node cannot release unseen material ownership",
+      "passed": true
+    },
+    {
+      "name": "recurring incomplete census retains bounded residency",
+      "passed": true
+    },
+    {
+      "name": "a later complete census releases the retained demand",
+      "passed": true
+    },
+    {
+      "name": "component material reassignment restores the old material and adopts the new one",
+      "passed": true
+    },
+    {
+      "name": "cutoff change before readiness preserves the changed state and original fallback",
+      "passed": true
+    },
+    {
+      "name": "cutoff change after readiness preserves the changed state and original fallback",
+      "passed": true
+    },
+    {
+      "name": "foreign terrain texture is preserved while only the owned MainTex is restored",
+      "passed": true
+    },
+    {
+      "name": "foreign suppression prevents automatic re-adoption",
+      "passed": true
+    },
+    {
+      "name": "foreign MainTex before readiness is never overwritten",
+      "passed": true
+    },
+    {
+      "name": "foreign MainTex after readiness is never overwritten",
+      "passed": true
+    },
+    {
+      "name": "terrain UV changes release only the owned texture slot",
+      "passed": true
+    },
+    {
+      "name": "unavailable instancer support leaves ordinary Renderer binding operational",
+      "passed": true
+    },
+    {
+      "name": "steady observer scans remain complete and bounded",
+      "passed": true
+    },
+    {
+      "name": "steady observer scans allocate no managed bytes after warm-up",
+      "passed": true
+    },
+    {
+      "name": "original loaded materials and dependencies remain unchanged",
+      "passed": true
+    }
+  ],
+  "cleanup_passed": true,
+  "errors": [],
+  "warnings": [],
+  "observer_allocation": {
+    "warmup_scans": 32,
+    "measured_scans": 512,
+    "managed_bytes": 0,
+    "observed_maximum_work": 3,
+    "declared_maximum_work": 9,
+    "scope": "Only the inert component observer after warmup; excludes hierarchy allocations and frame-time performance."
+  },
+  "limits": [
+    "A diagnostic texture provider supplies the owned texture. Production authored-bundle loading is outside this fixture.",
+    "An inert component exercises the production observer through its internal fixture seam. No original game script is instantiated.",
+    "Exact production component type and fields are supported by local assembly inspection and game-reference compilation, not a played-world test.",
+    "Repeated oversized component nodes keep a census incomplete and may retain unseen leases indefinitely until a complete pass or shutdown. The 1024-material bound limits growth, not eviction latency.",
+    "No original-shader draw, visual approval, game deployment, biome approval or target-hardware performance result is granted by this fixture."
+  ],
+  "game_validated": false,
+  "artwork_approved": false,
+  "performance_validated": false
+}

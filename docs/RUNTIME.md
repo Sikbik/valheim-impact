@@ -50,6 +50,40 @@ while the runtime uses the validated registry. Unity bundle requests, asset
 requests, material access, adoption, and destruction run on the engine thread.
 There is no synchronous load-on-demand path.
 
+## Native texture identity and sampling
+
+Native catalog schema 1 accepts an optional `wrapMode` of `repeat` or `clamp`.
+An explicit declaration also requires Trilinear filtering, anisotropy 4 and mip
+bias 0. Before adoption, the native loader verifies wrapping on U, V and W and
+each of those fixed sampler values. A mismatch prevents ownership transfer and
+drains the asynchronous load. The loader does not repair sampler state.
+
+Sharing includes pixel payload, format, dimensions, mip count, color space and
+the declared sampler policy. Equal compatible declarations can share a texture
+across bundle aliases. Identical pixels with different wrapping stay separate,
+so request order cannot select the other material's sampler.
+
+A historical catalog without `wrapMode` remains supported with unknown sampler
+state. Its identity also includes the native bundle hash and exact asset
+selector. Only identical legacy bundle/selector identities can share, and they
+stay separate from declared samplers. An absent declaration does not assume
+Repeat. Explicit null, unsupported values and non-string declarations are
+rejected.
+
+The package builder compares declared native wrapping with staged `wrap_mode`
+and preserves the catalog bytes. Missing staged wrapping resolves to the
+historical Repeat build default for that comparison; image `periodic` settings
+do not choose a sampler. Missing native declarations remain absent and unknown.
+Malformed explicit staging or native values and declared disagreements prevent
+packaging.
+
+The [native sampler fixture](evidence/texture-sampler-native.json) passed 14
+cases and 55 checks using two owned normal textures with identical pixel
+payloads and different wrapping. It covers both request orders, compatible
+aliases, legacy isolation, and rejection of individual sampler mismatches with
+cleanup. These are loader and ownership results. Material bindings remain
+albedo-only, and this fixture does not render or validate game appearance.
+
 ## Exact material matching
 
 Each rule specifies material name, shader name, `_MainTex`, original texture
@@ -65,10 +99,19 @@ expected alpha-test keyword state. Alpha-blend and premultiplied-alpha keywords
 must remain disabled. Missing required stored floats or unsupported states
 reject the match. Getters are guarded by property-presence checks.
 
+Schema 3 additionally permits explicit `grass` expectations for the two reviewed
+`Custom/Grass` Meadows materials. Its fixed-pass contract checks cutoff 0.46,
+queue 2000, instancing, terrain-color identity and scale, variant wind settings,
+and the measured shader property and pass signature. Missing mode, cull, blend
+and depth properties are required to be absent, rather than read as zero.
+Grass never enters through an implicit opaque rule. Schema 3 validates original
+JSON types and rejects unknown fields in both the runtime and package builder;
+it may also carry existing opaque and `Custom/Piece` cutout rules.
+
 The cutoff is compared at exact single-precision runtime representation. Package
 validation checks float32 rounding before acceptance. The package parser also
 rejects unknown cutout keys and quoted numeric values; the C# deserializer is
-more permissive about those lexical forms, while recognized state values remain
+more permissive about those lexical forms in schemas 1 and 2, while recognized state values remain
 constrained. Use the package builder to validate distributable input.
 
 Opaque rules retain the opaque queue and alpha-keyword guard and reject stored
@@ -87,6 +130,21 @@ preflights shared-material access. A reusable list holds at most eight slots.
 Oversized renderers, missing capability, or a capability failure use first-slot
 coverage with bounded diagnostics. This compatibility fallback is intentional;
 it does not establish complete renderer coverage.
+
+When explicit grass rules exist, the same walk also observes active
+`InstanceRenderer` components. It resolves the exact game type and declared
+material/mesh fields once, then uses cached getters and scalar component access.
+Duplicate components and ordinary Renderers share the existing material lease.
+The observer reserves its maximum work within the same 64-step budget. Missing
+component support disables grass participation while ordinary Renderer binding
+continues.
+
+An instancer node with more than eight total components makes the census
+incomplete. Unseen leases remain held through repeated incomplete passes,
+potentially until a later complete pass or shutdown. The material bound limits
+growth but does not guarantee eviction during recurring overflow. Grass also
+guards the original terrain-color texture object, its UVs and scale, material
+state and shader. A foreign change restores only a still-owned albedo slot.
 
 A material keeps its original texture object, shader object, and texture
 scale/offset. The binder changes only the selected albedo. Shared demand uses

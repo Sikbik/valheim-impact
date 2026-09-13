@@ -15,7 +15,14 @@ namespace ValheimImpact.Core
         [DataMember(IsRequired = true)] public int originalWidth;
         [DataMember(IsRequired = true)] public int originalHeight;
         private CutoutBindingState cutoutState;
+        private GrassBindingState grassState;
         public bool CutoutSpecified { get; private set; }
+        public bool GrassSpecified { get; private set; }
+        [DataMember(EmitDefaultValue = false)] public GrassBindingState grass
+        {
+            get { return grassState; }
+            set { GrassSpecified = true; grassState = value; }
+        }
         [DataMember(EmitDefaultValue = false)] public CutoutBindingState cutout
         {
             get { return cutoutState; }

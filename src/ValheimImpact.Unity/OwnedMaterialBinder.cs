@@ -26,6 +26,7 @@ namespace ValheimImpact.Unity
             internal Func<bool> CanRestore, CanApply;
             internal int LastSeenPass;
             internal bool Foreign;
+            internal GrassMaterialGuard Grass;
         }
         private sealed class Node { internal Transform Transform; internal int Child; internal bool Inspected; }
         private readonly OwnedMaterialRegistry registry;
@@ -34,6 +35,9 @@ namespace ValheimImpact.Unity
         private readonly List<GameObject> roots = new List<GameObject>();
         private readonly Stack<Node> traversal = new Stack<Node>();
         private readonly Action<string> log;
+        private readonly IBoundedMaterialObserver additional;
+        private readonly GrassShaderContracts grassShaders = new GrassShaderContracts();
+        private readonly int observationWork;
         private readonly HashSet<string> misses = new HashSet<string>(StringComparer.Ordinal);
         private static readonly Func<Renderer, int> DefaultMaterialCount = ResolveMaterialCount();
         private static readonly int ModeId = Shader.PropertyToID("_Mode"), CutoffId = Shader.PropertyToID("_Cutoff"),
@@ -61,12 +65,20 @@ namespace ValheimImpact.Unity
         public OwnedMaterialBinder(OwnedMaterialRegistry registry, Action<string> log = null,
             Func<OwnedTextureBundle, IOwnedTextureLoad<Texture>> begin = null, Action<Texture> retire = null,
             Func<Texture, bool> released = null)
+            : this(registry, log, begin, retire, released, null) { }
+        internal OwnedMaterialBinder(OwnedMaterialRegistry registry, Action<string> log,
+            Func<OwnedTextureBundle, IOwnedTextureLoad<Texture>> begin, Action<Texture> retire,
+            Func<Texture, bool> released, Func<Action<Material>, IBoundedMaterialObserver> observerFactory)
         {
             if (registry == null || !registry.Enabled) throw new ArgumentException("Validated enabled material registry required");
             this.registry = registry; this.log = log ?? (_ => {});
             Scheduler = new OwnedTextureScheduler<Texture>(registry.Catalog,
                 begin ?? (spec => new TextureLoad(spec)), retire ?? (texture => Object.Destroy(texture)),
                 released ?? (texture => texture == null), registry.Policy);
+            bool grass = false;
+            foreach (MaterialBindingRule rule in registry.Rules) grass |= rule.grass != null;
+            if (grass) additional = observerFactory != null ? observerFactory(ObserveMaterial) : InstanceMaterialObserver.TryCreate(ObserveMaterial, this.log);
+            observationWork = MaxSharedMaterials + (additional == null ? 0 : additional.MaximumWork);
         }
         private sealed class TextureLoad : IOwnedTextureLoad<Texture>
         {
@@ -113,6 +125,19 @@ namespace ValheimImpact.Unity
         // Also used by finite fixture scenes. This does not start any engine load.
         public void ObserveRenderer(Renderer renderer)
         { ObserveRendererMaterials(renderer); }
+        internal int ObserveGameObject(GameObject gameObject)
+        {
+            if (stopping || gameObject == null || !gameObject.activeInHierarchy) return 1;
+            Renderer renderer;
+            int work = gameObject.TryGetComponent<Renderer>(out renderer) ? Math.Max(1, ObserveRendererMaterials(renderer)) : 1;
+            if (additional != null)
+            {
+                bool complete;
+                work += additional.Observe(gameObject, out complete);
+                incomplete |= !complete;
+            }
+            return work;
+        }
         private static Func<Renderer, int> ResolveMaterialCount()
         {
             try
@@ -190,6 +215,7 @@ namespace ValheimImpact.Unity
             if (entries.Count >= MaxMaterials || material.shader == null) return;
             foreach (MaterialBindingRule rule in registry.Rules)
             {
+                if (rule.grass != null && additional == null) continue;
                 if (!material.HasProperty(rule.textureProperty)) continue;
                 Texture original = material.GetTexture(rule.textureProperty);
                 if (original == null) continue;
@@ -203,8 +229,15 @@ namespace ValheimImpact.Unity
                     continue;
                 }
                 if (!Eligible(material, rule)) continue;
+                GrassMaterialGuard grass = null;
+                if (rule.grass != null)
+                {
+                    if (!grassShaders.Matches(material)) continue;
+                    grass = GrassMaterialGuard.Capture(material, rule.grass);
+                    if (grass == null) continue;
+                }
                 var entry = new Entry { Key = key, Material = material, Shader = material.shader, Original = original, Rule = rule,
-                    Scale = material.GetTextureScale(rule.textureProperty), Offset = material.GetTextureOffset(rule.textureProperty), LastSeenPass = pass };
+                    Scale = material.GetTextureScale(rule.textureProperty), Offset = material.GetTextureOffset(rule.textureProperty), LastSeenPass = pass, Grass = grass };
                 // Cache these once per tracked entry. The steady update path must
                 // not allocate closures for every material on every frame.
                 entry.Read = () => entry.Material == null ? null : entry.Material.GetTexture(entry.Rule.textureProperty);
@@ -221,7 +254,7 @@ namespace ValheimImpact.Unity
         }
         private static bool EligibleOpaque(Material material)
         {
-            return material != null && material.shader != null && material.renderQueue <= 2500 &&
+            return material != null && material.shader != null && material.shader.name != "Custom/Grass" && material.renderQueue <= 2500 &&
                 !material.IsKeywordEnabled("_ALPHATEST_ON") && !material.IsKeywordEnabled("_ALPHABLEND_ON") &&
                 !material.IsKeywordEnabled("_ALPHAPREMULTIPLY_ON") &&
                 (!material.HasFloat(ModeId) || material.GetFloat(ModeId) == 0) &&
@@ -231,6 +264,7 @@ namespace ValheimImpact.Unity
         }
         private static bool Eligible(Material material, MaterialBindingRule rule)
         {
+            if (rule.grass != null) return GrassMaterialGuard.Eligible(material, rule.grass);
             if (rule.cutout == null) return EligibleOpaque(material);
             // These can be stored material values even when absent from ShaderLab
             // Properties. HasFloat must prove their presence before a read. Never
@@ -244,7 +278,7 @@ namespace ValheimImpact.Unity
         private bool Matches(Entry entry)
         {
             Material m = entry.Material;
-            return Eligible(m, entry.Rule) && entry.Original != null && m.shader == entry.Shader && m.HasProperty(entry.Rule.textureProperty) &&
+            return Eligible(m, entry.Rule) && (entry.Grass == null || entry.Grass.Matches(m)) && entry.Original != null && m.shader == entry.Shader && m.HasProperty(entry.Rule.textureProperty) &&
                 entry.Rule.Matches(m.name, m.shader.name, entry.Rule.textureProperty, entry.Original.name, entry.Original.width, entry.Original.height) &&
                 ReferenceEquals(m.GetTexture(entry.Rule.textureProperty), entry.Original);
         }
@@ -254,7 +288,7 @@ namespace ValheimImpact.Unity
             Material m = entry.Material;
             Func<Texture> read = entry.Read;
             Action<Texture> write = entry.Write;
-            bool foreign = m != null && (!Eligible(m, entry.Rule) || !entry.Binding.StillOwns(read) || m.shader != entry.Shader ||
+            bool foreign = m != null && (!Eligible(m, entry.Rule) || (entry.Grass != null && !entry.Grass.Matches(m)) || !entry.Binding.StillOwns(read) || m.shader != entry.Shader ||
                 m.name != entry.Rule.materialName || m.GetTextureScale(entry.Rule.textureProperty) != entry.Scale ||
                 m.GetTextureOffset(entry.Rule.textureProperty) != entry.Offset);
             if (foreign && !entry.Foreign) { entry.Foreign = true; ForeignChangeCount++; }
@@ -285,14 +319,12 @@ namespace ValheimImpact.Unity
                     if (node.Transform == null || !node.Transform.gameObject.activeInHierarchy) { traversal.Pop(); continue; }
                     if (!node.Inspected)
                     {
-                        // Reserve the maximum slot batch before touching this node.
-                        // Every inspected slot consumes the same 64-step discovery
-                        // budget instead of multiplying material work by eight.
-                        if (WorkPerFrame - work < MaxSharedMaterials) return;
+                        // Reserve the complete renderer-slot and optional component
+                        // batch before touching this node. Both observers consume
+                        // the same bounded discovery budget and census decision.
+                        if (WorkPerFrame - work < observationWork) return;
                         node.Inspected = true;
-                        Renderer renderer;
-                        if (node.Transform.TryGetComponent<Renderer>(out renderer))
-                            work += Math.Max(1, ObserveRendererMaterials(renderer)) - 1;
+                        work += ObserveGameObject(node.Transform.gameObject) - 1;
                     }
                     else if (node.Child < node.Transform.childCount)
                     {
@@ -324,7 +356,7 @@ namespace ValheimImpact.Unity
         {
             if (!incomplete) completedPass = pass;
             else { SkippedCensusCount++; if (SkippedCensusCount <= 3) log("Material census exceeded bounded hierarchy limits; retaining existing demand until a complete census or scene reset."); }
-            pass++; scanning = false; nextCensus = seconds + 2; roots.Clear(); traversal.Clear();
+            pass++; scanning = false; incomplete = false; nextCensus = seconds + 2; roots.Clear(); traversal.Clear();
         }
     }
 }

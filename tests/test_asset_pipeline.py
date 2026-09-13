@@ -197,6 +197,43 @@ class AssetPipelineTests(unittest.TestCase):
                     else:
                         self.assertFalse(output.exists())
 
+    def test_explicit_wrap_metadata_reaches_every_role_without_changing_pixels(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            Image.new('RGB', (8, 8), 'green').save(root / 'source.png')
+            common = dict(source='source.png', size=[8, 8], periodic=False,
+                          alpha_policy='opaque', normal_strength=0)
+            manifest = root / 'spec.json'
+            manifest.write_text(json.dumps({'assets': [dict(common, id='default'),
+                dict(common, id='clamped', wrap_mode='clamp'),
+                dict(common, id='repeated', wrap_mode='repeat')]}))
+            with patch.object(pipeline, 'ROOT', root):
+                pipeline.build(manifest)
+            data = json.loads((root / 'build/staging/meadows/manifest.json').read_text())
+            self.assertEqual([r['wrap_mode'] for r in data['assets']],
+                             ['repeat', 'repeat', 'clamp', 'clamp', 'repeat', 'repeat'])
+            for role in ('albedo', 'normal'):
+                rows = [r for r in data['assets'] if r['role'] == role]
+                self.assertEqual(len({r['dds_sha256'] for r in rows}), 1)
+
+    def test_invalid_late_wrap_metadata_preserves_existing_outputs(self):
+        for value in (None, True, 1, 'mirror', 'Clamp', [], {}):
+            with self.subTest(value=value), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                Image.new('RGB', (8, 8), 'green').save(root / 'source.png')
+                asset = dict(id='first', source='source.png', size=[8, 8], periodic=False,
+                             alpha_policy='opaque', generate_normal=False)
+                manifest = root / 'spec.json'
+                manifest.write_text(json.dumps({'assets': [asset, dict(asset, id='last', wrap_mode=value)]}))
+                output = root / 'build/staging/meadows'
+                output.mkdir(parents=True)
+                marker = output / 'manifest.json'
+                marker.write_bytes(b'prior valid output')
+                with patch.object(pipeline, 'ROOT', root), self.assertRaisesRegex(ValueError, 'wrap_mode'):
+                    pipeline.build(manifest)
+                self.assertEqual(marker.read_bytes(), b'prior valid output')
+                self.assertEqual({p.name for p in output.iterdir()}, {'manifest.json'})
+
     def test_build_preflights_linked_outputs_before_writing_any_texture(self):
         for linked_directory in (True, False):
             with self.subTest(linked_directory=linked_directory), tempfile.TemporaryDirectory() as directory:

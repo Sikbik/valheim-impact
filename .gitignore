@@ -31,6 +31,8 @@ unity/[Oo]bj/
 unity/[Ll]ogs/
 unity/[Uu]ser[Ss]ettings/
 unity/[Mm]emoryCaptures/
+unity/mono_crash.*
+unity/core.*
 unity/[Bb]uilds/
 unity/.vs/
 unity/OwnedInputs/

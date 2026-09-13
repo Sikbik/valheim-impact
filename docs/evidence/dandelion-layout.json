@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "scope": "Bounded layout metadata and CPU UV comparison for the dandelion albedo on seven serialized shared consumers. No original pixels, masks or mesh arrays are included.",
+  "source_inventory_sha256": "5d25600f2645e180064a4a08081e69d86c1c2078af98170ad2c526dbdf998365",
+  "texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+  "material_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8929892379601486267",
+  "mesh_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-2264560222537116440",
+  "shader_id": "CAB-ac3b95082e91bc1c7ea71211e0db869a:-8014961710185377972",
+  "shader_name": "Standard",
+  "cutoff": 0.14000000059604645,
+  "mode": 1,
+  "render_queue": 2450,
+  "normal_texture_bound": false,
+  "sampler": {
+    "filter": "Point",
+    "wrap_u": "Clamp",
+    "wrap_v": "Clamp",
+    "anisotropy": 1,
+    "mip_bias": 0
+  },
+  "vertex_count": 150,
+  "triangle_count": 136,
+  "explicit_backface_triangle_pairs": 56,
+  "head_instances": 2,
+  "leaf_instances": 5,
+  "stem_instances": 2,
+  "regions": {
+    "head": {
+      "triangles": 32,
+      "uv_bounds": {
+        "min": [
+          0.005724449176341295,
+          0.5129358172416687
+        ],
+        "max": [
+          0.4810454249382019,
+          0.9839906692504883
+        ]
+      },
+      "position_bounds": {
+        "min": [
+          -0.10568050295114517,
+          0.22381260991096497,
+          -0.14879228174686432
+        ],
+        "max": [
+          0.16191276907920837,
+          0.370610773563385,
+          0.19738788902759552
+        ]
+      },
+      "source_texel_centers": 225,
+      "source_visible_texel_centers": 54,
+      "source_alpha_min": 0,
+      "source_alpha_max": 255,
+      "source_region_cutoff_coverage": 0.24,
+      "uv_texel_centers_256": 14595,
+      "uv_texel_centers_512": 58404
+    },
+    "leaf": {
+      "triangles": 80,
+      "uv_bounds": {
+        "min": [
+          0.5012683272361755,
+          0.08029124140739441
+        ],
+        "max": [
+          0.8445723652839661,
+          0.9573896527290344
+        ]
+      },
+      "position_bounds": {
+        "min": [
+          -0.29352033138275146,
+          -0.037817686796188354,
+          -0.1910628080368042
+        ],
+        "max": [
+          0.33134007453918457,
+          0.207905113697052,
+          0.22045451402664185
+        ]
+      },
+      "source_texel_centers": 308,
+      "source_visible_texel_centers": 122,
+      "source_alpha_min": 0,
+      "source_alpha_max": 255,
+      "source_region_cutoff_coverage": 0.3961038961038961,
+      "uv_texel_centers_256": 19712,
+      "uv_texel_centers_512": 78509
+    },
+    "stem": {
+      "triangles": 24,
+      "uv_bounds": {
+        "min": [
+          0.8722167015075684,
+          6.612064316868782e-05
+        ],
+        "max": [
+          0.9496776461601257,
+          1.0001047849655151
+        ]
+      },
+      "position_bounds": {
+        "min": [
+          -0.010454768314957619,
+          -0.06025434285402298,
+          -0.07088219374418259
+        ],
+        "max": [
+          0.09883629530668259,
+          0.3553611636161804,
+          0.12858551740646362
+        ]
+      },
+      "source_texel_centers": 64,
+      "source_visible_texel_centers": 64,
+      "source_alpha_min": 222,
+      "source_alpha_max": 255,
+      "source_region_cutoff_coverage": 1.0,
+      "uv_texel_centers_256": 5029,
+      "uv_texel_centers_512": 19968
+    }
+  },
+  "consumers": [
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-1609649451563510355",
+      "hierarchy": "Pickable_Dandelion/visual",
+      "effective_axis_lengths": [
+        1.2000000476837158,
+        1.2000000476837158,
+        1.2000000476837158
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-5506783192631730660",
+      "hierarchy": "prop_TrophyGreydwarfBrute/attach/model/Dandelion02",
+      "effective_axis_lengths": [
+        0.8950153291225431,
+        0.8950154185295104,
+        0.8950154185295102
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8476077252483070286",
+      "hierarchy": "prop_itemstand_TrophyGreydwarfBrute/attach_other/prop_TrophyGreydwarfBrute/attach/model/Dandelion02",
+      "effective_axis_lengths": [
+        0.8950156110235976,
+        0.8950158453061189,
+        0.8950156700992163
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-8527725231628343457",
+      "hierarchy": "TrophyGreydwarfBrute/attach/model/Dandelion02",
+      "effective_axis_lengths": [
+        0.8950153291225428,
+        0.8950154185295103,
+        0.8950154185295102
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:-9168994393916003178",
+      "hierarchy": "Dandelion/attach/attachobj/Visual",
+      "effective_axis_lengths": [
+        1.0,
+        0.9999999999999998,
+        0.9999999999999998
+      ]
+    },
+    {
+      "id": "CAB-8923bd833c4171316cf3c761b642c1c8:8070440610014702370",
+      "hierarchy": "Greydwarf_Elite/Visual/Armature.001/root/spine1/spine2/spine3/Dandelion02",
+      "effective_axis_lengths": [
+        1.0000005830079315,
+        1.0000022838047236,
+        1.0000018206104635
+      ]
+    },
+    {
+      "id": "CAB-ce3ef22e661e6601117ebe9cc6da6256:-8911618029534636003",
+      "hierarchy": "Menu_Greydwarf_Elite/Visual/Armature.001/root/spine1/spine2/spine3/Dandelion02",
+      "effective_axis_lengths": [
+        1.0000005830079315,
+        1.0000022838047236,
+        1.0000018206104635
+      ]
+    }
+  ],
+  "cpu_comparison": {
+    "frames": 42,
+    "consumers": 7,
+    "views": [
+      "front",
+      "rear"
+    ],
+    "states": [
+      "original",
+      "HD BC3 base",
+      "Balanced BC3 base"
+    ],
+    "retained_material_scales": [
+      1.2,
+      1.0,
+      0.895015
+    ],
+    "exact_matrix_source": "Referenced layout measurements, all seven serialized rest-transform chains",
+    "camera_span_world_units": 1.0,
+    "resolution": [
+      480,
+      480
+    ],
+    "all_retained_vertices_inside_viewport": true,
+    "visual_findings": "Both heads, all five serrated leaves and both stems map to their intended retained surfaces in the front and rear contact sheets. The widened leaf retains a continuous vein and readable lobes. HD and Balanced share the intended layout. The tilted flower cards, trophy rotations and inverted item attachment remain geometry/transform behavior. Fine petal detail and near-edge color change under BC3 remain native-review concerns.",
+    "method": "Private CPU triangle rasterization of retained channels, Standard cutoff and native BC3 base-mip decode; this does not execute the original shader."
+  },
+  "region_coverage": {
+    "hd": {
+      "source": {
+        "head": {
+          "texel_centers": 58404,
+          "passing": 12518,
+          "coverage": 0.21433463461406754,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "leaf": {
+          "texel_centers": 78509,
+          "passing": 30808,
+          "coverage": 0.3924136086308576,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "stem": {
+          "texel_centers": 19968,
+          "passing": 19968,
+          "coverage": 1.0,
+          "alpha_min": 255,
+          "alpha_max": 255
+        }
+      },
+      "decoded": {
+        "head": {
+          "texel_centers": 58404,
+          "passing": 12517,
+          "coverage": 0.21431751249914388,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "leaf": {
+          "texel_centers": 78509,
+          "passing": 30804,
+          "coverage": 0.39236265905819717,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "stem": {
+          "texel_centers": 19968,
+          "passing": 19968,
+          "coverage": 1.0,
+          "alpha_min": 255,
+          "alpha_max": 255
+        }
+      }
+    },
+    "balanced": {
+      "source": {
+        "head": {
+          "texel_centers": 14595,
+          "passing": 3200,
+          "coverage": 0.21925316889345667,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "leaf": {
+          "texel_centers": 19712,
+          "passing": 7842,
+          "coverage": 0.3978287337662338,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "stem": {
+          "texel_centers": 5029,
+          "passing": 5029,
+          "coverage": 1.0,
+          "alpha_min": 255,
+          "alpha_max": 255
+        }
+      },
+      "decoded": {
+        "head": {
+          "texel_centers": 14595,
+          "passing": 3200,
+          "coverage": 0.21925316889345667,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "leaf": {
+          "texel_centers": 19712,
+          "passing": 7840,
+          "coverage": 0.3977272727272727,
+          "alpha_min": 0,
+          "alpha_max": 255
+        },
+        "stem": {
+          "texel_centers": 5029,
+          "passing": 5029,
+          "coverage": 1.0,
+          "alpha_min": 255,
+          "alpha_max": 255
+        }
+      }
+    }
+  },
+  "compression_checks": {
+    "passed": true,
+    "mip_count": 19,
+    "evidence": "docs/evidence/asset-validation.json"
+  },
+  "limits": {
+    "mip_sizes_8_and_larger": "Head, leaf and stem UV regions all have passing decoded texel centers through 8px. Per-region coverage still shifts at coarser levels.",
+    "mip_size_4": "Decoded head region coverage is 0; leaf 0.5, stem 0.5 in the exact distinct-texel-center diagnostic for both variants.",
+    "mip_size_2": "Decoded head region coverage is 0 and leaf 1.0. The narrow stem region contains no texel center, so its center-based coverage is null, not a measured native invisibility result.",
+    "mip_size_1": "Source and decoded whole-atlas passing coverage are 0. A single atlas texel cannot preserve separate flower, leaf and stem silhouettes or colors. No artificial opaque tail was introduced.",
+    "next_native_review": "Check actual mip selection, fractional LOD and distances at 1080p and 4K, plus all shared consumer transforms. No world, animation, final art or performance approval follows from this CPU fixture.",
+    "balanced_preparation": "The 256px derivative includes the recorded alpha ramp after its LANCZOS resize. Use the exact 256px fitted source or reproduce that post-resize remap. A plain 512-to-256 pipeline resize does not produce these exact checked bytes."
+  },
+  "mesh_authored": false,
+  "native_render_validation": false,
+  "game_validation": false,
+  "artwork_approved": false
+}

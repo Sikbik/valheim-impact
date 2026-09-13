@@ -33,7 +33,10 @@ namespace ValheimImpact.Core
             // The current owned build contract supports DXT5 with a full mip chain.
             Identity = payloadSha256.ToLowerInvariant() + ":DXT5:" + bundle.Width.ToString(CultureInfo.InvariantCulture) + ":" +
                 bundle.Height.ToString(CultureInfo.InvariantCulture) + ":" + bundle.MipCount.ToString(CultureInfo.InvariantCulture) + ":" +
-                (bundle.IsSrgb ? "srgb" : "linear");
+                (bundle.IsSrgb ? "srgb" : "linear") +
+                (bundle.WrapMode == null
+                    ? ":sampler-unknown:" + bundle.Sha256 + ":" + bundle.AssetName
+                    : ":sampler:" + bundle.WrapMode + ":trilinear:aniso4:bias0");
         }
     }
 

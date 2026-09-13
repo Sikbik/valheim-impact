@@ -1,0 +1,203 @@
+{
+  "status": "Authored cutout candidate; finite native material checks passed; distance, world and final art review remain separate stages",
+  "schema_version": 1,
+  "sources": {
+    "head": {
+      "source": "assets/meadows/dandelion-head-source-v1.png",
+      "source_sha256": "c635865c6676eaf48053e3d49f9c99a6b8e9ebcce5ab26cc36de691cf5e0694b",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_components_before": 105,
+      "removed_component_count": 104,
+      "removed_positive_alpha_pixels": 182,
+      "largest_removed_component_pixels": 12,
+      "retained_component_pixels": 985324,
+      "crop_box_xy_exclusive": [
+        48,
+        54,
+        1210,
+        1196
+      ],
+      "crop_sha256": "d1fe53b6f0916bf59481eae48458ff64a50b702ecd717eb5ff7551de97afcae2"
+    },
+    "leaf": {
+      "source": "assets/meadows/dandelion-leaf-source-v1.png",
+      "source_sha256": "0b585efae5dce086cff61acd100a2c46295dd7d81a52bcaa1090a7e5268758ab",
+      "source_dimensions": [
+        1254,
+        1254
+      ],
+      "alpha_components_before": 58,
+      "removed_component_count": 57,
+      "removed_positive_alpha_pixels": 96,
+      "largest_removed_component_pixels": 8,
+      "retained_component_pixels": 237288,
+      "crop_box_xy_exclusive": [
+        404,
+        10,
+        847,
+        1239
+      ],
+      "crop_sha256": "9234d8b6e04f0671fdfa29c3efa8758f009a4e83b487cdfd3d1c6b96f0f33b7d"
+    }
+  },
+  "owned_only_fitting": true,
+  "original_game_pixels": false,
+  "original_masks_used": false,
+  "cleanup": {
+    "method": "8-connected components of alpha > 0; set only alpha to zero for components of 32 pixels or fewer; preserve all other RGBA values before cropping",
+    "maximum_removed_component_size": 32,
+    "connected_edge_erosion": false
+  },
+  "coordinate_convention": "PNG origin at top left, crop right/bottom exclusive; UV v=1-y/height",
+  "master_dimensions": [
+    512,
+    512
+  ],
+  "placements": {
+    "head": {
+      "xy": [
+        64,
+        51
+      ],
+      "size": [
+        123,
+        138
+      ]
+    },
+    "leaf": {
+      "xy": [
+        260,
+        28
+      ],
+      "size": [
+        169,
+        438
+      ]
+    }
+  },
+  "source_resize": "Pillow RGBA to premultiplied RGBa, LANCZOS resize to exact width and height, back to RGBA; direct assignment into blank transparent atlas",
+  "stem": {
+    "source": "leaf",
+    "source_crop_xy_exclusive": [
+      616,
+      256,
+      635,
+      1120
+    ],
+    "source_alpha_min": 252,
+    "source_alpha_max": 254,
+    "row_color": "Float64 alpha-weighted mean of owned RGB over 19 columns; numpy.rint and uint8",
+    "profile_resize": "Pillow RGB BILINEAR resize from 1x864 to 1x512, then reverse rows",
+    "atlas_x_exclusive": [
+      440,
+      496
+    ],
+    "atlas_y_exclusive": [
+      0,
+      512
+    ],
+    "alpha": 255,
+    "row_orientation": "PNG top samples lower leaf midrib near its root; PNG bottom samples upper leaf midrib near the flower end. This matches high-V root and low-V flower attachment on retained stems.",
+    "horizontal_seam": "Every U column uses the same row color."
+  },
+  "transparent_rgb_padding": {
+    "method": "scipy.ndimage.distance_transform_edt nearest pixel with alpha >= 128; replace RGB at alpha < 128 within Euclidean radius <= 8 pixels",
+    "alpha_changed": false,
+    "pixels": 22586
+  },
+  "balanced": {
+    "dimensions": [
+      256,
+      256
+    ],
+    "source": "dandelion-atlas-hd-v1.png",
+    "resize": "Pillow RGBA LANCZOS, followed by the same cutoff-preserving alpha ramp as the master"
+  },
+  "alpha_remap": {
+    "after": "Each final base-image resample, before PNG save",
+    "threshold_byte": 36,
+    "opaque_at_byte": 192,
+    "formula": "alpha < 36 -> 0; otherwise numpy.rint(clip(36 + (alpha - 36) * 219 / 156, 36, 255)) using float64",
+    "fully_opaque_interiors": true,
+    "cutoff_silhouette_changed_by_remap": false,
+    "original_mask_used": false
+  },
+  "alpha_cutoff": 0.14000000059604645,
+  "generate_normal": false,
+  "versions": {
+    "numpy": "2.5.3",
+    "Pillow": "12.3.0",
+    "scipy": "1.18.1"
+  },
+  "outputs": {
+    "dandelion-atlas-hd-v1.png": {
+      "sha256": "17028ec8e889e8306b9a1d0c489be650c190fc6b6e3ab3cec3fade8fd27fa1d4",
+      "dimensions": [
+        512,
+        512
+      ],
+      "mode": "RGBA",
+      "rgba_sha256": "3fc970c5e727f938d003e279d2108e5b976852c336c15e688f7ea0dedea953b0",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "positive_alpha_pixels": 71998,
+      "coverage_at_cutoff": 0.27465057373046875
+    },
+    "dandelion-atlas-balanced-v1.png": {
+      "sha256": "639b491a193d2883d324cb4cc01520712759d870c578dee3882537f35d1af31f",
+      "dimensions": [
+        256,
+        256
+      ],
+      "mode": "RGBA",
+      "rgba_sha256": "7c212d8476bf10ca9e836a04caec139b57cd0b611e8cc9ff009e6e3128599f68",
+      "alpha_min": 0,
+      "alpha_max": 255,
+      "positive_alpha_pixels": 18210,
+      "coverage_at_cutoff": 0.277862548828125
+    }
+  },
+  "wrap_mode": "clamp",
+  "target_texture_id": "CAB-8923bd833c4171316cf3c761b642c1c8:-4286054824775633638",
+  "fitting_helper_reads_original_geometry": false,
+  "layout_informed_by_retained_uv_review": true,
+  "fitting_helper": {
+    "path": "tools/fit_dandelion.py",
+    "sha256": "e0a92197ef4c64ad1a3e7168b1da567d500297c746e419c57b9b6ea6cbad0fd1",
+    "dependency_manifest": "requirements-assets.txt",
+    "dependency_manifest_sha256": "b484fb6fbc42add5d47850a2e23eb01e71983d44b68fa3d698cbc3b1b8a3f35b",
+    "image_dependencies": {
+      "numpy": "2.5.3",
+      "Pillow": "12.3.0",
+      "scipy": "1.18.1"
+    },
+    "geometry_inputs": [],
+    "image_inputs": [
+      "assets/meadows/dandelion-head-source-v1.png",
+      "assets/meadows/dandelion-leaf-source-v1.png"
+    ],
+    "hash_validation": "Both parent hashes are verified before decoding. Both output PNG hashes are verified before either output file is created.",
+    "layout_constants": "Placement, dimensions and stem orientation record the prior retained-UV review. The helper itself reads only the two owned source images."
+  },
+  "png_encoding": {
+    "encoder": "Pillow PNG",
+    "pillow_version": "12.3.0",
+    "zlib_runtime_version": "1.3.2",
+    "mode": "RGBA",
+    "bit_depth": 8,
+    "color_type": 6,
+    "interlace": false,
+    "optimize": false,
+    "compress_level": 6,
+    "chunks": [
+      "IHDR",
+      "IDAT",
+      "IEND"
+    ],
+    "inherited_metadata": false,
+    "color_interpretation": "Albedo RGB is staged as sRGB; alpha is cutout coverage. The PNG has no embedded profile or text metadata."
+  }
+}

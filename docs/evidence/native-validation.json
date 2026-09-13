@@ -10,6 +10,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2532354676158598,
         "max_error": 1.4847409464281185
@@ -22,6 +24,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.24274444580078125,
         "max_error": 1.0
@@ -34,6 +38,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.38022921771278345,
         "max_error": 2.1703650881262035
@@ -46,6 +52,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.24508285522460938,
         "max_error": 1.0
@@ -58,6 +66,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2767717023642674,
         "max_error": 2.1703650881262035
@@ -70,6 +80,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2124176025390625,
         "max_error": 1.0
@@ -82,6 +94,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.3592337014401543,
         "max_error": 1.8016335616045467
@@ -94,6 +108,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.246734619140625,
         "max_error": 1.0
@@ -106,6 +122,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2666479432432657,
         "max_error": 1.8118216482914704
@@ -118,6 +136,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.20990753173828125,
         "max_error": 1.0
@@ -130,6 +150,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.34222047763759306,
         "max_error": 2.2190252151793004
@@ -142,6 +164,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.21556854248046875,
         "max_error": 1.0
@@ -154,6 +178,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "clamp",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.11542900616492283,
         "max_error": 2.0
@@ -166,6 +192,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "clamp",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0,
         "max_error": 0.0
@@ -178,6 +206,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.30501410171854126,
         "max_error": 2.770571578101581
@@ -190,6 +220,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.24030351638793945,
         "max_error": 1.0
@@ -202,6 +234,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2747242219217287,
         "max_error": 2.1703650881262035
@@ -214,6 +248,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.25670695304870605,
         "max_error": 1.0
@@ -226,6 +262,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.3312101144465732,
         "max_error": 2.4368331330340425
@@ -238,6 +276,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.19894981384277344,
         "max_error": 1.0
@@ -250,6 +290,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2974031771702148,
         "max_error": 2.4368331330340425
@@ -262,6 +304,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0,
         "max_error": 0.0
@@ -274,6 +318,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.18577626105805528,
         "max_error": 3.2908227754390253
@@ -286,6 +332,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0,
         "max_error": 0.0
@@ -298,6 +346,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.2677563121127593,
         "max_error": 2.5904656294674453
@@ -310,6 +360,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0,
         "max_error": 0.0
@@ -322,6 +374,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.13244583525105225,
         "max_error": 3.3631684864573685
@@ -334,6 +388,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0,
         "max_error": 0.0
@@ -346,6 +402,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.17401410366425973,
         "max_error": 3.2494684822575692
@@ -358,6 +416,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0,
         "max_error": 0.0
@@ -370,6 +430,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.5115232211677521,
         "max_error": 2.2190252151793004
@@ -382,6 +444,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.24732470512390137,
         "max_error": 1.0
@@ -394,6 +458,8 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.022080421447753906,
         "max_error": 2.0
@@ -406,6 +472,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.032611846923828125,
         "max_error": 2.0
@@ -418,6 +486,8 @@
       "payload_bytes": 87408,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.013675689697265625,
         "max_error": 2.0
@@ -430,6 +500,8 @@
       "payload_bytes": 21872,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.0180816650390625,
         "max_error": 2.0
@@ -442,6 +514,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.5123040344022471,
         "max_error": 2.2190252151793004
@@ -454,6 +528,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.5105593434535847,
         "max_error": 2.2190252151793004
@@ -466,6 +542,8 @@
       "payload_bytes": 1398128,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.49263443847689037,
         "max_error": 2.2190252151793004
@@ -478,14 +556,44 @@
       "payload_bytes": 349552,
       "stream_payload_verified": true,
       "cpu_readable": false,
+      "wrap_mode": "repeat",
+      "sampler_verified": true,
       "gpu_sampling": {
         "mean_error": 0.49833994458878383,
         "max_error": 2.2190252151793004
       }
+    },
+    {
+      "id": "dandelion_hd_albedo",
+      "width": 512,
+      "height": 512,
+      "payload_bytes": 349552,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "wrap_mode": "clamp",
+      "sampler_verified": true,
+      "gpu_sampling": {
+        "mean_error": 0.10666619673421329,
+        "max_error": 2.4368331330340425
+      }
+    },
+    {
+      "id": "dandelion_balanced_albedo",
+      "width": 256,
+      "height": 256,
+      "payload_bytes": 87408,
+      "stream_payload_verified": true,
+      "cpu_readable": false,
+      "wrap_mode": "clamp",
+      "sampler_verified": true,
+      "gpu_sampling": {
+        "mean_error": 0.09617030877548424,
+        "max_error": 2.5904656294674453
+      }
     }
   ],
-  "compressed_payload_bytes": 25713024,
-  "native_bundles_bytes": 8737803,
+  "compressed_payload_bytes": 26149984,
+  "native_bundles_bytes": 8808229,
   "gpu_base_mip_validation": true,
   "game_validation": false,
   "note": "Native layout and GPU sampling evidence, not a VRAM or frame-time benchmark."

@@ -30,7 +30,8 @@ Placed instances apply additional scale and rotation.
 
 The prefabs draw through `InstanceRenderer` and `Graphics.DrawMeshInstanced`.
 They do not appear as ordinary MeshRenderer material slots. Runtime discovery
-and replacement therefore need explicit support for this instanced path.
+now has an explicit schema-3 observer for this instanced path, with the finite
+ownership evidence described below. Actual gameplay discovery remains untested.
 The shared terrain-color texture and other grass materials remain outside this
 replacement scope. Neither material has a normal-map texture, so these four
 studies emit albedo only.
@@ -79,7 +80,19 @@ The resulting coarse coverage is higher than the base coverage, and the smallest
 mips still lose silhouettes. Passing the payload checks does not approve those
 distance transitions.
 
-Review actual instanced binding and rollback, original shader behavior on
+A separate [native ownership fixture](evidence/meadows-grass-binding.json) passes
+19 checks using the original material copies, production binder/observer code,
+inert components and a diagnostic texture provider. It covers shared demand,
+readiness, reassignment, incomplete discovery, foreign changes and restoration.
+All fixture objects drain and cleanup passes without warnings or errors. The
+observer allocates zero managed bytes across 512 warmed scans of its test node;
+this excludes hierarchy allocation and makes no frame-time claim.
+
+The [runtime guide](RUNTIME.md) describes schema 3 and its explicit limits.
+These changes add no default grass mapping or game deployment. Production
+authored-bundle loading through this instanced path still needs its own fixture.
+
+Review actual gameplay discovery and rollback, original shader behavior on
 supported graphics APIs, both faces under light, wind, player interaction,
 terrain tint, fade distances 20 to 35, weather and representative hardware.
 The quality presets remain candidates until those checks are complete.

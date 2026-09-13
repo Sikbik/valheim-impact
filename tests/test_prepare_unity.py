@@ -90,6 +90,25 @@ class SafetyTests(unittest.TestCase):
             self.assertFalse((dest / 'Assets').exists())
             self.assertEqual(list(outside.iterdir()), [])
 
+    def test_missing_or_invalid_wrap_metadata_is_rejected_before_copy(self):
+        for value in ('missing', None, 0, True, 'mirror', 'Clamp'):
+            with self.subTest(value=value), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                copy_template(root / 'unity')
+                stage = root / 'build/staging/meadows'
+                shutil.copytree(ROOT / 'build/staging/meadows', stage)
+                manifest = json.loads((stage / 'manifest.json').read_text())
+                for row in manifest['assets']:
+                    row['wrap_mode'] = 'repeat'
+                if value == 'missing':
+                    del manifest['assets'][-1]['wrap_mode']
+                else:
+                    manifest['assets'][-1]['wrap_mode'] = value
+                (stage / 'manifest.json').write_text(json.dumps(manifest))
+                with self.assertRaisesRegex(ValueError, 'wrap_mode'):
+                    pipeline.prepare(root)
+                self.assertFalse((root / 'build/unity-project').exists())
+
     def test_copy_allowlist(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
